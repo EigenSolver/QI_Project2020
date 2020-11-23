@@ -1,0 +1,95 @@
+\documentclass[11p]{article}
+\usepackage{physics}
+\usepackage{amsmath}
+\usepackage{tikz}
+\usetikzlibrary{quantikz}
+\title{Quantum project: Report 1}
+\author{}
+\begin{document}
+\maketitle
+\section{Introduction}
+Copying arbitrary quantum information is forbiden by the laws of quantum mechanics. Quantum communication protocols, e.g. QKD, rely on the fact that an eveasdroper will be noticed when intercepting and reading the information, which ensures that communication remains private. In this work we explore an imperfect quantum copy machine and its implementation on quantum computting platforms such as Quantum Inspire (QI). First, we will analyze the circuit that implements this copy machine and obtain a clear idea of what the output state is. Secondly, we implement this circuit for all single qubit states and show the results of the devices Starmon5 and the QXsimulator.
+\section{Universal quantum copy machine}
+
+The quantum circuit corresponding to the UQCM contains two stages, as can be seen in the following circuit,\\
+\begin{center}
+\begin{quantikz}\label{circuit:full}
+\lstick{$|0\rangle$}   &\qw &  \gate[3][2cm]{U_{copy}}&\qw\\
+\lstick{$|0\rangle$} & \gate[2][2cm]{U_{prepare}}  && \qw\\
+\lstick{$|0\rangle$} &   & &\qw
+\end{quantikz}.
+\end{center}
+
+
+\subsection{Preparation of the state}
+The first stage of the UQCM starts before interacting with the input qubit. The two bottom qubits are required to be in an arbitrary state,
+\begin{equation}
+| \psi \rangle = C_1|00\rangle C_2|01\rangle + C_3|10\rangle +C_4 |11\rangle.
+\end{equation}
+For such purpose we will use the following circuit with an input state $|0_{a_1} 0_{a_2}\rangle$. 
+\begin{center}
+\begin{quantikz}\label{circuit:full}
+\lstick{$|0\rangle_{a_1}$} & \gate[2][1cm]{U_{prepare}}  & \qw\\
+\lstick{$|0\rangle_{a_2}$} &   &\qw
+\end{quantikz}=\begin{quantikz}[slice all]\label{circuit:full}
+\lstick{$|0\rangle_{a_1}$} & \gate{R_y(\theta_1)}  & \ctrl{1}& \qw  &\targ{} &\gate{R_y(\theta_3)}&\qw\\
+\lstick{$|0\rangle_{a_2}$} & \qw & \targ{}& \gate{R_y(\theta_2)}  &\ctrl{-1} &\qw&\qw
+\end{quantikz}.
+\end{center}
+Here we analyse each stage of the preparation process. It is given by,
+\begin{align*}
+|\psi_0\rangle &= |0_{a_1} 0_{a_2}\rangle \\
+|\psi_1\rangle &= (\cos\theta_1|0\rangle + \sin\theta_1|1\rangle)|0\rangle\\
+|\psi_2\rangle & = \cos\theta_1|00\rangle + \sin\theta_1|11\rangle\\
+|\psi_3\rangle &=(\cos\theta_1\sin\theta_2|0\rangle + \cos\theta_2\sin\theta_1|1\rangle)|1\rangle+(\cos\theta_1\cos\theta_2|0\rangle - \sin\theta_2\sin\theta_1|1\rangle)|0\rangle\\
+|\psi_4\rangle &=(\cos\theta_1\sin\theta_2|1\rangle + \cos\theta_2\sin\theta_1|0\rangle)|1\rangle+(\cos\theta_1\cos\theta_2|0\rangle - \sin\theta_2\sin\theta_1|1\rangle)|0\rangle\\
+|\psi_5\rangle &=(\cos\theta_1\sin\theta_2|0\rangle + \cos\theta_2\sin\theta_1|1\rangle)(-\sin\theta_3|0\rangle+\cos\theta_1|1\rangle)\\& \qquad \qquad \qquad \qquad \quad+(\cos\theta_1\cos\theta_2|0\rangle - \sin\theta_2\sin\theta_1|1\rangle)(\cos\theta_3|0\rangle+\sin\theta_1|1\rangle)
+\end{align*}
+Finally, we found that the coefficients of the final state depends on the rotation angles,
+\begin{multline*}
+|\psi_5\rangle=(\cos\theta_1\cos\theta_2\cos\theta_3+\sin\theta_1\sin\theta_2\sin\theta_3)|00\rangle +(\sin\theta_1\cos\theta_2\cos\theta_3-\cos\theta_1\sin\theta_2\sin\theta_3)|01\rangle\\ +(\cos\theta_1\cos\theta_2\sin\theta_3-\sin\theta_1\sin\theta_2\cos\theta_3)|10\rangle\ +(\cos\theta_1\sin\theta_2\cos\theta_3+\sin\theta_1\cos\theta_2\sin\theta_3)|11\rangle\\
+\end{multline*}
+From which we can observe that,
+\begin{align}
+C_1 &= \cos\theta_1\cos\theta_2\cos\theta_3+\sin\theta_1\sin\theta_2\sin\theta_3\\
+C_2 &= \sin\theta_1\cos\theta_2\cos\theta_3-\cos\theta_1\sin\theta_2\sin\theta_3\\
+C_3 &= \cos\theta_1\cos\theta_2\sin\theta_3-\sin\theta_1\sin\theta_2\cos\theta_3\\
+C_4 &= \cos\theta_1\sin\theta_2\cos\theta_3+\sin\theta_1\cos\theta_2\sin\theta_3
+\end{align}
+
+\subsection{Copying proccess}
+Once we have prepared the state, we do the copy process, which can be described as controlled entanglement between the input and prepared qubits. The circuit corresponding to the copy process can be observed in the following circuit, where the prepared initial state and the input state that we consider are given respectively by,
+\begin{equation}
+|\psi\rangle^{(prep)}_{a_1,b_1} = \frac{1}{\sqrt{6}} (2|00\rangle + |01\rangle |11\rangle),\qquad |\psi\rangle^{(in)}_{a_0} = \alpha|0\rangle +\beta|1\rangle.
+\end{equation}
+\begin{center}
+\begin{quantikz}\label{circuit:full}
+\lstick{$|0\rangle$}   & \gate[3][2cm]{U_{copy}}&\qw\\
+\lstick{$|0\rangle$} & & \qw\\
+\lstick{$|0\rangle$} &  &\qw
+\end{quantikz}=\begin{quantikz}[slice all]\label{circuit:full}
+\lstick{$|0\rangle$}   & \ctrl{1}&\ctrl{2}&\targ{}&\targ{}&\qw\\
+\lstick{$|0\rangle$} &\targ{} & \qw & \ctrl{-1} &\qw&\qw\\
+\lstick{$|0\rangle$} & \qw&\targ{}&\qw&\ctrl{-2}&\qw
+\end{quantikz}.
+\end{center}
+We consider that the input state of the copy machine is $|\psi_0\rangle = |\psi\rangle^{(in)}_{a_0}|\psi\rangle^{(prep)}_{a_1,b_1}$. Then, it will transform in each stage of the copy process as,
+\begin{align}
+|\psi_1\rangle &= \frac{\alpha}{\sqrt{6}}|0\rangle(2|00\rangle +|01\rangle + |11\rangle) + \frac{\beta}{\sqrt{6}}|1\rangle(2|10\rangle +|11\rangle + |01\rangle) \\
+|\psi_2\rangle &= \frac{\alpha}{\sqrt{6}}|0\rangle(2|00\rangle +|01\rangle + |11\rangle) + \frac{\beta}{\sqrt{6}}|1\rangle(2|11\rangle +|10\rangle + |00\rangle) \\
+|\psi_3\rangle &= \sqrt{\frac{2}{3}}(\alpha|000\rangle+\beta|111\rangle) + \frac{1}{\sqrt{6}}(\alpha|001\rangle +\alpha|011\rangle + \beta|110\rangle + \beta |100\rangle) \\
+|\psi_4\rangle &= \sqrt{\frac{2}{3}}(\alpha|000\rangle+\beta|111\rangle) + \frac{1}{\sqrt{6}}(\alpha|101\rangle +\alpha|011\rangle + \beta|010\rangle + \beta |100\rangle) \\
+&= \left( \sqrt{\frac{2}{3}}\alpha|00\rangle +\beta \frac{1}{\sqrt{6}}(|10\rangle+\beta|01\rangle)\right)|0\rangle\notag \\
+&\qquad \qquad \qquad \qquad \qquad \qquad + \left( \sqrt{\frac{2}{3}}\beta|11\rangle + \frac{1}{\sqrt{6}}\alpha(|10\rangle +\alpha|01\rangle )\right)|1\rangle \\
+&= |\Phi_0\rangle|0\rangle+|\Phi_1\rangle|1\rangle
+\end{align}
+where we have defined,
+\begin{align}
+|\Phi_0\rangle &=\left( \sqrt{\frac{2}{3}}\alpha|00\rangle +\beta \frac{1}{\sqrt{3}}|+\rangle\right)\\
+|\Phi_1\rangle &= \left( \sqrt{\frac{2}{3}}\beta|11\rangle +\alpha \frac{1}{\sqrt{3}}|+\rangle\right)
+\end{align}
+
+\section{Implementation of UQCM in QI}
+
+
+\end{document}
