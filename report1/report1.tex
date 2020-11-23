@@ -14,9 +14,9 @@ Copying arbitrary quantum information is forbiden by the laws of quantum mechani
 The quantum circuit corresponding to the UQCM contains two stages, as can be seen in the following circuit,\\
 \begin{center}
 \begin{quantikz}\label{circuit:full}
-\lstick{$|0\rangle$}   &\qw &  \gate[3][2cm]{U_{copy}}&\qw\\
-\lstick{$|0\rangle$} & \gate[2][2cm]{U_{prepare}}  && \qw\\
-\lstick{$|0\rangle$} &   & &\qw
+\lstick{$|\psi \rangle_{a_0}$}   &\qw &  \gate[3][2cm]{U_{copy}}&\qw\\
+\lstick{$|0\rangle_{a_1}$} & \gate[2][2cm]{U_{prepare}}  && \qw\\
+\lstick{$|0\rangle_{b_1}$} &   & &\qw
 \end{quantikz}.
 \end{center}
 
@@ -24,38 +24,67 @@ The quantum circuit corresponding to the UQCM contains two stages, as can be see
 \subsection{Preparation of the state}
 The first stage of the UQCM starts before interacting with the input qubit. The two bottom qubits are required to be in an arbitrary state,
 \begin{equation}
-| \psi \rangle = C_1|00\rangle C_2|01\rangle + C_3|10\rangle +C_4 |11\rangle.
+| \psi \rangle = C_1|00\rangle + C_2|01\rangle + C_3|10\rangle +C_4 |11\rangle.
 \end{equation}
-For such purpose we will use the following circuit with an input state $|0_{a_1} 0_{a_2}\rangle$. 
+For such purpose we will use the following circuit with an input state $\ket{00}_{a_1b_1}$. 
 \begin{center}
+
+
 \begin{quantikz}\label{circuit:full}
 \lstick{$|0\rangle_{a_1}$} & \gate[2][1cm]{U_{prepare}}  & \qw\\
-\lstick{$|0\rangle_{a_2}$} &   &\qw
-\end{quantikz}=\begin{quantikz}[slice all]\label{circuit:full}
-\lstick{$|0\rangle_{a_1}$} & \gate{R_y(\theta_1)}  & \ctrl{1}& \qw  &\targ{} &\gate{R_y(\theta_3)}&\qw\\
-\lstick{$|0\rangle_{a_2}$} & \qw & \targ{}& \gate{R_y(\theta_2)}  &\ctrl{-1} &\qw&\qw
+\lstick{$|0\rangle_{b_1}$} &   &\qw
+\end{quantikz}=
+
+\begin{quantikz}[slice all]\label{circuit:full}
+\lstick{$|0\rangle_{a_1}$} & \gate{R(\theta_1)}  & \ctrl{1}& \qw  &\targ{} &\gate{R(\theta_3)}&\qw\\
+\lstick{$|0\rangle_{b_1}$} & \qw & \targ{}& \gate{R(\theta_2)}  &\ctrl{-1} &\qw&\qw
 \end{quantikz}.
+
+
 \end{center}
-Here we analyse each stage of the preparation process. It is given by,
+We analyse each stage of the preparation process. Simply denote $\ket{00}_{a_1b_1}$ as $\ket{00}$, where the 
+qubit from left to right side is always $a_1b_1$.
+
+The rotation gate here is defined by 
 \begin{align*}
-|\psi_0\rangle &= |0_{a_1} 0_{a_2}\rangle \\
+    R(\theta)&=R_y(2\theta)
+    =\cos(2\theta/2) \hat I-i \sin(2\theta/2)\hat \sigma_y
+    =\begin{pmatrix}
+        \cos\theta & -\sin\theta\\
+        \sin\theta & \cos \theta 
+    \end{pmatrix}
+\end{align*}
+
+And the formula can be given by,
+\begin{align*}
+|\psi_0\rangle &= |00 \rangle \\
 |\psi_1\rangle &= (\cos\theta_1|0\rangle + \sin\theta_1|1\rangle)|0\rangle\\
 |\psi_2\rangle & = \cos\theta_1|00\rangle + \sin\theta_1|11\rangle\\
-|\psi_3\rangle &=(\cos\theta_1\sin\theta_2|0\rangle + \cos\theta_2\sin\theta_1|1\rangle)|1\rangle+(\cos\theta_1\cos\theta_2|0\rangle - \sin\theta_2\sin\theta_1|1\rangle)|0\rangle\\
-|\psi_4\rangle &=(\cos\theta_1\sin\theta_2|1\rangle + \cos\theta_2\sin\theta_1|0\rangle)|1\rangle+(\cos\theta_1\cos\theta_2|0\rangle - \sin\theta_2\sin\theta_1|1\rangle)|0\rangle\\
-|\psi_5\rangle &=(\cos\theta_1\sin\theta_2|0\rangle + \cos\theta_2\sin\theta_1|1\rangle)(-\sin\theta_3|0\rangle+\cos\theta_1|1\rangle)\\& \qquad \qquad \qquad \qquad \quad+(\cos\theta_1\cos\theta_2|0\rangle - \sin\theta_2\sin\theta_1|1\rangle)(\cos\theta_3|0\rangle+\sin\theta_1|1\rangle)
+|\psi_3\rangle &=(\cos\theta_1\cos\theta_2|0\rangle - \sin\theta_2\sin\theta_1|1\rangle)|0\rangle + (\cos\theta_1\sin\theta_2|0\rangle + \cos\theta_2\sin\theta_1|1\rangle)|1\rangle\\
+|\psi_4\rangle &=(\cos\theta_1\cos\theta_2|0\rangle - \sin\theta_2\sin\theta_1|1\rangle)|0\rangle + (\cos\theta_1\sin\theta_2|1\rangle + \cos\theta_2\sin\theta_1|0\rangle)|1\rangle\\
+&=\cos\theta_1\cos\theta_2|00\rangle + \cos\theta_1\sin\theta_2|11\rangle + \cos\theta_2\sin\theta_1|01\rangle- \sin\theta_2\sin\theta_1|10\rangle\\
+|\psi_5\rangle&=\cos\theta_2(\cos\theta_1\ket{0}+\sin\theta_1\ket{1})(\cos\theta_3\ket{0}+\sin\theta_3\ket{1})\\
+&+\sin\theta_2(\cos\theta_1\ket{0}-\sin\theta_1\ket{1})(-\sin\theta_3\ket{0}+\cos\theta_3\ket{1})\\
 \end{align*}
 Finally, we found that the coefficients of the final state depends on the rotation angles,
-\begin{multline*}
-|\psi_5\rangle=(\cos\theta_1\cos\theta_2\cos\theta_3+\sin\theta_1\sin\theta_2\sin\theta_3)|00\rangle +(\sin\theta_1\cos\theta_2\cos\theta_3-\cos\theta_1\sin\theta_2\sin\theta_3)|01\rangle\\ +(\cos\theta_1\cos\theta_2\sin\theta_3-\sin\theta_1\sin\theta_2\cos\theta_3)|10\rangle\ +(\cos\theta_1\sin\theta_2\cos\theta_3+\sin\theta_1\cos\theta_2\sin\theta_3)|11\rangle\\
-\end{multline*}
+
+\[
+    |\psi_5\rangle= C_1|00\rangle + C_2|01\rangle + C_3|10\rangle +C_4 |11\rangle.
+\]
+
 From which we can observe that,
-\begin{align}
-C_1 &= \cos\theta_1\cos\theta_2\cos\theta_3+\sin\theta_1\sin\theta_2\sin\theta_3\\
-C_2 &= \sin\theta_1\cos\theta_2\cos\theta_3-\cos\theta_1\sin\theta_2\sin\theta_3\\
-C_3 &= \cos\theta_1\cos\theta_2\sin\theta_3-\sin\theta_1\sin\theta_2\cos\theta_3\\
-C_4 &= \cos\theta_1\sin\theta_2\cos\theta_3+\sin\theta_1\cos\theta_2\sin\theta_3
-\end{align}
+\[
+    \begin{aligned}
+        C_1 &= 
+        \cos \theta_1 \cos \theta_2 \cos \theta_3-\cos \theta_1 \sin \theta_2 \sin \theta_3\\
+        C_2 &= 
+        \sin \theta_1 \sin \theta_2 \sin \theta_3+\sin \theta_1 \cos \theta_2 \cos \theta_3\\
+        C_3 &=
+        \cos \theta_1 \sin \theta_2 \cos \theta_3+\cos \theta_1 \cos \theta_2 \sin \theta_3\\
+        C_4 &= 
+        \sin \theta_1 \cos \theta_2 \sin \theta_3-\sin \theta_1 \sin \theta_2 \cos \theta_3
+    \end{aligned}
+\]
 
 \subsection{Copying proccess}
 Once we have prepared the state, we do the copy process, which can be described as controlled entanglement between the input and prepared qubits. The circuit corresponding to the copy process can be observed in the following circuit, where the prepared initial state and the input state that we consider are given respectively by,
@@ -64,13 +93,16 @@ Once we have prepared the state, we do the copy process, which can be described 
 \end{equation}
 \begin{center}
 \begin{quantikz}\label{circuit:full}
-\lstick{$|0\rangle$}   & \gate[3][2cm]{U_{copy}}&\qw\\
-\lstick{$|0\rangle$} & & \qw\\
-\lstick{$|0\rangle$} &  &\qw
+% \lstick{$|\psi\rangle_{a_0}$}   & \gate[3][2cm]{U_{copy}}&\qw\\
+% \lstick{$|0\rangle_{a_1}$} & & \qw\\
+% \lstick{$|0\rangle_{b_1}$} &  &\qw
+\lstick{}   & \gate[3][2cm]{U_{copy}}&\qw\\
+\lstick{} & & \qw\\
+\lstick{} &  &\qw
 \end{quantikz}=\begin{quantikz}[slice all]\label{circuit:full}
-\lstick{$|0\rangle$}   & \ctrl{1}&\ctrl{2}&\targ{}&\targ{}&\qw\\
-\lstick{$|0\rangle$} &\targ{} & \qw & \ctrl{-1} &\qw&\qw\\
-\lstick{$|0\rangle$} & \qw&\targ{}&\qw&\ctrl{-2}&\qw
+\lstick{}   & \ctrl{1}&\ctrl{2}&\targ{}&\targ{}&\qw\\
+\lstick{} &\targ{} & \qw & \ctrl{-1} &\qw&\qw\\
+\lstick{} & \qw&\targ{}&\qw&\ctrl{-2}&\qw
 \end{quantikz}.
 \end{center}
 We consider that the input state of the copy machine is $|\psi_0\rangle = |\psi\rangle^{(in)}_{a_0}|\psi\rangle^{(prep)}_{a_1,b_1}$. Then, it will transform in each stage of the copy process as,
