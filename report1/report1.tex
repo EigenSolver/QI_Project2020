@@ -60,11 +60,13 @@ And the formula can be given by,
 |\psi_0\rangle &= |00 \rangle \\
 |\psi_1\rangle &= (\cos\theta_1|0\rangle + \sin\theta_1|1\rangle)|0\rangle\\
 |\psi_2\rangle & = \cos\theta_1|00\rangle + \sin\theta_1|11\rangle\\
-|\psi_3\rangle &=(\cos\theta_1\cos\theta_2|0\rangle - \sin\theta_2\sin\theta_1|1\rangle)|0\rangle + (\cos\theta_1\sin\theta_2|0\rangle + \cos\theta_2\sin\theta_1|1\rangle)|1\rangle\\
-|\psi_4\rangle &=(\cos\theta_1\cos\theta_2|0\rangle - \sin\theta_2\sin\theta_1|1\rangle)|0\rangle + (\cos\theta_1\sin\theta_2|1\rangle + \cos\theta_2\sin\theta_1|0\rangle)|1\rangle\\
-&=\cos\theta_1\cos\theta_2|00\rangle + \cos\theta_1\sin\theta_2|11\rangle + \cos\theta_2\sin\theta_1|01\rangle- \sin\theta_2\sin\theta_1|10\rangle\\
-|\psi_5\rangle&=\cos\theta_2(\cos\theta_1\ket{0}+\sin\theta_1\ket{1})(\cos\theta_3\ket{0}+\sin\theta_3\ket{1})\\
-&+\sin\theta_2(\cos\theta_1\ket{0}-\sin\theta_1\ket{1})(-\sin\theta_3\ket{0}+\cos\theta_3\ket{1})\\
+|\psi_3\rangle &=\cos\theta_1|0\rangle(\cos\theta_2|0\rangle + \sin\theta_2|1\rangle) + \sin\theta_1|1\rangle(-\sin\theta_2|0\rangle + \cos\theta_2|1\rangle)\\
+&=\cos\theta_1\cos\theta_2\ket{00}+\cos\theta_1\sin\theta_2\ket{01}-\sin\theta_1\sin\theta_2\ket{10}+\sin\theta_1\cos\theta_2\ket{11}\\
+|\psi_4\rangle &=\cos\theta_1\cos\theta_2|00\rangle + \cos\theta_1\sin\theta_2|11\rangle- \sin\theta_1\sin\theta_2|10\rangle + \sin\theta_1\cos\theta_2|01\rangle\\
+|\psi_5\rangle&=(\cos\theta_3|0\rangle + \sin\theta_3|1\rangle) 
+(\cos\theta_1\cos\theta_2|0\rangle+\sin\theta_1\cos\theta_2|1\rangle)\\
+&+(-\sin\theta_3|0\rangle + \cos\theta_3|1\rangle)
+(\cos\theta_1\sin\theta_2|1\rangle- \sin\theta_1\sin\theta_2|0\rangle)
 \end{align*}
 Finally, we found that the coefficients of the final state depends on the rotation angles,
 
@@ -73,19 +75,18 @@ Finally, we found that the coefficients of the final state depends on the rotati
 \]
 
 From which we can observe that,
-\[
-    \begin{aligned}
-    C_1 &=     \sin(\theta_1)  \sin(\theta_2)  \sin(\theta_3) +  \cos(\theta_1)  \cos(\theta_2)  \cos(\theta_3)\\
-    C_2 &=   \sin(\theta_1)  \cos(\theta_2)  \cos(\theta_3) -   \sin(\theta_2)  \sin(\theta_3)  \cos(\theta_1) \\
-    C_3 &=   \sin(\theta_3)  \cos(\theta_1)  \cos(\theta_2) -  \sin(\theta_1)  \sin(\theta_2)  \cos(\theta_3)\\
-    C_4 &=   \sin(\theta_1)  \sin(\theta_3)  \cos(\theta_2) +   \sin(\theta_2)  \cos(\theta_1)  \cos(\theta_3)
-    \end{aligned}
-\]
+
+\begin{align}
+    C_1 &=     \sin\theta_1  \sin\theta_2  \sin\theta_3 +  \cos\theta_1 \cos\theta_2  \cos\theta_3\\
+    C_2 &=   \sin\theta_1  \cos\theta_2 \cos\theta_3 -   \cos\theta_1 \sin\theta_2  \sin\theta_3   \\
+    C_3 &=   \cos\theta_1  \cos\theta_2 \sin\theta_3 -  \sin\theta_1  \sin\theta_2  \cos\theta_3\\
+    C_4 &=   \sin\theta_1  \cos\theta_2 \sin\theta_3  +    \cos\theta_1 \sin\theta_2 \cos\theta_3
+\end{align}
 
 \subsection{Copying proccess}
 Once we have prepared the state, we do the copy process, which can be described as controlled entanglement between the input and prepared qubits. The circuit corresponding to the copy process can be observed in the following circuit, where the prepared initial state and the input state that we consider are given respectively by,
 \begin{equation}
-|\psi\rangle^{(prep)}_{a_1,b_1} = \frac{1}{\sqrt{6}} (2|00\rangle + |01\rangle |11\rangle),\qquad |\psi\rangle^{(in)}_{a_0} = \alpha|0\rangle +\beta|1\rangle.
+|\psi\rangle^{(prep)}_{a_1,b_1} = \frac{1}{\sqrt{6}} (2|00\rangle + |01\rangle + |11\rangle),\qquad |\psi\rangle^{(in)}_{a_0} = \alpha|0\rangle +\beta|1\rangle.
 \end{equation}
 \begin{center}
 \begin{quantikz}\label{circuit:full}
@@ -105,10 +106,11 @@ We consider that the input state of the copy machine is $|\psi_0\rangle = |\psi\
 \begin{align}
 |\psi_1\rangle &= \frac{\alpha}{\sqrt{6}}|0\rangle(2|00\rangle +|01\rangle + |11\rangle) + \frac{\beta}{\sqrt{6}}|1\rangle(2|10\rangle +|11\rangle + |01\rangle) \\
 |\psi_2\rangle &= \frac{\alpha}{\sqrt{6}}|0\rangle(2|00\rangle +|01\rangle + |11\rangle) + \frac{\beta}{\sqrt{6}}|1\rangle(2|11\rangle +|10\rangle + |00\rangle) \\
-|\psi_3\rangle &= \sqrt{\frac{2}{3}}(\alpha|000\rangle+\beta|111\rangle) + \frac{1}{\sqrt{6}}(\alpha|001\rangle +\alpha|011\rangle + \beta|110\rangle + \beta |100\rangle) \\
+&= \sqrt{\frac{2}{3}}(\alpha|000\rangle+\beta|111\rangle) + \frac{1}{\sqrt{6}}(\alpha|001\rangle +\alpha|011\rangle + \beta|110\rangle + \beta |100\rangle) \\
+|\psi_3\rangle &= \sqrt{\frac{2}{3}}(\alpha|000\rangle+\beta|011\rangle) + \frac{1}{\sqrt{6}}(\alpha|001\rangle +\alpha|111\rangle + \beta|010\rangle + \beta |100\rangle) \\
 |\psi_4\rangle &= \sqrt{\frac{2}{3}}(\alpha|000\rangle+\beta|111\rangle) + \frac{1}{\sqrt{6}}(\alpha|101\rangle +\alpha|011\rangle + \beta|010\rangle + \beta |100\rangle) \\
-&= \left( \sqrt{\frac{2}{3}}\alpha|00\rangle +\beta \frac{1}{\sqrt{6}}(|10\rangle+\beta|01\rangle)\right)|0\rangle\notag \\
-&\qquad \qquad \qquad \qquad \qquad \qquad + \left( \sqrt{\frac{2}{3}}\beta|11\rangle + \frac{1}{\sqrt{6}}\alpha(|10\rangle +\alpha|01\rangle )\right)|1\rangle \\
+&=\left( \sqrt{\frac{2}{3}}\alpha|00\rangle +\beta \frac{1}{\sqrt{6}}(|10\rangle+|01\rangle)\right)|0\rangle\notag \\
+&\qquad \qquad \qquad \qquad \qquad \qquad + \left( \sqrt{\frac{2}{3}}\beta|11\rangle + \frac{1}{\sqrt{6}}\alpha(|10\rangle + |01\rangle )\right)|1\rangle \\
 &= |\Phi_0\rangle|0\rangle+|\Phi_1\rangle|1\rangle
 \end{align}
 where we have defined,
@@ -118,6 +120,15 @@ where we have defined,
 \end{align}
 
 \section{Implementation of UQCM in QI}
+
+\begin{quantikz}
+    \lstick{$|0\rangle_{a_1}$} & \gate{R(\theta_1)}  & \swap{2}& \qw & \qw & \qw &\swap{2} &\gate{R(\theta_3)} & \targ{}&\qw&\ctrl{2}&\qw & \meter{}\\
+    \lstick{} & \qw& \qw& \qw& \qw& \qw& \qw & \qw& \qw& \qw & \qw& \qw & \qw\\
+    \lstick{$|\psi \rangle_{a_0}$}  & \qw & \targX{} & \ctrl{2} & \qw & \targ{} & \targX{} & \qw & \ctrl{-2} & \ctrl{2} & \targ{} & \targ{} & \qw \\
+    \lstick{} & \qw& \qw& \qw& \qw& \qw& \qw & \qw& \qw& \qw & \qw& \qw & \qw\\
+    \lstick{$|0\rangle_{b_1}$} & \qw & \qw & \targ{} & \gate{R(\theta_2)}  &\ctrl{-2} & \qw & \qw & \qw & \targ{} & \qw & \ctrl{-2} & \qw \\
+\end{quantikz}.
+    
 
 
 \end{document}

@@ -1,7 +1,7 @@
 # Fdb version 3
-["pdflatex"] 1606169957 "/home/neuromancer/OneDrive/Quantum_Information/Project/report1/report1.tex" "/home/neuromancer/OneDrive/Quantum_Information/Project/report1/report1.pdf" "report1" 1606169958
-  "/home/neuromancer/OneDrive/Quantum_Information/Project/report1/report1.aux" 1606169958 726 2cc0827c69422604af6c088d5f8e1068 ""
-  "/home/neuromancer/OneDrive/Quantum_Information/Project/report1/report1.tex" 1606169955 6821 68ac12e2987b530da32d01f95d714a06 ""
+["pdflatex"] 1606218426 "/home/neuromancer/OneDrive/Quantum_Information/Project/report1/report1.tex" "/home/neuromancer/OneDrive/Quantum_Information/Project/report1/report1.pdf" "report1" 1606218427
+  "/home/neuromancer/OneDrive/Quantum_Information/Project/report1/report1.aux" 1606218427 726 8672399de5a784fc1c9b53f559efa580 ""
+  "/home/neuromancer/OneDrive/Quantum_Information/Project/report1/report1.tex" 1606218425 7535 a9363f9b3b387b9b76857c87f4555db8 ""
   "/usr/local/texlive/2020/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1246382020 1004 54797486969f23fa377b128694d548df ""
   "/usr/local/texlive/2020/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm" 1246382020 988 bdf658c3bfc2d96d3c8b02cfc1c94c20 ""
   "/usr/local/texlive/2020/texmf-dist/fonts/tfm/public/cm/cmbx12.tfm" 1136768653 1324 c910af8c371558dc20f2d7822f66fe64 ""
@@ -154,11 +154,11 @@
   "/usr/local/texlive/2020/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1590694141 382491 741389b5bbd79587e9601892413f03ad ""
   "/usr/local/texlive/2020/texmf-var/web2c/pdftex/pdflatex.fmt" 1590655582 1200420 b3ffefb0ab37717513b8d0452bcdddb6 ""
   "/usr/local/texlive/2020/texmf.cnf" 1590655574 455 5b996dcaa0eb4ef14a83b026bc0a008c ""
-  "report1.aux" 1606169958 726 2cc0827c69422604af6c088d5f8e1068 "pdflatex"
-  "report1.tex" 1606169955 6821 68ac12e2987b530da32d01f95d714a06 ""
+  "report1.aux" 1606218427 726 8672399de5a784fc1c9b53f559efa580 "pdflatex"
+  "report1.tex" 1606218425 7535 a9363f9b3b387b9b76857c87f4555db8 ""
   (generated)
+  "report1.pdf"
   "report1.log"
   "/home/neuromancer/OneDrive/Quantum_Information/Project/report1/report1.pdf"
-  "/home/neuromancer/OneDrive/Quantum_Information/Project/report1/report1.log"
   "report1.aux"
-  "report1.pdf"
+  "/home/neuromancer/OneDrive/Quantum_Information/Project/report1/report1.log"
