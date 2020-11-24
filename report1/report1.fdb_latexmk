@@ -1,7 +1,7 @@
 # Fdb version 3
-["pdflatex"] 1606239254 "/Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report1/report1.tex" "/Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report1/report1.pdf" "report1" 1606239257
-  "/Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report1/report1.aux" 1606239257 968 e4521c85cd63dd595008facba2088323 ""
-  "/Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report1/report1.tex" 1606239251 13287 c3d4cd533a023a71268425a3dd456cce ""
+["pdflatex"] 1606239580 "/Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report1/report1.tex" "/Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report1/report1.pdf" "report1" 1606242572
+  "/Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report1/report1.aux" 1606239584 968 e4521c85cd63dd595008facba2088323 ""
+  "/Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report1/report1.tex" 1606239579 13287 a3eb0bc2e892767b86f0b4de13c8dcb0 ""
   "/usr/local/texlive/2020/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2020/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1246382020 1004 54797486969f23fa377b128694d548df ""
   "/usr/local/texlive/2020/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm" 1246382020 988 bdf658c3bfc2d96d3c8b02cfc1c94c20 ""
@@ -158,11 +158,11 @@
   "Figures/starmon(-1,1)_F.png" 1606237449 169977 312faec7cc2ae4b262255f95de6beed7 ""
   "Figures/starmon(1,-1)_F.png" 1606237463 168751 1351a2ac9f8be20bdbae15d3e7995c7f ""
   "Figures/starmon(1,1)_F.png" 1606237375 178041 ad26c4891906b2c132bffcf1b9d583c5 ""
-  "report1.aux" 1606239257 968 e4521c85cd63dd595008facba2088323 "pdflatex"
-  "report1.tex" 1606239251 13287 c3d4cd533a023a71268425a3dd456cce ""
+  "report1.aux" 1606239584 968 e4521c85cd63dd595008facba2088323 "pdflatex"
+  "report1.tex" 1606239579 13287 a3eb0bc2e892767b86f0b4de13c8dcb0 ""
   (generated)
-  "report1.log"
   "/Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report1/report1.pdf"
-  "/Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report1/report1.log"
   "report1.pdf"
   "report1.aux"
+  "/Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report1/report1.log"
+  "report1.log"
