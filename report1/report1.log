@@ -1,12 +1,12 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.11.24)  24 NOV 2020 18:39
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.5.28)  7 DEC 2020 20:00
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**/Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report1/report1.tex
-(/Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report1/report1.tex
+**/home/neuromancer/OneDrive/Quantum_Information/Project/report1/report1.tex
+(/home/neuromancer/OneDrive/Quantum_Information/Project/report1/report1.tex
 LaTeX2e <2020-02-02> patch level 5
-L3 programming layer <2020-03-06> (/usr/local/texlive/2020/texmf-dist/tex/latex/base/article.cls
+L3 programming layer <2020-05-15> (/usr/local/texlive/2020/texmf-dist/tex/latex/base/article.cls
 Document Class: article 2019/12/20 v1.4l Standard LaTeX document class
 (/usr/local/texlive/2020/texmf-dist/tex/latex/base/size10.clo
 File: size10.clo 2019/12/20 v1.4l Standard LaTeX file (size option)
@@ -25,18 +25,19 @@ File: size10.clo 2019/12/20 v1.4l Standard LaTeX file (size option)
 ) (/usr/local/texlive/2020/texmf-dist/tex/latex/physics/physics.sty
 Package: physics 
  (/usr/local/texlive/2020/texmf-dist/tex/latex/l3packages/xparse/xparse.sty (/usr/local/texlive/2020/texmf-dist/tex/latex/l3kernel/expl3.sty
-Package: expl3 2020-03-06 L3 programming layer (loader) 
+Package: expl3 2020-05-15 L3 programming layer (loader) 
  (/usr/local/texlive/2020/texmf-dist/tex/latex/l3backend/l3backend-pdfmode.def
-File: l3backend-pdfmode.def 2020-03-12 L3 backend support: PDF mode
+File: l3backend-pdfmode.def 2020-05-05 L3 backend support: PDF mode
 \l__kernel_color_stack_int=\count175
 \l__pdf_internal_box=\box45
 ))
-Package: xparse 2020-03-06 L3 Experimental document command parser
+Package: xparse 2020-05-15 L3 Experimental document command parser
+ (/usr/local/texlive/2020/texmf-dist/tex/latex/l3packages/xparse/xparse-generic.tex
 \l__xparse_current_arg_int=\count176
 \g__xparse_grabber_int=\count177
 \l__xparse_m_args_int=\count178
 \l__xparse_v_nesting_int=\count179
-) (/usr/local/texlive/2020/texmf-dist/tex/latex/amsmath/amsmath.sty
+)) (/usr/local/texlive/2020/texmf-dist/tex/latex/amsmath/amsmath.sty
 Package: amsmath 2020/01/20 v2.17e AMS math features
 \@mathmargin=\skip49
 
@@ -90,7 +91,14 @@ LaTeX Font Info:    Redeclaring font encoding OMS on input line 734.
 \mathdisplay@stack=\toks19
 LaTeX Info: Redefining \[ on input line 2859.
 LaTeX Info: Redefining \] on input line 2860.
-)) (/usr/local/texlive/2020/texmf-dist/tex/latex/float/float.sty
+)) (/usr/local/texlive/2020/texmf-dist/tex/latex/amsfonts/amsfonts.sty
+Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Redeclaring math symbol \hbar on input line 98.
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
+) (/usr/local/texlive/2020/texmf-dist/tex/latex/float/float.sty
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \c@float@type=\count192
 \float@exts=\toks20
@@ -310,13 +318,9 @@ File: pgfmodulematrix.code.tex 2020/01/08 v3.1.5b (3.1.5b)
 \tikz@expandcount=\count279
  (/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarytopaths.code.tex
 File: tikzlibrarytopaths.code.tex 2020/01/08 v3.1.5b (3.1.5b)
-))) (/usr/local/texlive/2020/texmf-dist/tex/latex/quantikz/tikzlibraryquantikz.code.tex
-
-LaTeX Warning: You have requested package `',
-               but the package provides `quantikz'.
-
-Package: quantikz 2019/04/24 typeset quantum circuit diagrams
-(/usr/local/texlive/2020/texmf-dist/tex/latex/xargs/xargs.sty
+))) (/usr/local/texlive/2020/texmf-dist/tex/latex/doublestroke/dsfont.sty
+Package: dsfont 1995/08/01 v0.1 Double stroke roman fonts
+) (/usr/local/texlive/2020/texmf-dist/tex/latex/quantikz/tikzlibraryquantikz.code.tex (/usr/local/texlive/2020/texmf-dist/tex/latex/xargs/xargs.sty
 Package: xargs 2008/03/22 v1.1  extended macro definitions  (mpg)
  (/usr/local/texlive/2020/texmf-dist/tex/latex/xkeyval/xkeyval.sty
 Package: xkeyval 2014/12/03 v2.7a package option processing (HA)
@@ -415,17 +419,29 @@ File: pgflibraryshapes.misc.code.tex 2020/01/08 v3.1.5b (3.1.5b)
 File: tikzlibrarybackgrounds.code.tex 2020/01/08 v3.1.5b (3.1.5b)
 \pgf@layerbox@background=\box63
 \pgf@layerboxsaved@background=\box64
-) (/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarydecorations.markings.code.tex (/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/libraries/decorations/pgflibrarydecorations.markings.code.tex))
+) (/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarydecorations.markings.code.tex (/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/libraries/decorations/pgflibrarydecorations.markings.code.tex)) (/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarymath.code.tex
+(/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryfpu.code.tex (/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/libraries/pgflibraryfpu.code.tex))
+\tikz@math@for@depth=\count290
+\tikz@math@dimen=\dimen273
+\tikz@math@toks=\toks39
+)
 \myl=\skip56
 \myh=\skip57
 \myd=\skip58
-\c@aaa=\count290
+\c@aaa=\count291
+LaTeX Font Info:    Trying to load font information for U+msa on input line 142.
+ (/usr/local/texlive/2020/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
+LaTeX Font Info:    Trying to load font information for U+msb on input line 142.
+ (/usr/local/texlive/2020/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+))
 
 LaTeX Warning: Unused global option(s):
     [11p].
 
-(/Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report1/report1.aux
+(/home/neuromancer/OneDrive/Quantum_Information/Project/report1/report1.aux
 
 LaTeX Warning: Label `circuit:full' multiply defined.
 
@@ -453,62 +469,62 @@ LaTeX Warning: Label `fig:2a' multiply defined.
 )
 \openout1 = `report1.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 9.
-LaTeX Font Info:    ... okay on input line 9.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 9.
-LaTeX Font Info:    ... okay on input line 9.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 9.
-LaTeX Font Info:    ... okay on input line 9.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 9.
-LaTeX Font Info:    ... okay on input line 9.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 9.
-LaTeX Font Info:    ... okay on input line 9.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 9.
-LaTeX Font Info:    ... okay on input line 9.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 9.
-LaTeX Font Info:    ... okay on input line 9.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
  ABD: EveryShipout initializing macros (/usr/local/texlive/2020/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count291
-\scratchdimen=\dimen273
+\scratchcounter=\count292
+\scratchdimen=\dimen274
 \scratchbox=\box65
-\nofMPsegments=\count292
-\nofMParguments=\count293
-\everyMPshowfont=\toks39
-\MPscratchCnt=\count294
-\MPscratchDim=\dimen274
-\MPnumerator=\count295
-\makeMPintoPDFobject=\count296
-\everyMPtoPDFconversion=\toks40
+\nofMPsegments=\count293
+\nofMParguments=\count294
+\everyMPshowfont=\toks40
+\MPscratchCnt=\count295
+\MPscratchDim=\dimen275
+\MPnumerator=\count296
+\makeMPintoPDFobject=\count297
+\everyMPtoPDFconversion=\toks41
 ) (/usr/local/texlive/2020/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
  (/usr/local/texlive/2020/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 ))
-Underfull \hbox (badness 10000) in paragraph at lines 15--16
+Underfull \hbox (badness 10000) in paragraph at lines 17--18
 
  []
 
 [1
 
 {/usr/local/texlive/2020/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-Overfull \hbox (120.44472pt too wide) detected at line 71
+Overfull \hbox (120.44472pt too wide) detected at line 73
 []
  []
 
 [2]
-Overfull \hbox (33.48877pt too wide) detected at line 130
+Overfull \hbox (33.48877pt too wide) detected at line 132
 [] \OT1/cmr/m/n/10 = [] [] + [] [] = [] [] + [] [] [] 
  []
 
 [3]
-Overfull \hbox (38.14403pt too wide) detected at line 145
+Overfull \hbox (38.14403pt too wide) detected at line 147
 []
  []
 
 
-Overfull \hbox (81.92894pt too wide) in paragraph at lines 169--171
+Overfull \hbox (81.92894pt too wide) in paragraph at lines 171--173
 [][]\OT1/cmr/m/n/10 .
  []
 
@@ -516,52 +532,63 @@ Overfull \hbox (81.92894pt too wide) in paragraph at lines 169--171
 <Figures/simulator_F.png, id=29, 1002.74625pt x 529.98pt>
 File: Figures/simulator_F.png Graphic file (type png)
 <use Figures/simulator_F.png>
-Package pdftex.def Info: Figures/simulator_F.png  used on input line 188.
+Package pdftex.def Info: Figures/simulator_F.png  used on input line 190.
 (pdftex.def)             Requested size: 322.99684pt x 170.71652pt.
 
-Overfull \hbox (22.75188pt too wide) in paragraph at lines 184--190
+Overfull \hbox (22.75188pt too wide) in paragraph at lines 186--192
 \OT1/cmr/m/n/10 sphere and $1024$ shots for each point. NB: In the fol-low-ing pic-tures $\OML/cmm/m/it/10 F[]=F[]$
  []
 
-[5 </Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report1/Figures/simulator_F.png>]
+[5 </home/neuromancer/OneDrive/Quantum_Information/Project/report1/Figures/simulator_F.png>]
 <Figures/starmon(1,1)_F.png, id=35, 1002.74625pt x 529.98pt>
 File: Figures/starmon(1,1)_F.png Graphic file (type png)
 <use Figures/starmon(1,1)_F.png>
-Package pdftex.def Info: Figures/starmon(1,1)_F.png  used on input line 201.
+Package pdftex.def Info: Figures/starmon(1,1)_F.png  used on input line 203.
 (pdftex.def)             Requested size: 322.99684pt x 170.71652pt.
 <Figures/starmon(-1,-1)_F.png, id=36, 1002.74625pt x 529.98pt>
 File: Figures/starmon(-1,-1)_F.png Graphic file (type png)
 <use Figures/starmon(-1,-1)_F.png>
-Package pdftex.def Info: Figures/starmon(-1,-1)_F.png  used on input line 206.
+Package pdftex.def Info: Figures/starmon(-1,-1)_F.png  used on input line 208.
 (pdftex.def)             Requested size: 322.99684pt x 170.71652pt.
 <Figures/starmon(1,-1)_F.png, id=37, 1002.74625pt x 529.98pt>
 File: Figures/starmon(1,-1)_F.png Graphic file (type png)
 <use Figures/starmon(1,-1)_F.png>
-Package pdftex.def Info: Figures/starmon(1,-1)_F.png  used on input line 211.
+Package pdftex.def Info: Figures/starmon(1,-1)_F.png  used on input line 213.
 (pdftex.def)             Requested size: 322.99684pt x 170.71652pt.
 <Figures/starmon(-1,1)_F.png, id=38, 1002.74625pt x 529.98pt>
 File: Figures/starmon(-1,1)_F.png Graphic file (type png)
 <use Figures/starmon(-1,1)_F.png>
-Package pdftex.def Info: Figures/starmon(-1,1)_F.png  used on input line 216.
+Package pdftex.def Info: Figures/starmon(-1,1)_F.png  used on input line 218.
 (pdftex.def)             Requested size: 322.99684pt x 170.71652pt.
- [6 </Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report1/Figures/starmon(1,1)_F.png> </Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report1/Figures/starmon(-1,-1)_F.png>] [7 </Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report1/Figures/starmon(1,-1)_F.png> </Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report1/Figures/starmon(-1,1)_F.png>] (/Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report1/report1.aux)
+ [6 </home/neuromancer/OneDrive/Quantum_Information/Project/report1/Figures/starmon(1,1)_F.png> </home/neuromancer/OneDrive/Quantum_Information/Project/report1/Figures/starmon(-1,-1)_F.png>]
+
+LaTeX Warning: Citation `bennett2020quantum' on page 7 undefined on input line 230.
+
+[7 </home/neuromancer/OneDrive/Quantum_Information/Project/report1/Figures/starmon(1,-1)_F.png> </home/neuromancer/OneDrive/Quantum_Information/Project/report1/Figures/starmon(-1,1)_F.png>]
+LaTeX Font Info:    Trying to load font information for U+dsrom on input line 270.
+ (/usr/local/texlive/2020/texmf-dist/tex/latex/doublestroke/Udsrom.fd
+File: Udsrom.fd 1995/08/01 v0.1 Double stroke roman font definitions
+) [8] [9] (/home/neuromancer/OneDrive/Quantum_Information/Project/report1/report1.aux)
+
+LaTeX Warning: There were undefined references.
+
 
 LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 18906 strings out of 480608
- 404661 string characters out of 5903629
- 684272 words of memory out of 5000000
- 34466 multiletter control sequences out of 15000+600000
- 537413 words of font info for 42 fonts, out of 8000000 for 9000
- 1141 hyphenation exceptions out of 8191
- 60i,17n,104p,1236b,1512s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb>
-Output written on /Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report1/report1.pdf (7 pages, 607839 bytes).
+ 19656 strings out of 482371
+ 421038 string characters out of 5946016
+ 693666 words of memory out of 5000000
+ 35069 multiletter control sequences out of 15000+600000
+ 540489 words of font info for 58 fonts, out of 8000000 for 9000
+ 36 hyphenation exceptions out of 8191
+ 60i,17n,104p,1238b,1490s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/doublestroke/dsrom10.pfb>
+Output written on /home/neuromancer/OneDrive/Quantum_Information/Project/report1/report1.pdf (9 pages, 628125 bytes).
 PDF statistics:
- 86 PDF objects out of 1000 (max. 8388607)
- 55 compressed objects within 1 object stream
+ 100 PDF objects out of 1000 (max. 8388607)
+ 65 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  38 words of extra memory for PDF output out of 10000 (max. 10000000)
 
