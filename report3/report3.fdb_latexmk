@@ -1,8 +1,8 @@
 # Fdb version 3
-["pdflatex"] 1607449480 "/home/neuromancer/OneDrive/Quantum_Information/Project/report3/report3.tex" "/home/neuromancer/OneDrive/Quantum_Information/Project/report3/report3.pdf" "report3" 1607449480
+["pdflatex"] 1607449902 "/home/neuromancer/OneDrive/Quantum_Information/Project/report3/report3.tex" "/home/neuromancer/OneDrive/Quantum_Information/Project/report3/report3.pdf" "report3" 1607449903
   "../QKD/QKD_Simulation_128.csv" 1607446440 1853 e1afec9c2c5fd13c92154d47a6ff441c ""
-  "/home/neuromancer/OneDrive/Quantum_Information/Project/report3/report3.aux" 1607449480 690 89602768561ed3f55a9e42e467153e13 ""
-  "/home/neuromancer/OneDrive/Quantum_Information/Project/report3/report3.tex" 1607449479 4923 b4c58133e87e8530b5c7b125fa448974 ""
+  "/home/neuromancer/OneDrive/Quantum_Information/Project/report3/report3.aux" 1607449902 690 89602768561ed3f55a9e42e467153e13 ""
+  "/home/neuromancer/OneDrive/Quantum_Information/Project/report3/report3.tex" 1607449901 4926 36b4f6a1e034b9903c9619cad5ca7a42 ""
   "/usr/local/texlive/2020/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1246382020 1004 54797486969f23fa377b128694d548df ""
   "/usr/local/texlive/2020/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm" 1246382020 988 bdf658c3bfc2d96d3c8b02cfc1c94c20 ""
   "/usr/local/texlive/2020/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam10.tfm" 1246382020 916 f87d7c45f9c908e672703b83b72241a3 ""
@@ -170,12 +170,12 @@
   "/usr/local/texlive/2020/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1590694141 382491 741389b5bbd79587e9601892413f03ad ""
   "/usr/local/texlive/2020/texmf-var/web2c/pdftex/pdflatex.fmt" 1590655582 1200420 b3ffefb0ab37717513b8d0452bcdddb6 ""
   "/usr/local/texlive/2020/texmf.cnf" 1590655574 455 5b996dcaa0eb4ef14a83b026bc0a008c ""
-  "qkd145_error.png" 1607449320 25154 9fe3d5c489deecd296d5a90b0482c31f ""
-  "report3.aux" 1607449480 690 89602768561ed3f55a9e42e467153e13 "pdflatex"
-  "report3.tex" 1607449479 4923 b4c58133e87e8530b5c7b125fa448974 ""
+  "qkd145_error.png" 1607449895 24111 dd153fe7a07385412d8303e310430144 ""
+  "report3.aux" 1607449902 690 89602768561ed3f55a9e42e467153e13 "pdflatex"
+  "report3.tex" 1607449901 4926 36b4f6a1e034b9903c9619cad5ca7a42 ""
   (generated)
   "report3.aux"
-  "/home/neuromancer/OneDrive/Quantum_Information/Project/report3/report3.log"
   "/home/neuromancer/OneDrive/Quantum_Information/Project/report3/report3.pdf"
-  "report3.log"
   "report3.pdf"
+  "report3.log"
+  "/home/neuromancer/OneDrive/Quantum_Information/Project/report3/report3.log"
