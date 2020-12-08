@@ -1,8 +1,8 @@
 # Fdb version 3
-["pdflatex"] 1607450869 "/home/neuromancer/OneDrive/Quantum_Information/Project/report2/report2.tex" "/home/neuromancer/OneDrive/Quantum_Information/Project/report2/report2.pdf" "report2" 1607450870
+["pdflatex"] 1607451186 "/home/neuromancer/OneDrive/Quantum_Information/Project/report2/report2.tex" "/home/neuromancer/OneDrive/Quantum_Information/Project/report2/report2.pdf" "report2" 1607451186
   "../QKD/QKD_Simulation_128.csv" 1607446440 1853 e1afec9c2c5fd13c92154d47a6ff441c ""
-  "/home/neuromancer/OneDrive/Quantum_Information/Project/report2/report2.aux" 1607450870 1914 fd58fbd093f8e0ea2363ef9fe10e1070 ""
-  "/home/neuromancer/OneDrive/Quantum_Information/Project/report2/report2.tex" 1607450868 23314 c7fee4be1a2c7358f8d1506f66562872 ""
+  "/home/neuromancer/OneDrive/Quantum_Information/Project/report2/report2.aux" 1607451186 1651 8fb051ff0d52687e7a59c70915a2aff1 ""
+  "/home/neuromancer/OneDrive/Quantum_Information/Project/report2/report2.tex" 1607451184 23360 b9c0f66a6e242e00703a44ffed544261 ""
   "/usr/local/texlive/2020/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1246382020 1004 54797486969f23fa377b128694d548df ""
   "/usr/local/texlive/2020/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm" 1246382020 988 bdf658c3bfc2d96d3c8b02cfc1c94c20 ""
   "/usr/local/texlive/2020/texmf-dist/fonts/tfm/public/cm/cmbx10.tfm" 1136768653 1328 c834bbb027764024c09d3d2bf908b5f0 ""
@@ -167,11 +167,11 @@
   "Figures/tomography.png" 1607449939 16844 388caf2f73aa6b2fcfa1d87e23ad40d0 ""
   "Figures/yorktownconnectivity.png" 1607444108 29145 d847c803cc09f5c9e438223460544eaa ""
   "qkd145_error.png" 1607450713 24111 dd153fe7a07385412d8303e310430144 ""
-  "report2.aux" 1607450870 1914 fd58fbd093f8e0ea2363ef9fe10e1070 "pdflatex"
-  "report2.tex" 1607450868 23314 c7fee4be1a2c7358f8d1506f66562872 ""
+  "report2.aux" 1607451186 1651 8fb051ff0d52687e7a59c70915a2aff1 "pdflatex"
+  "report2.tex" 1607451184 23360 b9c0f66a6e242e00703a44ffed544261 ""
   (generated)
   "/home/neuromancer/OneDrive/Quantum_Information/Project/report2/report2.log"
-  "report2.aux"
   "report2.log"
-  "report2.pdf"
+  "report2.aux"
   "/home/neuromancer/OneDrive/Quantum_Information/Project/report2/report2.pdf"
+  "report2.pdf"

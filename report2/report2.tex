@@ -317,34 +317,34 @@ In this section we investigate whether we can attack QKD protocol equipped with 
 %     \item Preserve all remained measurement and take the result as a key.
 % \end{enumerate}
 
-\subsection{Intercept and resend Attack} 
-Suppose Eve eavesdrping by intercepting and randomly measuring the qubit, then resending a new one based on his measurement result.
-The probability of Eve being detected for a single qubit is $\epsilon=1/4$. 
+% \subsection{Intercept and resend Attack} 
+% Suppose Eve eavesdrping by intercepting and randomly measuring the qubit, then resending a new one based on his measurement result.
+% The probability of Eve being detected for a single qubit is $\epsilon=1/4$. 
 
-If the remained bitstring is of length $k$, Bob and Alice will preserve $k/2$ bits for error check,
- then probability of a successful eavesdroping without being noticed is
+% If the remained bitstring is of length $k$, Bob and Alice will preserve $k/2$ bits for error check,
+%  then probability of a successful eavesdroping without being noticed is
 
-\[
-    P(k)=(1-\epsilon)^{k/2}
-\]
-For a lone key with more than $10^2$ bits, a brief estimation under ideal condition is given by 
-\[
-    P\approx 10^{-12}
-\]
-theoretically it's almost impossible to eveasdroping without being detected.
+% \[
+%     P(k)=(1-\epsilon)^{k/2}
+% \]
+% For a lone key with more than $10^2$ bits, a brief estimation under ideal condition is given by 
+% \[
+%     P\approx 10^{-12}
+% \]
+% theoretically it's almost impossible to eveasdroping without being detected.
 
-\subsection{Attack with Quantum Copying Machine and Quantum Memory} 
-Assuming Eve has a quantum copying machine and a quantum memory capable to store all the qubits
-intercepted, then the eavesdroper can partially clone and store all the qubits, 
-then measure them after Alice and Bob publish their measurement basis.
+% \subsection{Attack with Quantum Copying Machine and Quantum Memory} 
+% Assuming Eve has a quantum copying machine and a quantum memory capable to store all the qubits
+% intercepted, then the eavesdroper can partially clone and store all the qubits, 
+% then measure them after Alice and Bob publish their measurement basis.
 
-The maximum fidelity of UQCM is $F=5/6$. Thus the minimum error rate of a single qubit is $\epsilon=1/6$.
+% The maximum fidelity of UQCM is $F=5/6$. Thus the minimum error rate of a single qubit is $\epsilon=1/6$.
 
-The success rate of Eve still decays exponentially with key length, but with a lower rate.
-For a lone key with more than $10^2$ bits, apply the same formula we get
-\[
-    P\approx 10^{-9}
-\]
+% The success rate of Eve still decays exponentially with key length, but with a lower rate.
+% For a lone key with more than $10^2$ bits, apply the same formula we get
+% \[
+%     P\approx 10^{-9}
+% \]
 
 \section{Error Rate in Noisy Reality}
 
