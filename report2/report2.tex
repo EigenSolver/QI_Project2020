@@ -250,7 +250,7 @@ When using the Yorktown backend, no SWAP gate is necessary.
 \begin{figure}[H]
     \centering
             \includegraphics[totalheight=6cm]{Figures/yorktownconnectivity.png}
-        \label{fig:2a}
+        \label{fig:2a}\caption{Connectivity of Yorktown IBM device.}
 \end{figure}
 
 \subsection{Comparison}
@@ -267,9 +267,40 @@ When using the Yorktown backend, no SWAP gate is necessary.
     $\sigma_{F_2/F_1}$ & 0.04 & 0.03 & 0.03 & 0.03 & 0.7 & 0.02 & 0.03 \\ \hline
     \end{tabular}
     \end{table}
+
+\subsection{Readout calibration}
+We considered that a classical error can affect the measurement process. Consider a state of the form $\ket{\psi} = \alpha\ket{0}+\beta\ket{1}$. The expectation value of a measurement along the Z axis is given by $\bar{m}=p_{+1}-p_{-1}$. However, this quantity can be affected by classical errors, such that it is transformed to,
+\begin{align}
+\bar{m} &= (1-2\epsilon_{10})|\alpha|^2-(1-2\epsilon_{01})|\beta|^2\\
+&=(\epsilon_{01}-\epsilon_{10})+(1-\epsilon_{01}-\epsilon_{10})(|\alpha|^2-|\beta|^2)\\
+&= \beta_0 + \beta_1 \langle Z\rangle.
+\end{align}
+Note that $|\alpha|^2=p_{+1}$ and $|\beta|^2=p_{-1}$. Then, we can find the corrected expectation value as,
+\begin{equation}
+\langle Z\rangle = \frac{\bar{m}-\beta_0}{\beta_1}.
+\end{equation}
+The parameters $\beta_0$ and $\beta_1$ can be estimated from experimental measurements of eigenstates of the Z basis, that is, $\ket{0}$ and $\ket{1}$. Then, they can be used to correct the outcome of future experiments, for example a quantum state tomography. In Fig. \ref{fig:3a} one can observe a check that the results have been calibrated. It corresponds to the average $Z$ value of a single qubit, when it is rotated along the $X$ axis from $0$ to $2\pi$. The blue curve represents the measurement outcomes without any correction, while the orange curve represents the corrected measurements. 
+\begin{figure}[H]
+    \centering
+            \includegraphics[totalheight=6cm]{Figures/tomography.png}
+        \label{fig:3a}\caption{Calibration check on qubit 0 of Starmon five. The calibration parameters were estimated to be $\beta_0 = 0.1229$ and $\beta_1=0.8278$. Blue curve corresponds to the pure results. Orange curve corresponds to the corrected results.}
+\end{figure}
+We are not only interested in corrected the expectation value, but also the coefficients associated to each measurement outcome. For such purpose, we consider corrected coefficients $\tilde{p_{+1}}$ and $\tilde{p_{-1}}$ that satisfy the following equations,
+\begin{equation}
+\left\{ \begin{array}{c}
+\tilde{p_{+1}} + \tilde{p_{-1}} = 1\\
+\tilde{p_{+1}} - \tilde{p_{-1}} = \frac{\bar{m}-\beta_0}{\beta_1}
+\end{array} \right.
+\end{equation}
+By solving this system of equations, we find that the corrected coefficients are given by
+\begin{equation}
+\tilde{p_{+1}} = \frac{\beta_1-\beta_0+p_{+1}-p_{-1}}{2\beta_1},\qquad \tilde{p_{-1}} = \frac{\beta_1+\beta_0-p_{+1}+p_{-1}}{2\beta_1}.
+\end{equation} 
+From this parameters we can correct the previous results corresponding to the average fidelity of the quantum copy machine on the Bloch sphere. 
 \subsection{Next meetings}
 \begin{enumerate}
     \item Readout correction on IBM
+    \item Readout correction for all the five qubits of starmon.
     \item Phase covariant cloning machine (optimal copy of the states on one equator)
     \item Economical cloning machine (2 qubits, we could run it on Spin-2!)
     \item Asymmetric Fourier cloning machine (?)
