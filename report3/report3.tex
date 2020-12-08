@@ -1,0 +1,131 @@
+\documentclass[11pt]{article}
+
+\usepackage{physics}
+\usepackage{comment}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{dsfont}
+\usepackage{tikz}
+\usepackage{csvsimple}
+\usetikzlibrary{quantikz}
+
+\title{Quantum project: Report 3}
+\author{}
+
+
+\begin{document}
+\maketitle
+
+
+
+
+\section{Simulation of QKD Attack by a eavesdrpper equipped with UQCM}
+In this section we investigate whether we can attack QKD protocol equipped with a UQCM.
+\
+We briefly review the BB84 QKD protocol\cite{bennett2020quantum} 
+\begin{enumerate}
+    \item Bob randomly picks a basis $B_i\in \{X,Z\}$ and randomly picks a private bistring $b_i\in \{0,1\}$.
+    \item Bob prepare the qubit in state in $\ket{0}, \text{or} \; \ket{1}$ or $\ket{+}, \text{or} \; \ket{-}$ depends on what basis and key he got.
+    \item Bob sends his qubit to Alice.
+    \item Alice measure the qubit in a random picked basis $\tilde{B}_i\in \{X,Z\}$.
+    \item The above process is repeated for several times to send a multiqubit key.
+    \item Bob and Alice publish their measurement basis.
+    \item Compare the basis and drop the measurement result with different basis.
+    \item Sampling the remained measurement, check the result(in public channel). If the error rate is above threshold, abort the distribution process (for possible eavesdrping). 
+    \item Preserve all remained measurement and take the result as a key.
+\end{enumerate}
+
+\subsection{Intercept and resend Attack} 
+Suppose Eve eavesdrping by intercepting and randomly measuring the qubit, then resending a new one based on his measurement result.
+The probability of Eve being detected for a single qubit is $\epsilon=1/4$. 
+
+If the remained bitstring is of length $k$, Bob and Alice will preserve $k/2$ bits for error check,
+ then probability of a successful eavesdroping without being noticed is
+
+\[
+    P(k)=(1-\epsilon)^{k/2}
+\]
+For a lone key with more than $10^2$ bits, a brief estimation under ideal condition is given by 
+\[
+    P\approx 10^{-12}
+\]
+theoretically it's almost impossible to eveasdroping without being detected.
+
+\subsection{Attack with Quantum Copying Machine and Quantum Memory} 
+Assuming Eve has a quantum copying machine and a quantum memory capable to store all the qubits
+intercepted, then the eavesdroper can partially clone and store all the qubits, 
+then measure them after Alice and Bob publish their measurement basis.
+
+The maximum fidelity of UQCM is $F=5/6$. Thus the minimum error rate of a single qubit is $\epsilon=1/6$.
+
+The success rate of Eve still decays exponentially with key length, but with a lower rate.
+For a lone key with more than $10^2$ bits, apply the same formula we get
+\[
+    P\approx 10^{-9}
+\]
+
+\section{Error Rate in Noisy Reality}
+
+
+However, the near-term quantum device is always noisy, which means error is possible when Bob and Alice compare their qubits.
+That's why we need a threshold $m$ to allow some extent of error tolerance,
+\[
+    P(k,p)=\sum_{j=0}^{m} \binom{k/2}{m} \epsilon^j(1-\epsilon)^{k/2-j}
+\]
+
+The threshold $p$ should depends on the fidelity of the quantum channel in which Alice and 
+Bob transfer their qubits.
+
+If Alice and Bob use a random sampling check to avoid eavesdrppor, suppose the sampling size is $N$, then the average error rate is defined as  
+
+\[
+\delta=\frac{|\{x_i|x_i^A \neq x_i^B\}|}{|\{x_i\}|}    
+\]
+
+
+We simulate a single-shot QKD process on Starmon-5, with 64, 128 and 144 key length.
+A example table is shown as
+
+\begin{center}
+    \begin{tabular}{|l|l|c|c|c|}%
+        \hline 
+        \bfseries No. & \bfseries Key & \bfseries Measure Basis & \bfseries Bob & \bfseries Eve% specify table head    
+        \csvreader[head to column names,
+        filter test=\ifnumless{\index}{30}
+        ]{../QKD/QKD_Simulation_128.csv}{}% use head of csv as column names
+        {\\
+        \hline\index & \key & \bases & \Bob & \Eve}% specify your coloumns here
+    \end{tabular}
+\end{center}
+
+
+% Consider a channel single-bit depolarizing noise characterized by $p$
+%     \[
+%         \mathcal{D}_p: \, \rho\rightarrow p\rho+(1-p)\mathds{1}/2
+%     \]
+% Then the probability of get a bit filp for single qubit is $\epsilon'=(1-p)/2$.
+
+% Then we can derive the flip probability of a single bit
+% \[
+% \epsilon''=(1-\epsilon)\frac{1-p}{2}+   \epsilon\frac{1+p}{2}=\frac{1}{2} (1-p+2p\epsilon)
+% \]
+
+% When the net error reach the same level with the environment noise,
+% we can say that error introduced by Eve can't be distinguished.
+Where the measurements with different basis are ignored, the measurement basis here is the 
+common basis for Alice and Bob. 
+
+The average error rate only relys on the noise of our quantum hardware, 
+it's not related with key length or sampling size.
+
+The average result we obtained is 
+\[
+\delta=(0.67774\pm 0.02140)    
+\]
+\begin{figure}
+    \centering
+    \includegraphics[]{qkd145_error.png}
+    \caption{Sampling Error for 144bit QKD}
+\end{figure}
+\end{document}
+
