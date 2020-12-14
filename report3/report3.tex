@@ -1,0 +1,71 @@
+\documentclass[11pt]{article}
+\usepackage{physics}
+\usepackage{comment}
+\usepackage{amsmath}
+\usepackage{float}
+\usepackage{tikz}
+\usetikzlibrary{quantikz}
+\title{Quantum project: Report 3}
+\author{}
+\begin{document}
+\maketitle
+
+\section{Report 3}
+\subsection{Phase covariant cloning machine}
+The circuit is similar to the universal one.
+In this case, the circuit proposed in [EquatorialQCM] is analogous to the one for the universal QCM. 
+\begin{quantikz}
+    \lstick{$\ket{\psi}_{a_0}$} & \qw                  & \qw        & \qw                   & \qw       & \qw                   & \ctrl{2}  & \ctrl{1}      & \targ{}        & \targ{}       &\qw\\
+    \lstick{$\ket{0}_{a_1}$}    & \qw                  & \targ{}    & \gate{R_y(\theta_2)}  & \ctrl{1}  & \qw                   & \qw       & \targ{}       & \qw           & \ctrl{-1}      & \meter{}         \\
+    \lstick{$\ket{0}_{a_2}$}    & \gate{R_y(\theta_1)} & \ctrl{-1}  & \qw                   & \targ{}   & \gate{R_y(\theta_3)}  & \targ{}   & \qw           & \ctrl{-2}     & \qw            & \meter{}   \\
+\end{quantikz}
+
+Note that in this circuit, the copies are made in the two ancillae (and not in the same Hilbert space as the input qubit).
+
+The only significant difference is the preparation of the two ancillae. In this case, different angles of rotation are used.
+It turns out that in order to optimally clone the states on the $x-z$ equator, we have to choose the following angles:
+\[
+    \theta_1=\theta_3=2\arcsin(\sqrt{\frac{1}{2}-\frac{1}{2\sqrt{2}}})=\frac{\pi}{4}=\theta, \quad \theta_2=0.
+\]
+
+Hence, we can rewrite the circuit above removing the rotation $R_y(\theta_2)$:
+
+\begin{quantikz}
+    \lstick{$\ket{\psi}_{a_0}$} & \qw                  & \qw         & \qw       & \qw                   & \ctrl{2}  & \ctrl{1}      & \targ{}        & \targ{}       &\qw\\
+    \lstick{$\ket{0}_{a_1}$}    & \qw                  & \targ{}     & \ctrl{1}  & \qw                   & \qw       & \targ{}       & \qw           & \ctrl{-1}      & \meter{}         \\
+    \lstick{$\ket{0}_{a_2}$}    & \gate{R_y(\theta_1)} & \ctrl{-1}   & \targ{}   & \gate{R_y(\theta_3)}  & \targ{}   & \qw           & \ctrl{-2}     & \qw            & \meter{}   \\
+\end{quantikz}
+
+The first two CNOT gates in this circuit act as a SWAP gate (because we have $\ket{0}_{a_1}$ as an input state). 
+It is now clear that these two CNOT gates are not necessary. We can delete them, provided that we move $R_y(\theta_3)$ to the second qubit. Since $\theta_1=\theta_3=\theta=\frac{\pi}{4}$, we obtain the following circuit:
+
+\begin{quantikz}
+    \lstick{$\ket{\psi}_{a_0}$} & \qw                  & \ctrl{2}  & \ctrl{1}      & \targ{}        & \targ{}       &\qw\\
+    \lstick{$\ket{0}_{a_1}$}    & \gate{R_y(\pi/4)} & \qw       & \targ{}       & \qw           & \ctrl{-1}      & \meter{}         \\
+    \lstick{$\ket{0}_{a_2}$}    & \gate{R_y(\pi/4)} & \targ{}   & \qw           & \ctrl{-2}     & \qw            & \meter{}   \\
+\end{quantikz}
+
+We have managed to greatly simplify the circuit. We have removed 5 CNOT gates from the circuit that we were using on real quantum processors with linear connectivity: the 2 CNOT gates mentioned here and the 3 CNOT gates that were necessary in order to implement the SWAP gate that was necessary to respect the connectivity constraints.
+With this new circuit, only the top qubit has to be able to connect to the other two qubits.
+
+Furthermore, the preparation of the input qubit and the measurement of the copies is also simplified. 
+Since we are only interested in the $x-z$ equator of the Bloch sphere, we always have either $\phi=0$ or $\phi=\pi$. 
+If $\phi=0$ we do not need to perform any rotation around the $z$-axis. If $\phi=\pi$, we can apply a $Z$ gate instead of performing a rotation around the $z$-axis.
+
+As a final observation, since this circuit is much more simple than the one for the universal QCM, the average fidelity over the whole Bloch sphere could be greater in this case than with the universal QCM.
+
+\subsection*{Economic universal cloning machine}
+\[
+    \rho=\ketbra{\psi}{\psi}=\abs{\alpha}^2\ketbra{0}{0}+\alpha^*\beta \ketbra{1}{0}+\alpha\beta^*\ketbra{0}{1}+\abs{\beta}^2\ketbra{1}{1}
+\]
+\[
+    \begin{split}
+        \rho_A&=\abs{\alpha}^2\ketbra{0}{0}+\alpha^*\beta\cos{\phi} \ketbra{1}{0}+\alpha\beta^*\cos{\phi}\ketbra{0}{1}+\abs{\beta}^2\ketbra{1}{1}=\\
+        &=\ketbra{\psi}{\psi}+(\cos{\phi}-1)(\alpha^*\beta\ketbra{1}{0}+\alpha\beta^*\ketbra{0}{1})
+    \end{split}
+\]
+\[
+    F=1+2(\cos{\phi}-1)\abs{\alpha}^2\abs{\beta}^2
+\]
+
+\end{document}
