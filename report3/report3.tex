@@ -67,5 +67,79 @@ As a final observation, since this circuit is much more simple than the one for 
 \[
     F=1+2(\cos{\phi}-1)\abs{\alpha}^2\abs{\beta}^2
 \]
+\subsection{Economical cloning machine}
+Given 2 qubits, with the first $B$ (Bob) to be the target and the second $E$ (Eve) to be the copy, an economical quantum cloning machnie can be defined by 
+\begin{align*}
+    &U_{c}\ket{00}_{BE}=\ket{00}_{BE}\\
+    &U_{c}\ket{10}_{BE}=\cos\alpha\ket{10}_{BE}+\sin\alpha\ket{01}_{BE} 
+\end{align*}
+
+Suppose the target state is an equatorial state (in the XY plane of Bloch sphere)
+\[
+\ket{\psi}_B=\frac{1}{\sqrt{2}}(\ket{0}+e^{i\phi}\ket{1})    
+\]
+The fidelity would be 
+\[
+    F_B=\expval{\tr_E(\rho)}{\psi_B}=\frac{1+\cos\alpha}{2}
+\]
+\[
+    F_E=\expval{\tr_B(\rho)}{\psi_E}=\frac{1+\sin\alpha}{2}
+\]
+
+The optimal fidelity can be found at $\alpha=\pi/4$ where $\sin\alpha=\cos\alpha$.
+
+The unitary can be implemented with a controlled-hadamard gate and a controlled not gate
+
+\begin{center}
+    \begin{quantikz}
+        \lstick{$\ket{\psi}_{B}$} & \qw  & \ctrl{1}  & \qw  & \targ{}      &\qw\\
+        \lstick{$\ket{0}_{E}$}    & \qw  & \gate{H}  & \qw  & \ctrl{-1}        & \meter{}         \\
+    \end{quantikz}
+\end{center}
+
+Thus
+\[
+U_c\ket{00}=\text{CNOT}_{EB} \text{CH}_{BE} \ket{00}_{BE}=\ket{00}_{BE}
+\]
+\begin{align*}
+    U_c\ket{10}&=\text{CNOT}_{EB} \text{CH}_{BE} \ket{10}_{BE}\\
+    &=\text{CNOT}_{EB}\frac{1}{\sqrt{2}}(\ket{10}+\ket{11})_{BE}\\
+    &=\frac{1}{\sqrt{2}}(\ket{10}+\ket{01})_{BE}
+\end{align*}
+
+The controlled hadamard gate can be implemented as 
+
+\begin{center}
+    \begin{quantikz}
+        \lstick{$\ket{\psi}_{B}$} & \qw  & \qw                & \qw        & \qw                 & \ctrl{1}   &\qw       &\qw        &\qw       &\qw\\
+        \lstick{$\ket{0}_{E}$}    & \qw  & \gate{S^\dagger} & \gate{H} & \gate{T^\dagger}  & \targ{}    &\gate{T}&\gate{H} &\gate{S}& \meter{}         \\
+    \end{quantikz}
+\end{center}
+where 
+\[
+S=\begin{pmatrix}
+    1&0\\
+    0&i
+\end{pmatrix}   , \quad
+T=\begin{pmatrix}
+    1&0\\
+    0&e^{i\frac{\pi}{4}}
+\end{pmatrix}   
+\]
+
+The circuit can be computed and result is 
+\begin{figure}[h]
+    \includegraphics[width=0.8\linewidth]{Figures/CH.png}
+\end{figure}
+
+We use this copying to attack QKD with Spin-2 processor, the result is shown
+\begin{figure}[h]
+    \includegraphics[width=0.8\linewidth]{Figures/economic_qkd.png}
+\end{figure}
+with average error rate 
+\[
+    \sigma\approx 0.4817\pm 0.0085
+\]
+The average fidelity for equatorial states on Starmon5 is about 0.66
 
 \end{document}
