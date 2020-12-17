@@ -116,7 +116,60 @@ We ran the circuit again obtaining:
 \[
     F_1=0.69 \pm 0.07, \quad F_2=0.73 \pm 0.05
 \]
-\subsection{Economical cloning machine}
+
+\subsection{Only $xz$ equator}
+
+\begin{table}[H]
+    \centering
+    \begin{tabular}{|c|c|c|c|c|c|c|c|c|}
+    \hline
+    \textbf{} & \textbf{Starmon 5} & \textbf{Athens} & \textbf{Ourense} & \textbf{Santiago} & \textbf{Valencia} & \textbf{Vigo} & \textbf{Yorktown} \\ \hline
+    $F_1$              & 0.79 & 0.81 & 0.84 & 0.78 & 0.5 & 0.80 & 0.76 \\ \hline
+    $\sigma_{F_1}$     & 0.03 & 0.02 & 0.01 & 0.02 & 0.2 & 0.02 & 0.04 \\ \hline
+    $F_2$              & 0.79 & 0.86 & 0.82 & 0.84 & 0.5 & 0.84 & 0.81 \\ \hline
+    $\sigma_{F_2}$     & 0.04 & 0.02 & 0.01 & 0.01 & 0.2 & 0.02 & 0.01 \\ \hline
+    $F_2/F_1$          & 0.99 & 1.06 & 0.98 & 1.07 & 1 & 1.05 & 1.06 \\ \hline
+    $\sigma_{F_2/F_1}$ & 0.04 & 0.01 & 0.01 & 0.02 & 1 & 0.02 & 0.05 \\ \hline
+    \end{tabular}
+\end{table}
+The quality of the copies on the equator is of course better than the avereage on the Bloch sphere. The average fidelity is close to the theoretical bound.
+For Athens, the average fidelity of the second copy is $F_2=0.86$, which is greater than the expected fidelity.
+This shouldn't worry too much: first of all there is some statistical uncertainty, moreover the bound is calculated considering a unitary evolution, but when using a real machine, the evolution is not unitary because of noise.
+Therefore, the bound does not hold strictly speaking (of course it would hold in absence of noise).
+
+\subsection{Further analysis on Starmon}
+We investigated furtherly the phase covariant QCM run on Starmon ($xz$ equator only), namely considering readout correction and different calibrations (the new one is 12/17/2020 - 2:32:41 PM):
+).
+
+\begin{table}[H]
+    \centering
+    \begin{tabular}{|c|c|c|c|c|c|}
+    \hline
+    \textbf{} & \textbf{Qubits13} & \textbf{Qubits13 RO} & \textbf{Qubits13 new} & \textbf{Qubits13 RO new} \\ \hline
+    $F_1$              & 0.79 & 0.80 & 0.78 & 0.80 \\ \hline
+    $\sigma_{F_1}$     & 0.03 & 0.03 & 0.03 & 0.03 \\ \hline
+    $F_2$              & 0.79 & 0.79 & 0.79 & 0.79 \\ \hline
+    $\sigma_{F_2}$     & 0.04 & 0.04 & 0.04 & 0.04 \\ \hline
+    $F_2/F_1$          & 0.99 & 0.99 & 1.01 & 0.99 \\ \hline
+    $\sigma_{F_2/F_1}$ & 0.04 & 0.05 & 0.05 & 0.05 \\ \hline
+    \end{tabular}
+\end{table}
+The readout correction does not change the results significantly.
+
+\begin{figure}[H]
+    \centering
+            \includegraphics[totalheight=6cm]{Figures/starmon13qubit1oldcalib.png}
+        \label{fig:oldcalib1}
+        \caption{Phase covariant QCM run on Starmon (old calibration). Copy on qubit 1.}
+\end{figure}
+\begin{figure}[H]
+    \centering
+            \includegraphics[totalheight=6cm]{Figures/starmon13qubit3oldcalib.png}
+        \label{fig:oldcalib2}
+        \caption{Phase covariant QCM run on Starmon (old calibration). Copy on qubit 3.}
+\end{figure}
+
+\section{Economical cloning machine}
 Given 2 qubits, with the first $B$ (Bob) to be the target and the second $E$ (Eve) to be the copy, an economical quantum cloning machnie can be defined by 
 \begin{align*}
     &U_{c}\ket{00}_{BE}=\ket{00}_{BE}\\
@@ -176,71 +229,21 @@ T=\begin{pmatrix}
 \end{pmatrix}   
 \]
 
-The circuit can be computed and result is 
-\begin{figure}[h]
-    \includegraphics[width=0.8\linewidth]{Figures/CH.png}
-\end{figure}
-
+% The circuit can be computed and result is 
+% \begin{figure}[h]
+%     \includegraphics[width=\linewidth]{Figures/CH.png}
+% \end{figure}
+\newpage
 We use this copying to attack QKD with Spin-2 processor, the result is shown
 \begin{figure}[h]
-    \includegraphics[width=0.8\linewidth]{Figures/economic_qkd.png}
+    \centering
+    \includegraphics[width=\linewidth]{Figures/economic_qkd.png}
 \end{figure}
 with average error rate  $\sigma\approx 0.4817\pm 0.0085$
 
-The average fidelity for equatorial states on Starmon5 is about 0.66
+The average fidelity for equatorial states on equatorial is about 0.66
 
 
-\subsection{Only $xz$ equator}
-
-\begin{table}[H]
-    \centering
-    \begin{tabular}{|c|c|c|c|c|c|c|c|c|}
-    \hline
-    \textbf{} & \textbf{Starmon 5} & \textbf{Athens} & \textbf{Ourense} & \textbf{Santiago} & \textbf{Valencia} & \textbf{Vigo} & \textbf{Yorktown} \\ \hline
-    $F_1$              & 0.79 & 0.81 & 0.84 & 0.78 & 0.5 & 0.80 & 0.76 \\ \hline
-    $\sigma_{F_1}$     & 0.03 & 0.02 & 0.01 & 0.02 & 0.2 & 0.02 & 0.04 \\ \hline
-    $F_2$              & 0.79 & 0.86 & 0.82 & 0.84 & 0.5 & 0.84 & 0.81 \\ \hline
-    $\sigma_{F_2}$     & 0.04 & 0.02 & 0.01 & 0.01 & 0.2 & 0.02 & 0.01 \\ \hline
-    $F_2/F_1$          & 0.99 & 1.06 & 0.98 & 1.07 & 1 & 1.05 & 1.06 \\ \hline
-    $\sigma_{F_2/F_1}$ & 0.04 & 0.01 & 0.01 & 0.02 & 1 & 0.02 & 0.05 \\ \hline
-    \end{tabular}
-\end{table}
-The quality of the copies on the equator is of course better than the avereage on the Bloch sphere. The average fidelity is close to the theoretical bound.
-For Athens, the average fidelity of the second copy is $F_2=0.86$, which is greater than the expected fidelity.
-This shouldn't worry too much: first of all there is some statistical uncertainty, moreover the bound is calculated considering a unitary evolution, but when using a real machine, the evolution is not unitary because of noise.
-Therefore, the bound does not hold strictly speaking (of course it would hold in absence of noise).
-
-\subsection{Further analysis on Starmon}
-We investigated furtherly the phase covariant QCM run on Starmon ($xz$ equator only), namely considering readout correction and different calibrations (the new one is 12/17/2020 - 2:32:41 PM):
-).
-
-\begin{table}[H]
-    \centering
-    \begin{tabular}{|c|c|c|c|c|c|}
-    \hline
-    \textbf{} & \textbf{Qubits13} & \textbf{Qubits13 RO} & \textbf{Qubits13 new} & \textbf{Qubits13 RO new} \\ \hline
-    $F_1$              & 0.79 & 0.80 & 0.78 & 0.80 \\ \hline
-    $\sigma_{F_1}$     & 0.03 & 0.03 & 0.03 & 0.03 \\ \hline
-    $F_2$              & 0.79 & 0.79 & 0.79 & 0.79 \\ \hline
-    $\sigma_{F_2}$     & 0.04 & 0.04 & 0.04 & 0.04 \\ \hline
-    $F_2/F_1$          & 0.99 & 0.99 & 1.01 & 0.99 \\ \hline
-    $\sigma_{F_2/F_1}$ & 0.04 & 0.05 & 0.05 & 0.05 \\ \hline
-    \end{tabular}
-\end{table}
-The readout correction does not change the results significantly.
-
-\begin{figure}[H]
-    \centering
-            \includegraphics[totalheight=6cm]{Figures/starmon13qubit1oldcalib.png}
-        \label{fig:oldcalib1}
-        \caption{Phase covariant QCM run on Starmon (old calibration). Copy on qubit 1.}
-\end{figure}
-\begin{figure}[H]
-    \centering
-            \includegraphics[totalheight=6cm]{Figures/starmon13qubit3oldcalib.png}
-        \label{fig:oldcalib2}
-        \caption{Phase covariant QCM run on Starmon (old calibration). Copy on qubit 3.}
-\end{figure}
 \bibliography{biblio}
 \bibliographystyle{ieeetr}
 \end{document}
