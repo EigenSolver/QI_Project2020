@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.5.28)  17 DEC 2020 19:28
-=======
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.11.24)  17 DEC 2020 19:00
->>>>>>> 952048ae1e8f4898ef795a9884249e1a537a3f59
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.5.28)  17 DEC 2020 19:30
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -317,13 +313,10 @@ File: pgfmodulematrix.code.tex 2020/01/08 v3.1.5b (3.1.5b)
 \tikz@expandcount=\count279
  (/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarytopaths.code.tex
 File: tikzlibrarytopaths.code.tex 2020/01/08 v3.1.5b (3.1.5b)
-<<<<<<< HEAD
-))) (/usr/local/texlive/2020/texmf-dist/tex/latex/quantikz/tikzlibraryquantikz.code.tex (/usr/local/texlive/2020/texmf-dist/tex/latex/xargs/xargs.sty
-=======
 ))) (/usr/local/texlive/2020/texmf-dist/tex/latex/caption/caption.sty
-Package: caption 2020/01/03 v3.4h Customizing captions (AR)
+Package: caption 2020/05/10 v3.4j Customizing captions (AR)
  (/usr/local/texlive/2020/texmf-dist/tex/latex/caption/caption3.sty
-Package: caption3 2020/01/03 v1.8h caption3 kernel (AR)
+Package: caption3 2020/05/10 v1.11 caption3 kernel (AR)
 Package caption3 Info: TeX engine: e-TeX on input line 61.
 \captionmargin=\dimen196
 \captionmargin@=\dimen197
@@ -341,14 +334,7 @@ Package caption Info: float package is loaded.
 Package: subcaption 2020/01/22 v1.3d Sub-captions (AR)
 \c@subfigure=\count282
 \c@subtable=\count283
-) (/usr/local/texlive/2020/texmf-dist/tex/latex/quantikz/tikzlibraryquantikz.code.tex
-
-LaTeX Warning: You have requested package `',
-               but the package provides `quantikz'.
-
-Package: quantikz 2019/04/24 typeset quantum circuit diagrams
-(/usr/local/texlive/2020/texmf-dist/tex/latex/xargs/xargs.sty
->>>>>>> 952048ae1e8f4898ef795a9884249e1a537a3f59
+) (/usr/local/texlive/2020/texmf-dist/tex/latex/quantikz/tikzlibraryquantikz.code.tex (/usr/local/texlive/2020/texmf-dist/tex/latex/xargs/xargs.sty
 Package: xargs 2008/03/22 v1.1  extended macro definitions  (mpg)
  (/usr/local/texlive/2020/texmf-dist/tex/latex/xkeyval/xkeyval.sty
 Package: xkeyval 2014/12/03 v2.7a package option processing (HA)
@@ -447,22 +433,17 @@ File: pgflibraryshapes.misc.code.tex 2020/01/08 v3.1.5b (3.1.5b)
 File: tikzlibrarybackgrounds.code.tex 2020/01/08 v3.1.5b (3.1.5b)
 \pgf@layerbox@background=\box63
 \pgf@layerboxsaved@background=\box64
-) (/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarydecorations.markings.code.tex (/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/libraries/decorations/pgflibrarydecorations.markings.code.tex)) (/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarymath.code.tex (/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryfpu.code.tex
-(/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/libraries/pgflibraryfpu.code.tex))
-\tikz@math@for@depth=\count290
-\tikz@math@dimen=\dimen273
+) (/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarydecorations.markings.code.tex (/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/libraries/decorations/pgflibrarydecorations.markings.code.tex))
+(/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarymath.code.tex (/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryfpu.code.tex (/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/libraries/pgflibraryfpu.code.tex))
+\tikz@math@for@depth=\count294
+\tikz@math@dimen=\dimen280
 \tikz@math@toks=\toks39
 )
 \myl=\skip56
 \myh=\skip57
 \myd=\skip58
-<<<<<<< HEAD
-\c@aaa=\count291
+\c@aaa=\count295
 ) (/home/neuromancer/OneDrive/Quantum_Information/Project/report3/report3.aux)
-=======
-\c@aaa=\count294
-) (/Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report3/report3.aux)
->>>>>>> 952048ae1e8f4898ef795a9884249e1a537a3f59
 \openout1 = `report3.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 15.
@@ -481,31 +462,17 @@ LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 15.
 LaTeX Font Info:    ... okay on input line 15.
  ABD: EveryShipout initializing macros (/usr/local/texlive/2020/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-<<<<<<< HEAD
-\scratchcounter=\count292
-\scratchdimen=\dimen274
+\scratchcounter=\count296
+\scratchdimen=\dimen281
 \scratchbox=\box65
-\nofMPsegments=\count293
-\nofMParguments=\count294
+\nofMPsegments=\count297
+\nofMParguments=\count298
 \everyMPshowfont=\toks40
-\MPscratchCnt=\count295
-\MPscratchDim=\dimen275
-\MPnumerator=\count296
-\makeMPintoPDFobject=\count297
+\MPscratchCnt=\count299
+\MPscratchDim=\dimen282
+\MPnumerator=\count300
+\makeMPintoPDFobject=\count301
 \everyMPtoPDFconversion=\toks41
-=======
-\scratchcounter=\count295
-\scratchdimen=\dimen280
-\scratchbox=\box65
-\nofMPsegments=\count296
-\nofMParguments=\count297
-\everyMPshowfont=\toks39
-\MPscratchCnt=\count298
-\MPscratchDim=\dimen281
-\MPnumerator=\count299
-\makeMPintoPDFobject=\count300
-\everyMPtoPDFconversion=\toks40
->>>>>>> 952048ae1e8f4898ef795a9884249e1a537a3f59
 ) (/usr/local/texlive/2020/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
@@ -521,35 +488,6 @@ Overfull \hbox (29.0145pt too wide) in paragraph at lines 25--26
 
 [1
 
-<<<<<<< HEAD
-{/usr/local/texlive/2020/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [2] [3]
-<Figures/CH.png, id=26, 1005.7575pt x 534.99875pt>
-File: Figures/CH.png Graphic file (type png)
-<use Figures/CH.png>
-Package pdftex.def Info: Figures/CH.png  used on input line 132.
-(pdftex.def)             Requested size: 288.0011pt x 153.1946pt.
-<Figures/economic_qkd.png, id=28, 422.7795pt x 276.43275pt>
-File: Figures/economic_qkd.png Graphic file (type png)
-<use Figures/economic_qkd.png>
-Package pdftex.def Info: Figures/economic_qkd.png  used on input line 137.
-(pdftex.def)             Requested size: 288.0011pt x 188.31766pt.
- [4 </home/neuromancer/OneDrive/Quantum_Information/Project/report3/Figures/CH.png> </home/neuromancer/OneDrive/Quantum_Information/Project/report3/Figures/economic_qkd.png>] [5] (/home/neuromancer/OneDrive/Quantum_Information/Project/report3/report3.aux) ) 
-Here is how much of TeX's memory you used:
- 19314 strings out of 482371
- 413715 string characters out of 5946016
- 676069 words of memory out of 5000000
- 34753 multiletter control sequences out of 15000+600000
- 538099 words of font info for 44 fonts, out of 8000000 for 9000
- 36 hyphenation exceptions out of 8191
- 60i,17n,104p,1238b,1536s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
-Output written on /home/neuromancer/OneDrive/Quantum_Information/Project/report3/report3.pdf (5 pages, 223940 bytes).
-PDF statistics:
- 76 PDF objects out of 1000 (max. 8388607)
- 52 compressed objects within 1 object stream
- 0 named destinations out of 1000 (max. 500000)
- 23 words of extra memory for PDF output out of 10000 (max. 10000000)
-=======
 {/usr/local/texlive/2020/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
 <Figures/topviewstarmon5qubit3.png, id=19, 826.08624pt x 441.65pt>
 File: Figures/topviewstarmon5qubit3.png Graphic file (type png)
@@ -566,42 +504,56 @@ Overfull \hbox (79.61197pt too wide) in paragraph at lines 95--105
  [][] 
  []
 
-[3 </Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report3/Figures/topviewstarmon5qubit3.png>]
-Overfull \hbox (79.61197pt too wide) in paragraph at lines 125--135
+[3 </home/neuromancer/OneDrive/Quantum_Information/Project/report3/Figures/topviewstarmon5qubit3.png>] [4]
+<Figures/CH.png, id=32, 1005.7575pt x 534.99875pt>
+File: Figures/CH.png Graphic file (type png)
+<use Figures/CH.png>
+Package pdftex.def Info: Figures/CH.png  used on input line 181.
+(pdftex.def)             Requested size: 288.0011pt x 153.1946pt.
+<Figures/economic_qkd.png, id=33, 422.7795pt x 276.43275pt>
+File: Figures/economic_qkd.png Graphic file (type png)
+<use Figures/economic_qkd.png>
+Package pdftex.def Info: Figures/economic_qkd.png  used on input line 186.
+(pdftex.def)             Requested size: 288.0011pt x 188.31766pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+Overfull \hbox (79.61197pt too wide) in paragraph at lines 197--207
  [][] 
  []
 
-
-Overfull \hbox (25.69205pt too wide) in paragraph at lines 147--157
+[5 </home/neuromancer/OneDrive/Quantum_Information/Project/report3/Figures/CH.png>]
+Overfull \hbox (25.69205pt too wide) in paragraph at lines 219--229
  [][] 
  []
 
-[4]
-<Figures/starmon13qubit1oldcalib.png, id=33, 1017.8025pt x 550.055pt>
+[6 </home/neuromancer/OneDrive/Quantum_Information/Project/report3/Figures/economic_qkd.png>]
+<Figures/starmon13qubit1oldcalib.png, id=45, 1017.8025pt x 550.055pt>
 File: Figures/starmon13qubit1oldcalib.png Graphic file (type png)
 <use Figures/starmon13qubit1oldcalib.png>
-Package pdftex.def Info: Figures/starmon13qubit1oldcalib.png  used on input line 162.
+Package pdftex.def Info: Figures/starmon13qubit1oldcalib.png  used on input line 234.
 (pdftex.def)             Requested size: 315.88824pt x 170.71652pt.
-<Figures/starmon13qubit3oldcalib.png, id=34, 1017.8025pt x 545.03625pt>
+<Figures/starmon13qubit3oldcalib.png, id=46, 1017.8025pt x 545.03625pt>
 File: Figures/starmon13qubit3oldcalib.png Graphic file (type png)
 <use Figures/starmon13qubit3oldcalib.png>
-Package pdftex.def Info: Figures/starmon13qubit3oldcalib.png  used on input line 168.
+Package pdftex.def Info: Figures/starmon13qubit3oldcalib.png  used on input line 240.
 (pdftex.def)             Requested size: 318.79243pt x 170.71652pt.
- (/Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report3/report3.bbl [5 </Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report3/Figures/starmon13qubit1oldcalib.png>]) [6 </Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report3/Figures/starmon13qubit3oldcalib.png>] (/Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report3/report3.aux) ) 
+ (/home/neuromancer/OneDrive/Quantum_Information/Project/report3/report3.bbl [7 </home/neuromancer/OneDrive/Quantum_Information/Project/report3/Figures/starmon13qubit1oldcalib.png>]) [8 </home/neuromancer/OneDrive/Quantum_Information/Project/report3/Figures/starmon13qubit3oldcalib.png>] (/home/neuromancer/OneDrive/Quantum_Information/Project/report3/report3.aux) ) 
 Here is how much of TeX's memory you used:
- 19441 strings out of 480608
- 409985 string characters out of 5903629
- 678270 words of memory out of 5000000
- 34986 multiletter control sequences out of 15000+600000
+ 20557 strings out of 482371
+ 436949 string characters out of 5946016
+ 688377 words of memory out of 5000000
+ 35980 multiletter control sequences out of 15000+600000
  538753 words of font info for 46 fonts, out of 8000000 for 9000
- 1141 hyphenation exceptions out of 8191
- 60i,16n,104p,1236b,1508s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb>
-Output written on /Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report3/report3.pdf (6 pages, 370248 bytes).
+ 36 hyphenation exceptions out of 8191
+ 60i,16n,104p,1238b,1536s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb>
+Output written on /home/neuromancer/OneDrive/Quantum_Information/Project/report3/report3.pdf (8 pages, 484820 bytes).
 PDF statistics:
- 85 PDF objects out of 1000 (max. 8388607)
- 57 compressed objects within 1 object stream
+ 105 PDF objects out of 1000 (max. 8388607)
+ 69 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 28 words of extra memory for PDF output out of 10000 (max. 10000000)
->>>>>>> 952048ae1e8f4898ef795a9884249e1a537a3f59
+ 38 words of extra memory for PDF output out of 10000 (max. 10000000)
 

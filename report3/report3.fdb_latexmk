@@ -1,21 +1,14 @@
 # Fdb version 3
-<<<<<<< HEAD
-["pdflatex"] 1608229709 "/home/neuromancer/OneDrive/Quantum_Information/Project/report3/report3.tex" "/home/neuromancer/OneDrive/Quantum_Information/Project/report3/report3.pdf" "report3" 1608229710
-  "/home/neuromancer/OneDrive/Quantum_Information/Project/report3/report3.aux" 1608229710 341 27fcdfbde0b20dcb05b912d4db71a383 ""
-  "/home/neuromancer/OneDrive/Quantum_Information/Project/report3/report3.tex" 1608229708 6872 644fa6363f312fca1f538e606be430c4 ""
-=======
-["bibtex report3"] 1608228035 "report3.aux" "report3.bbl" "report3" 1608228038
+["bibtex report3"] 1608229855 "report3.aux" "report3.bbl" "report3" 1608229856
   "/usr/local/texlive/2020/texmf-dist/bibtex/bst/base/ieeetr.bst" 1292289607 18361 1a00e58565e7f19bf2b3e1bfb82254ae ""
-  "biblio.bib" 1608227890 1842 65080796f409331b6a7301f7f849512d ""
-  "report3.aux" 1608228037 1492 2db5f1df4a81cf714139b24c7cda58dc "pdflatex"
+  "biblio.bib" 1608201562 1842 65080796f409331b6a7301f7f849512d ""
+  "report3.aux" 1608229856 1609 f3dd581bba2f7ce0d2ede388793a2805 "pdflatex"
   (generated)
-  "report3.bbl"
   "report3.blg"
-["pdflatex"] 1608228035 "/Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report3/report3.tex" "/Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report3/report3.pdf" "report3" 1608228038
-  "/Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report3/report3.aux" 1608228037 1492 2db5f1df4a81cf714139b24c7cda58dc ""
-  "/Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report3/report3.tex" 1608228031 10166 73954d405c857c7b64e9ad48e3f915c9 ""
-  "/usr/local/texlive/2020/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
->>>>>>> 952048ae1e8f4898ef795a9884249e1a537a3f59
+  "report3.bbl"
+["pdflatex"] 1608229855 "/home/neuromancer/OneDrive/Quantum_Information/Project/report3/report3.tex" "/home/neuromancer/OneDrive/Quantum_Information/Project/report3/report3.pdf" "report3" 1608229856
+  "/home/neuromancer/OneDrive/Quantum_Information/Project/report3/report3.aux" 1608229856 1609 f3dd581bba2f7ce0d2ede388793a2805 ""
+  "/home/neuromancer/OneDrive/Quantum_Information/Project/report3/report3.tex" 1608229848 12536 9d3393ae533549d1996516ffa0bc3bc4 ""
   "/usr/local/texlive/2020/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1246382020 1004 54797486969f23fa377b128694d548df ""
   "/usr/local/texlive/2020/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm" 1246382020 988 bdf658c3bfc2d96d3c8b02cfc1c94c20 ""
   "/usr/local/texlive/2020/texmf-dist/fonts/tfm/public/cm/cmbx10.tfm" 1136768653 1328 c834bbb027764024c09d3d2bf908b5f0 ""
@@ -38,11 +31,8 @@
   "/usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb" 1248133631 32080 340ef9bf63678554ee606688e7b5339d ""
   "/usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb" 1248133631 30251 6afa5cb1d0204815a708a080681d4674 ""
   "/usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb" 1248133631 36299 5f9df58c2139e7edcf37c8fca4bd384d ""
-<<<<<<< HEAD
-  "/usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb" 1248133631 37166 8ab3487cbe3ab49ebce74c29ea2418db ""
-=======
   "/usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb" 1248133631 36741 fa121aac0049305630cf160b86157ee4 ""
->>>>>>> 952048ae1e8f4898ef795a9884249e1a537a3f59
+  "/usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb" 1248133631 37166 8ab3487cbe3ab49ebce74c29ea2418db ""
   "/usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb" 1248133631 35469 70d41d2b9ea31d5d813066df7c99281c ""
   "/usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb" 1248133631 35752 024fb6c41858982481f6968b5fc26508 ""
   "/usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb" 1248133631 32722 d7379af29a190c3f453aba36302ff5a9 ""
@@ -50,6 +40,7 @@
   "/usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb" 1248133631 32734 69e00a6b65cedb993666e42eedb3d48f ""
   "/usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb" 1248133631 32726 0a1aea6fcd6468ee2cf64d891f5c43c8 ""
   "/usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb" 1248133631 32569 5e5ddc8df908dea60932f3c484a54c0d ""
+  "/usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb" 1248133631 32626 4f5c1b83753b1dd3a97d1b399a005b4b ""
   "/usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb" 1248133631 37944 359e864bd06cde3b1cf57bb20757fb06 ""
   "/usr/local/texlive/2020/texmf-dist/tex/context/base/mkii/supp-pdf.mkii" 1461363279 71627 94eb9990bed73c364d7f53f960cc8c5b ""
   "/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/basiclayer/pgfcore.code.tex" 1557692582 992 fb3cda354707a54fda62787a411c7c22 ""
@@ -140,8 +131,8 @@
   "/usr/local/texlive/2020/texmf-dist/tex/latex/base/article.cls" 1580683321 20023 e427dd9e17e239bf926ef3aab67fe35e ""
   "/usr/local/texlive/2020/texmf-dist/tex/latex/base/ifthen.sty" 1580683321 5159 892429808d9e0e2b3548aaefd9a06ed0 ""
   "/usr/local/texlive/2020/texmf-dist/tex/latex/base/size11.clo" 1580683321 8462 61fdf79debfc3dc4dab35ec6cf83fbf7 ""
-  "/usr/local/texlive/2020/texmf-dist/tex/latex/caption/caption.sty" 1578175482 57350 70b0c251b0022f1db12ad7dd4c1aa547 ""
-  "/usr/local/texlive/2020/texmf-dist/tex/latex/caption/caption3.sty" 1578175482 62012 5e9d40ecd926a6f500919e4c7e1480de ""
+  "/usr/local/texlive/2020/texmf-dist/tex/latex/caption/caption.sty" 1589230012 55681 9f734e1815747cb8bb47a735fd4254ad ""
+  "/usr/local/texlive/2020/texmf-dist/tex/latex/caption/caption3.sty" 1589230012 64207 bba542979d2533f31c75720ba779a52a ""
   "/usr/local/texlive/2020/texmf-dist/tex/latex/caption/subcaption.sty" 1579816624 5937 3a338c8462fea6d5e61cecda091f49cf ""
   "/usr/local/texlive/2020/texmf-dist/tex/latex/comment/comment.sty" 1472166125 10197 204f75d5d8d88aa345a8c402e879e63b ""
   "/usr/local/texlive/2020/texmf-dist/tex/latex/environ/environ.sty" 1399239813 4378 f429f0da968c278653359293040a8f52 ""
@@ -181,34 +172,20 @@
   "/usr/local/texlive/2020/texmf-dist/tex/latex/xcolor/xcolor.sty" 1463002160 55589 34128738f682d033422ca125f82e5d62 ""
   "/usr/local/texlive/2020/texmf-dist/tex/latex/xkeyval/xkeyval.sty" 1417732693 4962 9c1069474ff71dbc47d5006555e352d3 ""
   "/usr/local/texlive/2020/texmf-dist/web2c/texmf.cnf" 1583102494 39451 60d7debd9ef8ece44cbe965493576c2d ""
-<<<<<<< HEAD
   "/usr/local/texlive/2020/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1590694141 382491 741389b5bbd79587e9601892413f03ad ""
   "/usr/local/texlive/2020/texmf-var/web2c/pdftex/pdflatex.fmt" 1590655582 1200420 b3ffefb0ab37717513b8d0452bcdddb6 ""
   "/usr/local/texlive/2020/texmf.cnf" 1590655574 455 5b996dcaa0eb4ef14a83b026bc0a008c ""
   "Figures/CH.png" 1608229422 116126 e246f0ee06de1fccfc95d8c121e71d4d ""
   "Figures/economic_qkd.png" 1608229506 25713 fde5406cbcaef144725e6efbd3f70f88 ""
-  "report3.aux" 1608229710 341 27fcdfbde0b20dcb05b912d4db71a383 "pdflatex"
-  "report3.tex" 1608229708 6872 644fa6363f312fca1f538e606be430c4 ""
+  "Figures/starmon13qubit1oldcalib.png" 1608229782 153925 7d28f0c01e971afe55c5b277c3b9d736 ""
+  "Figures/starmon13qubit3oldcalib.png" 1608229782 154348 729285d0086eb1e7dfdce2c04bab238c ""
+  "Figures/topviewstarmon5qubit3.png" 1608229782 127982 c8d02a04b880fb3429b7b22b0d543392 ""
+  "report3.aux" 1608229856 1609 f3dd581bba2f7ce0d2ede388793a2805 "pdflatex"
+  "report3.bbl" 1608229855 228 fab9b25457536e5317df3e0d6f7d103e "bibtex report3"
+  "report3.tex" 1608229848 12536 9d3393ae533549d1996516ffa0bc3bc4 ""
   (generated)
-  "report3.pdf"
-  "report3.aux"
-  "/home/neuromancer/OneDrive/Quantum_Information/Project/report3/report3.log"
   "/home/neuromancer/OneDrive/Quantum_Information/Project/report3/report3.pdf"
-  "report3.log"
-=======
-  "/usr/local/texlive/2020/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1586288239 4811913 0be9a7e86c70a26e5e3042966bcd7097 ""
-  "/usr/local/texlive/2020/texmf-var/web2c/pdftex/pdflatex.fmt" 1606229358 2432458 09db606e9c1b706f0f3aca5e27d7e89a ""
-  "/usr/local/texlive/2020/texmf.cnf" 1586288231 577 d60164b4589a341208aff7a667fbbdcb ""
-  "Figures/starmon13qubit1oldcalib.png" 1608226786 153925 7d28f0c01e971afe55c5b277c3b9d736 ""
-  "Figures/starmon13qubit3oldcalib.png" 1608226820 154348 729285d0086eb1e7dfdce2c04bab238c ""
-  "Figures/topviewstarmon5qubit3.png" 1608225702 127982 c8d02a04b880fb3429b7b22b0d543392 ""
-  "report3.aux" 1608228037 1492 2db5f1df4a81cf714139b24c7cda58dc "pdflatex"
-  "report3.bbl" 1608228035 228 fab9b25457536e5317df3e0d6f7d103e "bibtex report3"
-  "report3.tex" 1608228031 10166 73954d405c857c7b64e9ad48e3f915c9 ""
-  (generated)
-  "/Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report3/report3.log"
-  "report3.log"
-  "/Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report3/report3.pdf"
   "report3.pdf"
+  "/home/neuromancer/OneDrive/Quantum_Information/Project/report3/report3.log"
+  "report3.log"
   "report3.aux"
->>>>>>> 952048ae1e8f4898ef795a9884249e1a537a3f59
