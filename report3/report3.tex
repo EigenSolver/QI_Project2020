@@ -16,8 +16,8 @@
 \maketitle
 
 \section{Phase covariant cloning machine}
-The circuit is similar to the universal one.
-In this case, the circuit proposed in [EquatorialQCM] is analogous to the one for the universal QCM. 
+The circuit for the phase covariant quantum cloning machine (PCQCM) proposed in  \cite{EquatorialQCM} is similar to one for the universal quantum cloning machine (UQCM):
+
 \begin{quantikz}
     \lstick{$\ket{\psi}_{a_0}$} & \qw                  & \qw        & \qw                   & \qw       & \qw                   & \ctrl{2}  & \ctrl{1}      & \targ{}        & \targ{}       &\qw\\
     \lstick{$\ket{0}_{a_1}$}    & \qw                  & \targ{}    & \gate{R_y(\theta_2)}  & \ctrl{1}  & \qw                   & \qw       & \targ{}       & \qw           & \ctrl{-1}      & \meter{}         \\
@@ -169,5 +169,6 @@ The readout correction does not change the results significantly.
         \label{fig:oldcalib2}
         \caption{Phase covariant QCM run on Starmon (old calibration). Copy on qubit 3.}
 \end{figure}
-
+\bibliography{biblio}
+\bibliographystyle{ieeetr}
 \end{document}

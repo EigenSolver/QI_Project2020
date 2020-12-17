@@ -250,6 +250,9 @@ INPUT /Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report3/Figures/starm
 INPUT /Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report3/Figures/starmon13qubit3oldcalib.png
 INPUT /Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report3/Figures/starmon13qubit3oldcalib.png
 INPUT /Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report3/Figures/starmon13qubit3oldcalib.png
+INPUT /Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report3/report3.bbl
+INPUT /Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report3/report3.bbl
+INPUT /usr/local/texlive/2020/texmf-dist/fonts/tfm/public/cm/cmti10.tfm
 INPUT /Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report3/report3.aux
 INPUT /usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
 INPUT /usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb
@@ -263,3 +266,4 @@ INPUT /usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pf
 INPUT /usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb
 INPUT /usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb
 INPUT /usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb
+INPUT /usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb

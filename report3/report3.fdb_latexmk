@@ -1,7 +1,14 @@
 # Fdb version 3
-["pdflatex"] 1608227440 "/Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report3/report3.tex" "/Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report3/report3.pdf" "report3" 1608227502
-  "/Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report3/report3.aux" 1608227442 1405 8971a59a38372404b3415ebe56a636c4 ""
-  "/Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report3/report3.tex" 1608227502 10094 aee4f371dbdc8fc76e7b663dc1c99638 ""
+["bibtex report3"] 1608228035 "report3.aux" "report3.bbl" "report3" 1608228038
+  "/usr/local/texlive/2020/texmf-dist/bibtex/bst/base/ieeetr.bst" 1292289607 18361 1a00e58565e7f19bf2b3e1bfb82254ae ""
+  "biblio.bib" 1608227890 1842 65080796f409331b6a7301f7f849512d ""
+  "report3.aux" 1608228037 1492 2db5f1df4a81cf714139b24c7cda58dc "pdflatex"
+  (generated)
+  "report3.bbl"
+  "report3.blg"
+["pdflatex"] 1608228035 "/Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report3/report3.tex" "/Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report3/report3.pdf" "report3" 1608228038
+  "/Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report3/report3.aux" 1608228037 1492 2db5f1df4a81cf714139b24c7cda58dc ""
+  "/Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report3/report3.tex" 1608228031 10166 73954d405c857c7b64e9ad48e3f915c9 ""
   "/usr/local/texlive/2020/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2020/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1246382020 1004 54797486969f23fa377b128694d548df ""
   "/usr/local/texlive/2020/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm" 1246382020 988 bdf658c3bfc2d96d3c8b02cfc1c94c20 ""
@@ -20,6 +27,7 @@
   "/usr/local/texlive/2020/texmf-dist/fonts/tfm/public/cm/cmsy10.tfm" 1136768653 1124 6c73e740cf17375f03eec0ee63599741 ""
   "/usr/local/texlive/2020/texmf-dist/fonts/tfm/public/cm/cmsy6.tfm" 1136768653 1116 933a60c408fc0a863a92debe84b2d294 ""
   "/usr/local/texlive/2020/texmf-dist/fonts/tfm/public/cm/cmsy8.tfm" 1136768653 1120 8b7d695260f3cff42e636090a8002094 ""
+  "/usr/local/texlive/2020/texmf-dist/fonts/tfm/public/cm/cmti10.tfm" 1136768653 1480 aa8e34af0eb6a2941b776984cf1dfdc4 ""
   "/usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb" 1248133631 34811 78b52f49e893bcba91bd7581cdc144c0 ""
   "/usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb" 1248133631 32080 340ef9bf63678554ee606688e7b5339d ""
   "/usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb" 1248133631 30251 6afa5cb1d0204815a708a080681d4674 ""
@@ -32,6 +40,7 @@
   "/usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb" 1248133631 32734 69e00a6b65cedb993666e42eedb3d48f ""
   "/usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb" 1248133631 32726 0a1aea6fcd6468ee2cf64d891f5c43c8 ""
   "/usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb" 1248133631 32569 5e5ddc8df908dea60932f3c484a54c0d ""
+  "/usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb" 1248133631 37944 359e864bd06cde3b1cf57bb20757fb06 ""
   "/usr/local/texlive/2020/texmf-dist/tex/context/base/mkii/supp-pdf.mkii" 1461363279 71627 94eb9990bed73c364d7f53f960cc8c5b ""
   "/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/basiclayer/pgfcore.code.tex" 1557692582 992 fb3cda354707a54fda62787a411c7c22 ""
   "/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/basiclayer/pgfcorearrows.code.tex" 1546728038 43820 bc6cf5aa959817914ace33f5c6232161 ""
@@ -164,11 +173,12 @@
   "Figures/starmon13qubit1oldcalib.png" 1608226786 153925 7d28f0c01e971afe55c5b277c3b9d736 ""
   "Figures/starmon13qubit3oldcalib.png" 1608226820 154348 729285d0086eb1e7dfdce2c04bab238c ""
   "Figures/topviewstarmon5qubit3.png" 1608225702 127982 c8d02a04b880fb3429b7b22b0d543392 ""
-  "report3.aux" 1608227442 1405 8971a59a38372404b3415ebe56a636c4 "pdflatex"
-  "report3.tex" 1608227502 10094 aee4f371dbdc8fc76e7b663dc1c99638 ""
+  "report3.aux" 1608228037 1492 2db5f1df4a81cf714139b24c7cda58dc "pdflatex"
+  "report3.bbl" 1608228035 228 fab9b25457536e5317df3e0d6f7d103e "bibtex report3"
+  "report3.tex" 1608228031 10166 73954d405c857c7b64e9ad48e3f915c9 ""
   (generated)
-  "/Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report3/report3.pdf"
-  "report3.log"
   "/Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report3/report3.log"
-  "report3.aux"
+  "report3.log"
+  "/Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report3/report3.pdf"
   "report3.pdf"
+  "report3.aux"
