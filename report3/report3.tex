@@ -4,14 +4,18 @@
 \usepackage{amsmath}
 \usepackage{float}
 \usepackage{tikz}
+\usepackage{graphicx}
+\usepackage{caption}
+\usepackage{subcaption}
+
 \usetikzlibrary{quantikz}
+
 \title{Quantum project: Report 3}
 \author{}
 \begin{document}
 \maketitle
 
-\section{Report 3}
-\subsection{Phase covariant cloning machine}
+\section{Phase covariant cloning machine}
 The circuit is similar to the universal one.
 In this case, the circuit proposed in [EquatorialQCM] is analogous to the one for the universal QCM. 
 \begin{quantikz}
@@ -54,18 +58,116 @@ If $\phi=0$ we do not need to perform any rotation around the $z$-axis. If $\phi
 
 As a final observation, since this circuit is much more simple than the one for the universal QCM, the average fidelity over the whole Bloch sphere could be greater in this case than with the universal QCM.
 
-\subsection*{Economic universal cloning machine}
+On the equator, the expected fidelity for both the copies is:
 \[
-    \rho=\ketbra{\psi}{\psi}=\abs{\alpha}^2\ketbra{0}{0}+\alpha^*\beta \ketbra{1}{0}+\alpha\beta^*\ketbra{0}{1}+\abs{\beta}^2\ketbra{1}{1}
+    F_{ideal}=\frac{1}{2}+\frac{1}{2\sqrt{2}}\approx 0.854\dots
 \]
+\subsection{Full Bloch sphere}
+Running the circuit on IBM simulator, we got the following fidelities for the two copies:
 \[
-    \begin{split}
-        \rho_A&=\abs{\alpha}^2\ketbra{0}{0}+\alpha^*\beta\cos{\phi} \ketbra{1}{0}+\alpha\beta^*\cos{\phi}\ketbra{0}{1}+\abs{\beta}^2\ketbra{1}{1}=\\
-        &=\ketbra{\psi}{\psi}+(\cos{\phi}-1)(\alpha^*\beta\ketbra{1}{0}+\alpha\beta^*\ketbra{0}{1})
-    \end{split}
+    F_1=0.82 \pm 0.03, \quad F_2=0.82 \pm 0.03.
 \]
+\begin{figure}[H]
+    \centering
+            \includegraphics[totalheight=6cm]{Figures/topviewstarmon5qubit3.png}
+        \label{fig:topviewstarmon}
+        \caption{Phase covariant QCM run on Starmon. Here it is shown the top view of the Bloch sphere, where it is plotted the fidelity of the second copy (on the physical qubit 3). }
+\end{figure}
+
+This is the average fidelity and standard deviation expected when using the phase covariant cloning machine on the full Bloch sphere. 
+\begin{table}[H]
+    \centering
+    \begin{tabular}{|c|c|c|c|c|c|c|c|c|}
+    \hline
+    \textbf{} & \textbf{Starmon 5} & \textbf{Athens} & \textbf{Ourense} & \textbf{Santiago} & \textbf{Valencia} & \textbf{Vigo} & \textbf{Yorktown} \\ \hline
+    $F_1$              & 0.75 & 0.78 & 0.79 & 0.75 & 0.4 & 0.78 & 0.76 \\ \hline
+    $\sigma_{F_1}$     & 0.04 & 0.04 & 0.03 & 0.04 & 0.2 & 0.03 & 0.03 \\ \hline
+    $F_2$              & 0.76 & 0.82 & 0.78 & 0.73 & 0.5 & 0.79 & 0.81 \\ \hline
+    $\sigma_{F_2}$     & 0.04 & 0.03 & 0.04 & 0.04 & 0.2 & 0.04 & 0.01 \\ \hline
+    $F_2/F_1$          & 1.01 & 1.05 & 0.99 & 0.98 & 1 & 1.02 & 1.07 \\ \hline
+    $\sigma_{F_2/F_1}$ & 0.05 & 0.01 & 0.02 & 0.04 & 1 & 0.03 & 0.04 \\ \hline
+    \end{tabular}
+\end{table}
+
+Here are also the results found last time with the universal QCM, for comparison.
+\begin{table}[H]
+    \centering
+    \begin{tabular}{|c|c|c|c|c|c|c|c|}
+    \hline
+    \textbf{} & \textbf{Starmon 5} & \textbf{Athens} & \textbf{Ourense} & \textbf{Santiago} & \textbf{Valencia} & \textbf{Vigo} & \textbf{Yorktown} \\ \hline
+    $F_1$              & 0.73 & 0.77 & 0.78 & 0.73 & 0.6 & 0.76 & 0.76 \\ \hline
+    $\sigma_{F_1}$     & 0.03 & 0.02 & 0.03 & 0.04 & 0.2 & 0.03 & 0.02 \\ \hline
+    $F_2$              & 0.73 & 0.78 & 0.72 & 0.72 & 0.6 & 0.75 & 0.76 \\ \hline
+    $\sigma_{F_2}$     & 0.05 & 0.02 & 0.03 & 0.04 & 0.2 & 0.03 & 0.02 \\ \hline
+    $F_2/F_1$          & 1.00 & 1.01 & 0.93 & 0.98 & 1.1 & 0.99 & 1.00 \\ \hline
+    $\sigma_{F_2/F_1}$ & 0.04 & 0.03 & 0.03 & 0.03 & 0.7 & 0.02 & 0.03 \\ \hline
+    \end{tabular}
+\end{table}
+
+The phase covariant QCM performs better in all the cases.
+Note, however, that for some backends different physical qubits may have been used (for the phase covariant QCM, we let the backend decide the best physical qubits).
+Moreover, the performances of the backends change day by day, depending for example on the calibration of the processor.
+
+The result of IBM Valencia is not consistent with the expectations. I think they might have problems with the rotations along the $y$ axis of one of the central qubits.
+
+NB: Starmon went offline before the whole Bloch sphere was covered. 
+The last points at the bottom of the sphere that were calculated when it came back online where worse than the previous ones (the difference before and after the stop is clearly visible).
+We ran the circuit again obtaining:
 \[
-    F=1+2(\cos{\phi}-1)\abs{\alpha}^2\abs{\beta}^2
+    F_1=0.69 \pm 0.07, \quad F_2=0.73 \pm 0.05
 \]
+
+
+\subsection{Only $xz$ equator}
+
+\begin{table}[H]
+    \centering
+    \begin{tabular}{|c|c|c|c|c|c|c|c|c|}
+    \hline
+    \textbf{} & \textbf{Starmon 5} & \textbf{Athens} & \textbf{Ourense} & \textbf{Santiago} & \textbf{Valencia} & \textbf{Vigo} & \textbf{Yorktown} \\ \hline
+    $F_1$              & 0.79 & 0.81 & 0.84 & 0.78 & 0.5 & 0.80 & 0.76 \\ \hline
+    $\sigma_{F_1}$     & 0.03 & 0.02 & 0.01 & 0.02 & 0.2 & 0.02 & 0.04 \\ \hline
+    $F_2$              & 0.79 & 0.86 & 0.82 & 0.84 & 0.5 & 0.84 & 0.81 \\ \hline
+    $\sigma_{F_2}$     & 0.04 & 0.02 & 0.01 & 0.01 & 0.2 & 0.02 & 0.01 \\ \hline
+    $F_2/F_1$          & 0.99 & 1.06 & 0.98 & 1.07 & 1 & 1.05 & 1.06 \\ \hline
+    $\sigma_{F_2/F_1}$ & 0.04 & 0.01 & 0.01 & 0.02 & 1 & 0.02 & 0.05 \\ \hline
+    \end{tabular}
+\end{table}
+The quality of the copies on the equator is of course better than the avereage on the Bloch sphere. The average fidelity is close to the theoretical bound.
+For Athens, the average fidelity of the second copy is $F_2=0.86$, which is greater than the expected fidelity.
+This shouldn't worry too much: first of all there is some statistical uncertainty, moreover the bound is calculated considering a unitary evolution, but when using a real machine, the evolution is not unitary because of noise.
+Therefore, the bound does not hold strictly speaking (of course it would hold in absence of noise).
+
+\subsection{Further analysis on Starmon}
+We investigated furtherly the phase covariant QCM run on Starmon ($xz$ equator only), namely considering readout correction and different calibrations (the new one is 12/17/2020 - 2:32:41 PM):
+).
+
+\begin{table}[H]
+    \centering
+    \begin{tabular}{|c|c|c|c|c|c|}
+    \hline
+    \textbf{} & \textbf{Qubits13} & \textbf{Qubits13 RO} & \textbf{Qubits13 new} & \textbf{Qubits13 RO new} \\ \hline
+    $F_1$              & 0.79 & 0.80 & 0.78 & 0.80 \\ \hline
+    $\sigma_{F_1}$     & 0.03 & 0.03 & 0.03 & 0.03 \\ \hline
+    $F_2$              & 0.79 & 0.79 & 0.79 & 0.79 \\ \hline
+    $\sigma_{F_2}$     & 0.04 & 0.04 & 0.04 & 0.04 \\ \hline
+    $F_2/F_1$          & 0.99 & 0.99 & 1.01 & 0.99 \\ \hline
+    $\sigma_{F_2/F_1}$ & 0.04 & 0.05 & 0.05 & 0.05 \\ \hline
+    \end{tabular}
+\end{table}
+The readout correction does not change the results significantly.
+
+\begin{figure}[H]
+    \centering
+            \includegraphics[totalheight=6cm]{Figures/starmon13qubit1oldcalib.png}
+        \label{fig:oldcalib1}
+        \caption{Phase covariant QCM run on Starmon (old calibration). Copy on qubit 1.}
+\end{figure}
+\begin{figure}[H]
+    \centering
+            \includegraphics[totalheight=6cm]{Figures/starmon13qubit3oldcalib.png}
+        \label{fig:oldcalib2}
+        \caption{Phase covariant QCM run on Starmon (old calibration). Copy on qubit 3.}
+\end{figure}
 
 \end{document}
