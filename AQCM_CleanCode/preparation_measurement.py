@@ -1,8 +1,8 @@
 import numpy as np
 from qiskit import QuantumRegister, ClassicalRegister, QuantumCircuit, assemble, transpile
 
-TOKEN_QI = 'c200b2b1cec5221ca055b2587f0224620ed312b3'
-TOKEN_IBMQ = '396ead77546bea5bd0a82c923c3af4291041412498d68092223ae8e2f2a95f9f34ef93c1416d1b3b62af52f3980571a82eddc3e5951a96d643152b907cfa37aa '
+TOKEN_QI = 'YOUR_TOKEN'
+TOKEN_IBMQ = 'YOUR_TOKEN '
 
 
 def prepare_qubit(qc, qubit, theta, phi):
@@ -144,6 +144,9 @@ def calculate_probabilities(job, index_copy1, index_copy2, nshots):
 
 
 def get_counts_from_jobs(jobs):
+    """
+    Extract the counts from the input jobs
+    """
     counts_array = []
     for job in jobs:
         # get_counts() returns a list of Counts (if more experiment were run in the job)
@@ -157,6 +160,9 @@ def get_counts_from_jobs(jobs):
 
 
 def analyze_data(job_to_analyze, index_copy1, index_copy2, nshots):
+    """
+    Returns an array of marginal probabilities for the experiments run in job_to_analyze
+    """
     # Get the counts in each job and merge everything into only one array
     results_probabilities = []
     counts_array = get_counts_from_jobs([job_to_analyze])
