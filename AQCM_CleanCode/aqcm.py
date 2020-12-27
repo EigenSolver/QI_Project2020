@@ -20,10 +20,10 @@ backend = QI.get_backend("Starmon-5")
 IBMQ.save_account(TOKEN_IBMQ, overwrite=True)
 provider = IBMQ.load_account()
 backend = provider.backends.ibmq_qasm_simulator
-#ibmq_qasm_simulator for simulator
-#ibmq_16_melbourne for melbourne
-#ibmqx2 for yorktown
-#ibmq_nameofthecity for all the others
+# ibmq_qasm_simulator for simulator
+# ibmq_16_melbourne for melbourne
+# ibmqx2 for yorktown
+# ibmq_nameofthecity for all the others
 
 backend_identifier = "simulator"  # This string is used to save all the different files
 path = "FullSphere/PhaseCovariant/"  # Path where the files will be saved (set whatever you want, create folder before using it)
@@ -192,3 +192,10 @@ print("FINISHED")
 print("===========================================")
 print("Final average fidelity copy1, copy2: ", [np.average(np.array(results_probabilities)[:, 0]),
                                                 np.average(np.array(results_probabilities)[:, 2])])
+
+with open(path + 'average_fidelities.txt', 'a') as file:
+    file.write(
+        backend_identifier + "\t" + str(np.average(np.array(results_probabilities)[:, 0])) + "\t" + str(
+            np.std(np.array(results_probabilities)[:, 0])) + "\t" + str(
+            np.average(np.array(results_probabilities)[:, 2])) + "\t" +
+        str(np.std(np.array(results_probabilities)[:, 2])) + "\n")
