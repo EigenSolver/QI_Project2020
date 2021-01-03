@@ -35,7 +35,7 @@ print(backend_identifier)
 ##############################################################################################
 
 #We are saving the target points along with the results
-#target_points = sphere_points(num_pts)
+target_points = sphere_points(num_pts)
 #np.savetxt(path + "target_points_" + backend_identifier + ".csv", target_points)
 
 # Set to true if the points only lie on the equator (does not perform phi rotation)
@@ -73,9 +73,9 @@ max_experiments = backend.configuration().max_experiments
 
 # Prepare circuits
 if not only_equator:
-    circuits = [circuit.bind_parameters({theta_param: points[0], phi_param: points[1]}) for points in sphere_points(num_pts)]
+    circuits = [circuit.bind_parameters({theta_param: points[0], phi_param: points[1]}) for points in target_points]
 else:
-    circuits = [circuit.bind_parameters({theta_param: points[0]}) for points in sphere_points(num_pts)]
+    circuits = [circuit.bind_parameters({theta_param: points[0]}) for points in target_points]
 
 circuits_transpiled = transpile(circuits, backend=backend, optimization_level=3)
 
