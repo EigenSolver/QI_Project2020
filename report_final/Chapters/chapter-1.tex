@@ -1,0 +1,29 @@
+\chapter{Introduction}
+\label{sec:introduction}
+The no-cloning theorem is a fundamental result of quantum mechanics, which states that a generic quantum state can not be copied exactly \cite{Wootters1982}.
+However, imperfect cloning is not forbidden, as was observed by Bu\ifmmode \check{z}\else \v{z}\fi{}ek and Hillery in 1996,
+who first proposed an approximate quantum cloning machine (QCM) for qubits \cite{Buzek1996}.
+Such QCM produces two identical imperfect copies of an arbitrary input state, making use of an extra ancillary qubit. 
+The quality of the copies is independent of the input state, therefore it is known as universal quantum cloning machine (UQCM).
+Other QCMs were then proposed, for example the phase-covariant quantum cloning machine (PCQCM), 
+which optimally clones the states on an equator of the Bloch sphere \cite{PhaseCovariantOptimalBruss}.
+Another category of quantum cloning machines is economical quantum cloning machines (EQCM), which do not use the extra ancillary qubit \cite{EconomicalNiuGriffiths}. 
+
+Quantum cloning is of particular interest in the context of quantum key distribution (QKD) \cite{QuantumCloningReviewScarani}. 
+The security of QKD protocols relies on the no-cloning theorem, therefore a QCM is a suitable means of attack.
+An eavesdropper could intercept the state that Alice is sending to Bob, clone it approximately and send the imperfect copy to Bob.
+Since, the copy is not exact, Alice and Bob would find some missing correlations after their measurements.
+Nonetheless, if the errors introduced by the QCM could be confused with generic noise and the eavesdropper could go unnoticed.
+
+In this project we have implemented an experimental realization of the universal, the phase-covariant and the economical phase-covariant QCMs on the quantum processors available via Quantum Inspire \cite{quantuminspire} and IBM Quantum Experience \cite{ibmquantumexperience}.
+The purpose of the present work is to compare the performances of different backends with each other and with the theoretical expectations,
+addressing the question of whether current quantum computers could be used as QCMs, focusing in particular on their use for eavesdropping.
+We considered three different sets of input states in order to evaluate the QCMs: the whole Bloch sphere, the equator of the Bloch sphere in the $xz$ plane and the BB84 states (i.e. the computational and the Hadamard basis).
+In each of these cases we have calculated the average fidelity of the two copies.
+Moreover, we also studied the results calibrating the readout.
+
+The report is structured as follows: 
+in Section \ref{sec:approximateqcm} we introduce the afore-mentioned QCMs, 
+in Section \ref{sec:implementation} we discuss the experimental setup with which we have implemented and tested them on real hardware,
+in Section \ref{sec:results} we examine the obtained results,
+in Section \ref{sec:conclusions} we draw some conclusions and discuss possible further developments.

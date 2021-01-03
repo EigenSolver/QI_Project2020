@@ -1,0 +1,156 @@
+\chapter{Approximate quantum cloning}
+\label{sec:approximateqcm}
+\section{No-cloning theorem}
+It is a fundamental result of quantum mechanics that a generic quantum states can not be copied exactly.
+\section{Universal quantum cloning machine}
+\section{Phase covariant quantum cloning machine}
+The circuit for the phase covariant quantum cloning machine (PCQCM) proposed in  \cite{EquatorialQCM} is similar to the one for the universal quantum cloning machine (UQCM), but the output copies are on the register of the ancillae:
+
+\[
+\begin{quantikz}
+    \lstick{$\ket{\psi}_{a_0}$} & \qw                  & \qw        & \qw                   & \qw       & \qw                   & \ctrl{2}  & \ctrl{1}      & \targ{}       & \targ{}        & \qw &  \\
+    \lstick{$\ket{0}_{a_1}$}    & \qw                  & \targ{}    & \gate{R_y(\theta_2)}  & \ctrl{1}  & \qw                   & \qw       & \targ{}       & \qw           & \ctrl{-1}      & \qw & \rstick{\hspace{-4 mm}$\rho_{1}$}  \\
+    \lstick{$\ket{0}_{a_2}$}    & \gate{R_y(\theta_1)} & \ctrl{-1}  & \qw                   & \targ{}   & \gate{R_y(\theta_3)}  & \targ{}   & \qw           & \ctrl{-2}     & \qw            & \qw & \rstick{\hspace{-4 mm}$\rho_{2}$}
+\end{quantikz}
+\]
+
+The only significant difference is the preparation of the two ancillae. In this case, different angles of rotation are used.
+In order to optimally clone the states on the $xz$ equator, the following angles have to be chosen:
+\[
+    \theta_1=\theta_3=\frac{\pi}{4}, \quad \theta_2=0.
+\]
+
+Hence, the circuit above can be rewritten removing the rotation $R_y(\theta_2)$:
+\[
+\begin{quantikz}
+    \lstick{$\ket{\psi}_{a_0}$} & \qw                  & \qw         & \qw       & \qw                   & \ctrl{2}  & \ctrl{1}      & \targ{}        & \targ{}       & \qw &  \\
+    \lstick{$\ket{0}_{a_1}$}    & \qw                  & \targ{}     & \ctrl{1}  & \qw                   & \qw       & \targ{}       & \qw           & \ctrl{-1}      & \qw & \rstick{\hspace{-4 mm}$\rho_{1}$}  \\
+    \lstick{$\ket{0}_{a_2}$}    & \gate{R_y(\theta_1)} & \ctrl{-1}   & \targ{}   & \gate{R_y(\theta_3)}  & \targ{}   & \qw           & \ctrl{-2}     & \qw            & \qw & \rstick{\hspace{-4 mm}$\rho_{2}$}
+\end{quantikz}
+\]
+The first two CNOT gates in this circuit act as a SWAP gate (because $\ket{0}_{a_1}$ is the input state of the central qubit). 
+Hence, these two CNOT gates are not necessary. It is possible to ignore them, provided that $R_y(\theta_3)$ is moved to the second qubit. Since $\theta_1=\theta_3=\theta=\frac{\pi}{4}$, the final circuit is obtained
+
+\[
+\begin{quantikz}
+    \lstick{$\ket{\psi}_{a_0}$} \slice{0} & \qw                           & \ctrl{2}  & \ctrl{1}  \slice{2}    & \targ{}       & \targ{}      \slice{3} & \qw  &  \\
+    \lstick{$\ket{0}_{a_1}$}    & \gate{R_y(\pi/4)}                       & \qw       & \targ{}                & \qw           & \ctrl{-1}              & \qw & \rstick{\hspace{-4 mm}$\rho_{1}$}  \\
+    \lstick{$\ket{0}_{a_2}$}    & \gate{R_y(\pi/4)} \slice{1}            & \targ{}    & \qw                    & \ctrl{-2}     & \qw                    & \qw & \rstick{\hspace{-4 mm}$\rho_{2}$}  
+\end{quantikz}
+\]
+
+We have managed to greatly simplify the circuit. We have removed 5 CNOT gates from the circuit that we were using on real quantum processors with linear connectivity: the 2 CNOT gates mentioned here and the 3 CNOT gates that were necessary in order to implement the SWAP gate that was necessary to respect the connectivity constraints.
+With this new circuit, only the top qubit has to be able to connect to the other two qubits.
+As a final observation, since this circuit is much more simple than the one for the universal QCM, the average fidelity over the whole Bloch sphere could be greater in this case than with the universal QCM.
+
+We will now show, step by step, that this circuit does clone states on the $xz$-equator.
+We consider a generic input state
+\[
+    \ket{\psi}=\cos(\theta/2)\ket{0}+e^{i\phi}\sin(\theta/2)\ket{1},
+\]
+therefore the initial state of the full circuit is
+\[
+    \ket{\Psi_0}=\ket{\psi}_{a_0}\ket{0}_{a_1}\ket{0}_{a_2}.
+\]
+Each ancilla, after the rotation, is
+\[
+    R_y(\pi/4)\ket{0}=\cos(\pi/8)\ket{0}-\sin(\pi/8)\ket{1}.
+\]
+Hence, the two ancilla are prepared in the following state:
+\[
+    \begin{split}
+    \ket{\phi}&=\big(\cos(\pi/8)\ket{0}+\sin(\pi/8)\ket{1}\big)\big(\cos(\pi/8)\ket{0}+\sin(\pi/8)\ket{1}\big)=\\
+    &=\cos^2(\pi/8)\ket{00}+\cos(\pi/8)\sin(\pi/8)(\ket{01}+\ket{10})+\sin^2(\theta)\ket{11}.
+    \end{split}
+\]
+
+Right before the CNOT gates, the state of the three qubits is:
+\[
+    \begin{split}
+    \ket{\Psi_1}&=\big(\cos(\theta/2)\ket{0}+e^{i\phi}\sin(\theta/2)\ket{1}\big)\big(\cos(\pi/8)\ket{0}+\sin(\pi/8)\ket{1}\big)\big(\cos(\pi/8)\ket{0}+\sin(\pi/8)\ket{1}\big)=\\
+    &=\cos(\theta/2)\cos^2(\pi/8)\ket{000}+e^{i\phi}\sin(\theta/2)\cos^2(\pi/8)\ket{100}\\
+    &+\cos(\theta/2)\sin(\pi/8)\cos(\pi/8)\ket{010}+e^{i\phi}\sin(\theta/2)\sin(\pi/8)\cos(\pi/8)\ket{110}\\
+    &+\cos(\theta/2)\cos(\pi/8)\sin(\pi/8)\ket{001}+e^{i\phi}\sin(\theta/2)\cos(\pi/8)\sin(\pi/8)\ket{101}\\
+    &+\cos(\theta/2)\sin^2(\pi/8)\ket{011}+e^{i\phi}\sin(\theta/2)\sin^2(\pi/8)\ket{111}.
+    \end{split}
+\]
+After applying the first two CNOT gates:
+\[
+    \begin{split}
+    \ket{\Psi_2}&=\cos(\theta/2)\cos^2(\pi/8)\ket{000}+e^{i\phi}\sin(\theta/2)\cos^2(\pi/8)\ket{111}\\
+    &+\cos(\theta/2)\sin(\pi/8)\cos(\pi/8)\ket{010}+e^{i\phi}\sin(\theta/2)\sin(\pi/8)\cos(\pi/8)\ket{101}\\
+    &+\cos(\theta/2)\cos(\pi/8)\sin(\pi/8)\ket{001}+e^{i\phi}\sin(\theta/2)\cos(\pi/8)\sin(\pi/8)\ket{110}\\
+    &+\cos(\theta/2)\sin^2(\pi/8)\ket{011}+e^{i\phi}\sin(\theta/2)\sin^2(\pi/8)\ket{100}.
+    \end{split}
+\]
+After applying the last two CNOT gates:
+\[
+    \begin{split}
+    \ket{\Psi_3}&=\cos(\theta/2)\cos^2(\pi/8)\ket{000}+e^{i\phi}\sin(\theta/2)\cos^2(\pi/8)\ket{111}\\
+    &+\cos(\theta/2)\sin(\pi/8)\cos(\pi/8)\ket{110}+e^{i\phi}\sin(\theta/2)\sin(\pi/8)\cos(\pi/8)\ket{001}\\
+    &+\cos(\theta/2)\cos(\pi/8)\sin(\pi/8)\ket{101}+e^{i\phi}\sin(\theta/2)\cos(\pi/8)\sin(\pi/8)\ket{010}\\
+    &+\cos(\theta/2)\sin^2(\pi/8)\ket{011}+e^{i\phi}\sin(\theta/2)\sin^2(\pi/8)\ket{100}.
+    \end{split}
+\]
+The above state is invariant under the exchange of the second and third qubits, where the copies are made. 
+This means that the single qubit states of the two copies are the same, i.e.:
+\[
+    \rho_{a_1}=\rho_{a_2} \quad \text{where} \quad \rho_{a_1}=\Tr_{a_0,a_2}[\ketbra{\Psi_3}], \quad \rho_{a_2}=\Tr_{a_0,a_1}[\ketbra{\Psi_3}]
+\]
+In order to calculate the expected fidelity of the copies (we will consider the copy $\rho_{a_1}$), we first isolate the qubits $a_0$ and $a_2$:
+\[
+    \begin{split}
+    \ket{\Psi_3}&=\ket{0}\big(\cos(\theta/2)\cos^2(\pi/8)\ket{0}+e^{i\phi}\sin(\theta/2)\cos(\pi/8)\sin(\pi/8)\ket{1}\big)\ket{0}\\
+    &+\ket{0}\big(e^{i\phi}\sin(\theta/2)\sin(\pi/8)\cos(\pi/8)\ket{0}+\cos(\theta/2)\sin^2(\pi/8)\ket{1}\big)\ket{1}\\
+    &+\ket{1}\big(e^{i\phi}\sin(\theta/2)\sin^2(\pi/8)\ket{0}+\cos(\theta/2)\sin(\pi/8)\cos(\pi/8)\ket{1})\ket{0}\\
+    &+\ket{1}\big(\cos(\theta/2)\cos(\pi/8)\sin(\pi/8)\ket{0}+e^{i\phi}\sin(\theta/2)\cos^2(\pi/8)\ket{1}\big)\ket{1}.
+    \end{split}
+\]
+The single copy fidelity is then ($\theta$ and $\phi$ are the angles on the Bloch sphere of the input state):
+\[
+    \begin{split}
+    F(\theta,\phi)&=\bra{\psi}\rho_{a_1}\ket{\psi}=\bra{\psi}\Tr_{a_0,a_2}[\ketbra{\Psi_3}]\ket{\psi}=\\
+    &=\big(\cos^2(\theta/2)\cos^2(\pi/8)+\sin^2(\theta/2)\cos(\pi/8)\sin(\pi/8)\big)^2\\
+    &+\big|e^{i\phi}\cos(\theta/2)\sin(\theta/2)\sin(\pi/8)\cos(\pi/8)+e^{-i\phi}\sin(\theta/2)\cos(\theta/2)\sin^2(\pi/8)\big|^2\\
+    &+\big|e^{i\phi}\cos(\theta/2)\sin(\theta/2)\sin^2(\pi/8)+e^{-i\phi}\sin(\theta/2)\cos(\theta/2)\sin(\pi/8)\cos(\pi/8)\big|^2\\
+    &+\big(\cos^2(\theta/2)\cos(\pi/8)\sin(\pi/8)+\sin^2(\theta/2)\cos^2(\pi/8)\big)^2.
+    \end{split}
+\]
+The fidelity can be computed analytically. The final result is:
+\[
+    F(\theta,\phi)=\frac{3\left(4-\sqrt{2}\right)+\left(3\sqrt{2}-4\right)\left[\cos(2\phi)+\cos(2\theta)\left(1-\cos(2\phi)\right)\right]}{     16(2-\sqrt{2})   }.
+\]
+It is possible to observe that if $\phi=0$ is set, the fidelity becomes a constant:
+\[
+    F(\theta,0)=\frac{3\left(4-\sqrt{2}\right)+\left(3\sqrt{2}-4\right)}{16(2-\sqrt{2})}=\frac{8}{16(2-\sqrt{2})}=\frac{1}{2}\frac{2+\sqrt{2}}{2}=\frac{1}{2}+\frac{1}{\sqrt{8}}.
+\]
+Therefore, for input states on the $xz$-equator, the fidelity of the PCQCM is:
+\begin{equation}
+    F_{equator}^{ideal}=\frac{1}{2}+\frac{1}{\sqrt{8}}\approx 0.854
+\end{equation}
+
+As discussed in \cite{PhaseCovariantOptimalBruss} this is the optimal fidelity for a PCQCM. 
+Moreover, this is the optimal result attainable also when trying to maximize the fidelity for BB84 input states.
+Indeed, the optimization over the two different sets of output is equivalent and leads therefore to the same result \cite{PhaseCovariantOptimalBruss}.
+
+It might be of some interest to consider the performances of the PCQCM over the whole Bloch sphere.
+The average fidelity over the Bloch sphere $S$ is (integrating over solid angle):
+\[
+    \overline{F}=\frac{1}{\int_S \dd{\Omega}}\int_S F(\Omega)\dd{\Omega}=\frac{1}{4\pi}\int_0^{2\pi}\int_0^\pi F(\theta,\phi)\sin(\theta)\dd{\theta}\dd{\phi}=\frac{7+2\sqrt{2}}{12}\approx 0.819.
+\]
+The standard deviation can be calculated similarly:
+\[
+    \sigma_{F}=\sqrt{\overline{F^2}-\overline{F}^2}=\frac{1}{6}\sqrt{\frac{3-2\sqrt{2}}{5}}\approx0.031.
+\]
+
+We conclude that when considering the PCQCM over the whole Bloch sphere, it is not too far from the optimal bound of the UQCM (which was $F=5/6\approx 0.833$).
+This could have some interesting consequences: since we managed to greatly simplify its circuit, the PCQCM could turn to be better than the UQCM when using real hardware, in contrast with what is expected theoretically.
+A similar analysis was carried out in \cite{LowCostCloning} in the context of economical QCM.
+\section{Economical phase covariant quantum cloning machine}
+\section{Quantum cloning and quantum key distribution}
+
+NB: optimal cloning and optimal eavesdropping are different!
+When using the 3 qubit phase covariant QCM Eve also has the ancilla, which carries some additional information. See \cite{QuantumCloningReviewScarani}
+"In summary: without ancilla, Eve can make the best possible guess on the bit sent by Alice (because the machine realizes the optimal phase-covariant cloning) but has very poor information about the result obtained by Bob. 
+Adding the ancilla does not modify the estimation of Alice’s bit but allows Eve to deterministically symmetrize her information on Alice and Bob’s symbols. 
+However, the two machines are equally good from the point of view of cloning."
