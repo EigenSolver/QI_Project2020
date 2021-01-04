@@ -1,12 +1,12 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.11.24)  31 DEC 2020 06:16
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.5.28)  7 DEC 2020 20:00
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**/Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report1/report1.tex
-(/Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report1/report1.tex
+**/home/neuromancer/OneDrive/Quantum_Information/Project/report1/report1.tex
+(/home/neuromancer/OneDrive/Quantum_Information/Project/report1/report1.tex
 LaTeX2e <2020-02-02> patch level 5
-L3 programming layer <2020-03-06> (/usr/local/texlive/2020/texmf-dist/tex/latex/base/article.cls
+L3 programming layer <2020-05-15> (/usr/local/texlive/2020/texmf-dist/tex/latex/base/article.cls
 Document Class: article 2019/12/20 v1.4l Standard LaTeX document class
 (/usr/local/texlive/2020/texmf-dist/tex/latex/base/size10.clo
 File: size10.clo 2019/12/20 v1.4l Standard LaTeX file (size option)
@@ -25,18 +25,19 @@ File: size10.clo 2019/12/20 v1.4l Standard LaTeX file (size option)
 ) (/usr/local/texlive/2020/texmf-dist/tex/latex/physics/physics.sty
 Package: physics 
  (/usr/local/texlive/2020/texmf-dist/tex/latex/l3packages/xparse/xparse.sty (/usr/local/texlive/2020/texmf-dist/tex/latex/l3kernel/expl3.sty
-Package: expl3 2020-03-06 L3 programming layer (loader) 
+Package: expl3 2020-05-15 L3 programming layer (loader) 
  (/usr/local/texlive/2020/texmf-dist/tex/latex/l3backend/l3backend-pdfmode.def
-File: l3backend-pdfmode.def 2020-03-12 L3 backend support: PDF mode
+File: l3backend-pdfmode.def 2020-05-05 L3 backend support: PDF mode
 \l__kernel_color_stack_int=\count175
 \l__pdf_internal_box=\box45
 ))
-Package: xparse 2020-03-06 L3 Experimental document command parser
+Package: xparse 2020-05-15 L3 Experimental document command parser
+ (/usr/local/texlive/2020/texmf-dist/tex/latex/l3packages/xparse/xparse-generic.tex
 \l__xparse_current_arg_int=\count176
 \g__xparse_grabber_int=\count177
 \l__xparse_m_args_int=\count178
 \l__xparse_v_nesting_int=\count179
-) (/usr/local/texlive/2020/texmf-dist/tex/latex/amsmath/amsmath.sty
+)) (/usr/local/texlive/2020/texmf-dist/tex/latex/amsmath/amsmath.sty
 Package: amsmath 2020/01/20 v2.17e AMS math features
 \@mathmargin=\skip49
 
@@ -104,37 +105,343 @@ Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \float@box=\box48
 \@float@everytoks=\toks21
 \@floatcapt=\box49
-) (/usr/local/texlive/2020/texmf-dist/tex/latex/doublestroke/dsfont.sty
-Package: dsfont 1995/08/01 v0.1 Double stroke roman fonts
+) (/usr/local/texlive/2020/texmf-dist/tex/latex/pgf/frontendlayer/tikz.sty (/usr/local/texlive/2020/texmf-dist/tex/latex/pgf/basiclayer/pgf.sty (/usr/local/texlive/2020/texmf-dist/tex/latex/pgf/utilities/pgfrcs.sty (/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/utilities/pgfutil-common.tex
+\pgfutil@everybye=\toks22
+\pgfutil@tempdima=\dimen144
+\pgfutil@tempdimb=\dimen145
+ (/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/utilities/pgfutil-common-lists.tex)) (/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/utilities/pgfutil-latex.def
+\pgfutil@abb=\box50
+ (/usr/local/texlive/2020/texmf-dist/tex/latex/ms/everyshi.sty
+Package: everyshi 2001/05/15 v3.00 EveryShipout Package (MS)
+)) (/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/utilities/pgfrcs.code.tex (/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/pgf.revision.tex)
+Package: pgfrcs 2020/01/08 v3.1.5b (3.1.5b)
+))
+Package: pgf 2020/01/08 v3.1.5b (3.1.5b)
+ (/usr/local/texlive/2020/texmf-dist/tex/latex/pgf/basiclayer/pgfcore.sty (/usr/local/texlive/2020/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2019/11/30 v1.2a Enhanced LaTeX Graphics (DPC,SPQR)
+ (/usr/local/texlive/2020/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+\KV@toks@=\toks23
+) (/usr/local/texlive/2020/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2019/11/30 v1.4a Standard LaTeX Graphics (DPC,SPQR)
+ (/usr/local/texlive/2020/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
+) (/usr/local/texlive/2020/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
 )
-/Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report1/report1.tex:8: Undefined control sequence.
-<recently read> \usetikzlibrary 
-                                
-l.8 \usetikzlibrary
-                   {quantikz}
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-
-/Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report1/report1.tex:8: LaTeX Error: Missing \begin{document}.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.8 \usetikzlibrary{q
-                     uantikz}
-You're in trouble here.  Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
+Package graphics Info: Driver file: pdftex.def on input line 105.
+ (/usr/local/texlive/2020/texmf-dist/tex/latex/graphics-def/pdftex.def
+File: pdftex.def 2018/01/08 v1.0l Graphics/color driver for pdftex
+))
+\Gin@req@height=\dimen146
+\Gin@req@width=\dimen147
+) (/usr/local/texlive/2020/texmf-dist/tex/latex/pgf/systemlayer/pgfsys.sty (/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/systemlayer/pgfsys.code.tex
+Package: pgfsys 2020/01/08 v3.1.5b (3.1.5b)
+ (/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex
+\pgfkeys@pathtoks=\toks24
+\pgfkeys@temptoks=\toks25
+ (/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/utilities/pgfkeysfiltered.code.tex
+\pgfkeys@tmptoks=\toks26
+))
+\pgf@x=\dimen148
+\pgf@y=\dimen149
+\pgf@xa=\dimen150
+\pgf@ya=\dimen151
+\pgf@xb=\dimen152
+\pgf@yb=\dimen153
+\pgf@xc=\dimen154
+\pgf@yc=\dimen155
+\pgf@xd=\dimen156
+\pgf@yd=\dimen157
+\w@pgf@writea=\write3
+\r@pgf@reada=\read2
+\c@pgf@counta=\count193
+\c@pgf@countb=\count194
+\c@pgf@countc=\count195
+\c@pgf@countd=\count196
+\t@pgf@toka=\toks27
+\t@pgf@tokb=\toks28
+\t@pgf@tokc=\toks29
+\pgf@sys@id@count=\count197
+ (/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/systemlayer/pgf.cfg
+File: pgf.cfg 2020/01/08 v3.1.5b (3.1.5b)
+)
+Driver file for pgf: pgfsys-pdftex.def
+ (/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-pdftex.def
+File: pgfsys-pdftex.def 2020/01/08 v3.1.5b (3.1.5b)
+ (/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-common-pdf.def
+File: pgfsys-common-pdf.def 2020/01/08 v3.1.5b (3.1.5b)
+))) (/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/systemlayer/pgfsyssoftpath.code.tex
+File: pgfsyssoftpath.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+\pgfsyssoftpath@smallbuffer@items=\count198
+\pgfsyssoftpath@bigbuffer@items=\count199
+) (/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/systemlayer/pgfsysprotocol.code.tex
+File: pgfsysprotocol.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+)) (/usr/local/texlive/2020/texmf-dist/tex/latex/xcolor/xcolor.sty
+Package: xcolor 2016/05/11 v2.12 LaTeX color extensions (UK)
+ (/usr/local/texlive/2020/texmf-dist/tex/latex/graphics-cfg/color.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package xcolor Info: Driver file: pdftex.def on input line 225.
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1348.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1352.
+Package xcolor Info: Model `RGB' extended on input line 1364.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1366.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1367.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1368.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1369.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1370.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1371.
+) (/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/basiclayer/pgfcore.code.tex
+Package: pgfcore 2020/01/08 v3.1.5b (3.1.5b)
+ (/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex (/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/math/pgfmathcalc.code.tex (/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/math/pgfmathutil.code.tex) (/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/math/pgfmathparser.code.tex
+\pgfmath@dimen=\dimen158
+\pgfmath@count=\count266
+\pgfmath@box=\box51
+\pgfmath@toks=\toks30
+\pgfmath@stack@operand=\toks31
+\pgfmath@stack@operation=\toks32
+) (/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.code.tex (/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.basic.code.tex) (/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.trigonometric.code.tex) (/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.random.code.tex) (/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.comparison.code.tex) (/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.base.code.tex) (/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.round.code.tex) (/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.misc.code.tex) (/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.integerarithmetics.code.tex))) (/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/math/pgfmathfloat.code.tex
+\c@pgfmathroundto@lastzeros=\count267
+)) (/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/math/pgfint.code.tex) (/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepoints.code.tex
+File: pgfcorepoints.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+\pgf@picminx=\dimen159
+\pgf@picmaxx=\dimen160
+\pgf@picminy=\dimen161
+\pgf@picmaxy=\dimen162
+\pgf@pathminx=\dimen163
+\pgf@pathmaxx=\dimen164
+\pgf@pathminy=\dimen165
+\pgf@pathmaxy=\dimen166
+\pgf@xx=\dimen167
+\pgf@xy=\dimen168
+\pgf@yx=\dimen169
+\pgf@yy=\dimen170
+\pgf@zx=\dimen171
+\pgf@zy=\dimen172
+) (/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathconstruct.code.tex
+File: pgfcorepathconstruct.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+\pgf@path@lastx=\dimen173
+\pgf@path@lasty=\dimen174
+) (/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathusage.code.tex
+File: pgfcorepathusage.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+\pgf@shorten@end@additional=\dimen175
+\pgf@shorten@start@additional=\dimen176
+) (/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/basiclayer/pgfcorescopes.code.tex
+File: pgfcorescopes.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+\pgfpic=\box52
+\pgf@hbox=\box53
+\pgf@layerbox@main=\box54
+\pgf@picture@serial@count=\count268
+) (/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/basiclayer/pgfcoregraphicstate.code.tex
+File: pgfcoregraphicstate.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+\pgflinewidth=\dimen177
+) (/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransformations.code.tex
+File: pgfcoretransformations.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+\pgf@pt@x=\dimen178
+\pgf@pt@y=\dimen179
+\pgf@pt@temp=\dimen180
+) (/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/basiclayer/pgfcorequick.code.tex
+File: pgfcorequick.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+) (/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreobjects.code.tex
+File: pgfcoreobjects.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+) (/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathprocessing.code.tex
+File: pgfcorepathprocessing.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+) (/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/basiclayer/pgfcorearrows.code.tex
+File: pgfcorearrows.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+\pgfarrowsep=\dimen181
+) (/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreshade.code.tex
+File: pgfcoreshade.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+\pgf@max=\dimen182
+\pgf@sys@shading@range@num=\count269
+\pgf@shadingcount=\count270
+) (/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreimage.code.tex
+File: pgfcoreimage.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+ (/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreexternal.code.tex
+File: pgfcoreexternal.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+\pgfexternal@startupbox=\box55
+)) (/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/basiclayer/pgfcorelayers.code.tex
+File: pgfcorelayers.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+) (/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransparency.code.tex
+File: pgfcoretransparency.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+) (/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepatterns.code.tex
+File: pgfcorepatterns.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+) (/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/basiclayer/pgfcorerdf.code.tex
+File: pgfcorerdf.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+))) (/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/modules/pgfmoduleshapes.code.tex
+File: pgfmoduleshapes.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+\pgfnodeparttextbox=\box56
+) (/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/modules/pgfmoduleplot.code.tex
+File: pgfmoduleplot.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+) (/usr/local/texlive/2020/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-0-65.sty
+Package: pgfcomp-version-0-65 2020/01/08 v3.1.5b (3.1.5b)
+\pgf@nodesepstart=\dimen183
+\pgf@nodesepend=\dimen184
+) (/usr/local/texlive/2020/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-1-18.sty
+Package: pgfcomp-version-1-18 2020/01/08 v3.1.5b (3.1.5b)
+)) (/usr/local/texlive/2020/texmf-dist/tex/latex/pgf/utilities/pgffor.sty (/usr/local/texlive/2020/texmf-dist/tex/latex/pgf/utilities/pgfkeys.sty (/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex)) (/usr/local/texlive/2020/texmf-dist/tex/latex/pgf/math/pgfmath.sty (/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex)) (/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/utilities/pgffor.code.tex
+Package: pgffor 2020/01/08 v3.1.5b (3.1.5b)
+ (/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex)
+\pgffor@iter=\dimen185
+\pgffor@skip=\dimen186
+\pgffor@stack=\toks33
+\pgffor@toks=\toks34
+)) (/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/frontendlayer/tikz/tikz.code.tex
+Package: tikz 2020/01/08 v3.1.5b (3.1.5b)
+ (/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/libraries/pgflibraryplothandlers.code.tex
+File: pgflibraryplothandlers.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+\pgf@plot@mark@count=\count271
+\pgfplotmarksize=\dimen187
+)
+\tikz@lastx=\dimen188
+\tikz@lasty=\dimen189
+\tikz@lastxsaved=\dimen190
+\tikz@lastysaved=\dimen191
+\tikz@lastmovetox=\dimen192
+\tikz@lastmovetoy=\dimen193
+\tikzleveldistance=\dimen194
+\tikzsiblingdistance=\dimen195
+\tikz@figbox=\box57
+\tikz@figbox@bg=\box58
+\tikz@tempbox=\box59
+\tikz@tempbox@bg=\box60
+\tikztreelevel=\count272
+\tikznumberofchildren=\count273
+\tikznumberofcurrentchild=\count274
+\tikz@fig@count=\count275
+ (/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/modules/pgfmodulematrix.code.tex
+File: pgfmodulematrix.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+\pgfmatrixcurrentrow=\count276
+\pgfmatrixcurrentcolumn=\count277
+\pgf@matrix@numberofcolumns=\count278
+)
+\tikz@expandcount=\count279
+ (/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarytopaths.code.tex
+File: tikzlibrarytopaths.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+))) (/usr/local/texlive/2020/texmf-dist/tex/latex/doublestroke/dsfont.sty
+Package: dsfont 1995/08/01 v0.1 Double stroke roman fonts
+) (/usr/local/texlive/2020/texmf-dist/tex/latex/quantikz/tikzlibraryquantikz.code.tex (/usr/local/texlive/2020/texmf-dist/tex/latex/xargs/xargs.sty
+Package: xargs 2008/03/22 v1.1  extended macro definitions  (mpg)
+ (/usr/local/texlive/2020/texmf-dist/tex/latex/xkeyval/xkeyval.sty
+Package: xkeyval 2014/12/03 v2.7a package option processing (HA)
+ (/usr/local/texlive/2020/texmf-dist/tex/generic/xkeyval/xkeyval.tex (/usr/local/texlive/2020/texmf-dist/tex/generic/xkeyval/xkvutils.tex
+\XKV@toks=\toks35
+\XKV@tempa@toks=\toks36
+)
+\XKV@depth=\count280
+File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
+))
+\xargs@max=\count281
+\xargs@toksa=\toks37
+\xargs@toksb=\toks38
+) (/usr/local/texlive/2020/texmf-dist/tex/latex/base/ifthen.sty
+Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
+) (/usr/local/texlive/2020/texmf-dist/tex/generic/xstring/xstring.sty (/usr/local/texlive/2020/texmf-dist/tex/generic/xstring/xstring.tex
+\integerpart=\count282
+\decimalpart=\count283
+)
+Package: xstring 2019/02/06 v1.83 String manipulations (CT)
+) (/usr/local/texlive/2020/texmf-dist/tex/latex/etoolbox/etoolbox.sty
+Package: etoolbox 2019/09/21 v2.5h e-TeX tools for LaTeX (JAW)
+\etb@tempcnta=\count284
+) (/usr/local/texlive/2020/texmf-dist/tex/latex/mathtools/mathtools.sty
+Package: mathtools 2020/03/24 v1.24 mathematical typesetting tools
+ (/usr/local/texlive/2020/texmf-dist/tex/latex/tools/calc.sty
+Package: calc 2017/05/25 v4.3 Infix arithmetic (KKT,FJ)
+\calc@Acount=\count285
+\calc@Bcount=\count286
+\calc@Adimen=\dimen196
+\calc@Bdimen=\dimen197
+\calc@Askip=\skip52
+\calc@Bskip=\skip53
+LaTeX Info: Redefining \setlength on input line 80.
+LaTeX Info: Redefining \addtolength on input line 81.
+\calc@Ccount=\count287
+\calc@Cskip=\skip54
+) (/usr/local/texlive/2020/texmf-dist/tex/latex/mathtools/mhsetup.sty
+Package: mhsetup 2017/03/31 v1.3 programming setup (MH)
+)
+LaTeX Info: Thecontrolsequence`\('isalreadyrobust on input line 130.
+LaTeX Info: Thecontrolsequence`\)'isalreadyrobust on input line 130.
+LaTeX Info: Thecontrolsequence`\['isalreadyrobust on input line 130.
+LaTeX Info: Thecontrolsequence`\]'isalreadyrobust on input line 130.
+\g_MT_multlinerow_int=\count288
+\l_MT_multwidth_dim=\dimen198
+\origjot=\skip55
+\l_MT_shortvdotswithinadjustabove_dim=\dimen199
+\l_MT_shortvdotswithinadjustbelow_dim=\dimen256
+\l_MT_above_intertext_sep=\dimen257
+\l_MT_below_intertext_sep=\dimen258
+\l_MT_above_shortintertext_sep=\dimen259
+\l_MT_below_shortintertext_sep=\dimen260
+\xmathstrut@box=\box61
+\xmathstrut@dim=\dimen261
+) (/usr/local/texlive/2020/texmf-dist/tex/latex/environ/environ.sty
+Package: environ 2014/05/04 v0.3 A new way to define environments
+ (/usr/local/texlive/2020/texmf-dist/tex/latex/trimspaces/trimspaces.sty
+Package: trimspaces 2009/09/17 v1.1 Trim spaces around a token list
+)) (/usr/local/texlive/2020/texmf-dist/tex/generic/tikz-cd/tikzlibrarycd.code.tex (/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarymatrix.code.tex
+File: tikzlibrarymatrix.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+) (/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryquotes.code.tex
+File: tikzlibraryquotes.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+) (/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/libraries/pgflibraryarrows.meta.code.tex
+File: pgflibraryarrows.meta.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+\pgfarrowinset=\dimen262
+\pgfarrowlength=\dimen263
+\pgfarrowwidth=\dimen264
+\pgfarrowlinewidth=\dimen265
+)) (/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarydecorations.pathreplacing.code.tex (/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarydecorations.code.tex (/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/modules/pgfmoduledecorations.code.tex
+\pgfdecoratedcompleteddistance=\dimen266
+\pgfdecoratedremainingdistance=\dimen267
+\pgfdecoratedinputsegmentcompleteddistance=\dimen268
+\pgfdecoratedinputsegmentremainingdistance=\dimen269
+\pgf@decorate@distancetomove=\dimen270
+\pgf@decorate@repeatstate=\count289
+\pgfdecorationsegmentamplitude=\dimen271
+\pgfdecorationsegmentlength=\dimen272
+)
+\tikz@lib@dec@box=\box62
+) (/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/libraries/decorations/pgflibrarydecorations.pathreplacing.code.tex)) (/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarycalc.code.tex
+File: tikzlibrarycalc.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+) (/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarypositioning.code.tex
+File: tikzlibrarypositioning.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+) (/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryfit.code.tex
+File: tikzlibraryfit.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+) (/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryshapes.symbols.code.tex
+File: tikzlibraryshapes.symbols.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+ (/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/libraries/shapes/pgflibraryshapes.symbols.code.tex
+File: pgflibraryshapes.symbols.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+)) (/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarydecorations.pathmorphing.code.tex (/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/libraries/decorations/pgflibrarydecorations.pathmorphing.code.tex)) (/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryshapes.misc.code.tex
+File: tikzlibraryshapes.misc.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+ (/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/libraries/shapes/pgflibraryshapes.misc.code.tex
+File: pgflibraryshapes.misc.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+)) (/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarybackgrounds.code.tex
+File: tikzlibrarybackgrounds.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+\pgf@layerbox@background=\box63
+\pgf@layerboxsaved@background=\box64
+) (/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarydecorations.markings.code.tex (/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/libraries/decorations/pgflibrarydecorations.markings.code.tex)) (/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarymath.code.tex
+(/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryfpu.code.tex (/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/libraries/pgflibraryfpu.code.tex))
+\tikz@math@for@depth=\count290
+\tikz@math@dimen=\dimen273
+\tikz@math@toks=\toks39
+)
+\myl=\skip56
+\myh=\skip57
+\myd=\skip58
+\c@aaa=\count291
+LaTeX Font Info:    Trying to load font information for U+msa on input line 142.
+ (/usr/local/texlive/2020/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Trying to load font information for U+msb on input line 142.
+ (/usr/local/texlive/2020/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+))
 
 LaTeX Warning: Unused global option(s):
     [11p].
 
-(/Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report1/report1.aux
+(/home/neuromancer/OneDrive/Quantum_Information/Project/report1/report1.aux
 
 LaTeX Warning: Label `circuit:full' multiply defined.
 
@@ -176,2375 +483,112 @@ LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 11.
 LaTeX Font Info:    ... okay on input line 11.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 11.
 LaTeX Font Info:    ... okay on input line 11.
- [1
-
-{/usr/local/texlive/2020/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-LaTeX Font Info:    Trying to load font information for U+msa on input line 12.
- (/usr/local/texlive/2020/texmf-dist/tex/latex/amsfonts/umsa.fd
-File: umsa.fd 2013/01/14 v3.01 AMS symbols A
-)
-LaTeX Font Info:    Trying to load font information for U+msb on input line 12.
- (/usr/local/texlive/2020/texmf-dist/tex/latex/amsfonts/umsb.fd
-File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-)
+ ABD: EveryShipout initializing macros (/usr/local/texlive/2020/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count292
+\scratchdimen=\dimen274
+\scratchbox=\box65
+\nofMPsegments=\count293
+\nofMParguments=\count294
+\everyMPshowfont=\toks40
+\MPscratchCnt=\count295
+\MPscratchDim=\dimen275
+\MPnumerator=\count296
+\makeMPintoPDFobject=\count297
+\everyMPtoPDFconversion=\toks41
+) (/usr/local/texlive/2020/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
+Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
+ (/usr/local/texlive/2020/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
+))
 Underfull \hbox (badness 10000) in paragraph at lines 17--18
 
  []
 
+[1
 
-/Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report1/report1.tex:19: LaTeX Error: Environment quantikz undefined.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.19 \begin{quantikz}
-                     \label{circuit:full}
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-/Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report1/report1.tex:20: Undefined control sequence.
-l.20 \lstick
-            {$|\psi \rangle_{a_0}$}   &\qw &  \gate[3][2cm]{U_{copy}}&\qw\\
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-/Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report1/report1.tex:20: Misplaced alignment tab character &.
-l.20 \lstick{$|\psi \rangle_{a_0}$}   &
-                                       \qw &  \gate[3][2cm]{U_{copy}}&\qw\\
-I can't figure out why you would want to use a tab mark
-here. If you just want an ampersand, the remedy is
-simple: Just type `I\&' now. But if some right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-/Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report1/report1.tex:20: Undefined control sequence.
-l.20 \lstick{$|\psi \rangle_{a_0}$}   &\qw
-                                           &  \gate[3][2cm]{U_{copy}}&\qw\\
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-/Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report1/report1.tex:20: Misplaced alignment tab character &.
-l.20 \lstick{$|\psi \rangle_{a_0}$}   &\qw &
-                                              \gate[3][2cm]{U_{copy}}&\qw\\
-I can't figure out why you would want to use a tab mark
-here. If you just want an ampersand, the remedy is
-simple: Just type `I\&' now. But if some right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-/Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report1/report1.tex:20: Undefined control sequence.
-l.20 ...ick{$|\psi \rangle_{a_0}$}   &\qw &  \gate
-                                                  [3][2cm]{U_{copy}}&\qw\\
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-/Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report1/report1.tex:20: Missing $ inserted.
-<inserted text> 
-                $
-l.20 ...\rangle_{a_0}$}   &\qw &  \gate[3][2cm]{U_
-                                                  {copy}}&\qw\\
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-/Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report1/report1.tex:20: Extra }, or forgotten $.
-l.20 ..._{a_0}$}   &\qw &  \gate[3][2cm]{U_{copy}}
-                                                  &\qw\\
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-/Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report1/report1.tex:20: Misplaced alignment tab character &.
-l.20 ...{a_0}$}   &\qw &  \gate[3][2cm]{U_{copy}}&
-                                                  \qw\\
-I can't figure out why you would want to use a tab mark
-here. If you just want an ampersand, the remedy is
-simple: Just type `I\&' now. But if some right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-/Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report1/report1.tex:20: Undefined control sequence.
-l.20 ...0}$}   &\qw &  \gate[3][2cm]{U_{copy}}&\qw
-                                                  \\
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-
-/Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report1/report1.tex:20: LaTeX Error: There's no line here to end.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.20 ...$}   &\qw &  \gate[3][2cm]{U_{copy}}&\qw\\
-                                                  
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-/Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report1/report1.tex:20: Missing $ inserted.
-<inserted text> 
-                $
-l.20 ...$}   &\qw &  \gate[3][2cm]{U_{copy}}&\qw\\
-                                                  
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-/Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report1/report1.tex:20: Missing } inserted.
-<inserted text> 
-                }
-l.20 ...$}   &\qw &  \gate[3][2cm]{U_{copy}}&\qw\\
-                                                  
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-/Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report1/report1.tex:21: Undefined control sequence.
-<recently read> \lstick 
-                        
-l.21 \lstick
-            {$|0\rangle_{a_1}$} & \gate[2][2cm]{U_{prepare}}  && \qw\\
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-/Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report1/report1.tex:21: Misplaced alignment tab character &.
-l.21 \lstick{$|0\rangle_{a_1}$} &
-                                  \gate[2][2cm]{U_{prepare}}  && \qw\\
-I can't figure out why you would want to use a tab mark
-here. If you just want an ampersand, the remedy is
-simple: Just type `I\&' now. But if some right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-/Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report1/report1.tex:21: Undefined control sequence.
-l.21 \lstick{$|0\rangle_{a_1}$} & \gate
-                                       [2][2cm]{U_{prepare}}  && \qw\\
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-/Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report1/report1.tex:21: Missing $ inserted.
-<inserted text> 
-                $
-l.21 \lstick{$|0\rangle_{a_1}$} & \gate[2][2cm]{U_
-                                                  {prepare}}  && \qw\\
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-/Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report1/report1.tex:21: Extra }, or forgotten $.
-l.21 ...angle_{a_1}$} & \gate[2][2cm]{U_{prepare}}
-                                                    && \qw\\
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-/Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report1/report1.tex:21: Misplaced alignment tab character &.
-l.21 ...le_{a_1}$} & \gate[2][2cm]{U_{prepare}}  &
-                                                  & \qw\\
-I can't figure out why you would want to use a tab mark
-here. If you just want an ampersand, the remedy is
-simple: Just type `I\&' now. But if some right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-/Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report1/report1.tex:21: Misplaced alignment tab character &.
-l.21 ...e_{a_1}$} & \gate[2][2cm]{U_{prepare}}  &&
-                                                   \qw\\
-I can't figure out why you would want to use a tab mark
-here. If you just want an ampersand, the remedy is
-simple: Just type `I\&' now. But if some right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-/Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report1/report1.tex:21: Undefined control sequence.
-l.21 ..._1}$} & \gate[2][2cm]{U_{prepare}}  && \qw
-                                                  \\
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-
-/Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report1/report1.tex:21: LaTeX Error: There's no line here to end.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.21 ...}$} & \gate[2][2cm]{U_{prepare}}  && \qw\\
-                                                  
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-/Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report1/report1.tex:21: Missing $ inserted.
-<inserted text> 
-                $
-l.21 ...}$} & \gate[2][2cm]{U_{prepare}}  && \qw\\
-                                                  
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-/Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report1/report1.tex:21: Missing } inserted.
-<inserted text> 
-                }
-l.21 ...}$} & \gate[2][2cm]{U_{prepare}}  && \qw\\
-                                                  
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-/Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report1/report1.tex:22: Undefined control sequence.
-<recently read> \lstick 
-                        
-l.22 \lstick
-            {$|0\rangle_{b_1}$} &   & &\qw
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-/Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report1/report1.tex:22: Misplaced alignment tab character &.
-l.22 \lstick{$|0\rangle_{b_1}$} &
-                                    & &\qw
-I can't figure out why you would want to use a tab mark
-here. If you just want an ampersand, the remedy is
-simple: Just type `I\&' now. But if some right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-/Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report1/report1.tex:22: Misplaced alignment tab character &.
-l.22 \lstick{$|0\rangle_{b_1}$} &   &
-                                      &\qw
-I can't figure out why you would want to use a tab mark
-here. If you just want an ampersand, the remedy is
-simple: Just type `I\&' now. But if some right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-/Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report1/report1.tex:22: Misplaced alignment tab character &.
-l.22 \lstick{$|0\rangle_{b_1}$} &   & &
-                                       \qw
-I can't figure out why you would want to use a tab mark
-here. If you just want an ampersand, the remedy is
-simple: Just type `I\&' now. But if some right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-/Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report1/report1.tex:22: Undefined control sequence.
-l.22 \lstick{$|0\rangle_{b_1}$} &   & &\qw
-                                          
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-
-/Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report1/report1.tex:23: LaTeX Error: \begin{center} on input line 18 ended by \end{quantikz}.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.23 \end{quantikz}
-                   .
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-/Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report1/report1.tex:36: LaTeX Error: Environment quantikz undefined.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.36 \begin{quantikz}
-                     \label{circuit:full}
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-/Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report1/report1.tex:37: Undefined control sequence.
-l.37 \lstick
-            {$|0\rangle_{a_1}$} & \gate[2][1cm]{U_{prepare}}  & \qw\\
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-/Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report1/report1.tex:37: Misplaced alignment tab character &.
-l.37 \lstick{$|0\rangle_{a_1}$} &
-                                  \gate[2][1cm]{U_{prepare}}  & \qw\\
-I can't figure out why you would want to use a tab mark
-here. If you just want an ampersand, the remedy is
-simple: Just type `I\&' now. But if some right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-/Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report1/report1.tex:37: Undefined control sequence.
-l.37 \lstick{$|0\rangle_{a_1}$} & \gate
-                                       [2][1cm]{U_{prepare}}  & \qw\\
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-/Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report1/report1.tex:37: Missing $ inserted.
-<inserted text> 
-                $
-l.37 \lstick{$|0\rangle_{a_1}$} & \gate[2][1cm]{U_
-                                                  {prepare}}  & \qw\\
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-/Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report1/report1.tex:37: Extra }, or forgotten $.
-l.37 ...angle_{a_1}$} & \gate[2][1cm]{U_{prepare}}
-                                                    & \qw\\
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-/Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report1/report1.tex:37: Misplaced alignment tab character &.
-l.37 ...le_{a_1}$} & \gate[2][1cm]{U_{prepare}}  &
-                                                   \qw\\
-I can't figure out why you would want to use a tab mark
-here. If you just want an ampersand, the remedy is
-simple: Just type `I\&' now. But if some right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-/Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report1/report1.tex:37: Undefined control sequence.
-l.37 ...a_1}$} & \gate[2][1cm]{U_{prepare}}  & \qw
-                                                  \\
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-
-/Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report1/report1.tex:37: LaTeX Error: There's no line here to end.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.37 ...1}$} & \gate[2][1cm]{U_{prepare}}  & \qw\\
-                                                  
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-/Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report1/report1.tex:37: Missing $ inserted.
-<inserted text> 
-                $
-l.37 ...1}$} & \gate[2][1cm]{U_{prepare}}  & \qw\\
-                                                  
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-/Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report1/report1.tex:37: Missing } inserted.
-<inserted text> 
-                }
-l.37 ...1}$} & \gate[2][1cm]{U_{prepare}}  & \qw\\
-                                                  
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-/Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report1/report1.tex:38: Undefined control sequence.
-<recently read> \lstick 
-                        
-l.38 \lstick
-            {$|0\rangle_{b_1}$} &   &\qw
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-/Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report1/report1.tex:38: Misplaced alignment tab character &.
-l.38 \lstick{$|0\rangle_{b_1}$} &
-                                    &\qw
-I can't figure out why you would want to use a tab mark
-here. If you just want an ampersand, the remedy is
-simple: Just type `I\&' now. But if some right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-/Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report1/report1.tex:38: Misplaced alignment tab character &.
-l.38 \lstick{$|0\rangle_{b_1}$} &   &
-                                     \qw
-I can't figure out why you would want to use a tab mark
-here. If you just want an ampersand, the remedy is
-simple: Just type `I\&' now. But if some right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-/Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report1/report1.tex:38: Undefined control sequence.
-l.38 \lstick{$|0\rangle_{b_1}$} &   &\qw
-                                        
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-
-/Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report1/report1.tex:39: LaTeX Error: \begin{center} on input line 33 ended by \end{quantikz}.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.39 \end{quantikz}
-                   =
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-/Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report1/report1.tex:41: LaTeX Error: Environment quantikz undefined.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.41 \begin{quantikz}
-                     [slice all]\label{circuit:full}
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-/Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report1/report1.tex:42: Undefined control sequence.
-l.42 \lstick
-            {$|0\rangle_{a_1}$} & \gate{R_y(\theta_1)}  & \ctrl{1}& \qw  &\t...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-/Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report1/report1.tex:42: Misplaced alignment tab character &.
-l.42 \lstick{$|0\rangle_{a_1}$} &
-                                  \gate{R_y(\theta_1)}  & \ctrl{1}& \qw  &\t...
-I can't figure out why you would want to use a tab mark
-here. If you just want an ampersand, the remedy is
-simple: Just type `I\&' now. But if some right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-/Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report1/report1.tex:42: Undefined control sequence.
-l.42 \lstick{$|0\rangle_{a_1}$} & \gate
-                                       {R_y(\theta_1)}  & \ctrl{1}& \qw  &\t...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-/Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report1/report1.tex:42: Missing $ inserted.
-<inserted text> 
-                $
-l.42 \lstick{$|0\rangle_{a_1}$} & \gate{R_
-                                          y(\theta_1)}  & \ctrl{1}& \qw  &\t...
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-/Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report1/report1.tex:42: Extra }, or forgotten $.
-l.42 ...{$|0\rangle_{a_1}$} & \gate{R_y(\theta_1)}
-                                                    & \ctrl{1}& \qw  &\targ{...
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-/Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report1/report1.tex:42: Misplaced alignment tab character &.
-l.42 ...0\rangle_{a_1}$} & \gate{R_y(\theta_1)}  &
-                                                   \ctrl{1}& \qw  &\targ{} &...
-I can't figure out why you would want to use a tab mark
-here. If you just want an ampersand, the remedy is
-simple: Just type `I\&' now. But if some right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-/Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report1/report1.tex:42: Undefined control sequence.
-l.42 ...le_{a_1}$} & \gate{R_y(\theta_1)}  & \ctrl
-                                                  {1}& \qw  &\targ{} &\gate{...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-/Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report1/report1.tex:42: Misplaced alignment tab character &.
-l.42 ...a_1}$} & \gate{R_y(\theta_1)}  & \ctrl{1}&
-                                                   \qw  &\targ{} &\gate{R_y(...
-I can't figure out why you would want to use a tab mark
-here. If you just want an ampersand, the remedy is
-simple: Just type `I\&' now. But if some right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-/Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report1/report1.tex:42: Undefined control sequence.
-l.42 ...$} & \gate{R_y(\theta_1)}  & \ctrl{1}& \qw
-                                                    &\targ{} &\gate{R_y(\the...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-/Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report1/report1.tex:42: Misplaced alignment tab character &.
-l.42 ...& \gate{R_y(\theta_1)}  & \ctrl{1}& \qw  &
-                                                  \targ{} &\gate{R_y(\theta_...
-I can't figure out why you would want to use a tab mark
-here. If you just want an ampersand, the remedy is
-simple: Just type `I\&' now. But if some right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-/Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report1/report1.tex:42: Undefined control sequence.
-l.42 ...te{R_y(\theta_1)}  & \ctrl{1}& \qw  &\targ
-                                                  {} &\gate{R_y(\theta_3)}&\...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-/Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report1/report1.tex:42: Misplaced alignment tab character &.
-l.42 ..._y(\theta_1)}  & \ctrl{1}& \qw  &\targ{} &
-                                                  \gate{R_y(\theta_3)}&\qw\\
-I can't figure out why you would want to use a tab mark
-here. If you just want an ampersand, the remedy is
-simple: Just type `I\&' now. But if some right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-/Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report1/report1.tex:42: Undefined control sequence.
-l.42 ...heta_1)}  & \ctrl{1}& \qw  &\targ{} &\gate
-                                                  {R_y(\theta_3)}&\qw\\
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-/Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report1/report1.tex:42: Misplaced alignment tab character &.
-l.42 ...l{1}& \qw  &\targ{} &\gate{R_y(\theta_3)}&
-                                                  \qw\\
-I can't figure out why you would want to use a tab mark
-here. If you just want an ampersand, the remedy is
-simple: Just type `I\&' now. But if some right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-/Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report1/report1.tex:42: Undefined control sequence.
-l.42 ...}& \qw  &\targ{} &\gate{R_y(\theta_3)}&\qw
-                                                  \\
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-
-/Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report1/report1.tex:42: LaTeX Error: There's no line here to end.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.42 ... \qw  &\targ{} &\gate{R_y(\theta_3)}&\qw\\
-                                                  
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-/Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report1/report1.tex:42: Missing $ inserted.
-<inserted text> 
-                $
-l.42 ... \qw  &\targ{} &\gate{R_y(\theta_3)}&\qw\\
-                                                  
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-/Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report1/report1.tex:42: Missing } inserted.
-<inserted text> 
-                }
-l.42 ... \qw  &\targ{} &\gate{R_y(\theta_3)}&\qw\\
-                                                  
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-/Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report1/report1.tex:43: Undefined control sequence.
-<recently read> \lstick 
-                        
-l.43 \lstick
-            {$|0\rangle_{b_1}$} & \qw & \targ{}& \gate{R_y(\theta_2)}  &\ctr...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-/Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report1/report1.tex:43: Misplaced alignment tab character &.
-l.43 \lstick{$|0\rangle_{b_1}$} &
-                                  \qw & \targ{}& \gate{R_y(\theta_2)}  &\ctr...
-I can't figure out why you would want to use a tab mark
-here. If you just want an ampersand, the remedy is
-simple: Just type `I\&' now. But if some right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-/Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report1/report1.tex:43: Undefined control sequence.
-l.43 \lstick{$|0\rangle_{b_1}$} & \qw
-                                      & \targ{}& \gate{R_y(\theta_2)}  &\ctr...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-/Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report1/report1.tex:43: Misplaced alignment tab character &.
-l.43 \lstick{$|0\rangle_{b_1}$} & \qw &
-                                        \targ{}& \gate{R_y(\theta_2)}  &\ctr...
-I can't figure out why you would want to use a tab mark
-here. If you just want an ampersand, the remedy is
-simple: Just type `I\&' now. But if some right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-/Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report1/report1.tex:43: Undefined control sequence.
-l.43 \lstick{$|0\rangle_{b_1}$} & \qw & \targ
-                                             {}& \gate{R_y(\theta_2)}  &\ctr...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-/Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report1/report1.tex:43: Misplaced alignment tab character &.
-l.43 \lstick{$|0\rangle_{b_1}$} & \qw & \targ{}&
-                                                 \gate{R_y(\theta_2)}  &\ctr...
-I can't figure out why you would want to use a tab mark
-here. If you just want an ampersand, the remedy is
-simple: Just type `I\&' now. But if some right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-/Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report1/report1.tex:43: Undefined control sequence.
-l.43 ...{$|0\rangle_{b_1}$} & \qw & \targ{}& \gate
-                                                  {R_y(\theta_2)}  &\ctrl{-1...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-/Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report1/report1.tex:43: Missing $ inserted.
-<inserted text> 
-                $
-l.43 ...0\rangle_{b_1}$} & \qw & \targ{}& \gate{R_
-                                                  y(\theta_2)}  &\ctrl{-1} &...
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-/Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report1/report1.tex:43: Extra }, or forgotten $.
-l.43 ...1}$} & \qw & \targ{}& \gate{R_y(\theta_2)}
-                                                    &\ctrl{-1} &\qw&\qw
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-/Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report1/report1.tex:43: Misplaced alignment tab character &.
-l.43 ...} & \qw & \targ{}& \gate{R_y(\theta_2)}  &
-                                                  \ctrl{-1} &\qw&\qw
-I can't figure out why you would want to use a tab mark
-here. If you just want an ampersand, the remedy is
-simple: Just type `I\&' now. But if some right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-/Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report1/report1.tex:43: Undefined control sequence.
-l.43 ...qw & \targ{}& \gate{R_y(\theta_2)}  &\ctrl
-                                                  {-1} &\qw&\qw
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-/Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report1/report1.tex:43: Misplaced alignment tab character &.
-l.43 ...targ{}& \gate{R_y(\theta_2)}  &\ctrl{-1} &
-                                                  \qw&\qw
-I can't figure out why you would want to use a tab mark
-here. If you just want an ampersand, the remedy is
-simple: Just type `I\&' now. But if some right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-/Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report1/report1.tex:43: Undefined control sequence.
-l.43 ...g{}& \gate{R_y(\theta_2)}  &\ctrl{-1} &\qw
-                                                  &\qw
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-/Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report1/report1.tex:43: Misplaced alignment tab character &.
-l.43 ...{}& \gate{R_y(\theta_2)}  &\ctrl{-1} &\qw&
-                                                  \qw
-I can't figure out why you would want to use a tab mark
-here. If you just want an ampersand, the remedy is
-simple: Just type `I\&' now. But if some right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-/Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report1/report1.tex:43: Undefined control sequence.
-l.43 ... \gate{R_y(\theta_2)}  &\ctrl{-1} &\qw&\qw
-                                                  
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-
-/Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report1/report1.tex:44: LaTeX Error: \begin{center} on input line 33 ended by \end{quantikz}.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.44 \end{quantikz}
-                   .
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-/Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report1/report1.tex:44: Missing $ inserted.
-<inserted text> 
-                $
-l.44 \end{quantikz}
-                   .
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-/Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report1/report1.tex:44: Missing } inserted.
-<inserted text> 
-                }
-l.44 \end{quantikz}
-                   .
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-[2]
+{/usr/local/texlive/2020/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
 Overfull \hbox (120.44472pt too wide) detected at line 73
 []
  []
 
-
-/Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report1/report1.tex:99: LaTeX Error: Environment quantikz undefined.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.99 \begin{quantikz}
-                     \label{circuit:full}
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-/Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report1/report1.tex:103: Undefined control sequence.
-l.103 \lstick
-             {}   & \gate[3][2cm]{U_{copy}}&\qw\\
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-/Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report1/report1.tex:103: Misplaced alignment tab character &.
-l.103 \lstick{}   &
-                    \gate[3][2cm]{U_{copy}}&\qw\\
-I can't figure out why you would want to use a tab mark
-here. If you just want an ampersand, the remedy is
-simple: Just type `I\&' now. But if some right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-/Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report1/report1.tex:103: Undefined control sequence.
-l.103 \lstick{}   & \gate
-                         [3][2cm]{U_{copy}}&\qw\\
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-/Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report1/report1.tex:103: Missing $ inserted.
-<inserted text> 
-                $
-l.103 \lstick{}   & \gate[3][2cm]{U_
-                                    {copy}}&\qw\\
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-/Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report1/report1.tex:103: Extra }, or forgotten $.
-l.103 \lstick{}   & \gate[3][2cm]{U_{copy}}
-                                           &\qw\\
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-/Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report1/report1.tex:103: Misplaced alignment tab character &.
-l.103 \lstick{}   & \gate[3][2cm]{U_{copy}}&
-                                            \qw\\
-I can't figure out why you would want to use a tab mark
-here. If you just want an ampersand, the remedy is
-simple: Just type `I\&' now. But if some right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-/Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report1/report1.tex:103: Undefined control sequence.
-l.103 \lstick{}   & \gate[3][2cm]{U_{copy}}&\qw
-                                               \\
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-
-/Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report1/report1.tex:103: LaTeX Error: There's no line here to end.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.103 \lstick{}   & \gate[3][2cm]{U_{copy}}&\qw\\
-                                                 
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-/Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report1/report1.tex:103: Missing $ inserted.
-<inserted text> 
-                $
-l.103 \lstick{}   & \gate[3][2cm]{U_{copy}}&\qw\\
-                                                 
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-/Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report1/report1.tex:103: Missing } inserted.
-<inserted text> 
-                }
-l.103 \lstick{}   & \gate[3][2cm]{U_{copy}}&\qw\\
-                                                 
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-/Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report1/report1.tex:104: Undefined control sequence.
-<recently read> \lstick 
-                        
-l.104 \lstick
-             {} & & \qw\\
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-/Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report1/report1.tex:104: Misplaced alignment tab character &.
-l.104 \lstick{} &
-                  & \qw\\
-I can't figure out why you would want to use a tab mark
-here. If you just want an ampersand, the remedy is
-simple: Just type `I\&' now. But if some right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-/Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report1/report1.tex:104: Misplaced alignment tab character &.
-l.104 \lstick{} & &
-                    \qw\\
-I can't figure out why you would want to use a tab mark
-here. If you just want an ampersand, the remedy is
-simple: Just type `I\&' now. But if some right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-/Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report1/report1.tex:104: Undefined control sequence.
-l.104 \lstick{} & & \qw
-                       \\
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-
-/Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report1/report1.tex:104: LaTeX Error: There's no line here to end.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.104 \lstick{} & & \qw\\
-                         
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-/Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report1/report1.tex:105: Undefined control sequence.
-<recently read> \lstick 
-                        
-l.105 \lstick
-             {} &  &\qw
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-/Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report1/report1.tex:105: Misplaced alignment tab character &.
-l.105 \lstick{} &
-                   &\qw
-I can't figure out why you would want to use a tab mark
-here. If you just want an ampersand, the remedy is
-simple: Just type `I\&' now. But if some right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-/Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report1/report1.tex:105: Misplaced alignment tab character &.
-l.105 \lstick{} &  &
-                    \qw
-I can't figure out why you would want to use a tab mark
-here. If you just want an ampersand, the remedy is
-simple: Just type `I\&' now. But if some right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-/Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report1/report1.tex:105: Undefined control sequence.
-l.105 \lstick{} &  &\qw
-                       
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-
-/Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report1/report1.tex:106: LaTeX Error: \begin{center} on input line 98 ended by \end{quantikz}.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.106 \end{quantikz}
-                    =\begin{quantikz}[slice all]\label{circuit:full}
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-/Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report1/report1.tex:106: LaTeX Error: Environment quantikz undefined.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.106 \end{quantikz}=\begin{quantikz}
-                                     [slice all]\label{circuit:full}
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-/Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report1/report1.tex:107: Undefined control sequence.
-l.107 \lstick
-             {}   & \ctrl{1}&\ctrl{2}&\targ{}&\targ{}&\qw\\
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-/Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report1/report1.tex:107: Misplaced alignment tab character &.
-l.107 \lstick{}   &
-                    \ctrl{1}&\ctrl{2}&\targ{}&\targ{}&\qw\\
-I can't figure out why you would want to use a tab mark
-here. If you just want an ampersand, the remedy is
-simple: Just type `I\&' now. But if some right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-/Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report1/report1.tex:107: Undefined control sequence.
-l.107 \lstick{}   & \ctrl
-                         {1}&\ctrl{2}&\targ{}&\targ{}&\qw\\
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-/Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report1/report1.tex:107: Misplaced alignment tab character &.
-l.107 \lstick{}   & \ctrl{1}&
-                             \ctrl{2}&\targ{}&\targ{}&\qw\\
-I can't figure out why you would want to use a tab mark
-here. If you just want an ampersand, the remedy is
-simple: Just type `I\&' now. But if some right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-/Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report1/report1.tex:107: Undefined control sequence.
-l.107 \lstick{}   & \ctrl{1}&\ctrl
-                                  {2}&\targ{}&\targ{}&\qw\\
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-/Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report1/report1.tex:107: Misplaced alignment tab character &.
-l.107 \lstick{}   & \ctrl{1}&\ctrl{2}&
-                                      \targ{}&\targ{}&\qw\\
-I can't figure out why you would want to use a tab mark
-here. If you just want an ampersand, the remedy is
-simple: Just type `I\&' now. But if some right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-/Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report1/report1.tex:107: Undefined control sequence.
-l.107 \lstick{}   & \ctrl{1}&\ctrl{2}&\targ
-                                           {}&\targ{}&\qw\\
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-/Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report1/report1.tex:107: Misplaced alignment tab character &.
-l.107 \lstick{}   & \ctrl{1}&\ctrl{2}&\targ{}&
-                                              \targ{}&\qw\\
-I can't figure out why you would want to use a tab mark
-here. If you just want an ampersand, the remedy is
-simple: Just type `I\&' now. But if some right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-/Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report1/report1.tex:107: Undefined control sequence.
-l.107 ...ick{}   & \ctrl{1}&\ctrl{2}&\targ{}&\targ
-                                                  {}&\qw\\
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-/Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report1/report1.tex:107: Misplaced alignment tab character &.
-l.107 ...{}   & \ctrl{1}&\ctrl{2}&\targ{}&\targ{}&
-                                                  \qw\\
-I can't figure out why you would want to use a tab mark
-here. If you just want an ampersand, the remedy is
-simple: Just type `I\&' now. But if some right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-/Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report1/report1.tex:107: Undefined control sequence.
-l.107 ...  & \ctrl{1}&\ctrl{2}&\targ{}&\targ{}&\qw
-                                                  \\
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-/Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report1/report1.tex:108: Undefined control sequence.
-<recently read> \lstick 
-                        
-l.108 \lstick
-             {} &\targ{} & \qw & \ctrl{-1} &\qw&\qw\\
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-/Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report1/report1.tex:108: Misplaced alignment tab character &.
-l.108 \lstick{} &
-                 \targ{} & \qw & \ctrl{-1} &\qw&\qw\\
-I can't figure out why you would want to use a tab mark
-here. If you just want an ampersand, the remedy is
-simple: Just type `I\&' now. But if some right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-/Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report1/report1.tex:108: Undefined control sequence.
-l.108 \lstick{} &\targ
-                      {} & \qw & \ctrl{-1} &\qw&\qw\\
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-/Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report1/report1.tex:108: Misplaced alignment tab character &.
-l.108 \lstick{} &\targ{} &
-                           \qw & \ctrl{-1} &\qw&\qw\\
-I can't figure out why you would want to use a tab mark
-here. If you just want an ampersand, the remedy is
-simple: Just type `I\&' now. But if some right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-/Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report1/report1.tex:108: Undefined control sequence.
-l.108 \lstick{} &\targ{} & \qw
-                               & \ctrl{-1} &\qw&\qw\\
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-/Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report1/report1.tex:108: Misplaced alignment tab character &.
-l.108 \lstick{} &\targ{} & \qw &
-                                 \ctrl{-1} &\qw&\qw\\
-I can't figure out why you would want to use a tab mark
-here. If you just want an ampersand, the remedy is
-simple: Just type `I\&' now. But if some right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-/Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report1/report1.tex:108: Undefined control sequence.
-l.108 \lstick{} &\targ{} & \qw & \ctrl
-                                      {-1} &\qw&\qw\\
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-/Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report1/report1.tex:108: Misplaced alignment tab character &.
-l.108 \lstick{} &\targ{} & \qw & \ctrl{-1} &
-                                            \qw&\qw\\
-I can't figure out why you would want to use a tab mark
-here. If you just want an ampersand, the remedy is
-simple: Just type `I\&' now. But if some right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-/Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report1/report1.tex:108: Undefined control sequence.
-l.108 \lstick{} &\targ{} & \qw & \ctrl{-1} &\qw
-                                               &\qw\\
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-/Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report1/report1.tex:108: Misplaced alignment tab character &.
-l.108 \lstick{} &\targ{} & \qw & \ctrl{-1} &\qw&
-                                                \qw\\
-I can't figure out why you would want to use a tab mark
-here. If you just want an ampersand, the remedy is
-simple: Just type `I\&' now. But if some right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-/Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report1/report1.tex:108: Undefined control sequence.
-l.108 ...ick{} &\targ{} & \qw & \ctrl{-1} &\qw&\qw
-                                                  \\
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-/Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report1/report1.tex:109: Undefined control sequence.
-<recently read> \lstick 
-                        
-l.109 \lstick
-             {} & \qw&\targ{}&\qw&\ctrl{-2}&\qw
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-/Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report1/report1.tex:109: Misplaced alignment tab character &.
-l.109 \lstick{} &
-                  \qw&\targ{}&\qw&\ctrl{-2}&\qw
-I can't figure out why you would want to use a tab mark
-here. If you just want an ampersand, the remedy is
-simple: Just type `I\&' now. But if some right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-/Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report1/report1.tex:109: Undefined control sequence.
-l.109 \lstick{} & \qw
-                     &\targ{}&\qw&\ctrl{-2}&\qw
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-/Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report1/report1.tex:109: Misplaced alignment tab character &.
-l.109 \lstick{} & \qw&
-                      \targ{}&\qw&\ctrl{-2}&\qw
-I can't figure out why you would want to use a tab mark
-here. If you just want an ampersand, the remedy is
-simple: Just type `I\&' now. But if some right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-/Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report1/report1.tex:109: Undefined control sequence.
-l.109 \lstick{} & \qw&\targ
-                           {}&\qw&\ctrl{-2}&\qw
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-/Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report1/report1.tex:109: Misplaced alignment tab character &.
-l.109 \lstick{} & \qw&\targ{}&
-                              \qw&\ctrl{-2}&\qw
-I can't figure out why you would want to use a tab mark
-here. If you just want an ampersand, the remedy is
-simple: Just type `I\&' now. But if some right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-/Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report1/report1.tex:109: Undefined control sequence.
-l.109 \lstick{} & \qw&\targ{}&\qw
-                                 &\ctrl{-2}&\qw
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-/Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report1/report1.tex:109: Misplaced alignment tab character &.
-l.109 \lstick{} & \qw&\targ{}&\qw&
-                                  \ctrl{-2}&\qw
-I can't figure out why you would want to use a tab mark
-here. If you just want an ampersand, the remedy is
-simple: Just type `I\&' now. But if some right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-/Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report1/report1.tex:109: Undefined control sequence.
-l.109 \lstick{} & \qw&\targ{}&\qw&\ctrl
-                                       {-2}&\qw
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-[3]
-/Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report1/report1.tex:109: Misplaced alignment tab character &.
-l.109 \lstick{} & \qw&\targ{}&\qw&\ctrl{-2}&
-                                            \qw
-I can't figure out why you would want to use a tab mark
-here. If you just want an ampersand, the remedy is
-simple: Just type `I\&' now. But if some right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-/Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report1/report1.tex:109: Undefined control sequence.
-l.109 \lstick{} & \qw&\targ{}&\qw&\ctrl{-2}&\qw
-                                               
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-
-/Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report1/report1.tex:110: LaTeX Error: \begin{center} on input line 98 ended by \end{quantikz}.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.110 \end{quantikz}
-                    .
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
+[2]
 Overfull \hbox (33.48877pt too wide) detected at line 132
 [] \OT1/cmr/m/n/10 = [] [] + [] [] = [] [] + [] [] [] 
  []
 
-
+[3]
 Overfull \hbox (38.14403pt too wide) detected at line 147
 []
  []
 
+
+Overfull \hbox (81.92894pt too wide) in paragraph at lines 171--173
+[][]\OT1/cmr/m/n/10 .
+ []
+
 [4]
-
-/Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report1/report1.tex:165: LaTeX Error: Environment quantikz undefined.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.165 \begin{quantikz}
-                      
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-/Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report1/report1.tex:166: Undefined control sequence.
-l.166     \lstick
-                 {$|0\rangle_{a_1}$} & \gate{R_y(\theta_1)}  & \swap{2}& \qw...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-/Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report1/report1.tex:166: Misplaced alignment tab character &.
-l.166     \lstick{$|0\rangle_{a_1}$} &
-                                       \gate{R_y(\theta_1)}  & \swap{2}& \qw...
-I can't figure out why you would want to use a tab mark
-here. If you just want an ampersand, the remedy is
-simple: Just type `I\&' now. But if some right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-/Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report1/report1.tex:166: Undefined control sequence.
-l.166     \lstick{$|0\rangle_{a_1}$} & \gate
-                                            {R_y(\theta_1)}  & \swap{2}& \qw...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-/Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report1/report1.tex:166: Missing $ inserted.
-<inserted text> 
-                $
-l.166     \lstick{$|0\rangle_{a_1}$} & \gate{R_
-                                               y(\theta_1)}  & \swap{2}& \qw...
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-/Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report1/report1.tex:166: Extra }, or forgotten $.
-l.166 ...$|0\rangle_{a_1}$} & \gate{R_y(\theta_1)}
-                                                    & \swap{2}& \qw & \qw & ...
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-/Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report1/report1.tex:166: Misplaced alignment tab character &.
-l.166 ...\rangle_{a_1}$} & \gate{R_y(\theta_1)}  &
-                                                   \swap{2}& \qw & \qw & \qw...
-I can't figure out why you would want to use a tab mark
-here. If you just want an ampersand, the remedy is
-simple: Just type `I\&' now. But if some right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-/Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report1/report1.tex:166: Undefined control sequence.
-l.166 ...e_{a_1}$} & \gate{R_y(\theta_1)}  & \swap
-                                                  {2}& \qw & \qw & \qw &\swa...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-/Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report1/report1.tex:166: Misplaced alignment tab character &.
-l.166 ..._1}$} & \gate{R_y(\theta_1)}  & \swap{2}&
-                                                   \qw & \qw & \qw &\swap{2}...
-I can't figure out why you would want to use a tab mark
-here. If you just want an ampersand, the remedy is
-simple: Just type `I\&' now. But if some right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-/Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report1/report1.tex:166: Undefined control sequence.
-l.166 ...} & \gate{R_y(\theta_1)}  & \swap{2}& \qw
-                                                   & \qw & \qw &\swap{2} &\g...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-/Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report1/report1.tex:166: Misplaced alignment tab character &.
-l.166 ...& \gate{R_y(\theta_1)}  & \swap{2}& \qw &
-                                                   \qw & \qw &\swap{2} &\gat...
-I can't figure out why you would want to use a tab mark
-here. If you just want an ampersand, the remedy is
-simple: Just type `I\&' now. But if some right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-/Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report1/report1.tex:166: Undefined control sequence.
-l.166 ...ate{R_y(\theta_1)}  & \swap{2}& \qw & \qw
-                                                   & \qw &\swap{2} &\gate{R_...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-/Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report1/report1.tex:166: Misplaced alignment tab character &.
-l.166 ...e{R_y(\theta_1)}  & \swap{2}& \qw & \qw &
-                                                   \qw &\swap{2} &\gate{R_y(...
-I can't figure out why you would want to use a tab mark
-here. If you just want an ampersand, the remedy is
-simple: Just type `I\&' now. But if some right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-/Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report1/report1.tex:166: Undefined control sequence.
-l.166 ...y(\theta_1)}  & \swap{2}& \qw & \qw & \qw
-                                                   &\swap{2} &\gate{R_y(\the...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-/Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report1/report1.tex:166: Misplaced alignment tab character &.
-l.166 ...\theta_1)}  & \swap{2}& \qw & \qw & \qw &
-                                                  \swap{2} &\gate{R_y(\theta...
-I can't figure out why you would want to use a tab mark
-here. If you just want an ampersand, the remedy is
-simple: Just type `I\&' now. But if some right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-/Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report1/report1.tex:166: Undefined control sequence.
-l.166 ...a_1)}  & \swap{2}& \qw & \qw & \qw &\swap
-                                                  {2} &\gate{R_y(\theta_3)} ...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-/Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report1/report1.tex:166: Misplaced alignment tab character &.
-l.166 ...  & \swap{2}& \qw & \qw & \qw &\swap{2} &
-                                                  \gate{R_y(\theta_3)} & \ta...
-I can't figure out why you would want to use a tab mark
-here. If you just want an ampersand, the remedy is
-simple: Just type `I\&' now. But if some right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-/Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report1/report1.tex:166: Undefined control sequence.
-l.166 ...swap{2}& \qw & \qw & \qw &\swap{2} &\gate
-                                                  {R_y(\theta_3)} & \targ{}&...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-/Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report1/report1.tex:166: Misplaced alignment tab character &.
-l.166 ...w & \qw &\swap{2} &\gate{R_y(\theta_3)} &
-                                                   \targ{}&\qw&\ctrl{2}&\qw ...
-I can't figure out why you would want to use a tab mark
-here. If you just want an ampersand, the remedy is
-simple: Just type `I\&' now. But if some right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-/Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report1/report1.tex:166: Undefined control sequence.
-l.166 ...w &\swap{2} &\gate{R_y(\theta_3)} & \targ
-                                                  {}&\qw&\ctrl{2}&\qw & \met...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-/Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report1/report1.tex:166: Misplaced alignment tab character &.
-l.166 ...\swap{2} &\gate{R_y(\theta_3)} & \targ{}&
-                                                  \qw&\ctrl{2}&\qw & \meter{}\\
-I can't figure out why you would want to use a tab mark
-here. If you just want an ampersand, the remedy is
-simple: Just type `I\&' now. But if some right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-/Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report1/report1.tex:166: Undefined control sequence.
-l.166 ...ap{2} &\gate{R_y(\theta_3)} & \targ{}&\qw
-                                                  &\ctrl{2}&\qw & \meter{}\\
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-/Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report1/report1.tex:166: Misplaced alignment tab character &.
-l.166 ...p{2} &\gate{R_y(\theta_3)} & \targ{}&\qw&
-                                                  \ctrl{2}&\qw & \meter{}\\
-I can't figure out why you would want to use a tab mark
-here. If you just want an ampersand, the remedy is
-simple: Just type `I\&' now. But if some right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-/Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report1/report1.tex:166: Undefined control sequence.
-l.166 ...&\gate{R_y(\theta_3)} & \targ{}&\qw&\ctrl
-                                                  {2}&\qw & \meter{}\\
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-/Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report1/report1.tex:166: Misplaced alignment tab character &.
-l.166 ...te{R_y(\theta_3)} & \targ{}&\qw&\ctrl{2}&
-                                                  \qw & \meter{}\\
-I can't figure out why you would want to use a tab mark
-here. If you just want an ampersand, the remedy is
-simple: Just type `I\&' now. But if some right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-/Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report1/report1.tex:166: Undefined control sequence.
-l.166 ...R_y(\theta_3)} & \targ{}&\qw&\ctrl{2}&\qw
-                                                   & \meter{}\\
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-/Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report1/report1.tex:166: Misplaced alignment tab character &.
-l.166 ...y(\theta_3)} & \targ{}&\qw&\ctrl{2}&\qw &
-                                                   \meter{}\\
-I can't figure out why you would want to use a tab mark
-here. If you just want an ampersand, the remedy is
-simple: Just type `I\&' now. But if some right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-/Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report1/report1.tex:166: Undefined control sequence.
-l.166 ...a_3)} & \targ{}&\qw&\ctrl{2}&\qw & \meter
-                                                  {}\\
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-/Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report1/report1.tex:167: Undefined control sequence.
-<recently read> \lstick 
-                        
-l.167     \lstick
-                 {} & \qw & \qw& \qw& \qw& \qw& \qw& \qw & \qw& \qw& \qw & \...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-/Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report1/report1.tex:167: Misplaced alignment tab character &.
-l.167     \lstick{} &
-                      \qw & \qw& \qw& \qw& \qw& \qw& \qw & \qw& \qw& \qw & \...
-I can't figure out why you would want to use a tab mark
-here. If you just want an ampersand, the remedy is
-simple: Just type `I\&' now. But if some right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-/Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report1/report1.tex:167: Undefined control sequence.
-l.167     \lstick{} & \qw
-                          & \qw& \qw& \qw& \qw& \qw& \qw & \qw& \qw& \qw & \...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-/Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report1/report1.tex:167: Misplaced alignment tab character &.
-l.167     \lstick{} & \qw &
-                            \qw& \qw& \qw& \qw& \qw& \qw & \qw& \qw& \qw & \...
-I can't figure out why you would want to use a tab mark
-here. If you just want an ampersand, the remedy is
-simple: Just type `I\&' now. But if some right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-/Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report1/report1.tex:167: Undefined control sequence.
-l.167     \lstick{} & \qw & \qw
-                               & \qw& \qw& \qw& \qw& \qw & \qw& \qw& \qw & \...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-/Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report1/report1.tex:167: Misplaced alignment tab character &.
-l.167     \lstick{} & \qw & \qw&
-                                 \qw& \qw& \qw& \qw& \qw & \qw& \qw& \qw & \...
-I can't figure out why you would want to use a tab mark
-here. If you just want an ampersand, the remedy is
-simple: Just type `I\&' now. But if some right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-/Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report1/report1.tex:167: Undefined control sequence.
-l.167     \lstick{} & \qw & \qw& \qw
-                                    & \qw& \qw& \qw& \qw & \qw& \qw& \qw & \...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-/Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report1/report1.tex:167: Misplaced alignment tab character &.
-l.167     \lstick{} & \qw & \qw& \qw&
-                                      \qw& \qw& \qw& \qw & \qw& \qw& \qw & \...
-I can't figure out why you would want to use a tab mark
-here. If you just want an ampersand, the remedy is
-simple: Just type `I\&' now. But if some right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-/Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report1/report1.tex:167: Undefined control sequence.
-l.167     \lstick{} & \qw & \qw& \qw& \qw
-                                         & \qw& \qw& \qw & \qw& \qw& \qw & \...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-/Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report1/report1.tex:167: Misplaced alignment tab character &.
-l.167     \lstick{} & \qw & \qw& \qw& \qw&
-                                           \qw& \qw& \qw & \qw& \qw& \qw & \...
-I can't figure out why you would want to use a tab mark
-here. If you just want an ampersand, the remedy is
-simple: Just type `I\&' now. But if some right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-/Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report1/report1.tex:167: Undefined control sequence.
-l.167     \lstick{} & \qw & \qw& \qw& \qw& \qw
-                                              & \qw& \qw & \qw& \qw& \qw & \...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-/Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report1/report1.tex:167: Misplaced alignment tab character &.
-l.167     \lstick{} & \qw & \qw& \qw& \qw& \qw&
-                                                \qw& \qw & \qw& \qw& \qw & \...
-I can't figure out why you would want to use a tab mark
-here. If you just want an ampersand, the remedy is
-simple: Just type `I\&' now. But if some right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-/Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report1/report1.tex:167: Undefined control sequence.
-l.167 ...\lstick{} & \qw & \qw& \qw& \qw& \qw& \qw
-                                                  & \qw & \qw& \qw& \qw & \q...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-/Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report1/report1.tex:167: Misplaced alignment tab character &.
-l.167 ...lstick{} & \qw & \qw& \qw& \qw& \qw& \qw&
-                                                   \qw & \qw& \qw& \qw & \qw...
-I can't figure out why you would want to use a tab mark
-here. If you just want an ampersand, the remedy is
-simple: Just type `I\&' now. But if some right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-/Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report1/report1.tex:167: Undefined control sequence.
-l.167 ...ck{} & \qw & \qw& \qw& \qw& \qw& \qw& \qw
-                                                   & \qw& \qw& \qw & \qw& \q...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-/Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report1/report1.tex:167: Misplaced alignment tab character &.
-l.167 ...{} & \qw & \qw& \qw& \qw& \qw& \qw& \qw &
-                                                   \qw& \qw& \qw & \qw& \qw \\
-I can't figure out why you would want to use a tab mark
-here. If you just want an ampersand, the remedy is
-simple: Just type `I\&' now. But if some right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-/Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report1/report1.tex:167: Undefined control sequence.
-l.167 ... \qw & \qw& \qw& \qw& \qw& \qw& \qw & \qw
-                                                  & \qw& \qw & \qw& \qw \\
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-/Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report1/report1.tex:167: Misplaced alignment tab character &.
-l.167 ...\qw & \qw& \qw& \qw& \qw& \qw& \qw & \qw&
-                                                   \qw& \qw & \qw& \qw \\
-I can't figure out why you would want to use a tab mark
-here. If you just want an ampersand, the remedy is
-simple: Just type `I\&' now. But if some right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-/Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report1/report1.tex:167: Undefined control sequence.
-l.167 ...& \qw& \qw& \qw& \qw& \qw& \qw & \qw& \qw
-                                                  & \qw & \qw& \qw \\
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-/Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report1/report1.tex:167: Misplaced alignment tab character &.
-l.167 ... \qw& \qw& \qw& \qw& \qw& \qw & \qw& \qw&
-                                                   \qw & \qw& \qw \\
-I can't figure out why you would want to use a tab mark
-here. If you just want an ampersand, the remedy is
-simple: Just type `I\&' now. But if some right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-/Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report1/report1.tex:167: Undefined control sequence.
-l.167 ...& \qw& \qw& \qw& \qw& \qw & \qw& \qw& \qw
-                                                   & \qw& \qw \\
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-/Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report1/report1.tex:167: Misplaced alignment tab character &.
-l.167 ...\qw& \qw& \qw& \qw& \qw & \qw& \qw& \qw &
-                                                   \qw& \qw \\
-I can't figure out why you would want to use a tab mark
-here. If you just want an ampersand, the remedy is
-simple: Just type `I\&' now. But if some right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-/Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report1/report1.tex:167: Undefined control sequence.
-l.167 ... \qw& \qw& \qw& \qw & \qw& \qw& \qw & \qw
-                                                  & \qw \\
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-/Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report1/report1.tex:167: Misplaced alignment tab character &.
-l.167 ...\qw& \qw& \qw& \qw & \qw& \qw& \qw & \qw&
-                                                   \qw \\
-I can't figure out why you would want to use a tab mark
-here. If you just want an ampersand, the remedy is
-simple: Just type `I\&' now. But if some right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-/Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report1/report1.tex:167: Undefined control sequence.
-l.167 ... \qw& \qw& \qw & \qw& \qw& \qw & \qw& \qw
-                                                   \\
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-/Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report1/report1.tex:168: Undefined control sequence.
-<recently read> \lstick 
-                        
-l.168     \lstick
-                 {$|\psi \rangle_{a_0}$} & \qw & \targX{} & \ctrl{2} & \qw &...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-/Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report1/report1.tex:168: Missing } inserted.
-<inserted text> 
-                }
-l.168     \lstick{$
-                   |\psi \rangle_{a_0}$} & \qw & \targX{} & \ctrl{2} & \qw &...
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-/Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report1/report1.tex:168: Missing $ inserted.
-<inserted text> 
-                $
-l.168     \lstick{$|\psi
-                         \rangle_{a_0}$} & \qw & \targX{} & \ctrl{2} & \qw &...
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-/Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report1/report1.tex:168: Misplaced alignment tab character &.
-l.168     \lstick{$|\psi \rangle_{a_0}$} &
-                                           \qw & \targX{} & \ctrl{2} & \qw &...
-I can't figure out why you would want to use a tab mark
-here. If you just want an ampersand, the remedy is
-simple: Just type `I\&' now. But if some right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-/Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report1/report1.tex:168: Undefined control sequence.
-l.168     \lstick{$|\psi \rangle_{a_0}$} & \qw
-                                               & \targX{} & \ctrl{2} & \qw &...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-/Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report1/report1.tex:168: Misplaced alignment tab character &.
-l.168     \lstick{$|\psi \rangle_{a_0}$} & \qw &
-                                                 \targX{} & \ctrl{2} & \qw &...
-I can't figure out why you would want to use a tab mark
-here. If you just want an ampersand, the remedy is
-simple: Just type `I\&' now. But if some right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-/Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report1/report1.tex:168: Undefined control sequence.
-l.168 ...ick{$|\psi \rangle_{a_0}$} & \qw & \targX
-                                                  {} & \ctrl{2} & \qw & \tar...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-/Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report1/report1.tex:168: Misplaced alignment tab character &.
-l.168 ...$|\psi \rangle_{a_0}$} & \qw & \targX{} &
-                                                   \ctrl{2} & \qw & \targ{} ...
-I can't figure out why you would want to use a tab mark
-here. If you just want an ampersand, the remedy is
-simple: Just type `I\&' now. But if some right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-/Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report1/report1.tex:168: Undefined control sequence.
-l.168 ... \rangle_{a_0}$} & \qw & \targX{} & \ctrl
-                                                  {2} & \qw & \targ{} & \tar...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-/Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report1/report1.tex:168: Misplaced alignment tab character &.
-l.168 ...gle_{a_0}$} & \qw & \targX{} & \ctrl{2} &
-                                                   \qw & \targ{} & \targX{} ...
-I can't figure out why you would want to use a tab mark
-here. If you just want an ampersand, the remedy is
-simple: Just type `I\&' now. But if some right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-/Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report1/report1.tex:168: Undefined control sequence.
-l.168 ...{a_0}$} & \qw & \targX{} & \ctrl{2} & \qw
-                                                   & \targ{} & \targX{} & \q...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-/Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report1/report1.tex:168: Misplaced alignment tab character &.
-l.168 ..._0}$} & \qw & \targX{} & \ctrl{2} & \qw &
-                                                   \targ{} & \targX{} & \qw ...
-I can't figure out why you would want to use a tab mark
-here. If you just want an ampersand, the remedy is
-simple: Just type `I\&' now. But if some right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-/Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report1/report1.tex:168: Undefined control sequence.
-l.168 ...& \qw & \targX{} & \ctrl{2} & \qw & \targ
-                                                  {} & \targX{} & \qw & \ctr...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-/Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report1/report1.tex:168: Misplaced alignment tab character &.
-l.168 ...w & \targX{} & \ctrl{2} & \qw & \targ{} &
-                                                   \targX{} & \qw & \ctrl{-2...
-I can't figure out why you would want to use a tab mark
-here. If you just want an ampersand, the remedy is
-simple: Just type `I\&' now. But if some right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-/Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report1/report1.tex:168: Undefined control sequence.
-l.168 ...rgX{} & \ctrl{2} & \qw & \targ{} & \targX
-                                                  {} & \qw & \ctrl{-2} & \ct...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-/Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report1/report1.tex:168: Misplaced alignment tab character &.
-l.168 ...} & \ctrl{2} & \qw & \targ{} & \targX{} &
-                                                   \qw & \ctrl{-2} & \ctrl{2...
-I can't figure out why you would want to use a tab mark
-here. If you just want an ampersand, the remedy is
-simple: Just type `I\&' now. But if some right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-/Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report1/report1.tex:168: Undefined control sequence.
-l.168 ...\ctrl{2} & \qw & \targ{} & \targX{} & \qw
-                                                   & \ctrl{-2} & \ctrl{2} & ...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-/Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report1/report1.tex:168: Misplaced alignment tab character &.
-l.168 ...trl{2} & \qw & \targ{} & \targX{} & \qw &
-                                                   \ctrl{-2} & \ctrl{2} & \t...
-I can't figure out why you would want to use a tab mark
-here. If you just want an ampersand, the remedy is
-simple: Just type `I\&' now. But if some right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-/Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report1/report1.tex:168: Undefined control sequence.
-l.168 ... & \qw & \targ{} & \targX{} & \qw & \ctrl
-                                                  {-2} & \ctrl{2} & \targ{} ...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-/Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report1/report1.tex:168: Misplaced alignment tab character &.
-l.168 ... & \targ{} & \targX{} & \qw & \ctrl{-2} &
-                                                   \ctrl{2} & \targ{} & \tar...
-I can't figure out why you would want to use a tab mark
-here. If you just want an ampersand, the remedy is
-simple: Just type `I\&' now. But if some right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-/Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report1/report1.tex:168: Undefined control sequence.
-l.168 ...rg{} & \targX{} & \qw & \ctrl{-2} & \ctrl
-                                                  {2} & \targ{} & \targ{} & ...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-/Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report1/report1.tex:168: Misplaced alignment tab character &.
-l.168 ...& \targX{} & \qw & \ctrl{-2} & \ctrl{2} &
-                                                   \targ{} & \targ{} & \qw \\
-I can't figure out why you would want to use a tab mark
-here. If you just want an ampersand, the remedy is
-simple: Just type `I\&' now. But if some right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-/Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report1/report1.tex:168: Undefined control sequence.
-l.168 ...gX{} & \qw & \ctrl{-2} & \ctrl{2} & \targ
-                                                  {} & \targ{} & \qw \\
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-/Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report1/report1.tex:168: Misplaced alignment tab character &.
-l.168 ... & \qw & \ctrl{-2} & \ctrl{2} & \targ{} &
-                                                   \targ{} & \qw \\
-I can't figure out why you would want to use a tab mark
-here. If you just want an ampersand, the remedy is
-simple: Just type `I\&' now. But if some right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-/Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report1/report1.tex:168: Undefined control sequence.
-l.168 ... & \ctrl{-2} & \ctrl{2} & \targ{} & \targ
-                                                  {} & \qw \\
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-/Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report1/report1.tex:168: Misplaced alignment tab character &.
-l.168 ...ctrl{-2} & \ctrl{2} & \targ{} & \targ{} &
-                                                   \qw \\
-I can't figure out why you would want to use a tab mark
-here. If you just want an ampersand, the remedy is
-simple: Just type `I\&' now. But if some right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-/Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report1/report1.tex:168: Undefined control sequence.
-l.168 ...{-2} & \ctrl{2} & \targ{} & \targ{} & \qw
-                                                   \\
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-/Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report1/report1.tex:169: Undefined control sequence.
-<recently read> \lstick 
-                        
-l.169     \lstick
-                 {} & \qw & \qw& \qw& \qw& \qw& \qw& \qw & \qw& \qw& \qw & \...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-/Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report1/report1.tex:169: Misplaced alignment tab character &.
-l.169     \lstick{} &
-                      \qw & \qw& \qw& \qw& \qw& \qw& \qw & \qw& \qw& \qw & \...
-I can't figure out why you would want to use a tab mark
-here. If you just want an ampersand, the remedy is
-simple: Just type `I\&' now. But if some right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-/Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report1/report1.tex:169: Undefined control sequence.
-l.169     \lstick{} & \qw
-                          & \qw& \qw& \qw& \qw& \qw& \qw & \qw& \qw& \qw & \...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-/Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report1/report1.tex:169: Misplaced alignment tab character &.
-l.169     \lstick{} & \qw &
-                            \qw& \qw& \qw& \qw& \qw& \qw & \qw& \qw& \qw & \...
-I can't figure out why you would want to use a tab mark
-here. If you just want an ampersand, the remedy is
-simple: Just type `I\&' now. But if some right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-/Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report1/report1.tex:169: Undefined control sequence.
-l.169     \lstick{} & \qw & \qw
-                               & \qw& \qw& \qw& \qw& \qw & \qw& \qw& \qw & \...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-/Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report1/report1.tex:169: Misplaced alignment tab character &.
-l.169     \lstick{} & \qw & \qw&
-                                 \qw& \qw& \qw& \qw& \qw & \qw& \qw& \qw & \...
-I can't figure out why you would want to use a tab mark
-here. If you just want an ampersand, the remedy is
-simple: Just type `I\&' now. But if some right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-/Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report1/report1.tex:169: Undefined control sequence.
-l.169     \lstick{} & \qw & \qw& \qw
-                                    & \qw& \qw& \qw& \qw & \qw& \qw& \qw & \...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-/Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report1/report1.tex:169: Misplaced alignment tab character &.
-l.169     \lstick{} & \qw & \qw& \qw&
-                                      \qw& \qw& \qw& \qw & \qw& \qw& \qw & \...
-I can't figure out why you would want to use a tab mark
-here. If you just want an ampersand, the remedy is
-simple: Just type `I\&' now. But if some right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-/Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report1/report1.tex:169: Undefined control sequence.
-l.169     \lstick{} & \qw & \qw& \qw& \qw
-                                         & \qw& \qw& \qw & \qw& \qw& \qw & \...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-/Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report1/report1.tex:169: Misplaced alignment tab character &.
-l.169     \lstick{} & \qw & \qw& \qw& \qw&
-                                           \qw& \qw& \qw & \qw& \qw& \qw & \...
-I can't figure out why you would want to use a tab mark
-here. If you just want an ampersand, the remedy is
-simple: Just type `I\&' now. But if some right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-/Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report1/report1.tex:169: Undefined control sequence.
-l.169     \lstick{} & \qw & \qw& \qw& \qw& \qw
-                                              & \qw& \qw & \qw& \qw& \qw & \...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-/Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report1/report1.tex:169: Misplaced alignment tab character &.
-l.169     \lstick{} & \qw & \qw& \qw& \qw& \qw&
-                                                \qw& \qw & \qw& \qw& \qw & \...
-I can't figure out why you would want to use a tab mark
-here. If you just want an ampersand, the remedy is
-simple: Just type `I\&' now. But if some right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-/Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report1/report1.tex:169: Undefined control sequence.
-l.169 ...\lstick{} & \qw & \qw& \qw& \qw& \qw& \qw
-                                                  & \qw & \qw& \qw& \qw & \q...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-/Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report1/report1.tex:169: Misplaced alignment tab character &.
-l.169 ...lstick{} & \qw & \qw& \qw& \qw& \qw& \qw&
-                                                   \qw & \qw& \qw& \qw & \qw...
-I can't figure out why you would want to use a tab mark
-here. If you just want an ampersand, the remedy is
-simple: Just type `I\&' now. But if some right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-/Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report1/report1.tex:169: Undefined control sequence.
-l.169 ...ck{} & \qw & \qw& \qw& \qw& \qw& \qw& \qw
-                                                   & \qw& \qw& \qw & \qw& \q...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-/Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report1/report1.tex:169: Misplaced alignment tab character &.
-l.169 ...{} & \qw & \qw& \qw& \qw& \qw& \qw& \qw &
-                                                   \qw& \qw& \qw & \qw& \qw \\
-I can't figure out why you would want to use a tab mark
-here. If you just want an ampersand, the remedy is
-simple: Just type `I\&' now. But if some right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-/Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report1/report1.tex:169: Undefined control sequence.
-l.169 ... \qw & \qw& \qw& \qw& \qw& \qw& \qw & \qw
-                                                  & \qw& \qw & \qw& \qw \\
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-/Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report1/report1.tex:169: Misplaced alignment tab character &.
-l.169 ...\qw & \qw& \qw& \qw& \qw& \qw& \qw & \qw&
-                                                   \qw& \qw & \qw& \qw \\
-I can't figure out why you would want to use a tab mark
-here. If you just want an ampersand, the remedy is
-simple: Just type `I\&' now. But if some right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-/Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report1/report1.tex:169: Undefined control sequence.
-l.169 ...& \qw& \qw& \qw& \qw& \qw& \qw & \qw& \qw
-                                                  & \qw & \qw& \qw \\
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-/Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report1/report1.tex:169: Misplaced alignment tab character &.
-l.169 ... \qw& \qw& \qw& \qw& \qw& \qw & \qw& \qw&
-                                                   \qw & \qw& \qw \\
-(That makes 100 errors; please try again.) 
+<Figures/simulator_F.png, id=29, 1002.74625pt x 529.98pt>
+File: Figures/simulator_F.png Graphic file (type png)
+<use Figures/simulator_F.png>
+Package pdftex.def Info: Figures/simulator_F.png  used on input line 190.
+(pdftex.def)             Requested size: 322.99684pt x 170.71652pt.
+
+Overfull \hbox (22.75188pt too wide) in paragraph at lines 186--192
+\OT1/cmr/m/n/10 sphere and $1024$ shots for each point. NB: In the fol-low-ing pic-tures $\OML/cmm/m/it/10 F[]=F[]$
+ []
+
+[5 </home/neuromancer/OneDrive/Quantum_Information/Project/report1/Figures/simulator_F.png>]
+<Figures/starmon(1,1)_F.png, id=35, 1002.74625pt x 529.98pt>
+File: Figures/starmon(1,1)_F.png Graphic file (type png)
+<use Figures/starmon(1,1)_F.png>
+Package pdftex.def Info: Figures/starmon(1,1)_F.png  used on input line 203.
+(pdftex.def)             Requested size: 322.99684pt x 170.71652pt.
+<Figures/starmon(-1,-1)_F.png, id=36, 1002.74625pt x 529.98pt>
+File: Figures/starmon(-1,-1)_F.png Graphic file (type png)
+<use Figures/starmon(-1,-1)_F.png>
+Package pdftex.def Info: Figures/starmon(-1,-1)_F.png  used on input line 208.
+(pdftex.def)             Requested size: 322.99684pt x 170.71652pt.
+<Figures/starmon(1,-1)_F.png, id=37, 1002.74625pt x 529.98pt>
+File: Figures/starmon(1,-1)_F.png Graphic file (type png)
+<use Figures/starmon(1,-1)_F.png>
+Package pdftex.def Info: Figures/starmon(1,-1)_F.png  used on input line 213.
+(pdftex.def)             Requested size: 322.99684pt x 170.71652pt.
+<Figures/starmon(-1,1)_F.png, id=38, 1002.74625pt x 529.98pt>
+File: Figures/starmon(-1,1)_F.png Graphic file (type png)
+<use Figures/starmon(-1,1)_F.png>
+Package pdftex.def Info: Figures/starmon(-1,1)_F.png  used on input line 218.
+(pdftex.def)             Requested size: 322.99684pt x 170.71652pt.
+ [6 </home/neuromancer/OneDrive/Quantum_Information/Project/report1/Figures/starmon(1,1)_F.png> </home/neuromancer/OneDrive/Quantum_Information/Project/report1/Figures/starmon(-1,-1)_F.png>]
+
+LaTeX Warning: Citation `bennett2020quantum' on page 7 undefined on input line 230.
+
+[7 </home/neuromancer/OneDrive/Quantum_Information/Project/report1/Figures/starmon(1,-1)_F.png> </home/neuromancer/OneDrive/Quantum_Information/Project/report1/Figures/starmon(-1,1)_F.png>]
+LaTeX Font Info:    Trying to load font information for U+dsrom on input line 270.
+ (/usr/local/texlive/2020/texmf-dist/tex/latex/doublestroke/Udsrom.fd
+File: Udsrom.fd 1995/08/01 v0.1 Double stroke roman font definitions
+) [8] [9] (/home/neuromancer/OneDrive/Quantum_Information/Project/report1/report1.aux)
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: There were multiply-defined labels.
+
+ ) 
 Here is how much of TeX's memory you used:
- 2164 strings out of 480608
- 33556 string characters out of 5903629
- 292119 words of memory out of 5000000
- 18077 multiletter control sequences out of 15000+600000
- 539893 words of font info for 54 fonts, out of 8000000 for 9000
- 1141 hyphenation exceptions out of 8191
- 44i,17n,40p,746b,300s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 19656 strings out of 482371
+ 421038 string characters out of 5946016
+ 693666 words of memory out of 5000000
+ 35069 multiletter control sequences out of 15000+600000
+ 540489 words of font info for 58 fonts, out of 8000000 for 9000
+ 36 hyphenation exceptions out of 8191
+ 60i,17n,104p,1238b,1490s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/doublestroke/dsrom10.pfb>
+Output written on /home/neuromancer/OneDrive/Quantum_Information/Project/report1/report1.pdf (9 pages, 628125 bytes).
+PDF statistics:
+ 100 PDF objects out of 1000 (max. 8388607)
+ 65 compressed objects within 1 object stream
+ 0 named destinations out of 1000 (max. 500000)
+ 38 words of extra memory for PDF output out of 10000 (max. 10000000)
 
-/Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report1/report1.tex:169:  ==> Fatal error occurred, no output PDF file produced!

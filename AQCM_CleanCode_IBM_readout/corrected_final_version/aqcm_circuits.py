@@ -85,21 +85,4 @@ def phase_covariant_qcm(qc, input, ancilla1, ancilla2):
 
     return ancilla1, ancilla2
 
-def economical_phase_covariant_qcm(qc, input, ancilla1):
-    """
-    Economical phase covariant cloning machine. Optimally clones the states on the xz equator.
-    Only two qubits needed
-    Ideal fidelity F=1/2+1/sqrt(8)=0.854...
-    """
-
-    qc.rx(np.pi/2, input)
-
-    qc.ch(input, ancilla1)
-    qc.cx(ancilla1, input)
-
-    qc.rx(-np.pi/2, input)
-    qc.rx(-np.pi/2, input)
-
-    return input, ancilla1
-
 

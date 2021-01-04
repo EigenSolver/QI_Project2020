@@ -1,9 +1,13 @@
 import numpy as np
 from preparation_measurement import *
 from readout_correction import *
+import vars as var
 
+backend_identifier = var.backend_identifier
+path = var.path
+num_pts = var.num_pts
 
-def write_readout_parameters(readout, backend_identifier, path, num_pts):
+def write_readout_parameters(readout):
     """
     Write results of readout parameters in a file
     """
@@ -12,15 +16,15 @@ def write_readout_parameters(readout, backend_identifier, path, num_pts):
 
         for i in range(len(readout)):
             for j in range(len(readout[i])):
-                file.write(str(readout[i][j]) + '\t')
+                file.write(str(readout[i][j])+'\t')
         file.write('\n')
 
 
-def write_copying_results(coords, results, label, backend_identifier, path, num_pts):
+def write_copying_results(coords, results, label):
     """
     Write results of qubit measurements in a file
     """
-
+    
     with open(path + 'results_' + label + backend_identifier + '.txt', 'a') as file:
         file.write(str(coords[0]) + "\t" + str(coords[1]) + "\t")
         for i in range(len(results[-1])):
@@ -28,24 +32,22 @@ def write_copying_results(coords, results, label, backend_identifier, path, num_
                 str(results[-1][i]) + "\t")
         file.write('\n')
 
-
-def write_average_fidelities(results_list, backend_identifier, path, num_pts):
+def write_average_fidelities(results_list):
     """
     Write fidelities for corrected and original results.
     """
 
-    labels = ['', 'corrected']
+    labels = ['','corrected']
     for i in range(len(results_list)):
         with open(path + 'average_fidelities.txt', 'a') as file:
             file.write(
-                backend_identifier + "_" + str(labels[i]) + "\t" + str(
-                    np.average(np.array(results_list[i])[:, 0])) + "\t" + str(
+                backend_identifier+"_"+str(labels[i])+"\t" + str(np.average(np.array(results_list[i])[:, 0])) + "\t" + str(
                     np.std(np.array(results_list[i])[:, 0])) + "\t" + str(
                     np.average(np.array(results_list[i])[:, 2])) + "\t" +
                 str(np.std(np.array(results_list[i])[:, 2])) + "\n")
 
 
-def save_experiment(batch, results_probabilities, corrected_results, readout_params, backend_identifier, path, num_pts):
+def save_experiment(batch, results_probabilities, corrected_results, readout_params):
     """
     Receives measurement results and readout parameters, correct the measurements
     and write resulting data in files
@@ -58,16 +60,16 @@ def save_experiment(batch, results_probabilities, corrected_results, readout_par
         coords = (
             target_points[len(results_probabilities) - 1][0],
             target_points[len(results_probabilities) - 1][1])
-
-        # Readout calibration
-        reordered_results = [results_probabilities[-1][i:i + 2] for i in
-                             range(0, len(results_probabilities[-1]) - 1, 2)]
+                
+        #Readout calibration
+        reordered_results = [results_probabilities[-1][i:i+2] for i in range(0,len(results_probabilities[-1])-1,2)]
         corrected_results.append(correct_copies(readout_params, reordered_results))
 
-        # Write corrected results
-        write_copying_results(coords, corrected_results, 'corrected_', backend_identifier, path, num_pts)
-        write_copying_results(coords, results_probabilities, '', backend_identifier, path, num_pts)
-
+        #Write corrected results
+        write_copying_results(coords, corrected_results,'corrected_')
+        write_copying_results(coords, results_probabilities,'')
+                
         print(len(results_probabilities), "/", num_pts)
-
+    
     return results_probabilities, corrected_results
+
