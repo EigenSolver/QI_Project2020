@@ -1,8 +1,8 @@
 import numpy as np
 from qiskit import QuantumRegister, ClassicalRegister, QuantumCircuit, assemble, transpile
 
-TOKEN_QI = '1c41a094c4e24eef5ab12f66b24c1ea7161cde21'
-TOKEN_IBMQ = '396ead77546bea5bd0a82c923c3af4291041412498d68092223ae8e2f2a95f9f34ef93c1416d1b3b62af52f3980571a82eddc3e5951a96d643152b907cfa37aa '
+TOKEN_QI = 'YOUR_TOKEN'
+TOKEN_IBMQ = 'YOUR_TOKEN '
 
 
 def prepare_qubit(qc, qubit, theta, phi):
