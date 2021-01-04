@@ -20,7 +20,7 @@
 \contentsline {subsection}{\numberline {4.1.3}BB84 states}{11}{subsection.4.1.3}%
 \contentsline {section}{\numberline {4.2}Phase covariant quantum cloning machine}{11}{section.4.2}%
 \contentsline {subsection}{\numberline {4.2.1}Sphere}{11}{subsection.4.2.1}%
-\contentsline {subsection}{\numberline {4.2.2}Equator}{12}{subsection.4.2.2}%
+\contentsline {subsection}{\numberline {4.2.2}Equator}{11}{subsection.4.2.2}%
 \contentsline {subsection}{\numberline {4.2.3}BB84 states}{12}{subsection.4.2.3}%
 \contentsline {section}{\numberline {4.3}Economical phase covariant quantum cloning machine}{12}{section.4.3}%
 \contentsline {subsection}{\numberline {4.3.1}Sphere}{12}{subsection.4.3.1}%
