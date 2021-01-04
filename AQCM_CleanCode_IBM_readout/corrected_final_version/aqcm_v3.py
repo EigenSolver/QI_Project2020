@@ -12,6 +12,7 @@ from coreapi.auth import BasicAuthentication
 from quantuminspire.api import QuantumInspireAPI
 from analyze_data import *
 import sys
+
 ##############################################################################################
 num_pts = 10
 ##############################################################################################
@@ -28,16 +29,16 @@ backend = QI.get_backend("Starmon-5")
 # Enable account for IBMQ, the token has to be inserted in preparation_measurement
 backend_identifier, backend = get_backend(sys.argv[1])
 print(backend_identifier)
-#ibmq_qasm_simulator for simulator
-#ibmq_16_melbourne for melbourne
-#ibmqx2 for yorktown
-#ibmq_nameofthecity for all the others
+# ibmq_qasm_simulator for simulator
+# ibmq_16_melbourne for melbourne
+# ibmqx2 for yorktown
+# ibmq_nameofthecity for all the others
 ##############################################################################################
 
-#We are saving the target points along with the results
-target_points = equator_xz_points(num_pts)
-#np.savetxt(path + "target_points_" + backend_identifier + ".csv", target_points)
-path = './'
+# We are saving the target points along with the results
+target_points = bb84_points()
+# np.savetxt(path + "target_points_" + backend_identifier + ".csv", target_points)
+path = 'PhaseCovariant/BB84/'
 # Set to true if the points only lie on the equator (does not perform phi rotation)
 only_equator = True
 
@@ -57,7 +58,7 @@ if not only_equator:
 else:
     prepare_qubit_equator(circuit, qreg[0], theta_param)
 
-qubit_copy1, qubit_copy2 = universal_qcm(circuit, qreg[0], qreg[1], qreg[2])
+qubit_copy1, qubit_copy2 = phase_covariant_qcm(circuit, qreg[0], qreg[1], qreg[2])
 index_copy1 = qubit_copy1.index
 index_copy2 = qubit_copy2.index
 
@@ -69,7 +70,11 @@ else:
     rotated_measurement_equator(circuit, qreg[index_copy2], creg[index_copy2], theta_param)
 
 max_shots = backend.configuration().max_shots
-max_experiments = backend.configuration().max_experiments
+
+if backend.provider() == QI:
+    max_experiments = 1
+else:
+    max_experiments = backend.configuration().max_experiments
 
 # Prepare circuits
 if not only_equator:
@@ -79,7 +84,7 @@ else:
 
 circuits_transpiled = transpile(circuits, backend=backend, optimization_level=3)
 
-#Find the positions of the physical qubits transpiled for the circuit
+# Find the positions of the physical qubits transpiled for the circuit
 layout = []
 
 if backend_identifier != 'simulator':
@@ -89,20 +94,20 @@ if backend_identifier != 'simulator':
 else:
     layout = range(nqubits)
 
-#print(layout)
+# print(layout)
 
-#Prepare readout circuits
+# Prepare readout circuits
 readout_circuits = make_readout_circuits()
-readout_circuits_transpiled = transpile(readout_circuits[0]+readout_circuits[1], backend=backend, optimization_level=3,initial_layout=[layout[index_copy1], layout[index_copy2]])
+readout_circuits_transpiled = transpile(readout_circuits[0] + readout_circuits[1], backend=backend,
+                                        optimization_level=3, initial_layout=[layout[index_copy1], layout[index_copy2]])
 readout_obj = assemble(readout_circuits_transpiled, backend=backend, shots=max_shots)
 
-print(backend_identifier+": First circuit not transpiled: ")
-print(backend_identifier+": First circuit transpiled: ")
+print(backend_identifier + ": First circuit not transpiled: ")
+print(backend_identifier + ": First circuit transpiled: ")
 print(circuits_transpiled[0])
 print(circuits_transpiled[1])
 for circuit in readout_circuits_transpiled:
     print(circuit)
-
 
 # =======================================================================================================
 # RUN THE CIRCUITS
@@ -114,9 +119,8 @@ results_probabilities = []
 corrected_results = []
 index = 0
 
-#Requirements for QI implementation, split readout circuits in individual lists
-#because max_experiments = 1
-
+# Requirements for QI implementation, split readout circuits in individual lists
+# because max_experiments = 1
 while index * max_experiments < num_pts:
 
     # Split the transpiled circuits array in an array that contains the maximum number of circuits allowed to run at
@@ -128,32 +132,43 @@ while index * max_experiments < num_pts:
     # Actually take the slice of the original array
     max_circuits_transpiled = [circuit for circuit in circuits_transpiled[first_circuit_index:last_circuit_index]]
 
-    #Run a readout before the first round of experiments and calculate data
-    readout_params = run_readout_correction(readout_obj, max_shots, backend)
-    write_readout_parameters(readout_params, backend_identifier,path)
+    # Run a readout before the first round of experiments and calculate data
+    readout_params = []
+    if backend.provider() == QI:
+        if index % 75 == 0: # perform readout correction on QI every 75 experiments
+            readout_params = run_readout_correction(readout_obj, max_shots, backend)
+            write_readout_parameters(readout_params, backend_identifier, path)
+    else:
+        readout_params = run_readout_correction(readout_obj, max_shots, backend)
+        write_readout_parameters(readout_params, backend_identifier, path)
 
     # Create and run the maximum number of experiments
     qobj = assemble(max_circuits_transpiled, backend=backend, shots=max_shots)
 
-    #Run the circuits and save the job in an arrray
+    # Run the circuits and save the job in an arrray
     running_jobs.append(backend.run(qobj))
 
-    #Save and analyze data from last job
-    print(backend_identifier+": Waiting for a job to finish...")
+    # Save and analyze data from last job
+    print(backend_identifier + ": Waiting for a job to finish...")
     running_jobs[0].result()  # Wait for the first job to finish
     results_probabilities_batch = analyze_data(running_jobs[0], index_copy1, index_copy2, max_shots)
-    results_probabilities, corrected_results = save_experiment(results_probabilities_batch, results_probabilities, corrected_results, readout_params, backend_identifier, target_points, path) 
+    results_probabilities, corrected_results = save_experiment(results_probabilities_batch, results_probabilities,
+                                                               corrected_results, readout_params, backend_identifier,
+                                                               target_points, path)
 
-    #Eliminate the job from the list and get next one
+    # Eliminate the job from the list and get next one
     running_jobs.pop(0)  # Delete the first job from the array when it is finished
     index = index + 1
 
-    #If it is the last cycle, we evaluate remaining jobs similarly as before
+    # If it is the last cycle, we evaluate remaining jobs similarly as before
     if index * max_experiments > num_pts:
         while len(running_jobs) != 0:
             results_probabilities_batch = analyze_data(running_jobs[0], index_copy1, index_copy2, max_shots)
-            results_probabilities, corrected_results = save_experiment(results_probabilities_batch, results_probabilities, corrected_results, readout_params, backend_identifier, target_points, path) 
+            results_probabilities, corrected_results = save_experiment(results_probabilities_batch,
+                                                                       results_probabilities, corrected_results,
+                                                                       readout_params, backend_identifier,
+                                                                       target_points, path)
             running_jobs.pop(0)
 
-#print([results_probabilities, corrected_results])
-write_average_fidelities([results_probabilities, corrected_results],backend_identifier, path)
+# print([results_probabilities, corrected_results])
+write_average_fidelities([results_probabilities, corrected_results], backend_identifier, path)
