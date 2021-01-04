@@ -19,13 +19,13 @@ backend = QI.get_backend("Starmon-5")
 # Enable account for IBMQ, the token has to be inserted in preparation_measurement
 IBMQ.save_account(TOKEN_IBMQ, overwrite=True)
 provider = IBMQ.load_account()
-backend = provider.backends.ibmq_qasm_simulator
+backend = provider.backends.ibmqx2
 # ibmq_qasm_simulator for simulator
 # ibmq_16_melbourne for melbourne
 # ibmqx2 for yorktown
 # ibmq_nameofthecity for all the others
 
-backend_identifier = "simulator"  # This string is used to save all the different files
+backend_identifier = "yorktown"  # This string is used to save all the different files
 path = "FullSphere/PhaseCovariant/"  # Path where the files will be saved (set whatever you want, create folder before using it)
 
 # Prepare sampling points
