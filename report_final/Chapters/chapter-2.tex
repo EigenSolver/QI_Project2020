@@ -149,50 +149,96 @@ A similar analysis was carried out in \cite{LowCostCloning} in the context of ec
 \section{Economical phase covariant quantum cloning machine}
 
 Given 2 qubits, with the first $B$ (Bob) to be the target and the second $E$ (Eve) to be the copy, an economical quantum cloning machnie 
-(EQCM) on can be defined by 
+(EQCM) on can be defined by \cite{EconomicalNiuGriffiths} 
 
-\begin{align*}
+\begin{align}
+    \label{eqn:eco_def1}
     &U_{c}\ket{00}_{BE}=\ket{00}_{BE}\\
+    \label{eqn:eco_def2}
     &U_{c}\ket{10}_{BE}=\cos\alpha\ket{10}_{BE}+\sin\alpha\ket{01}_{BE} 
-\end{align*}
+\end{align}
 With target to be an equatorial state in the XY plane of Bloch sphere
 \[
-\ket{\psi}_B=\frac{1}{\sqrt{2}}(\ket{0}+e^{i\phi}\ket{1})    
+\ket{\psi}_B=\frac{1}{\sqrt{2}}(\ket{0}+e^{i\phi}\ket{1})=\frac{1}{\sqrt{2}}\left(
+    \begin{array}{c}
+     1 \\
+     e^{i \phi } \\
+    \end{array}
+    \right)
 \]
-The fidelity would be 
+and Eve's qubit initialized at $\ket{0}$ state.
+Apply the unitary to the two-qubit input state and we get 
 \[
-    F_B=\expval{\tr_E(\rho)}{\psi_B}=\frac{1+\cos\alpha}{2}
+U_c\ket{\psi}_B\ket{0}_E=\frac{1}{\sqrt{2}}\ket{00}_{BE}+\frac{e^{i\phi}}{\sqrt{2}}(\cos\alpha\ket{10}_{BE}+\sin\alpha\ket{01}_{BE})
+=\frac{1}{\sqrt{2}}\left(
+    \begin{array}{c}
+     1 \\
+     e^{i \phi } \cos (\alpha ) \\
+     e^{i \phi } \sin (\alpha ) \\
+     0 \\
+    \end{array}
+    \right)
+\]
+And the density matrix of the system after applying the unitary is 
+\begin{equation}
+    \label{eqn:post_state}
+    \rho_{BE}= \frac{1}{2}   \left(
+        \begin{array}{cccc}
+            1 & e^{-i \phi } \cos (\alpha ) & e^{-i \phi } \sin (\alpha ) & 0 \\
+            e^{i \phi } \cos (\alpha ) & \cos ^2(\alpha ) & \frac{1}{2} \sin (2 \alpha ) & 0 \\
+            e^{i \phi } \sin (\alpha ) & \frac{1}{2} \sin (2 \alpha ) & \sin ^2(\alpha ) & 0 \\
+            0 & 0 & 0 & 0 \\
+        \end{array}
+        \right)
+\end{equation}
+Use partial trace to get the density matrix of subsystem from the mixed state 
+\[
+    \Tr_E(\rho_{BE})= \left(
+        \begin{array}{cc}
+         \frac{\sin ^2(\alpha )}{2}+\frac{1}{2} & \frac{1}{2} e^{-i \phi } \cos (\alpha ) \\
+         \frac{1}{2} e^{i \phi } \cos (\alpha ) & \frac{\cos ^2(\alpha )}{2} \\
+        \end{array}
+        \right),\quad 
+    \Tr_B(\rho_{BE})=\left(
+        \begin{array}{cc}
+        \frac{\cos ^2(\alpha )}{2}+\frac{1}{2} & \frac{1}{2} e^{-i \phi } \sin (\alpha ) \\
+        \frac{1}{2} e^{i \phi } \sin (\alpha ) & \frac{\sin ^2(\alpha )}{2} \\
+        \end{array}
+        \right)
+\]
+Then we can calculate the fidelity 
+\[
+    F_B=\expval{\Tr_E(\rho_{BE})}{\psi_B}=\frac{1+\cos\alpha}{2}
 \]
 \[
-    F_E=\expval{\tr_B(\rho)}{\psi_E}=\frac{1+\sin\alpha}{2}
+    F_E=\expval{\Tr_B(\rho_{BE})}{\psi_B}=\frac{1+\sin\alpha}{2}
 \]
 By the definition of a quantum cloning machine, the post-copy states must preserve
-same fidelities where $F_B=F_E$, thus $\sin\alpha=\cos\alpha$. We acquire that 
-$\alpha=\pi/4$, thus 
+same fidelities where $F_B=F_E$, or $\sin\alpha=\cos\alpha$. Thus we acquire that 
+$\alpha=\pi/4$, and the fidelity of a economical quantum cloning machine on this equator would be  
 \[
-F_{XY}=\frac{1+\cos{\pi/4}}{2} \approx 0.8535
+F_{equator}=\frac{1+\cos{\pi/4}}{2} \approx 0.8535
 \]
 The unitary $U_c$ can be implemented with a controlled-Hadamard gate and a controlled-NOT gate
 \begin{center}
     \begin{quantikz}
-        \lstick{$\ket{\psi}_{B}$} & \qw  & \ctrl{1}  & \qw  & \targ{}      &\qw\\
-        \lstick{$\ket{0}_{E}$}    & \qw  & \gate{H}  & \qw  & \ctrl{-1}        & \meter{}         \\
+    \lstick{$\ket{\psi}_{B}$}  \slice{0}   & \ctrl{1}   \slice{1}  & \targ{}   \slice{2}    &\qw \\
+    \lstick{\hspace{-1cm}$\ket{0}_{E}$}    & \gate{H}              & \ctrl{-1}     &\qw & \rstick{\hspace{-4 mm}$\rho$} 
     \end{quantikz}
 \end{center}
-The circuit can be easily verified 
-\[
-U_c\ket{00}=\text{CNOT}_{EB} \text{CH}_{BE} \ket{00}_{BE}=\ket{00}_{BE}
-\]
+Verify the circuit complys with the definition in \ref{eqn:eco_def1} and \ref{eqn:eco_def2}
 \begin{align*}
+    U_c\ket{00}&=\text{CNOT}_{EB} \text{CH}_{BE} \ket{00}_{BE}=\ket{00}_{BE}\\
+    \\
     U_c\ket{10}&=\text{CNOT}_{EB} \text{CH}_{BE} \ket{10}_{BE}\\
     &=\text{CNOT}_{EB}\frac{1}{\sqrt{2}}(\ket{10}+\ket{11})_{BE}\\
     &=\frac{1}{\sqrt{2}}(\ket{10}+\ket{01})_{BE}
 \end{align*}
-The controlled hadamard gate can be compiled into common-used quantum gates 
+The controlled-Hadamard gate can be compiled into common-used quantum gates 
 \begin{center}
     \begin{quantikz}
-        \lstick{$\ket{\psi}_{B}$} & \qw  & \qw                & \qw        & \qw                 & \ctrl{1}   &\qw       &\qw        &\qw       &\qw\\
-        \lstick{$\ket{0}_{E}$}    & \qw  & \gate{S^\dagger} & \gate{H} & \gate{T^\dagger}  & \targ{}    &\gate{T}&\gate{H} &\gate{S}& \meter{}         \\
+        \lstick{$\ket{\psi}_{B}$} & \qw              & \qw      & \qw               & \ctrl{1}   &\qw       &\qw        &\qw   &\qw    \\
+        \lstick{\hspace{-1cm}$\ket{0}_{E}$}    & \gate{S^\dagger} & \gate{H} & \gate{T^\dagger}  & \targ{}    &\gate{T}  &\gate{H}   &\gate{S}  &\qw\\
     \end{quantikz}
 \end{center}
 where 
@@ -234,7 +280,7 @@ Consider the generic input state to be copied
 \[
     \ket{\psi}_B=\cos(\theta/2)\ket{0}_B+e^{i\phi}\sin(\theta/2)\ket{1}_B,
 \]
-The post copied state is 
+The post-copy state is 
 \[
     \ket{\Psi}_{BE}=U_c(\ket{\psi}_B\otimes \ket{0}_E), \quad \rho_{BE}=\ketbra{\Psi}_{BE}=
     \left(
@@ -246,12 +292,21 @@ The post copied state is
 \end{array}
 \right)
 \]
+The above density matrix comply with \ref{eqn:post_state}. This assured the two qubits will share the same state after being copied.
+\[
+    \Tr_E[\rho_{BE}]=\Tr_B[\rho_{BE}]=\frac{1}{4}\left(
+        \begin{array}{cc}
+         \cos (\theta )+3 & \sqrt{2} e^{-i \phi } \sin (\theta ) \\
+         \sqrt{2} e^{i \phi } \sin (\theta ) & 1-\cos (\theta ) \\
+        \end{array}
+        \right)
+\]
 Then we have the fidelity 
 \[
-F(\theta,\phi)=\expval{\tr_E(\rho_{BE})}{\psi_B}=\frac{1}{8} \left(2 \cos (\theta )-\left(\sqrt{2}-1\right) \cos (2 \theta )+\sqrt{2}+5\right)
+F(\theta,\phi)=\expval{\Tr_E[\rho_{BE}]}{\psi_B}=\frac{1}{8} \left(2 \cos (\theta )-\left(\sqrt{2}-1\right) \cos (2 \theta )+\sqrt{2}+5\right)
 \]
 The fidelity is not related with $\phi$ and it can be verified that on XY equator 
-\[F(\pi/2)=\frac{1}{4} \left(\sqrt{2}+2\right)\]
+\[F(\pi/2,\phi)=\frac{1}{4} \left(\sqrt{2}+2\right)\]
 which is exactly what we expected.
 The fidelity is shown below
 \begin{figure}[h]
@@ -261,10 +316,10 @@ The fidelity is shown below
 \end{figure}
 The global fidelity on the whole bloch sphere is 
 \[
-    \overline{F}=\frac{1}{\int_S \dd{\Omega}}\int_S F(\Omega)\dd{\Omega}=\frac{1}{\pi}\int_0^\pi F(\theta,\phi)\sin(\theta)\dd{\theta}
+    \overline{F}=\frac{1}{\int_S \dd{\Omega}}\int_S F(\Omega)\dd{\Omega}=\frac{1}{2}\int_0^\pi F(\theta,\phi)\sin(\theta)\dd{\theta}
     =\frac{1}{12} \left(2 \sqrt{2}+7\right)\approx 0.819036
 \]
-With the lowest fidelity occurs at $F(\theta=\pi)=1/2$.
+With the lowest fidelity occurs at $F(\pi)=1/2$.
 
 And the deviation
 \[
@@ -278,7 +333,7 @@ For the BB84 states on the XZ equator,  we can use a $Rx(-\pi/2)$ gate to rotate
 \begin{center}
     \begin{quantikz}
         \lstick{$\ket{\psi}_{B}$} & \qw  & \gate{Rx(-\pi/2)} & \gate[2]{U_{EQCN}}  & \gate{Rx(\pi/2)}     &\qw\\
-        \lstick{$\ket{0}_{E}$}    & \qw  & \qw               & \qw                 & \gate{Rx(\pi/2)}            & \meter{}         \\
+        \lstick{$\ket{0}_{E}$}    & \qw  & \qw               & \qw                 & \gate{Rx(\pi/2)}            & \qw & \rho
     \end{quantikz}
 \end{center}
 

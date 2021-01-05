@@ -3,6 +3,7 @@ import pandas as pd
 import plotly
 import plotly.express as px
 import os
+import plotly.graph_objects as go
 
 
 # PLEASE INSTALL FOLLOWING PYTHON PACKAGES BEFORE FIRST RUNNING
@@ -37,7 +38,10 @@ def data_plotter(file_path,plot_type="2D",fig_path="",fig_format=".svg",show_fig
         # Make data.
         theta=data_sheet["θ"]
         phi=data_sheet["ϕ"]
-        p0=data_sheet.prob_0
+        try:
+            p0=data_sheet.prob_0
+        except:
+            p0=data_sheet.prob_0_qubit_0
     
     elif file_extension==".txt":
         theta, phi, p0 = np.loadtxt(file_path,delimiter="\t",usecols=(0,1,2),unpack=True)
@@ -54,26 +58,54 @@ def data_plotter(file_path,plot_type="2D",fig_path="",fig_format=".svg",show_fig
         fig.show()
 
     if plot_type =='3D':
-        fig = px.scatter_3d(df, x, y, z, color=p0/(5/6), template="plotly_white")
+        fig = px.scatter_3d(x, y, z, color=p0, template="plotly_white")
         plotly.offline.plot(fig, filename=fig_path)
     elif plot_type =='2D':
-        fig = px.scatter_3d(df, x, y, z, color=p0/(5/6), template="plotly_white")
+        fig = px.scatter_3d(x, y, z, color=p0, template="plotly_white")
         fig.write_image(fig_path+fig_format) 
     elif plot_type =='Proj':
-        mx=x[z<0]/(1-z[z<0])
-        my=y[z<0]/(1-z[z<0])
-        fig= px.scatter(x=mx,y=my,color=p0[z<0]/(5/6))
+        lat=np.pi/2-theta
+        lon=phi-np.pi
+
+        n_lat, n_lon = (30,10) 
+        off_set=1e-3
+        g_lat,g_lon = np.meshgrid(np.linspace(-np.pi/2+off_set,np.pi/2-off_set,n_lat), np.linspace(-np.pi+off_set,np.pi-off_set,n_lon))
+
+        def hammar_map(lat,lon):
+            kx=2*np.sqrt(2)*np.cos(lat)*np.sin(lon/2)/np.sqrt(1+np.cos(lon/2)*np.cos(lat))
+            ky=np.sqrt(2)*np.sin(lat)/np.sqrt(1+np.cos(lon/2)*np.cos(lat))
+            return mx,my
+        
+        def mollweide_map(lat,lon):
+            A=lat
+            for i in range(20):
+                A=A-(2*A+np.sin(2*A)-np.pi*np.sin(lat))/(2+2*np.cos(2*A))
+
+            kx=2*np.sqrt(2)*lon*np.cos(A)/np.pi
+            ky=np.sqrt(2)*np.sin(A)
+            return kx,ky 
+
+
+        kx,ky=mollweide_map(lat,lon)
+        gx,gy=mollweide_map(g_lat.flatten(),g_lon.flatten())
+        
+        fig = go.Figure()
+
+        fig.add_trace(go.Scatter(x=kx,y=ky,mode='markers',marker=dict(color=p0)))
+
+        fig.add_trace(go.Scatter(x=gx,y=gy,mode='lines',line=dict(width=1)))
+
+        # fig= px.scatter(x=kx,y=ky,color=p0)
+        # fig.add_line(x=gx,y=gy)
         fig.update_yaxes(scaleanchor = "x", scaleratio = 1)
-        fig.write_image(fig_path+"_1"+fig_format) 
+        fig.update_layout(coloraxis_colorbar=dict(title="Fidelity"),
+            title="Bloch Sphere Projection",
+            xaxis_title="x",
+            yaxis_title="y",
+            showlegend=False) 
+        fig.write_image(fig_path+fig_format,scale=2) 
         
-        
-        
-        mx=x[z>0]/(z[z>0]+1)
-        my=y[z>0]/(z[z>0]+1)
-        fig= px.scatter(x=mx,y=my,color=p0[z>0]/(5/6))
-        
-        fig.update_yaxes(scaleanchor = "x", scaleratio = 1)
-        fig.write_image(fig_path+"_2"+fig_format) 
+
     else:
         raise ValueError("Unsupported Plot style")
 
