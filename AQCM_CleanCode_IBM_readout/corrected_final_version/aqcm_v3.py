@@ -13,7 +13,7 @@ from quantuminspire.api import QuantumInspireAPI
 from analyze_data import *
 import sys
 ##############################################################################################
-num_pts = 10
+num_pts = 1000
 ##############################################################################################
 ################################ QUANTUM INSPIRE ############################################
 # Enable account for Quantum Inspire, the token has to be inserted in preparation_measurement
@@ -35,11 +35,11 @@ print(backend_identifier)
 ##############################################################################################
 
 #We are saving the target points along with the results
-target_points = equator_xz_points(num_pts)
+target_points = sphere_points(num_pts)
 #np.savetxt(path + "target_points_" + backend_identifier + ".csv", target_points)
-path = './'
+path = 'PhaseCovariant/FullSphereRerun/'
 # Set to true if the points only lie on the equator (does not perform phi rotation)
-only_equator = True
+only_equator = False
 
 # =======================================================================================================
 # PREPARE THE CIRCUITS
@@ -57,7 +57,7 @@ if not only_equator:
 else:
     prepare_qubit_equator(circuit, qreg[0], theta_param)
 
-qubit_copy1, qubit_copy2 = universal_qcm(circuit, qreg[0], qreg[1], qreg[2])
+qubit_copy1, qubit_copy2 = phase_covariant_qcm(circuit, qreg[0], qreg[1], qreg[2])
 index_copy1 = qubit_copy1.index
 index_copy2 = qubit_copy2.index
 
