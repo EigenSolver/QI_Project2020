@@ -18,7 +18,7 @@ Without readout correction:
     \centering
     \begin{tabular}{|c|c|c|c|c|c|c|c|}
     \hline
-    \textbf{} & \textbf{Starmon 5} & \textbf{Athens} & \textbf{Ourense} & \textbf{Santiago} & \textbf{Valencia} & \textbf{Vigo} & \textbf{Yorktown} \\ \hline
+    \textbf{} & \textbf{Starmon-5} & \textbf{Athens} & \textbf{Ourense} & \textbf{Santiago} & \textbf{Valencia} & \textbf{Vigo} & \textbf{Yorktown} \\ \hline
     $F_1$              & 0.759 & 0.782 & 0.801 & 0.788 & 0.768 & 0.784 & 0.794 \\ \hline
     $\sigma_{F_1}$     & 0.033 & 0.035 & 0.029 & 0.032 & 0.044 & 0.030 & 0.023 \\ \hline
     $F_2$              & 0.760 & 0.825 & 0.779 & 0.772 & 0.797 & 0.807 & 0.793 \\ \hline
@@ -31,20 +31,183 @@ With readout correction:
     \centering
     \begin{tabular}{|c|c|c|c|c|c|c|c|}
     \hline
-    \textbf{} & \textbf{Starmon 5} & \textbf{Athens} & \textbf{Ourense} & \textbf{Santiago} & \textbf{Valencia} & \textbf{Vigo} & \textbf{Yorktown} \\ \hline
+    \textbf{} & \textbf{Starmon-5} & \textbf{Athens} & \textbf{Ourense} & \textbf{Santiago} & \textbf{Valencia} & \textbf{Vigo} & \textbf{Yorktown} \\ \hline
     $F_1$              & 0.786 & 0.779 & 0.802 & 0.796 & 0.800 & 0.801 & 0.794 \\ \hline
     $\sigma_{F_1}$     & 0.034 & 0.036 & 0.031 & 0.035 & 0.040 & 0.035 & 0.025 \\ \hline
     $F_2$              & 0.767 & 0.823 & 0.780 & 0.773 & 0.791 & 0.807 & 0.755 \\ \hline
     $\sigma_{F_2}$     & 0.040 & 0.031 & 0.034 & 0.045 & 0.034 & 0.036 & 0.042 \\ \hline
     \end{tabular}
 \end{table}
+
+
+\begin{figure}[H]
+    \centering
+    \begin{subfigure}{.5\textwidth}
+      \centering
+      \includegraphics[width=\textwidth]{Figures/PhaseCovariant/Starmon/FullSphere/results_starmon.txt_copy1.png}
+      \caption{A subfigure}
+      \label{fig:pc_starmon5_sphere_1}
+    \end{subfigure}%
+    \begin{subfigure}{.5\textwidth}
+      \centering
+      \includegraphics[width=\textwidth]{Figures/PhaseCovariant/Starmon/FullSphere/results_starmon.txt_copy2.png}
+      \caption{A subfigure}
+      \label{fig:pc_starmon5_sphere_2}
+    \end{subfigure}
+    \caption{Starmon-5 (not corrected)}
+    \label{fig:pc_starmon5_sphere}
+\end{figure}
+\begin{figure}[H]
+    \centering
+    \begin{subfigure}{.5\textwidth}
+      \centering
+      \includegraphics[width=\textwidth]{Figures/PhaseCovariant/Starmon/FullSphere/results_starmon_corrected.txt_copy1.png}
+      \caption{A subfigure}
+      \label{fig:pc_starmon5_sphere_1_corrected}
+    \end{subfigure}%
+    \begin{subfigure}{.5\textwidth}
+      \centering
+      \includegraphics[width=\textwidth]{Figures/PhaseCovariant/Starmon/FullSphere/results_starmon_corrected.txt_copy2.png}
+      \caption{A subfigure}
+      \label{fig:pc_starmon5_sphere_2_corrected}
+    \end{subfigure}
+    \caption{Starmon-5 (corrected)}
+    \label{fig:pc_starmon5_sphere_corrected}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \begin{subfigure}{.5\textwidth}
+      \centering
+      \includegraphics[width=\textwidth]{Figures/PhaseCovariant/IBM/FullSphere/results_valencia.txt_copy1.png}
+      \caption{A subfigure}
+      \label{fig:pc_valencia_sphere_1}
+    \end{subfigure}%
+    \begin{subfigure}{.5\textwidth}
+      \centering
+      \includegraphics[width=\textwidth]{Figures/PhaseCovariant/IBM/FullSphere/results_valencia.txt_copy2.png}
+      \caption{A subfigure}
+      \label{fig:pc_valencia_sphere_2}
+    \end{subfigure}
+    \caption{Valencia (not corrected)}
+    \label{fig:pc_valencia_sphere}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \begin{subfigure}{.5\textwidth}
+      \centering
+      \includegraphics[width=\textwidth]{Figures/PhaseCovariant/IBM/FullSphere/results_corrected_valencia.txt_copy1.png}
+      \caption{A subfigure}
+      \label{fig:pc_valencia_sphere_1_corrected}
+    \end{subfigure}%
+    \begin{subfigure}{.5\textwidth}
+      \centering
+      \includegraphics[width=\textwidth]{Figures/PhaseCovariant/IBM/FullSphere/results_corrected_valencia.txt_copy2.png}
+      \caption{A subfigure}
+      \label{fig:pc_valencia_sphere_2_corrected}
+    \end{subfigure}
+    \caption{Valencia (corrected)}
+    \label{fig:pc_valencia_sphere_corrected}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \begin{subfigure}{.5\textwidth}
+      \centering
+      \includegraphics[width=\textwidth]{Figures/PhaseCovariant/IBM/FullSphere/results_ibmqx2.txt_copy1.png}
+      \caption{A subfigure}
+      \label{fig:pc_yorktown_sphere_1}
+    \end{subfigure}%
+    \begin{subfigure}{.5\textwidth}
+      \centering
+      \includegraphics[width=\textwidth]{Figures/PhaseCovariant/IBM/FullSphere/results_ibmqx2.txt_copy2.png}
+      \caption{A subfigure}
+      \label{fig:pc_yorktown_sphere_2}
+    \end{subfigure}
+    \caption{Yorktown (not corrected)}
+    \label{fig:pc_yorktown_sphere}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \begin{subfigure}{.5\textwidth}
+      \centering
+      \includegraphics[width=\textwidth]{Figures/PhaseCovariant/IBM/FullSphere/results_santiago.txt_copy1.png}
+      \caption{A subfigure}
+      \label{fig:pc_santiago_sphere_1}
+    \end{subfigure}%
+    \begin{subfigure}{.5\textwidth}
+      \centering
+      \includegraphics[width=\textwidth]{Figures/PhaseCovariant/IBM/FullSphere/results_santiago.txt_copy2.png}
+      \caption{A subfigure}
+      \label{fig:pc_santiago_sphere_2}
+    \end{subfigure}
+    \caption{Santiago (not corrected)}
+    \label{fig:pc_santiago_sphere}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \begin{subfigure}{.5\textwidth}
+      \centering
+      \includegraphics[width=\textwidth]{Figures/PhaseCovariant/IBM/FullSphere/results_athens.txt_copy1.png}
+      \caption{A subfigure}
+      \label{fig:pc_athens_sphere_1}
+    \end{subfigure}%
+    \begin{subfigure}{.5\textwidth}
+      \centering
+      \includegraphics[width=\textwidth]{Figures/PhaseCovariant/IBM/FullSphere/results_athens.txt_copy2.png}
+      \caption{A subfigure}
+      \label{fig:pc_athens_sphere_2}
+    \end{subfigure}
+    \caption{Yorktown (not corrected)}
+    \label{fig:pc_athens_sphere}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \begin{subfigure}{.5\textwidth}
+      \centering
+      \includegraphics[width=\textwidth]{Figures/PhaseCovariant/IBM/FullSphere/results_ourense.txt_copy1.png}
+      \caption{A subfigure}
+      \label{fig:pc_ourense_sphere_1}
+    \end{subfigure}%
+    \begin{subfigure}{.5\textwidth}
+      \centering
+      \includegraphics[width=\textwidth]{Figures/PhaseCovariant/IBM/FullSphere/results_ourense.txt_copy2.png}
+      \caption{A subfigure}
+      \label{fig:pc_ourense_sphere_2}
+    \end{subfigure}
+    \caption{Ourense (not corrected)}
+    \label{fig:pc_ourense_sphere}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \begin{subfigure}{.5\textwidth}
+      \centering
+      \includegraphics[width=\textwidth]{Figures/PhaseCovariant/IBM/FullSphere/results_vigo.txt_copy1.png}
+      \caption{A subfigure}
+      \label{fig:pc_vigo_sphere_1}
+    \end{subfigure}%
+    \begin{subfigure}{.5\textwidth}
+      \centering
+      \includegraphics[width=\textwidth]{Figures/PhaseCovariant/IBM/FullSphere/results_vigo.txt_copy2.png}
+      \caption{A subfigure}
+      \label{fig:pc_vigo_sphere_2}
+    \end{subfigure}
+    \caption{Vigo (not corrected)}
+    \label{fig:pc_vigo_sphere}
+\end{figure}
+
 \subsection{Equator}
 
 \begin{table}[H]
     \centering
     \begin{tabular}{|c|c|c|c|c|c|c|c|}
     \hline
-    \textbf{} & \textbf{Starmon 5} & \textbf{Athens} & \textbf{Ourense} & \textbf{Santiago} & \textbf{Valencia} & \textbf{Vigo} & \textbf{Yorktown} \\ \hline
+    \textbf{} & \textbf{Starmon-5} & \textbf{Athens} & \textbf{Ourense} & \textbf{Santiago} & \textbf{Valencia} & \textbf{Vigo} & \textbf{Yorktown} \\ \hline
     $F_1$              & 0.780 & 0.817 & 0.836 & 0.822 & 0.820 & 0.798 & 0.802 \\ \hline
     $\sigma_{F_1}$     & 0.029 & 0.019 & 0.017 & 0.013 & 0.017 & 0.019 & 0.028 \\ \hline
     $F_2$              & 0.785 & 0.858 & 0.811 & 0.815 & 0.836 & 0.836 & 0.807 \\ \hline
@@ -56,7 +219,7 @@ With readout correction:
     \centering
     \begin{tabular}{|c|c|c|c|c|c|c|c|}
     \hline
-    \textbf{} & \textbf{Starmon 5} & \textbf{Athens} & \textbf{Ourense} & \textbf{Santiago} & \textbf{Valencia} & \textbf{Vigo} & \textbf{Yorktown} \\ \hline
+    \textbf{} & \textbf{Starmon-5} & \textbf{Athens} & \textbf{Ourense} & \textbf{Santiago} & \textbf{Valencia} & \textbf{Vigo} & \textbf{Yorktown} \\ \hline
     $F_1$              & 0.801 & 0.814 & 0.839 & 0.825 & 0.834 & 0.836 & 0.804 \\ \hline
     $\sigma_{F_1}$     & 0.032 & 0.019 & 0.018 & 0.014 & 0.023 & 0.022 & 0.030 \\ \hline
     $F_2$              & 0.791 & 0.858 & 0.811 & 0.857 & 0.836 & 0.839 & 0.819 \\ \hline
@@ -69,7 +232,7 @@ With readout correction:
     \centering
     \begin{tabular}{|c|c|c|c|c|c|c|c|}
     \hline
-    \textbf{} & \textbf{Starmon 5} & \textbf{Athens} & \textbf{Ourense} & \textbf{Santiago} & \textbf{Valencia} & \textbf{Vigo} & \textbf{Yorktown} \\ \hline
+    \textbf{} & \textbf{Starmon-5} & \textbf{Athens} & \textbf{Ourense} & \textbf{Santiago} & \textbf{Valencia} & \textbf{Vigo} & \textbf{Yorktown} \\ \hline
     $F_1$              & 0.787 & 0.820 & 0.838 & 0.829 & 0.821 & 0.797 & 0.806 \\ \hline
     $\sigma_{F_1}$     & 0.037 & 0.023 & 0.021 & 0.011 & 0.008 & 0.026 & 0.027 \\ \hline
     $F_2$              & 0.790 & 0.853 & 0.815 & 0.832 & 0.824 & 0.829 & 0.793 \\ \hline
@@ -81,7 +244,7 @@ With readout correction:
     \centering
     \begin{tabular}{|c|c|c|c|c|c|c|c|}
     \hline
-    \textbf{} & \textbf{Starmon 5} & \textbf{Athens} & \textbf{Ourense} & \textbf{Santiago} & \textbf{Valencia} & \textbf{Vigo} & \textbf{Yorktown} \\ \hline
+    \textbf{} & \textbf{Starmon-5} & \textbf{Athens} & \textbf{Ourense} & \textbf{Santiago} & \textbf{Valencia} & \textbf{Vigo} & \textbf{Yorktown} \\ \hline
     $F_1$              & 0.809 & 0.818 & 0.840 & 0.833 & 0.841 & 0.820 & 0.807 \\ \hline
     $\sigma_{F_1}$     & 0.041 & 0.023 & 0.022 & 0.011 & 0.009 & 0.031 & 0.028 \\ \hline
     $F_2$              & 0.796 & 0.852 & 0.817 & 0.833 & 0.820 & 0.830 & 0.788 \\ \hline
@@ -90,6 +253,175 @@ With readout correction:
 \end{table}
 \section{Economical phase covariant quantum cloning machine}
 \subsection{Sphere}
+Without readout correction:
+\begin{table}[H]
+    \centering
+    \begin{tabular}{|c|c|c|c|c|c|c|c|c|}
+    \hline
+    \textbf{} & \textbf{Spin-2} & \textbf{Starmon-5} & \textbf{Athens} & \textbf{Ourense} & \textbf{Santiago} & \textbf{Valencia} & \textbf{Vigo} & \textbf{Yorktown} \\ \hline
+    $F_1$              & 0.714  & 0.759NO & 0.810 & 0.776 & 0.811 & 0.819 & 0.803 & 0.789 \\ \hline
+    $\sigma_{F_1}$     & 0.128  & 0.033NO & 0.142 & 0.159 & 0.132 & 0.132 & 0.112 & 0.129 \\ \hline
+    $F_2$              & 0.690  & 0.760NO & 0.812 & 0.834 & 0.794 & 0.826 & 0.802 & 0.777 \\ \hline
+    $\sigma_{F_2}$     & 0.083  & 0.038NO & 0.136 & 0.119 & 0.149 & 0.133 & 0.149 & 0.137 \\ \hline
+    \end{tabular}
+\end{table}
+
+With readout correction:
+\begin{table}[H]
+    \centering
+    \begin{tabular}{|c|c|c|c|c|c|c|c|c|}
+    \hline
+    \textbf{} & \textbf{Spin-2} & \textbf{Starmon-5} & \textbf{Athens} & \textbf{Ourense} & \textbf{Santiago} & \textbf{Valencia} & \textbf{Vigo} & \textbf{Yorktown} \\ \hline
+    $F_1$              & 0.731 & 0.786NO & 0.810 & 0.777 & 0.814 & 0.820 & 0.824 & 0.781 \\ \hline
+    $\sigma_{F_1}$     & 0.172 & 0.034NO & 0.144 & 0.166 & 0.138 & 0.138 & 0.131 & 0.140 \\ \hline
+    $F_2$              & 0.821 & 0.767NO & 0.811 & 0.844 & 0.799 & 0.807 & 0.801 & 0.776 \\ \hline
+    $\sigma_{F_2}$     & 0.130 & 0.040NO & 0.139 & 0.127 & 0.153 & 0.153 & 0.154 & 0.145 \\ \hline
+    \end{tabular}
+\end{table}
+
+\begin{figure}[H]
+    \centering
+    \begin{subfigure}{.5\textwidth}
+      \centering
+      \includegraphics[width=\textwidth]{Figures/Economical/Spin2/FullSphere/results_spin2.txt_copy1.png}
+      \caption{A subfigure}
+      \label{fig:ec_spin2_sphere_1}
+    \end{subfigure}%
+    \begin{subfigure}{.5\textwidth}
+      \centering
+      \includegraphics[width=\textwidth]{Figures/Economical/Spin2/FullSphere/results_spin2.txt_copy2.png}
+      \caption{A subfigure}
+      \label{fig:ec_spin2_sphere_2}
+    \end{subfigure}
+    \caption{Spin-2 (not corrected)}
+    \label{fig:ec_spin2_sphere}
+\end{figure}
+\begin{figure}[H]
+    \centering
+    \begin{subfigure}{.5\textwidth}
+      \centering
+      \includegraphics[width=\textwidth]{Figures/Economical/Spin2/FullSphere/results_spin2_corrected.txt_copy1.png}
+      \caption{A subfigure}
+      \label{fig:ec_pin2_sphere_1_corrected}
+    \end{subfigure}%
+    \begin{subfigure}{.5\textwidth}
+      \centering
+      \includegraphics[width=\textwidth]{Figures/Economical/Spin2/FullSphere/results_spin2_corrected.txt_copy2.png}
+      \caption{A subfigure}
+      \label{fig:ec_spin2_sphere_2_corrected}
+    \end{subfigure}
+    \caption{Spin-2 (corrected)}
+    \label{fig:ec_spin2_sphere_corrected}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \begin{subfigure}{.5\textwidth}
+      \centering
+      \includegraphics[width=\textwidth]{Figures/Economical/IBM/FullSphere/results_valencia.txt_copy1.png}
+      \caption{A subfigure}
+      \label{fig:ec_valencia_sphere_1}
+    \end{subfigure}%
+    \begin{subfigure}{.5\textwidth}
+      \centering
+      \includegraphics[width=\textwidth]{Figures/Economical/IBM/FullSphere/results_valencia.txt_copy2.png}
+      \caption{A subfigure}
+      \label{fig:ec_valencia_sphere_2}
+    \end{subfigure}
+    \caption{Valencia (not corrected)}
+    \label{fig:ec_valencia_sphere}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \begin{subfigure}{.5\textwidth}
+      \centering
+      \includegraphics[width=\textwidth]{Figures/Economical/IBM/FullSphere/results_ibmqx2.txt_copy1.png}
+      \caption{A subfigure}
+      \label{fig:ec_yorktown_sphere_1}
+    \end{subfigure}%
+    \begin{subfigure}{.5\textwidth}
+      \centering
+      \includegraphics[width=\textwidth]{Figures/Economical/IBM/FullSphere/results_ibmqx2.txt_copy2.png}
+      \caption{A subfigure}
+      \label{fig:ec_yorktown_sphere_2}
+    \end{subfigure}
+    \caption{Yorktown (not corrected)}
+    \label{fig:ec_yorktown_sphere}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \begin{subfigure}{.5\textwidth}
+      \centering
+      \includegraphics[width=\textwidth]{Figures/Economical/IBM/FullSphere/results_santiago.txt_copy1.png}
+      \caption{A subfigure}
+      \label{fig:ec_santiago_sphere_1}
+    \end{subfigure}%
+    \begin{subfigure}{.5\textwidth}
+      \centering
+      \includegraphics[width=\textwidth]{Figures/Economical/IBM/FullSphere/results_santiago.txt_copy2.png}
+      \caption{A subfigure}
+      \label{fig:ec_santiago_sphere_2}
+    \end{subfigure}
+    \caption{Santiago (not corrected)}
+    \label{fig:ec_santiago_sphere}
+\end{figure}
+
 \subsection{Equator}
+
+
+Without readout correction:
+\begin{table}[H]
+    \centering
+    \begin{tabular}{|c|c|c|c|c|c|c|c|c|}
+    \hline
+    \textbf{} & \textbf{Spin-2} & \textbf{Starmon-5} & \textbf{Athens} & \textbf{Ourense} & \textbf{Santiago} & \textbf{Valencia} & \textbf{Vigo} & \textbf{Yorktown} \\ \hline
+    $F_1$              & 0.751  & 0.759NO & 0.839 & 0.813 & 0.837 & 0.852 & 0.824 & 0.819 \\ \hline
+    $\sigma_{F_1}$     & 0.029  & 0.033NO & 0.010 & 0.018 & 0.009 & 0.005 & 0.012 & 0.037 \\ \hline
+    $F_2$              & 0.704  & 0.760NO & 0.838 & 0.867 & 0.799 & 0.850 & 0.826 & 0.832 \\ \hline
+    $\sigma_{F_2}$     & 0.025  & 0.038NO & 0.009 & 0.019 & 0.022 & 0.012 & 0.018 & 0.026 \\ \hline
+    \end{tabular}
+\end{table}
+
+
+With readout correction:
+\begin{table}[H]
+    \centering
+    \begin{tabular}{|c|c|c|c|c|c|c|c|c|}
+    \hline
+    \textbf{} & \textbf{Spin-2} & \textbf{Starmon-5} & \textbf{Athens} & \textbf{Ourense} & \textbf{Santiago} & \textbf{Valencia} & \textbf{Vigo} & \textbf{Yorktown} \\ \hline
+    $F_1$              & 0.751 & 0.786NO & 0.840 & 0.815 & 0.838 & 0.851 & 0.850 & 0.814 \\ \hline
+    $\sigma_{F_1}$     & 0.042 & 0.034NO & 0.011 & 0.019 & 0.010 & 0.005 & 0.014 & 0.041 \\ \hline
+    $F_2$              & 0.862 & 0.767NO & 0.837 & 0.879 & 0.811 & 0.832 & 0.828 & 0.835 \\ \hline
+    $\sigma_{F_2}$     & 0.037 & 0.040NO & 0.009 & 0.022 & 0.019 & 0.015 & 0.019 & 0.028 \\ \hline
+    \end{tabular}
+\end{table}
+
 \subsection{BB84 states}
 
+Without readout correction:
+\begin{table}[H]
+    \centering
+    \begin{tabular}{|c|c|c|c|c|c|c|c|c|}
+    \hline
+    \textbf{} & \textbf{Spin-2} & \textbf{Starmon-5} & \textbf{Athens} & \textbf{Ourense} & \textbf{Santiago} & \textbf{Valencia} & \textbf{Vigo} & \textbf{Yorktown} \\ \hline
+    $F_1$              & 0.742  & 0.759NO & 0.840 & 0.812 & 0.851 & 0.844 & 0.832 & 0.814 \\ \hline
+    $\sigma_{F_1}$     & 0.010  & 0.033NO & 0.008 & 0.027 & 0.008 & 0.003 & 0.017 & 0.027 \\ \hline
+    $F_2$              & 0.693  & 0.760NO & 0.842 & 0.866 & 0.825 & 0.848 & 0.827 & 0.833 \\ \hline
+    $\sigma_{F_2}$     & 0.018  & 0.038NO & 0.003 & 0.020 & 0.010 & 0.010 & 0.022 & 0.022 \\ \hline
+    \end{tabular}
+\end{table}
+
+With readout correction:
+\begin{table}[H]
+    \centering
+    \begin{tabular}{|c|c|c|c|c|c|c|c|c|}
+    \hline
+    \textbf{} & \textbf{Spin-2} & \textbf{Starmon-5} & \textbf{Athens} & \textbf{Ourense} & \textbf{Santiago} & \textbf{Valencia} & \textbf{Vigo} & \textbf{Yorktown} \\ \hline
+    $F_1$              & 0.737 & 0.786NO & 0.841 & 0.815 & 0.939 & 0.858 & 0.850 & 0.809 \\ \hline
+    $\sigma_{F_1}$     & 0.023 & 0.034NO & 0.008 & 0.028 & 0.009 & 0.003 & 0.020 & 0.029 \\ \hline
+    $F_2$              & 0.847 & 0.767NO & 0.840 & 0.874 & 0.799 & 0.843 & 0.829 & 0.835 \\ \hline
+    $\sigma_{F_2}$     & 0.026 & 0.040NO & 0.003 & 0.021 & 0.012 & 0.011 & 0.023 & 0.023 \\ \hline
+    \end{tabular}
+\end{table}
