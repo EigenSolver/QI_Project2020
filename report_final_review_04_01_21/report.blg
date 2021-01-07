@@ -1,0 +1,61 @@
+This is BibTeX, Version 0.99d (TeX Live 2017/Debian)
+Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
+The top-level auxiliary file: report.aux
+The style file: tudelft-report.bst
+Illegal, another \bibstyle command---line 86 of file report.aux
+ : \bibstyle
+ :          {ieeetr}
+I'm skipping whatever remains of this command
+Database file #1: bibliography.bib
+Repeated entry---line 144 of file bibliography.bib
+ : @article{EquatorialQCM
+ :                       ,
+I'm skipping whatever remains of this entry
+Warning--entry type for "quantuminspire" isn't style-file defined
+--line 174 of file bibliography.bib
+Warning--entry type for "ibmquantumexperience" isn't style-file defined
+--line 181 of file bibliography.bib
+Warning--empty year in ibmquantumexperience
+Warning--empty year in quantuminspire
+You've used 11 entries,
+            2773 wiz_defined-function locations,
+            692 strings with 6984 characters,
+and the built_in function-call counts, 5259 in all, are:
+= -- 507
+> -- 252
+< -- 9
++ -- 86
+- -- 75
+* -- 433
+:= -- 810
+add.period$ -- 51
+call.type$ -- 11
+change.case$ -- 58
+chr.to.int$ -- 11
+cite$ -- 24
+duplicate$ -- 225
+empty$ -- 434
+format.name$ -- 96
+if$ -- 1107
+int.to.chr$ -- 1
+int.to.str$ -- 1
+missing$ -- 9
+newline$ -- 80
+num.names$ -- 44
+pop$ -- 97
+preamble$ -- 1
+purify$ -- 47
+quote$ -- 0
+skip$ -- 173
+stack$ -- 0
+substring$ -- 235
+swap$ -- 29
+text.length$ -- 1
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 121
+warning$ -- 2
+while$ -- 48
+width$ -- 0
+write$ -- 181
+(There were 2 error messages)
