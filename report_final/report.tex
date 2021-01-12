@@ -4,6 +4,11 @@
 \usepackage{tikz}
 \usepackage{physics}
 \usepackage{float}
+\usepackage{bm}
+\usepackage{subcaption}
+
+\DeclareMathOperator{\atantwo}{arctan2}
+
 \usetikzlibrary{quantikz}
 
 \begin{document}
@@ -43,6 +48,7 @@
 \\ Yuning Zhang}
 %\affiliation{Technische Universiteit Delft}
 \setpagecolor{tudelft-cyan}
+\coverimage{Figures/cover.png}
 \makecover
 
 %% Include an optional title page.
@@ -62,10 +68,10 @@
 %% Use letters for the chapter numbers of the appendices.
 \appendix
 
-%\input{appendix-a}
+\input{Chapters/appendix-a}
 
-\bibliographystyle{ieeetr}
-% \bibliography{bibliography}
+%\bibliographystyle{ieeetr}
+\bibliography{bibliography}
 
 \end{document}
 

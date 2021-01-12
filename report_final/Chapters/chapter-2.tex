@@ -4,7 +4,8 @@
 It is a fundamental result of quantum mechanics that a generic quantum states can not be copied exactly.
 \section{Universal quantum cloning machine}
 \section{Phase covariant quantum cloning machine}
-The circuit for the phase covariant quantum cloning machine (PCQCM) proposed in  \cite{EquatorialQCM} is similar to the one for the universal quantum cloning machine (UQCM), but the output copies are on the register of the ancillae:
+A phase covariant quantum cloning machine (PCQCM) is a QCM optimized to clone states on an equator of the Bloch sphere.
+The circuit for the optimal PCQCM proposed in  \cite{EquatorialQCM} is similar to the one for the UQCM, but the output copies are on the registers of the ancillae:
 
 \[
 \begin{quantikz}
@@ -95,9 +96,9 @@ After applying the last two CNOT gates:
 The above state is invariant under the exchange of the second and third qubits, where the copies are made. 
 This means that the single qubit states of the two copies are the same, i.e.:
 \[
-    \rho_{a_1}=\rho_{a_2} \quad \text{where} \quad \rho_{a_1}=\Tr_{a_0,a_2}[\ketbra{\Psi_3}], \quad \rho_{a_2}=\Tr_{a_0,a_1}[\ketbra{\Psi_3}]
+    \rho_{1}=\rho_{2} \quad \text{where} \quad \rho_{1}=\Tr_{a_0,a_2}[\ketbra{\Psi_3}], \quad \rho_{2}=\Tr_{a_0,a_1}[\ketbra{\Psi_3}].
 \]
-In order to calculate the expected fidelity of the copies (we will consider the copy $\rho_{a_1}$), we first isolate the qubits $a_0$ and $a_2$:
+In order to calculate the expected fidelity of the copies (we will consider the copy $\rho_{1}$), we first isolate the qubits $a_0$ and $a_2$:
 \[
     \begin{split}
     \ket{\Psi_3}&=\ket{0}\big(\cos(\theta/2)\cos^2(\pi/8)\ket{0}+e^{i\phi}\sin(\theta/2)\cos(\pi/8)\sin(\pi/8)\ket{1}\big)\ket{0}\\
@@ -109,7 +110,7 @@ In order to calculate the expected fidelity of the copies (we will consider the 
 The single copy fidelity is then ($\theta$ and $\phi$ are the angles on the Bloch sphere of the input state):
 \[
     \begin{split}
-    F(\theta,\phi)&=\bra{\psi}\rho_{a_1}\ket{\psi}=\bra{\psi}\Tr_{a_0,a_2}[\ketbra{\Psi_3}]\ket{\psi}=\\
+    F(\theta,\phi)&=\bra{\psi}\rho_{1}\ket{\psi}=\bra{\psi}\Tr_{a_0,a_2}[\ketbra{\Psi_3}]\ket{\psi}=\\
     &=\big(\cos^2(\theta/2)\cos^2(\pi/8)+\sin^2(\theta/2)\cos(\pi/8)\sin(\pi/8)\big)^2\\
     &+\big|e^{i\phi}\cos(\theta/2)\sin(\theta/2)\sin(\pi/8)\cos(\pi/8)+e^{-i\phi}\sin(\theta/2)\cos(\theta/2)\sin^2(\pi/8)\big|^2\\
     &+\big|e^{i\phi}\cos(\theta/2)\sin(\theta/2)\sin^2(\pi/8)+e^{-i\phi}\sin(\theta/2)\cos(\theta/2)\sin(\pi/8)\cos(\pi/8)\big|^2\\
@@ -117,227 +118,252 @@ The single copy fidelity is then ($\theta$ and $\phi$ are the angles on the Bloc
     \end{split}
 \]
 The fidelity can be computed analytically. The final result is:
-\[
+\begin{equation}
     F(\theta,\phi)=\frac{3\left(4-\sqrt{2}\right)+\left(3\sqrt{2}-4\right)\left[\cos(2\phi)+\cos(2\theta)\left(1-\cos(2\phi)\right)\right]}{     16(2-\sqrt{2})   }.
-\]
+\end{equation}
+\begin{figure}[H]
+    \centering
+            \includegraphics[width=0.5\textwidth]{Figures/phase_covariant.png}
+        \label{fig:phase_covariant}
+        \caption{Caption}
+\end{figure}
 It is possible to observe that if $\phi=0$ is set, the fidelity becomes a constant:
 \[
     F(\theta,0)=\frac{3\left(4-\sqrt{2}\right)+\left(3\sqrt{2}-4\right)}{16(2-\sqrt{2})}=\frac{8}{16(2-\sqrt{2})}=\frac{1}{2}\frac{2+\sqrt{2}}{2}=\frac{1}{2}+\frac{1}{\sqrt{8}}.
 \]
 Therefore, for input states on the $xz$-equator, the fidelity of the PCQCM is:
 \begin{equation}
-    F_{equator}^{ideal}=\frac{1}{2}+\frac{1}{\sqrt{8}}\approx 0.854
+    F_{equator}^{ideal}=\frac{1}{2}+\frac{1}{\sqrt{8}}\approx 0.854.
+    \label{eqn:fidelity_pcqcm}
 \end{equation}
 
 As discussed in \cite{PhaseCovariantOptimalBruss} this is the optimal fidelity for a PCQCM. 
 Moreover, this is the optimal result attainable also when trying to maximize the fidelity for BB84 input states.
-Indeed, the optimization over the two different sets of output is equivalent and leads therefore to the same result \cite{PhaseCovariantOptimalBruss}.
+Indeed, the optimization over the two different sets of input states is equivalent and leads therefore to the same result \cite{PhaseCovariantOptimalBruss}.
 
 It might be of some interest to consider the performances of the PCQCM over the whole Bloch sphere.
 The average fidelity over the Bloch sphere $S$ is (integrating over solid angle):
-\[
+\begin{equation}
     \overline{F}=\frac{1}{\int_S \dd{\Omega}}\int_S F(\Omega)\dd{\Omega}=\frac{1}{4\pi}\int_0^{2\pi}\int_0^\pi F(\theta,\phi)\sin(\theta)\dd{\theta}\dd{\phi}=\frac{7+2\sqrt{2}}{12}\approx 0.819.
-\]
+    \label{eqn:avg_fidelity_pcqcm}
+\end{equation}
 The standard deviation can be calculated similarly:
-\[
+\begin{equation}
     \sigma_{F}=\sqrt{\overline{F^2}-\overline{F}^2}=\frac{1}{6}\sqrt{\frac{3-2\sqrt{2}}{5}}\approx0.031.
-\]
+    \label{eqn:std_fidelity_pcqcm}
+\end{equation}
 
 We conclude that when considering the PCQCM over the whole Bloch sphere, it is not too far from the optimal bound of the UQCM (which was $F=5/6\approx 0.833$).
 This could have some interesting consequences: since we managed to greatly simplify its circuit, the PCQCM could turn to be better than the UQCM when using real hardware, in contrast with what is expected theoretically.
-A similar analysis was carried out in \cite{LowCostCloning} in the context of economical QCM.
-\section{Economical phase covariant quantum cloning machine}
+A similar analysis regarding the performances of a real QCM was carried out in \cite{LowCostCloning} in the context of economical QCMs.
 
-Given 2 qubits, with the first $B$ (Bob) to be the target and the second $E$ (Eve) to be the copy, an economical quantum cloning machnie 
-(EQCM) on can be defined by \cite{EconomicalNiuGriffiths} 
+\subsection*{Rotated PCQCM}
+The found expression for the fidelity is rather complicated. When considering a PCQCM that optimally clones the states on the $xy$-equator, the expression simplifies.
+It is possible to obtain the fidelity for an arbitrary state on the Bloch sphere starting from the expression previously found, without analyzing a new circuit.
+Given a point $(\theta,\phi)$ on the Bloch sphere, we want to find the coordinates $(\theta',\phi')$ of such point after a rotation of $\pi/2$ about the $x$-axis is performed.
+Indeed, such rotation transforms the $xy$-equator into the $xz$-equator.
 
-\begin{align}
-    \label{eqn:eco_def1}
-    &U_{c}\ket{00}_{BE}=\ket{00}_{BE}\\
-    \label{eqn:eco_def2}
-    &U_{c}\ket{10}_{BE}=\cos\alpha\ket{10}_{BE}+\sin\alpha\ket{01}_{BE} 
-\end{align}
-With target to be an equatorial state in the XY plane of Bloch sphere
+We start considering a generic vector on a sphere of unit radius:
 \[
-\ket{\psi}_B=\frac{1}{\sqrt{2}}(\ket{0}+e^{i\phi}\ket{1})=\frac{1}{\sqrt{2}}\left(
-    \begin{array}{c}
-     1 \\
-     e^{i \phi } \\
-    \end{array}
-    \right)
+    \bm v = \begin{pmatrix}
+        \sin(\theta)\cos(\phi)\\
+        \sin(\theta)\sin(\phi)\\
+        \cos(\phi)
+    \end{pmatrix}.
 \]
-and Eve's qubit initialized at $\ket{0}$ state.
-Apply the unitary to the two-qubit input state and we get 
+An arbitrary rotation about the $x$-axis in a $3D$ Euclidean space is given by:
 \[
-U_c\ket{\psi}_B\ket{0}_E=\frac{1}{\sqrt{2}}\ket{00}_{BE}+\frac{e^{i\phi}}{\sqrt{2}}(\cos\alpha\ket{10}_{BE}+\sin\alpha\ket{01}_{BE})
-=\frac{1}{\sqrt{2}}\left(
-    \begin{array}{c}
-     1 \\
-     e^{i \phi } \cos (\alpha ) \\
-     e^{i \phi } \sin (\alpha ) \\
-     0 \\
-    \end{array}
-    \right)
+    R_x(\alpha)=\begin{pmatrix}
+        1 & 0 & 0 \\
+        0 & \cos(\alpha) & -\sin(\alpha) \\
+        0 & \sin(\alpha) & \cos(\alpha)
+    \end{pmatrix}
 \]
-And the density matrix of the system after applying the unitary is 
+Therefore, if we consider a rotation of $\pi/2$ about the $x$-axis, the transformed vector is:
+\[
+    \bm v' = R_x(\pi/2)\bm v = \begin{pmatrix}
+        1 & 0 & 0 \\
+        0 & 0 & -1 \\
+        0 & 1 & 0 \\
+    \end{pmatrix}
+    \begin{pmatrix}
+        \sin(\theta)\cos(\phi)\\
+        \sin(\theta)\sin(\phi)\\
+        \cos(\phi)
+    \end{pmatrix}=\begin{pmatrix}
+        \sin(\theta)\cos(\phi)\\
+        -\cos(\phi)\\
+        \sin(\theta)\sin(\phi)
+    \end{pmatrix}.
+\]
+Finally, the new angular coordiantes can be calculated:
+\[
+    \begin{gathered}
+    \theta'=\arccos(\frac{v'_z}{v'})=\arccos(\sin(\theta)\sin(\phi))\\
+    \phi'=\atantwo\left(v'_y,v'_x\right)=\atantwo\left(-\cos(\phi),\sin(\theta)\cos(\phi)\right)
+    \end{gathered}
+\]
+The fidelity for a PCQCM that optimally clones the state on the $xy$-equator is obtained from the one previously found simply changing the variables:
+\[
+    F_{xy}(\theta,\phi)=F(\theta'(\theta,\phi),\phi'(\theta,\phi)).
+\]
+After some manipulations, it is possible to obtain the following expression:
 \begin{equation}
-    \label{eqn:post_state}
-    \rho_{BE}= \frac{1}{2}   \left(
-        \begin{array}{cccc}
-            1 & e^{-i \phi } \cos (\alpha ) & e^{-i \phi } \sin (\alpha ) & 0 \\
-            e^{i \phi } \cos (\alpha ) & \cos ^2(\alpha ) & \frac{1}{2} \sin (2 \alpha ) & 0 \\
-            e^{i \phi } \sin (\alpha ) & \frac{1}{2} \sin (2 \alpha ) & \sin ^2(\alpha ) & 0 \\
-            0 & 0 & 0 & 0 \\
-        \end{array}
-        \right)
+    F_{xy}(\theta,\phi)=\frac{5+\sqrt{2}}{8}+\frac{1-\sqrt{2}}{8}\cos(2\theta).
 \end{equation}
-Use partial trace to get the density matrix of subsystem from the mixed state 
-\[
-    \Tr_E(\rho_{BE})= \left(
-        \begin{array}{cc}
-         \frac{\sin ^2(\alpha )}{2}+\frac{1}{2} & \frac{1}{2} e^{-i \phi } \cos (\alpha ) \\
-         \frac{1}{2} e^{i \phi } \cos (\alpha ) & \frac{\cos ^2(\alpha )}{2} \\
-        \end{array}
-        \right),\quad 
-    \Tr_B(\rho_{BE})=\left(
-        \begin{array}{cc}
-        \frac{\cos ^2(\alpha )}{2}+\frac{1}{2} & \frac{1}{2} e^{-i \phi } \sin (\alpha ) \\
-        \frac{1}{2} e^{i \phi } \sin (\alpha ) & \frac{\sin ^2(\alpha )}{2} \\
-        \end{array}
-        \right)
-\]
-Then we can calculate the fidelity 
-\[
-    F_B=\expval{\Tr_E(\rho_{BE})}{\psi_B}=\frac{1+\cos\alpha}{2}
-\]
-\[
-    F_E=\expval{\Tr_B(\rho_{BE})}{\psi_B}=\frac{1+\sin\alpha}{2}
-\]
-By the definition of a quantum cloning machine, the post-copy states must preserve
-same fidelities where $F_B=F_E$, or $\sin\alpha=\cos\alpha$. Thus we acquire that 
-$\alpha=\pi/4$, and the fidelity of a economical quantum cloning machine on this equator would be  
-\[
-F_{equator}=\frac{1+\cos{\pi/4}}{2} \approx 0.8535
-\]
-The unitary $U_c$ can be implemented with a controlled-Hadamard gate and a controlled-NOT gate
-\begin{center}
-    \begin{quantikz}
-    \lstick{$\ket{\psi}_{B}$}  \slice{0}   & \ctrl{1}   \slice{1}  & \targ{}   \slice{2}    &\qw \\
-    \lstick{\hspace{-1cm}$\ket{0}_{E}$}    & \gate{H}              & \ctrl{-1}     &\qw & \rstick{\hspace{-4 mm}$\rho$} 
-    \end{quantikz}
-\end{center}
-Verify the circuit complys with the definition in \ref{eqn:eco_def1} and \ref{eqn:eco_def2}
-\begin{align*}
-    U_c\ket{00}&=\text{CNOT}_{EB} \text{CH}_{BE} \ket{00}_{BE}=\ket{00}_{BE}\\
-    \\
-    U_c\ket{10}&=\text{CNOT}_{EB} \text{CH}_{BE} \ket{10}_{BE}\\
-    &=\text{CNOT}_{EB}\frac{1}{\sqrt{2}}(\ket{10}+\ket{11})_{BE}\\
-    &=\frac{1}{\sqrt{2}}(\ket{10}+\ket{01})_{BE}
-\end{align*}
-The controlled-Hadamard gate can be compiled into common-used quantum gates 
-\begin{center}
-    \begin{quantikz}
-        \lstick{$\ket{\psi}_{B}$} & \qw              & \qw      & \qw               & \ctrl{1}   &\qw       &\qw        &\qw   &\qw    \\
-        \lstick{\hspace{-1cm}$\ket{0}_{E}$}    & \gate{S^\dagger} & \gate{H} & \gate{T^\dagger}  & \targ{}    &\gate{T}  &\gate{H}   &\gate{S}  &\qw\\
-    \end{quantikz}
-\end{center}
-where 
-\[
-S=\begin{pmatrix}
-    1&0\\
-    0&i
-\end{pmatrix}   , \quad
-T=\begin{pmatrix}
-    1&0\\
-    0&e^{i\frac{\pi}{4}}
-\end{pmatrix}   
-\]
-As the name shows, the economical quantum cloning machine is designed to use 2 instead of 3 qubits, which limited
-its performance on the whole bloch sphere. 
-The controlled-Hadamard gate can be write in matrix form by definition.
-With the CNOT gate known, we can write the unitary of cloning machine
-
-\[
-\text{CH}_{BE}=\left(
-    \begin{array}{cccc}
-     1 & 0 & 0 & 0 \\
-     0 & 1 & 0 & 0 \\
-     0 & 0 & \frac{1}{\sqrt{2}} & \frac{1}{\sqrt{2}} \\
-     0 & 0 & \frac{1}{\sqrt{2}} & -\frac{1}{\sqrt{2}} \\
-    \end{array}
-    \right), \quad
-    U_c=
-    \left(
-\begin{array}{cccc}
- 1 & 0 & 0 & 0 \\
- 0 & 0 & \frac{1}{\sqrt{2}} & -\frac{1}{\sqrt{2}} \\
- 0 & 0 & \frac{1}{\sqrt{2}} & \frac{1}{\sqrt{2}} \\
- 0 & 1 & 0 & 0 \\
-\end{array}
-\right)
-\]
-Consider the generic input state to be copied
-\[
-    \ket{\psi}_B=\cos(\theta/2)\ket{0}_B+e^{i\phi}\sin(\theta/2)\ket{1}_B,
-\]
-The post-copy state is 
-\[
-    \ket{\Psi}_{BE}=U_c(\ket{\psi}_B\otimes \ket{0}_E), \quad \rho_{BE}=\ketbra{\Psi}_{BE}=
-    \left(
-\begin{array}{cccc}
- \cos ^2\left(\frac{\theta }{2}\right) & \frac{e^{-i \phi } \sin (\theta )}{2 \sqrt{2}} & \frac{e^{-i \phi } \sin (\theta )}{2 \sqrt{2}} & 0 \\
- \frac{e^{i \phi } \sin (\theta )}{2 \sqrt{2}} & \frac{1}{2} \sin ^2\left(\frac{\theta }{2}\right) & \frac{1}{2} \sin ^2\left(\frac{\theta }{2}\right) & 0 \\
- \frac{e^{i \phi } \sin (\theta )}{2 \sqrt{2}} & \frac{1}{2} \sin ^2\left(\frac{\theta }{2}\right) & \frac{1}{2} \sin ^2\left(\frac{\theta }{2}\right) & 0 \\
- 0 & 0 & 0 & 0 \\
-\end{array}
-\right)
-\]
-The above density matrix comply with \ref{eqn:post_state}. This assured the two qubits will share the same state after being copied.
-\[
-    \Tr_E[\rho_{BE}]=\Tr_B[\rho_{BE}]=\frac{1}{4}\left(
-        \begin{array}{cc}
-         \cos (\theta )+3 & \sqrt{2} e^{-i \phi } \sin (\theta ) \\
-         \sqrt{2} e^{i \phi } \sin (\theta ) & 1-\cos (\theta ) \\
-        \end{array}
-        \right)
-\]
-Then we have the fidelity 
-\[
-F(\theta,\phi)=\expval{\Tr_E[\rho_{BE}]}{\psi_B}=\frac{1}{8} \left(2 \cos (\theta )-\left(\sqrt{2}-1\right) \cos (2 \theta )+\sqrt{2}+5\right)
-\]
-The fidelity is not related with $\phi$ and it can be verified that on XY equator 
-\[F(\pi/2,\phi)=\frac{1}{4} \left(\sqrt{2}+2\right)\]
-which is exactly what we expected.
-The fidelity is shown below
-\begin{figure}[h]
-    \centering
-    \includegraphics[width=0.5\linewidth]{F.jpeg}
-    \caption{Fidelity of Economical Quantum Cloning Machine}
+\begin{figure}[H]
+\centering
+    \begin{minipage}[t]{.5\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{Figures/plot_1D_phase_covariant_different_labels.png}
+        \label{fig:phase_covariant_rotated_1d}
+        \caption{Caption (TO FIX)}
+    \end{minipage}%
+    \begin{minipage}[t]{.5\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{Figures/phase_covariant_rotated.png}
+        \label{fig:phase_covariant_rotated}
+        \caption{Caption (TO FIX)}
+    \end{minipage}
 \end{figure}
-The global fidelity on the whole bloch sphere is 
-\[
-    \overline{F}=\frac{1}{\int_S \dd{\Omega}}\int_S F(\Omega)\dd{\Omega}=\frac{1}{2}\int_0^\pi F(\theta,\phi)\sin(\theta)\dd{\theta}
-    =\frac{1}{12} \left(2 \sqrt{2}+7\right)\approx 0.819036
-\]
-With the lowest fidelity occurs at $F(\pi)=1/2$.
 
-And the deviation
-\[
-    \sigma_{F}=\sqrt{\overline{F^2}-\overline{F}^2}
-    =\frac{1}{12} \sqrt{\frac{1}{5} \left(27-8 \sqrt{2}\right)}\approx 0.147603
-\]
-For the BB84 states on the XZ equator,  we can use a $Rx(-\pi/2)$ gate to rotate 
- input state onto the XY equator and then rotate it back after copying. This modified EQCM could copy states 
- on the XZ plane and thus can be used to attack a BB84 QKD protocol. 
+It is possible to observe that the fidelity does not depend on $\phi$, which means that it is constant across sections parallel to the $xy$-plane.
+This was not evident with the previous expression, since the sections parallel to the $xz$-plane do not have such a simple expression.
 
+We conclude observing that if $\theta=\pi/2$ (i.e. on the equator), we obtain $F_{xy}(\pi/2,\phi)=\frac{1}{2}+\frac{1}{2\sqrt{2}}$, which is the maximum fidelity achievable.
+On the other hand, for $\theta=0$ or $\theta=\pi$, we obtain the minimum fidelity, i.e. $F_{xy}(0,\phi)=3/4$. Regardless of the equator that is optimally copied, the fidelity is then bounded by
+\begin{equation}
+    \frac{3}{4}\leq F(\theta,\phi) \leq \frac{1}{2}+\frac{1}{2\sqrt{2}}.
+\end{equation}
+\section{Economical phase covariant quantum cloning machine}
+The two previous QCMs used $3$ qubits in order to implement the approximate $1 \to 2$ cloning. 
+One may wonder whether the extra ancillary qubit is necessary.
+It turns out that in certain cases it is not. The QCMs that only use $2$ qubits are known as economical quantum cloning machines (EQCM) \cite{EconomicalNiuGriffiths}.
+The advantage of EQCMs consists in the fact that their experimental implementation requires less resources.
+In particular, it was proven that a universal EQCM does not exist \cite{EconomicalQCAnyDimension}. 
+On the other hand, it is possible to build a phase covariant economical quantum cloning machine (PCEQCM), as discussed in the references above.
+
+The circuit to implement a PCEQCM that optimally clones that states on the $xy$-equator is 
 \begin{center}
     \begin{quantikz}
-        \lstick{$\ket{\psi}_{B}$} & \qw  & \gate{Rx(-\pi/2)} & \gate[2]{U_{EQCN}}  & \gate{Rx(\pi/2)}     &\qw\\
-        \lstick{$\ket{0}_{E}$}    & \qw  & \qw               & \qw                 & \gate{Rx(\pi/2)}            & \qw & \rho
+    \lstick{$\ket{\psi}_{a_0}$}  \slice{0}   & \ctrl{1}   \slice{1}  & \targ{}   \slice{2}    &\qw &  \rstick{\hspace{-4 mm}$\rho_1$}\\
+    \lstick{$\ket{0}_{a_1}$}    & \gate{H}              & \ctrl{-1}     &\qw & \rstick{\hspace{-4 mm}$\rho_2$} 
+    \end{quantikz}
+\end{center}
+where the controlled-Hadamard can be rewritteng using more elementary gates:
+\begin{center}
+    \begin{quantikz}
+        & \ctrl{2}   & \qw           &   && \qw              & \qw      & \qw               & \ctrl{2}   &\qw      &\qw      &\qw    &\qw \\[-0.3cm]
+        &            &               & = &&                 &          &                   &            &         &         &        &\\[-0.3cm]
+        & \gate{H}   & \qw           &   && \gate{S^\dagger} & \gate{H} & \gate{T^\dagger}  & \targ{}    &\gate{T} &\gate{H} &\gate{S}& \qw\\
     \end{quantikz}
 \end{center}
 
+We are going to analyze the circuit considering an arbitrary input state $\ket{\psi}=\cos(\theta/2)\ket{0}+e^{i\phi}\sin(\theta/2)\ket{1}$.
+The initial state is
+\[
+    \ket{\Psi_0}=\cos(\theta/2)\ket{00}+e^{i\phi}\sin(\theta/2)\ket{10}.
+\]
+After applying the controlled-Hadamard gate we obtain
+\[
+    \ket{\Psi_1}=\cos(\theta/2)\ket{00}+\frac{1}{\sqrt{2}}e^{i\phi}\sin(\theta/2)\ket{10}+\frac{1}{\sqrt{2}}e^{i\phi}\sin(\theta/2)\ket{11}.
+\]
+Finally, applying the CNOT gate, we get:
+\[
+    \ket{\Psi_2}=\cos(\theta/2)\ket{00}+\frac{1}{\sqrt{2}}e^{i\phi}\sin(\theta/2)\ket{10}+\frac{1}{\sqrt{2}}e^{i\phi}\sin(\theta/2)\ket{01}.
+\]
 
+The above state is invariant under exchange of qubits. This means that the single qubit states are the same, i.e.:
+\[
+    \rho_{1}=\rho_{2} \quad \text{where} \quad \rho_{1}=\Tr_{a_1}[\ketbra{\Psi_2}], \quad \rho_{2}=\Tr_{a_0}[\ketbra{\Psi_2}].
+\]
+
+Since there are only two qubits, it is feasible to calculate the density matrix of the final state of two qubits:
+\[
+    \rho_{a_0 a_1}=\ketbra{\Psi_2}{\Psi_2}=\frac{1}{2}\begin{pmatrix}
+        \cos ^2\left(\frac{\theta }{2}\right) & \frac{e^{-i \phi } \sin (\theta )}{2 \sqrt{2}} & \frac{e^{-i \phi } \sin (\theta )}{2 \sqrt{2}} & 0 \\
+        \frac{e^{i \phi } \sin (\theta )}{2 \sqrt{2}} & \frac{1}{2} \sin ^2\left(\frac{\theta }{2}\right) & \frac{1}{2} \sin ^2\left(\frac{\theta }{2}\right) & 0 \\
+        \frac{e^{i \phi } \sin (\theta )}{2 \sqrt{2}} & \frac{1}{2} \sin ^2\left(\frac{\theta }{2}\right) & \frac{1}{2} \sin ^2\left(\frac{\theta }{2}\right) & 0 \\
+        0 & 0 & 0 & 0 \\
+    \end{pmatrix}.
+\]
+The reduced density matrix for the copies is:
+\[
+    \rho_1=\Tr_{a_1}[\rho_{a_0 a_1}]=
+        \begin{pmatrix}
+            \cos (\theta )+3 & \sqrt{2} e^{-i \phi } \sin (\theta ) \\
+            \sqrt{2} e^{i \phi } \sin (\theta ) & 1-\cos (\theta ) \\
+        \end{pmatrix}=\rho_2.
+\]
+When comparing the copies with the input state, the following fidelity is obtained:
+\begin{equation}
+    F_{xy}(\theta,\phi)=\expval{\rho_1}{\psi}=\expval{\rho_2}{\psi}=\frac{1}{8} \left(2 \cos (\theta )-\left(\sqrt{2}-1\right) \cos (2 \theta )+\sqrt{2}+5\right).
+\end{equation}
+It is possible to observe that the fidelity does not depend on $\phi$. Moreover, for $\theta=\frac{\pi}{2}$ (i.e. on the $xy$-equator):
+\[
+    F_{xy}(\pi/2,\phi)=\left(\frac{1}{2}+\frac{1}{2\sqrt{2}}\right)\approx 0.854.
+\]
+This is the same value obtained in the previous section for the PCQCM with the extra ancillary qubit.
+\begin{figure}[H]
+    \begin{minipage}{.5\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{Figures/plot_1D_economical_phase_covariant.png}
+        \label{fig:economical_phase_covariant_rotated_1d}
+        \caption{Caption (TO FIX)}
+      \end{minipage}%
+      \begin{minipage}{.5\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{Figures/economical_phase_covariant_rotated.png}
+        \label{fig:economical_phase_covariant_rotated}
+        \caption{Caption (TO FIX)}
+      \end{minipage}
+    \end{figure}
+The average fidelity on the whole Bloch sphere is
+\begin{equation}
+    \overline{F}_{xy}=\frac{1}{\int_S \dd{\Omega}}\int_S F_{xy}(\Omega)\dd{\Omega}=\frac{1}{2}\int_0^\pi F_{xy}(\theta,\phi)\sin(\theta)\dd{\theta}=\frac{7+2\sqrt{2}}{12}\approx 0.819.
+    \label{eqn:avg_fidelity_epcqcm}
+\end{equation}
+The standard deviation is
+\begin{equation}
+    \sigma_{{F}_{xy}}=\sqrt{\overline{F^2}_{xy}-\overline{F}^2_{xy}}
+    =\frac{1}{12} \sqrt{\frac{1}{5} \left(27-8 \sqrt{2}\right)}\approx 0.148.
+    \label{eqn:std_fidelity_epcqcm}
+\end{equation}
+
+The average fidelity is the same obtained in the previous section for the PCQCM, but in this case the standard deviation is larger.
+Indeed, the fidelity is bounded by 
+\begin{equation}
+    \frac{1}{2}\leq F_{xy}(\theta,\phi)\leq 1,
+\end{equation}
+where the minimum is reached at $\theta=\pi$ (the South Pole) and the maximum is reached at $\theta=0$ (the North Pole).
+This means that the states in the northern emisphere of the Bloch sphere are cloned better than those on the $xy$-equator,
+whereas those in the southern emisphere are cloned worse.
+
+
+\subsection*{Rotated EPCQCM}
+Since we are interested in cloning the states on the $xz$-equator, we have to perform a rotation before and after the circuit discussed above.
+The EPCQCM that optimally clones the $xz$-equator can be implemented using the following circuit:
+
+\begin{center}
+    \begin{quantikz}
+    \lstick{$\ket{\psi}_{a_0}$}             & \gate{R_x(-\pi/2)}  & \ctrl{1}    & \targ{}       & \gate{R_x(\pi/2)} & \qw &  \rstick{\hspace{-4 mm}$\rho_1$}\\
+    \lstick{$\ket{0}_{a_1}$}    & \qw                  &\gate{H}    & \ctrl{-1}    & \gate{R_x(\pi/2)} & \qw & \rstick{\hspace{-4 mm}$\rho_2$} 
+    \end{quantikz}
+\end{center}
+The fidelity of the copies using the rotated EPCQCM can be calculated as we have shown for the PCQCM. In this case it was more convenient to analyze the circuit for the $xy$-equator.
+The fidelity for an EPCQCM that optimally clones the $xz$-equator is:
+
+\begin{equation}
+    F(\theta,\phi)=\frac{1}{4}\left(2+\sqrt{2}-\sin(\theta)\sin(\phi)+(\sqrt{2}-1)\sin^2(\theta)\sin^2(\phi)\right)
+\end{equation}
+
+\begin{figure}[H]
+    \centering
+            \includegraphics[width=0.5\textwidth]{Figures/economical_phase_covariant.png}
+        \label{fig:economical_phase_covariant}
+        \caption{Caption}
+\end{figure}
+This is the circuit that we have run and the fidelity that we will compare our results with.
 
 \section{Quantum cloning and quantum key distribution}
 

@@ -34,7 +34,7 @@
     %% the title page.
     \RequirePackage[dutch,english]{babel}
 \fi
-\RequirePackage[nooneline,footnotesize]{caption}
+\RequirePackage[nooneline,footnotesize,center]{caption}
 \RequirePackage{fancyhdr}
 \RequirePackage[flushmargin,hang]{footmisc}
 \RequirePackage{ifpdf}
@@ -363,8 +363,8 @@
                \node[anchor=north west,inner sep=0pt] at (current page.west) {
                \includegraphics[width=\@cover@imagewidth]{\@cover@image}};
             \else
-               \node at (current page.north east)[anchor=north east,inner sep=0pt]{
-               \includegraphics[width=\@cover@imagewidth]{\@cover@image}};
+            \node[anchor=north west,inner sep=0pt] at (current page.west) {
+                \includegraphics[width=\@cover@imagewidth]{\@cover@image}};
             \fi}
           \fi
         \fi

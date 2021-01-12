@@ -12,13 +12,17 @@ Another category of quantum cloning machines is economical quantum cloning machi
 Quantum cloning is of particular interest in the context of quantum key distribution (QKD) \cite{QuantumCloningReviewScarani}. 
 The security of QKD protocols relies on the no-cloning theorem, therefore a QCM is a suitable means of attack.
 An eavesdropper could intercept the state that Alice is sending to Bob, clone it approximately and send the imperfect copy to Bob.
-Since, the copy is not exact, Alice and Bob would find some missing correlations after their measurements.
-Nonetheless, if the errors introduced by the QCM could be confused with generic noise and the eavesdropper could go unnoticed.
+Eve could store her copies and wait for Bob to reveal the basis he has performed each measurement. 
+Afterwards, she could measure her qubits in the same basis as Bob, obtaining a string of outcomes equivalent to Bob's one.
+Since, the copy sent to Bob is not exact, Alice and Bob would find some missing correlations in their bit strings during the sifting procedure.
+Nonetheless, the errors introduced by the QCM could be confused with generic noise (inevitable in a real setting) and the eavesdropper could go unnoticed.
+This is why QKD protocols have a threshold for the maximum error rate tolerated: due to the laws of quantum mechanics, there is a trade-off between the information acquired by Eve and the disturbance introduced while acquiring such information.
+QCMs could be used to push this information-disturbance trade-off to the limit.
 
 In this project we have implemented an experimental realization of the universal, the phase-covariant and the economical phase-covariant QCMs on the quantum processors available via Quantum Inspire \cite{quantuminspire} and IBM Quantum Experience \cite{ibmquantumexperience}.
 The purpose of the present work is to compare the performances of different backends with each other and with the theoretical expectations,
 addressing the question of whether current quantum computers could be used as QCMs, focusing in particular on their use for eavesdropping.
-We considered three different sets of input states in order to evaluate the QCMs: the whole Bloch sphere, the equator of the Bloch sphere in the $xz$ plane and the BB84 states (i.e. the computational and the Hadamard basis).
+We considered three different sets of input states in order to evaluate the QCMs: the whole Bloch sphere, the equator of the Bloch sphere in the $xz$-plane and the BB84 states (i.e. the computational and the Hadamard basis).
 In each of these cases we have calculated the average fidelity of the two copies.
 Moreover, we also studied the results calibrating the readout.
 

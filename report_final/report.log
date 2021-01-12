@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.5.28)  4 JAN 2021 18:29
-=======
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.11.24)  4 JAN 2021 20:03
->>>>>>> 6d3967412bee50d3a764bac36bacbfcd758493d2
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.11.24)  12 JAN 2021 01:55
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -833,6 +829,17 @@ Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \float@box=\box65
 \@float@everytoks=\toks45
 \@floatcapt=\box66
+) (/usr/local/texlive/2020/texmf-dist/tex/latex/tools/bm.sty
+Package: bm 2019/07/24 v1.2d Bold Symbol Support (DPC/FMi)
+\symboldoperators=\mathgroup8
+\symboldletters=\mathgroup9
+\symboldotherletters=\mathgroup10
+LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 141.
+LaTeX Info: Redefining \bm on input line 209.
+) (/usr/local/texlive/2020/texmf-dist/tex/latex/caption/subcaption.sty
+Package: subcaption 2020/01/22 v1.3d Sub-captions (AR)
+\c@subfigure=\count318
+\c@subtable=\count319
 ) (/usr/local/texlive/2020/texmf-dist/tex/latex/quantikz/tikzlibraryquantikz.code.tex
 
 LaTeX Warning: You have requested package `',
@@ -841,12 +848,12 @@ LaTeX Warning: You have requested package `',
 Package: quantikz 2019/04/24 typeset quantum circuit diagrams
 (/usr/local/texlive/2020/texmf-dist/tex/latex/xargs/xargs.sty
 Package: xargs 2008/03/22 v1.1  extended macro definitions  (mpg)
-\xargs@max=\count318
+\xargs@max=\count320
 \xargs@toksa=\toks46
 \xargs@toksb=\toks47
 ) (/usr/local/texlive/2020/texmf-dist/tex/latex/etoolbox/etoolbox.sty
 Package: etoolbox 2019/09/21 v2.5h e-TeX tools for LaTeX (JAW)
-\etb@tempcnta=\count319
+\etb@tempcnta=\count321
 ) (/usr/local/texlive/2020/texmf-dist/tex/latex/mathtools/mathtools.sty
 Package: mathtools 2020/03/24 v1.24 mathematical typesetting tools
  (/usr/local/texlive/2020/texmf-dist/tex/latex/mathtools/mhsetup.sty
@@ -856,7 +863,7 @@ LaTeX Info: Thecontrolsequence`\('isalreadyrobust on input line 130.
 LaTeX Info: Thecontrolsequence`\)'isalreadyrobust on input line 130.
 LaTeX Info: Thecontrolsequence`\['isalreadyrobust on input line 130.
 LaTeX Info: Thecontrolsequence`\]'isalreadyrobust on input line 130.
-\g_MT_multlinerow_int=\count320
+\g_MT_multlinerow_int=\count322
 \l_MT_multwidth_dim=\dimen298
 \origjot=\skip87
 \l_MT_shortvdotswithinadjustabove_dim=\dimen299
@@ -887,7 +894,7 @@ File: pgflibraryarrows.meta.code.tex 2020/01/08 v3.1.5b (3.1.5b)
 \pgfdecoratedinputsegmentcompleteddistance=\dimen312
 \pgfdecoratedinputsegmentremainingdistance=\dimen313
 \pgf@decorate@distancetomove=\dimen314
-\pgf@decorate@repeatstate=\count321
+\pgf@decorate@repeatstate=\count323
 \pgfdecorationsegmentamplitude=\dimen315
 \pgfdecorationsegmentlength=\dimen316
 )
@@ -912,7 +919,7 @@ File: tikzlibrarybackgrounds.code.tex 2020/01/08 v3.1.5b (3.1.5b)
 \myl=\skip88
 \myh=\skip89
 \myd=\skip90
-\c@aaa=\count322
+\c@aaa=\count324
 )
 
 LaTeX Warning: Unused global option(s):
@@ -921,40 +928,40 @@ LaTeX Warning: Unused global option(s):
 (/Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report_final/report.aux)
 \openout1 = `report.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 9.
-LaTeX Font Info:    ... okay on input line 9.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 9.
-LaTeX Font Info:    ... okay on input line 9.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 9.
-LaTeX Font Info:    ... okay on input line 9.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 9.
-LaTeX Font Info:    ... okay on input line 9.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 9.
-LaTeX Font Info:    ... okay on input line 9.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 9.
-LaTeX Font Info:    ... okay on input line 9.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 9.
-LaTeX Font Info:    ... okay on input line 9.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 9.
-LaTeX Font Info:    ... okay on input line 9.
-LaTeX Font Info:    Checking defaults for FML/futm/m/it on input line 9.
-LaTeX Font Info:    Trying to load font information for FML+futm on input line 9.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
+LaTeX Font Info:    Checking defaults for FML/futm/m/it on input line 14.
+LaTeX Font Info:    Trying to load font information for FML+futm on input line 14.
  (/usr/local/texlive/2020/texmf-dist/tex/latex/fourier/fmlfutm.fd
 File: fmlfutm.fd 2004/10/30 Fontinst v1.926 font definitions for FML/futm.
 )
-LaTeX Font Info:    ... okay on input line 9.
-LaTeX Font Info:    Checking defaults for FMS/futm/m/n on input line 9.
-LaTeX Font Info:    Trying to load font information for FMS+futm on input line 9.
+LaTeX Font Info:    ... okay on input line 14.
+LaTeX Font Info:    Checking defaults for FMS/futm/m/n on input line 14.
+LaTeX Font Info:    Trying to load font information for FMS+futm on input line 14.
  (/usr/local/texlive/2020/texmf-dist/tex/latex/fourier/fmsfutm.fd
 File: fmsfutm.fd 2004/10/30 Fontinst v1.926 font definitions for FMS/futm.
 )
-LaTeX Font Info:    ... okay on input line 9.
-LaTeX Font Info:    Checking defaults for FMX/futm/m/n on input line 9.
-LaTeX Font Info:    Trying to load font information for FMX+futm on input line 9.
+LaTeX Font Info:    ... okay on input line 14.
+LaTeX Font Info:    Checking defaults for FMX/futm/m/n on input line 14.
+LaTeX Font Info:    Trying to load font information for FMX+futm on input line 14.
  (/usr/local/texlive/2020/texmf-dist/tex/latex/fourier/fmxfutm.fd
 File: fmxfutm.fd futm-extension
 )
-LaTeX Font Info:    ... okay on input line 9.
+LaTeX Font Info:    ... okay on input line 14.
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: float package is loaded.
 Package caption Info: hyperref package is loaded.
@@ -995,16 +1002,16 @@ Package caption Info: End \AtBeginDocument code.
 
 (/usr/local/texlive/2020/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count323
+\scratchcounter=\count325
 \scratchdimen=\dimen317
 \scratchbox=\box71
-\nofMPsegments=\count324
-\nofMParguments=\count325
+\nofMPsegments=\count326
+\nofMParguments=\count327
 \everyMPshowfont=\toks48
-\MPscratchCnt=\count326
+\MPscratchCnt=\count328
 \MPscratchDim=\dimen318
-\MPnumerator=\count327
-\makeMPintoPDFobject=\count328
+\MPnumerator=\count329
+\makeMPintoPDFobject=\count330
 \everyMPtoPDFconversion=\toks49
 ) (/usr/local/texlive/2020/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
@@ -1013,7 +1020,7 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 48
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 ))
 \AtBeginShipoutBox=\box72
-Package hyperref Info: Link coloring ON on input line 9.
+Package hyperref Info: Link coloring ON on input line 14.
  (/usr/local/texlive/2020/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2019/09/16 v2.46 Cross-referencing by name of section
  (/usr/local/texlive/2020/texmf-dist/tex/latex/refcount/refcount.sty
@@ -1021,68 +1028,68 @@ Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
 ) (/usr/local/texlive/2020/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
-\c@section@level=\count329
+\c@section@level=\count331
 )
-LaTeX Info: Redefining \ref on input line 9.
-LaTeX Info: Redefining \pageref on input line 9.
-LaTeX Info: Redefining \nameref on input line 9.
+LaTeX Info: Redefining \ref on input line 14.
+LaTeX Info: Redefining \pageref on input line 14.
+LaTeX Info: Redefining \nameref on input line 14.
  (/Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report_final/report.out) (/Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report_final/report.out)
 \@outlinefile=\write4
 \openout4 = `report.out'.
 
  ABD: EveryShipout initializing macros
-\c@mv@tabular=\count330
-\c@mv@boldtabular=\count331
-LaTeX Font Info:    Redeclaring math accent \widehat on input line 9.
-LaTeX Font Info:    Redeclaring math accent \widetilde on input line 9.
+\c@mv@tabular=\count332
+\c@mv@boldtabular=\count333
+LaTeX Font Info:    Redeclaring math accent \widehat on input line 14.
+LaTeX Font Info:    Redeclaring math accent \widetilde on input line 14.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\\' on input line 37.
+(hyperref)                removing `\\' on input line 42.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\\' on input line 37.
+(hyperref)                removing `\\' on input line 42.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\new@ifnextchar' on input line 37.
+(hyperref)                removing `\new@ifnextchar' on input line 42.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\bigskipamount' on input line 37.
+(hyperref)                removing `\bigskipamount' on input line 42.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\new@ifnextchar' on input line 37.
+(hyperref)                removing `\new@ifnextchar' on input line 42.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\bigskipamount' on input line 37.
+(hyperref)                removing `\bigskipamount' on input line 42.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\new@ifnextchar' on input line 43.
+(hyperref)                removing `\new@ifnextchar' on input line 48.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\bigskipamount' on input line 43.
+(hyperref)                removing `\bigskipamount' on input line 48.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\\' on input line 43.
+(hyperref)                removing `\\' on input line 48.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\new@ifnextchar' on input line 43.
+(hyperref)                removing `\new@ifnextchar' on input line 48.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\bigskipamount' on input line 43.
+(hyperref)                removing `\bigskipamount' on input line 48.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\\' on input line 43.
+(hyperref)                removing `\\' on input line 48.
 
 *geometry* verbose mode - [ newgeometry ] result:
 * driver: pdftex
@@ -1117,55 +1124,60 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 \GPT@outputbox=\box73
-<cover/logo_black.pdf, id=143, 125.46875pt x 77.28876pt>
+<Figures/cover.png, id=155, 462.528pt x 346.896pt>
+File: Figures/cover.png Graphic file (type png)
+<use Figures/cover.png>
+Package pdftex.def Info: Figures/cover.png  used on input line 53.
+(pdftex.def)             Requested size: 597.50787pt x 448.15405pt.
+<cover/logo_black.pdf, id=157, 125.46875pt x 77.28876pt>
 File: cover/logo_black.pdf Graphic file (type pdf)
 <use cover/logo_black.pdf>
-Package pdftex.def Info: cover/logo_black.pdf  used on input line 47.
+Package pdftex.def Info: cover/logo_black.pdf  used on input line 53.
 (pdftex.def)             Requested size: 125.46843pt x 77.28856pt.
-LaTeX Font Info:    Trying to load font information for T1+Roboto-LF on input line 47.
+LaTeX Font Info:    Trying to load font information for T1+Roboto-LF on input line 53.
 (/usr/local/texlive/2020/texmf-dist/tex/latex/roboto/T1Roboto-LF.fd
 File: T1Roboto-LF.fd 2019/12/11 (autoinst) Font definitions for T1/Roboto-LF.
 )
 
 LaTeX Font Warning: Font shape `T1/Roboto-LF/t/n' undefined
-(Font)              using `T1/Roboto-LF/m/n' instead on input line 47.
+(Font)              using `T1/Roboto-LF/m/n' instead on input line 53.
 
 LaTeX Font Info:    Font shape `T1/Roboto-LF/m/n' aliased to
-(Font)              `T1/Roboto-LF/regular/n' on input line 47.
+(Font)              `T1/Roboto-LF/regular/n' on input line 53.
 LaTeX Font Info:    Font shape `T1/Roboto-LF/regular/n' will be
-(Font)              scaled to size 80.0pt on input line 47.
+(Font)              scaled to size 80.0pt on input line 53.
 LaTeX Font Info:    Font shape `T1/Roboto-LF/t/n' aliased to
-(Font)              `T1/Roboto-LF/regular/n' on input line 47.
+(Font)              `T1/Roboto-LF/regular/n' on input line 53.
 LaTeX Font Info:    Font shape `T1/Roboto-LF/regular/n' will be
-(Font)              scaled to size 10.0pt on input line 47.
+(Font)              scaled to size 10.0pt on input line 53.
 LaTeX Font Info:    Font shape `T1/Roboto-LF/t/n' aliased to
-(Font)              `T1/Roboto-LF/regular/n' on input line 47.
+(Font)              `T1/Roboto-LF/regular/n' on input line 53.
 LaTeX Font Info:    Font shape `T1/Roboto-LF/regular/n' will be
-(Font)              scaled to size 22.0pt on input line 47.
+(Font)              scaled to size 22.0pt on input line 53.
 LaTeX Font Info:    Font shape `T1/Roboto-LF/t/n' aliased to
-(Font)              `T1/Roboto-LF/regular/n' on input line 47.
+(Font)              `T1/Roboto-LF/regular/n' on input line 53.
 LaTeX Font Info:    Font shape `T1/Roboto-LF/regular/n' will be
-(Font)              scaled to size 15.0pt on input line 47.
+(Font)              scaled to size 15.0pt on input line 53.
 
-Overfull \hbox (161.65878pt too wide) in paragraph at lines 47--47
+Overfull \hbox (161.65878pt too wide) in paragraph at lines 53--53
 []\T1/Roboto-LF/regular/n/80 Approximate 
  []
 
 
-Overfull \hbox (25.09872pt too wide) in paragraph at lines 47--47
+Overfull \hbox (25.09872pt too wide) in paragraph at lines 53--53
 \T1/Roboto-LF/regular/n/80 quantum 
  []
 
 LaTeX Font Info:    Font shape `T1/Roboto-LF/t/n' aliased to
-(Font)              `T1/Roboto-LF/regular/n' on input line 47.
+(Font)              `T1/Roboto-LF/regular/n' on input line 53.
 LaTeX Font Info:    Font shape `T1/Roboto-LF/regular/n' will be
-(Font)              scaled to size 26.0pt on input line 47.
+(Font)              scaled to size 26.0pt on input line 53.
 [1
 
 
 
 
-{/usr/local/texlive/2020/texmf-var/fonts/map/pdftex/updmap/pdftex.map} </Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report_final/cover/logo_black.pdf>] [2
+{/usr/local/texlive/2020/texmf-var/fonts/map/pdftex/updmap/pdftex.map} </Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report_final/Figures/cover.png> </Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report_final/cover/logo_black.pdf>] [2
 
 
 ] (/Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report_final/report.toc
@@ -1188,51 +1200,30 @@ LaTeX Font Info:    Font shape `T1/Roboto-LF/t/n' aliased to
 (Font)              `T1/Roboto-LF/regular/n' on input line 1.
 LaTeX Font Info:    Font shape `T1/Roboto-LF/regular/n' will be
 (Font)              scaled to size 96.0pt on input line 1.
-
-Package natbib Warning: Citation `Wootters1982' on page 1 undefined on input line 3.
-
-
-Package natbib Warning: Citation `Buzek1996' on page 1 undefined on input line 5.
-
-
-Package natbib Warning: Citation `PhaseCovariantOptimalBruss' on page 1 undefined on input line 9.
-
-
-Package natbib Warning: Citation `EconomicalNiuGriffiths' on page 1 undefined on input line 10.
-
-
-Package natbib Warning: Citation `QuantumCloningReviewScarani' on page 1 undefined on input line 12.
-
-
-Package natbib Warning: Citation `quantuminspire' on page 1 undefined on input line 18.
-
-
-Package natbib Warning: Citation `ibmquantumexperience' on page 1 undefined on input line 18.
-
-LaTeX Font Info:    Trying to load font information for FML+futmi on input line 21.
+LaTeX Font Info:    Trying to load font information for FML+futmi on input line 25.
 (/usr/local/texlive/2020/texmf-dist/tex/latex/fourier/fmlfutmi.fd
 File: fmlfutmi.fd 2004/10/30 Fontinst v1.926 font definitions for FML/futmi.
 )
 LaTeX Font Info:    Font shape `FMX/futm/m/n' will be
-(Font)              scaled to size 9.19998pt on input line 21.
+(Font)              scaled to size 9.19998pt on input line 25.
 LaTeX Font Info:    Font shape `FMX/futm/m/n' will be
-(Font)              scaled to size 6.99199pt on input line 21.
+(Font)              scaled to size 6.99199pt on input line 25.
 LaTeX Font Info:    Font shape `FMX/futm/m/n' will be
-(Font)              scaled to size 5.51999pt on input line 21.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 21.
+(Font)              scaled to size 5.51999pt on input line 25.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 25.
  (/usr/local/texlive/2020/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 21.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 25.
  (/usr/local/texlive/2020/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 LaTeX Font Info:    Font shape `U/futm/m/n' will be
-(Font)              scaled to size 9.19998pt on input line 21.
+(Font)              scaled to size 9.19998pt on input line 25.
 LaTeX Font Info:    Font shape `U/futm/m/n' will be
-(Font)              scaled to size 6.99199pt on input line 21.
+(Font)              scaled to size 6.99199pt on input line 25.
 LaTeX Font Info:    Font shape `U/futm/m/n' will be
-(Font)              scaled to size 5.51999pt on input line 21.
+(Font)              scaled to size 5.51999pt on input line 25.
 ) (/Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report_final/Chapters/chapter-2.tex [1
 
 ] [2
@@ -1240,115 +1231,266 @@ LaTeX Font Info:    Font shape `U/futm/m/n' will be
 ]
 Chapter 2.
 
-Package natbib Warning: Citation `EquatorialQCM' on page 3 undefined on input line 7.
-
-
-Underfull \vbox (badness 2065) has occurred while \output is active []
+Underfull \vbox (badness 1286) has occurred while \output is active []
 
  [3] [4]
+<Figures/phase_covariant.png, id=289, 462.528pt x 346.896pt>
+File: Figures/phase_covariant.png Graphic file (type png)
+<use Figures/phase_covariant.png>
+Package pdftex.def Info: Figures/phase_covariant.png  used on input line 126.
+(pdftex.def)             Requested size: 224.06544pt x 168.0485pt.
+ [5 </Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report_final/Figures/phase_covariant.png>]
+<Figures/plot_1D_phase_covariant_different_labels.png, id=301, 1420.30624pt x 905.3825pt>
+File: Figures/plot_1D_phase_covariant_different_labels.png Graphic file (type png)
+<use Figures/plot_1D_phase_covariant_different_labels.png>
+Package pdftex.def Info: Figures/plot_1D_phase_covariant_different_labels.png  used on input line 218.
+(pdftex.def)             Requested size: 224.06544pt x 142.81953pt.
+<Figures/phase_covariant_rotated.png, id=302, 462.528pt x 324.0105pt>
+File: Figures/phase_covariant_rotated.png Graphic file (type png)
+<use Figures/phase_covariant_rotated.png>
+Package pdftex.def Info: Figures/phase_covariant_rotated.png  used on input line 224.
+(pdftex.def)             Requested size: 224.06544pt x 156.96198pt.
+ [6] [7 </Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report_final/Figures/plot_1D_phase_covariant_different_labels.png (PNG copy)> </Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report_final/Figures/phase_covariant_rotated.png>]
+<Figures/plot_1D_economical_phase_covariant.png, id=322, 1420.30624pt x 909.3975pt>
+File: Figures/plot_1D_economical_phase_covariant.png Graphic file (type png)
+<use Figures/plot_1D_economical_phase_covariant.png>
+Package pdftex.def Info: Figures/plot_1D_economical_phase_covariant.png  used on input line 310.
+(pdftex.def)             Requested size: 224.06544pt x 143.45288pt.
+<Figures/economical_phase_covariant_rotated.png, id=323, 462.528pt x 324.0105pt>
+File: Figures/economical_phase_covariant_rotated.png Graphic file (type png)
+<use Figures/economical_phase_covariant_rotated.png>
+Package pdftex.def Info: Figures/economical_phase_covariant_rotated.png  used on input line 316.
+(pdftex.def)             Requested size: 224.06544pt x 156.96198pt.
+ [8 </Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report_final/Figures/plot_1D_economical_phase_covariant.png (PNG copy)> </Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report_final/Figures/economical_phase_covariant_rotated.png>]
+<Figures/economical_phase_covariant.png, id=333, 462.528pt x 346.896pt>
+File: Figures/economical_phase_covariant.png Graphic file (type png)
+<use Figures/economical_phase_covariant.png>
+Package pdftex.def Info: Figures/economical_phase_covariant.png  used on input line 362.
+(pdftex.def)             Requested size: 224.06544pt x 168.0485pt.
+) (/Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report_final/Chapters/chapter-3.tex [9 </Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report_final/Figures/economical_phase_covariant.png>] [10
 
-Package natbib Warning: Citation `PhaseCovariantOptimalBruss' on page 5 undefined on input line 132.
-
-
-Package natbib Warning: Citation `PhaseCovariantOptimalBruss' on page 5 undefined on input line 134.
-
-
-Package natbib Warning: Citation `LowCostCloning' on page 5 undefined on input line 148.
-
-
-Package natbib Warning: Citation `EconomicalNiuGriffiths' on page 5 undefined on input line 152.
-
-[5] [6]
-<<<<<<< HEAD
-<F.jpeg, id=270, 578.16pt x 367.3725pt>
-=======
-<F.jpeg, id=261, 578.16pt x 367.3725pt>
->>>>>>> 6d3967412bee50d3a764bac36bacbfcd758493d2
-File: F.jpeg Graphic file (type jpg)
-<use F.jpeg>
-Package pdftex.def Info: F.jpeg  used on input line 314.
-(pdftex.def)             Requested size: 224.06544pt x 142.37218pt.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-
-Package natbib Warning: Citation `QuantumCloningReviewScarani' on page 7 undefined on input line 345.
-
-<<<<<<< HEAD
-) (/home/neuromancer/OneDrive/Quantum_Information/Project/report_final/Chapters/chapter-3.tex [7] [8 </home/neuromancer/OneDrive/Quantum_Information/Project/report_final/F.jpeg>]
-=======
-) (/Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report_final/Chapters/chapter-3.tex [7 </Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report_final/F.jpeg>] [8]
->>>>>>> 6d3967412bee50d3a764bac36bacbfcd758493d2
+]
 Chapter 3.
-) (/Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report_final/Chapters/chapter-4.tex [9
+LaTeX Font Info:    Font shape `FMX/futm/m/n' will be
+(Font)              scaled to size 7.35999pt on input line 49.
+LaTeX Font Info:    Font shape `FMX/futm/m/n' will be
+(Font)              scaled to size 6.25598pt on input line 49.
+LaTeX Font Info:    Font shape `U/futm/m/n' will be
+(Font)              scaled to size 7.35999pt on input line 49.
+LaTeX Font Info:    Font shape `U/futm/m/n' will be
+(Font)              scaled to size 6.25598pt on input line 49.
+LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 49.
+(/usr/local/texlive/2020/texmf-dist/tex/latex/base/t1cmtt.fd
+File: t1cmtt.fd 2019/12/16 v2.5j Standard LaTeX font definitions
+) [11]
+LaTeX Font Info:    Trying to load font information for TS1+futs on input line 80.
+ (/usr/local/texlive/2020/texmf-dist/tex/latex/fourier/ts1futs.fd
+File: ts1futs.fd 2003/09/14 Fontinst v1.801 font definitions for TS1/futs.
+) [12]) (/Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report_final/Chapters/chapter-4.tex [13] [14
 
-] [10]
+]
 Chapter 4.
 
-Underfull \hbox (badness 10000) in paragraph at lines 3--8
+Underfull \hbox (badness 10000) in paragraph at lines 8--13
 
  []
 
-[11
+[15]
+<Figures/PhaseCovariant/Starmon/FullSphere/results_starmon_corrected_copy1.png, id=393, 462.528pt x 346.896pt>
+File: Figures/PhaseCovariant/Starmon/FullSphere/results_starmon_corrected_copy1.png Graphic file (type png)
+<use Figures/PhaseCovariant/Starmon/FullSphere/results_starmon_corrected_copy1.png>
+Package pdftex.def Info: Figures/PhaseCovariant/Starmon/FullSphere/results_starmon_corrected_copy1.png  used on input line 60.
+(pdftex.def)             Requested size: 224.06544pt x 168.0485pt.
+<Figures/PhaseCovariant/Starmon/FullSphere/results_starmon_corrected_copy2.png, id=394, 462.528pt x 346.896pt>
+File: Figures/PhaseCovariant/Starmon/FullSphere/results_starmon_corrected_copy2.png Graphic file (type png)
+<use Figures/PhaseCovariant/Starmon/FullSphere/results_starmon_corrected_copy2.png>
+Package pdftex.def Info: Figures/PhaseCovariant/Starmon/FullSphere/results_starmon_corrected_copy2.png  used on input line 65.
+(pdftex.def)             Requested size: 224.06544pt x 168.0485pt.
+<Figures/PhaseCovariant/IBM/FullSphere/results_corrected_athens_copy1.png, id=395, 462.528pt x 346.896pt>
+File: Figures/PhaseCovariant/IBM/FullSphere/results_corrected_athens_copy1.png Graphic file (type png)
+<use Figures/PhaseCovariant/IBM/FullSphere/results_corrected_athens_copy1.png>
+Package pdftex.def Info: Figures/PhaseCovariant/IBM/FullSphere/results_corrected_athens_copy1.png  used on input line 76.
+(pdftex.def)             Requested size: 224.06544pt x 168.0485pt.
+<Figures/PhaseCovariant/IBM/FullSphere/results_corrected_athens_copy2.png, id=396, 462.528pt x 346.896pt>
+File: Figures/PhaseCovariant/IBM/FullSphere/results_corrected_athens_copy2.png Graphic file (type png)
+<use Figures/PhaseCovariant/IBM/FullSphere/results_corrected_athens_copy2.png>
+Package pdftex.def Info: Figures/PhaseCovariant/IBM/FullSphere/results_corrected_athens_copy2.png  used on input line 81.
+(pdftex.def)             Requested size: 224.06544pt x 168.0485pt.
+<Figures/PhaseCovariant/IBM/FullSphere/results_corrected_ourense_copy1.png, id=397, 462.528pt x 346.896pt>
+File: Figures/PhaseCovariant/IBM/FullSphere/results_corrected_ourense_copy1.png Graphic file (type png)
+<use Figures/PhaseCovariant/IBM/FullSphere/results_corrected_ourense_copy1.png>
+Package pdftex.def Info: Figures/PhaseCovariant/IBM/FullSphere/results_corrected_ourense_copy1.png  used on input line 93.
+(pdftex.def)             Requested size: 224.06544pt x 168.0485pt.
+<Figures/PhaseCovariant/IBM/FullSphere/results_corrected_ourense_copy2.png, id=398, 462.528pt x 346.896pt>
+File: Figures/PhaseCovariant/IBM/FullSphere/results_corrected_ourense_copy2.png Graphic file (type png)
+<use Figures/PhaseCovariant/IBM/FullSphere/results_corrected_ourense_copy2.png>
+Package pdftex.def Info: Figures/PhaseCovariant/IBM/FullSphere/results_corrected_ourense_copy2.png  used on input line 99.
+(pdftex.def)             Requested size: 224.06544pt x 168.0485pt.
 
-]) (/Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report_final/Chapters/chapter-5.tex [12]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [16 </Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report_final/Figures/PhaseCovariant/Starmon/FullSphere/results_starmon_corrected_copy1.png> </Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report_final/Figures/PhaseCovariant/Starmon/FullSphere/results_starmon_corrected_copy2.png> </Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report_final/Figures/PhaseCovariant/IBM/FullSphere/results_corrected_athens_copy1.png> </Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report_final/Figures/PhaseCovariant/IBM/FullSphere/results_corrected_athens_copy2.png>]
+<Figures/PhaseCovariant/IBM/FullSphere/results_corrected_santiago_copy1.png, id=411, 462.528pt x 346.896pt>
+File: Figures/PhaseCovariant/IBM/FullSphere/results_corrected_santiago_copy1.png Graphic file (type png)
+<use Figures/PhaseCovariant/IBM/FullSphere/results_corrected_santiago_copy1.png>
+Package pdftex.def Info: Figures/PhaseCovariant/IBM/FullSphere/results_corrected_santiago_copy1.png  used on input line 111.
+(pdftex.def)             Requested size: 224.06544pt x 168.0485pt.
+<Figures/PhaseCovariant/IBM/FullSphere/results_corrected_santiago_copy2.png, id=412, 462.528pt x 346.896pt>
+File: Figures/PhaseCovariant/IBM/FullSphere/results_corrected_santiago_copy2.png Graphic file (type png)
+<use Figures/PhaseCovariant/IBM/FullSphere/results_corrected_santiago_copy2.png>
+Package pdftex.def Info: Figures/PhaseCovariant/IBM/FullSphere/results_corrected_santiago_copy2.png  used on input line 117.
+(pdftex.def)             Requested size: 224.06544pt x 168.0485pt.
+<Figures/PhaseCovariant/IBM/FullSphere/results_corrected_valencia_copy1.png, id=413, 462.528pt x 346.896pt>
+File: Figures/PhaseCovariant/IBM/FullSphere/results_corrected_valencia_copy1.png Graphic file (type png)
+<use Figures/PhaseCovariant/IBM/FullSphere/results_corrected_valencia_copy1.png>
+Package pdftex.def Info: Figures/PhaseCovariant/IBM/FullSphere/results_corrected_valencia_copy1.png  used on input line 129.
+(pdftex.def)             Requested size: 224.06544pt x 168.0485pt.
+<Figures/PhaseCovariant/IBM/FullSphere/results_corrected_valencia_copy2.png, id=414, 462.528pt x 346.896pt>
+File: Figures/PhaseCovariant/IBM/FullSphere/results_corrected_valencia_copy2.png Graphic file (type png)
+<use Figures/PhaseCovariant/IBM/FullSphere/results_corrected_valencia_copy2.png>
+Package pdftex.def Info: Figures/PhaseCovariant/IBM/FullSphere/results_corrected_valencia_copy2.png  used on input line 134.
+(pdftex.def)             Requested size: 224.06544pt x 168.0485pt.
+<Figures/PhaseCovariant/IBM/FullSphere/results_corrected_vigo_copy1.png, id=415, 462.528pt x 346.896pt>
+File: Figures/PhaseCovariant/IBM/FullSphere/results_corrected_vigo_copy1.png Graphic file (type png)
+<use Figures/PhaseCovariant/IBM/FullSphere/results_corrected_vigo_copy1.png>
+Package pdftex.def Info: Figures/PhaseCovariant/IBM/FullSphere/results_corrected_vigo_copy1.png  used on input line 146.
+(pdftex.def)             Requested size: 224.06544pt x 168.0485pt.
+<Figures/PhaseCovariant/IBM/FullSphere/results_corrected_vigo_copy2.png, id=416, 462.528pt x 346.896pt>
+File: Figures/PhaseCovariant/IBM/FullSphere/results_corrected_vigo_copy2.png Graphic file (type png)
+<use Figures/PhaseCovariant/IBM/FullSphere/results_corrected_vigo_copy2.png>
+Package pdftex.def Info: Figures/PhaseCovariant/IBM/FullSphere/results_corrected_vigo_copy2.png  used on input line 152.
+(pdftex.def)             Requested size: 224.06544pt x 168.0485pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [17 </Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report_final/Figures/PhaseCovariant/IBM/FullSphere/results_corrected_ourense_copy1.png> </Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report_final/Figures/PhaseCovariant/IBM/FullSphere/results_corrected_ourense_copy2.png> </Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report_final/Figures/PhaseCovariant/IBM/FullSphere/results_corrected_santiago_copy1.png> </Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report_final/Figures/PhaseCovariant/IBM/FullSphere/results_corrected_santiago_copy2.png> </Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report_final/Figures/PhaseCovariant/IBM/FullSphere/results_corrected_valencia_copy1.png> </Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report_final/Figures/PhaseCovariant/IBM/FullSphere/results_corrected_valencia_copy2.png>]
+<Figures/PhaseCovariant/IBM/FullSphere/results_corrected_ibmqx2_copy1.png, id=429, 462.528pt x 346.896pt>
+File: Figures/PhaseCovariant/IBM/FullSphere/results_corrected_ibmqx2_copy1.png Graphic file (type png)
+<use Figures/PhaseCovariant/IBM/FullSphere/results_corrected_ibmqx2_copy1.png>
+Package pdftex.def Info: Figures/PhaseCovariant/IBM/FullSphere/results_corrected_ibmqx2_copy1.png  used on input line 164.
+(pdftex.def)             Requested size: 224.06544pt x 168.0485pt.
+<Figures/PhaseCovariant/IBM/FullSphere/results_corrected_ibmqx2_copy2.png, id=430, 462.528pt x 346.896pt>
+File: Figures/PhaseCovariant/IBM/FullSphere/results_corrected_ibmqx2_copy2.png Graphic file (type png)
+<use Figures/PhaseCovariant/IBM/FullSphere/results_corrected_ibmqx2_copy2.png>
+Package pdftex.def Info: Figures/PhaseCovariant/IBM/FullSphere/results_corrected_ibmqx2_copy2.png  used on input line 170.
+(pdftex.def)             Requested size: 224.06544pt x 168.0485pt.
+ [18 </Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report_final/Figures/PhaseCovariant/IBM/FullSphere/results_corrected_vigo_copy1.png> </Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report_final/Figures/PhaseCovariant/IBM/FullSphere/results_corrected_vigo_copy2.png> </Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report_final/Figures/PhaseCovariant/IBM/FullSphere/results_corrected_ibmqx2_copy1.png> </Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report_final/Figures/PhaseCovariant/IBM/FullSphere/results_corrected_ibmqx2_copy2.png>]
+<Figures/PhaseCovariant/Starmon/OnlyEquator/results_starmon_corrected_copy1.png, id=450, 462.528pt x 346.896pt>
+File: Figures/PhaseCovariant/Starmon/OnlyEquator/results_starmon_corrected_copy1.png Graphic file (type png)
+<use Figures/PhaseCovariant/Starmon/OnlyEquator/results_starmon_corrected_copy1.png>
+Package pdftex.def Info: Figures/PhaseCovariant/Starmon/OnlyEquator/results_starmon_corrected_copy1.png  used on input line 243.
+(pdftex.def)             Requested size: 224.06544pt x 168.0485pt.
+<Figures/PhaseCovariant/Starmon/OnlyEquator/results_starmon_corrected_copy2.png, id=451, 462.528pt x 346.896pt>
+File: Figures/PhaseCovariant/Starmon/OnlyEquator/results_starmon_corrected_copy2.png Graphic file (type png)
+<use Figures/PhaseCovariant/Starmon/OnlyEquator/results_starmon_corrected_copy2.png>
+Package pdftex.def Info: Figures/PhaseCovariant/Starmon/OnlyEquator/results_starmon_corrected_copy2.png  used on input line 248.
+(pdftex.def)             Requested size: 224.06544pt x 168.0485pt.
+<Figures/PhaseCovariant/IBM/OnlyEquator/results_corrected_athens_copy1.png, id=452, 462.528pt x 346.896pt>
+File: Figures/PhaseCovariant/IBM/OnlyEquator/results_corrected_athens_copy1.png Graphic file (type png)
+<use Figures/PhaseCovariant/IBM/OnlyEquator/results_corrected_athens_copy1.png>
+Package pdftex.def Info: Figures/PhaseCovariant/IBM/OnlyEquator/results_corrected_athens_copy1.png  used on input line 261.
+(pdftex.def)             Requested size: 224.06544pt x 168.0485pt.
+<Figures/PhaseCovariant/IBM/OnlyEquator/results_corrected_athens_copy2.png, id=453, 462.528pt x 346.896pt>
+File: Figures/PhaseCovariant/IBM/OnlyEquator/results_corrected_athens_copy2.png Graphic file (type png)
+<use Figures/PhaseCovariant/IBM/OnlyEquator/results_corrected_athens_copy2.png>
+Package pdftex.def Info: Figures/PhaseCovariant/IBM/OnlyEquator/results_corrected_athens_copy2.png  used on input line 266.
+(pdftex.def)             Requested size: 224.06544pt x 168.0485pt.
+ [19 </Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report_final/Figures/PhaseCovariant/Starmon/OnlyEquator/results_starmon_corrected_copy1.png> </Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report_final/Figures/PhaseCovariant/Starmon/OnlyEquator/results_starmon_corrected_copy2.png>]
+<Figures/PhaseCovariant/IBM/OnlyEquator/results_corrected_ourense_copy1.png, id=465, 462.528pt x 346.896pt>
+File: Figures/PhaseCovariant/IBM/OnlyEquator/results_corrected_ourense_copy1.png Graphic file (type png)
+<use Figures/PhaseCovariant/IBM/OnlyEquator/results_corrected_ourense_copy1.png>
+Package pdftex.def Info: Figures/PhaseCovariant/IBM/OnlyEquator/results_corrected_ourense_copy1.png  used on input line 279.
+(pdftex.def)             Requested size: 224.06544pt x 168.0485pt.
+<Figures/PhaseCovariant/IBM/OnlyEquator/results_corrected_ourense_copy2.png, id=466, 462.528pt x 346.896pt>
+File: Figures/PhaseCovariant/IBM/OnlyEquator/results_corrected_ourense_copy2.png Graphic file (type png)
+<use Figures/PhaseCovariant/IBM/OnlyEquator/results_corrected_ourense_copy2.png>
+Package pdftex.def Info: Figures/PhaseCovariant/IBM/OnlyEquator/results_corrected_ourense_copy2.png  used on input line 284.
+(pdftex.def)             Requested size: 224.06544pt x 168.0485pt.
+<Figures/PhaseCovariant/IBM/OnlyEquator/results_corrected_santiago_copy1.png, id=467, 462.528pt x 346.896pt>
+File: Figures/PhaseCovariant/IBM/OnlyEquator/results_corrected_santiago_copy1.png Graphic file (type png)
+<use Figures/PhaseCovariant/IBM/OnlyEquator/results_corrected_santiago_copy1.png>
+Package pdftex.def Info: Figures/PhaseCovariant/IBM/OnlyEquator/results_corrected_santiago_copy1.png  used on input line 297.
+(pdftex.def)             Requested size: 224.06544pt x 168.0485pt.
+<Figures/PhaseCovariant/IBM/OnlyEquator/results_corrected_santiago_copy2.png, id=468, 462.528pt x 346.896pt>
+File: Figures/PhaseCovariant/IBM/OnlyEquator/results_corrected_santiago_copy2.png Graphic file (type png)
+<use Figures/PhaseCovariant/IBM/OnlyEquator/results_corrected_santiago_copy2.png>
+Package pdftex.def Info: Figures/PhaseCovariant/IBM/OnlyEquator/results_corrected_santiago_copy2.png  used on input line 302.
+(pdftex.def)             Requested size: 224.06544pt x 168.0485pt.
+<Figures/PhaseCovariant/IBM/OnlyEquator/results_corrected_valencia_copy1.png, id=469, 462.528pt x 346.896pt>
+File: Figures/PhaseCovariant/IBM/OnlyEquator/results_corrected_valencia_copy1.png Graphic file (type png)
+<use Figures/PhaseCovariant/IBM/OnlyEquator/results_corrected_valencia_copy1.png>
+Package pdftex.def Info: Figures/PhaseCovariant/IBM/OnlyEquator/results_corrected_valencia_copy1.png  used on input line 315.
+(pdftex.def)             Requested size: 224.06544pt x 168.0485pt.
+<Figures/PhaseCovariant/IBM/OnlyEquator/results_corrected_valencia_copy2.png, id=470, 462.528pt x 346.896pt>
+File: Figures/PhaseCovariant/IBM/OnlyEquator/results_corrected_valencia_copy2.png Graphic file (type png)
+<use Figures/PhaseCovariant/IBM/OnlyEquator/results_corrected_valencia_copy2.png>
+Package pdftex.def Info: Figures/PhaseCovariant/IBM/OnlyEquator/results_corrected_valencia_copy2.png  used on input line 320.
+(pdftex.def)             Requested size: 224.06544pt x 168.0485pt.
+ [20 </Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report_final/Figures/PhaseCovariant/IBM/OnlyEquator/results_corrected_athens_copy1.png> </Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report_final/Figures/PhaseCovariant/IBM/OnlyEquator/results_corrected_athens_copy2.png> </Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report_final/Figures/PhaseCovariant/IBM/OnlyEquator/results_corrected_ourense_copy1.png> </Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report_final/Figures/PhaseCovariant/IBM/OnlyEquator/results_corrected_ourense_copy2.png> </Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report_final/Figures/PhaseCovariant/IBM/OnlyEquator/results_corrected_santiago_copy1.png> </Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report_final/Figures/PhaseCovariant/IBM/OnlyEquator/results_corrected_santiago_copy2.png>]
+<Figures/PhaseCovariant/IBM/OnlyEquator/results_corrected_vigo_copy1.png, id=482, 462.528pt x 346.896pt>
+File: Figures/PhaseCovariant/IBM/OnlyEquator/results_corrected_vigo_copy1.png Graphic file (type png)
+<use Figures/PhaseCovariant/IBM/OnlyEquator/results_corrected_vigo_copy1.png>
+Package pdftex.def Info: Figures/PhaseCovariant/IBM/OnlyEquator/results_corrected_vigo_copy1.png  used on input line 333.
+(pdftex.def)             Requested size: 224.06544pt x 168.0485pt.
+<Figures/PhaseCovariant/IBM/OnlyEquator/results_corrected_vigo_copy2.png, id=483, 462.528pt x 346.896pt>
+File: Figures/PhaseCovariant/IBM/OnlyEquator/results_corrected_vigo_copy2.png Graphic file (type png)
+<use Figures/PhaseCovariant/IBM/OnlyEquator/results_corrected_vigo_copy2.png>
+Package pdftex.def Info: Figures/PhaseCovariant/IBM/OnlyEquator/results_corrected_vigo_copy2.png  used on input line 338.
+(pdftex.def)             Requested size: 224.06544pt x 168.0485pt.
+<Figures/PhaseCovariant/IBM/OnlyEquator/results_corrected_ibmqx2_copy1.png, id=484, 462.528pt x 346.896pt>
+File: Figures/PhaseCovariant/IBM/OnlyEquator/results_corrected_ibmqx2_copy1.png Graphic file (type png)
+<use Figures/PhaseCovariant/IBM/OnlyEquator/results_corrected_ibmqx2_copy1.png>
+Package pdftex.def Info: Figures/PhaseCovariant/IBM/OnlyEquator/results_corrected_ibmqx2_copy1.png  used on input line 351.
+(pdftex.def)             Requested size: 224.06544pt x 168.0485pt.
+<Figures/PhaseCovariant/IBM/OnlyEquator/results_corrected_ibmqx2_copy2.png, id=485, 462.528pt x 346.896pt>
+File: Figures/PhaseCovariant/IBM/OnlyEquator/results_corrected_ibmqx2_copy2.png Graphic file (type png)
+<use Figures/PhaseCovariant/IBM/OnlyEquator/results_corrected_ibmqx2_copy2.png>
+Package pdftex.def Info: Figures/PhaseCovariant/IBM/OnlyEquator/results_corrected_ibmqx2_copy2.png  used on input line 356.
+(pdftex.def)             Requested size: 224.06544pt x 168.0485pt.
+ [21 </Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report_final/Figures/PhaseCovariant/IBM/OnlyEquator/results_corrected_valencia_copy1.png> </Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report_final/Figures/PhaseCovariant/IBM/OnlyEquator/results_corrected_valencia_copy2.png> </Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report_final/Figures/PhaseCovariant/IBM/OnlyEquator/results_corrected_vigo_copy1.png> </Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report_final/Figures/PhaseCovariant/IBM/OnlyEquator/results_corrected_vigo_copy2.png> </Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report_final/Figures/PhaseCovariant/IBM/OnlyEquator/results_corrected_ibmqx2_copy1.png> </Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report_final/Figures/PhaseCovariant/IBM/OnlyEquator/results_corrected_ibmqx2_copy2.png>] [22]) (/Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report_final/Chapters/chapter-5.tex [23] [24
+
+]
 Chapter 5.
-)
+) (/Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report_final/Chapters/appendix-a.tex [25] [26
 
-Package natbib Warning: There were undefined citations.
+]
+Appendix A.
+) (/Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report_final/report.bbl [27] [28
 
+])
 \Changes@OutFile=\write6
 \openout6 = `report.soc'.
 
 \tf@loc=\write7
 \openout7 = `report.loc'.
 
-[13
-
-]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 70.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 70.
+ [29]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 76.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 76.
  (/Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report_final/report.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 70.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 70.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 76.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 76.
 Package rerunfilecheck Info: File `report.out' has not changed.
-(rerunfilecheck)             Checksum: ED662727AD003783D75F8B5CCE2F4483;1977.
+(rerunfilecheck)             Checksum: 56E9734E8B2865EC90012E5DFE999BB1;2178.
 
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 70.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 76.
  ) 
 Here is how much of TeX's memory you used:
-<<<<<<< HEAD
- 30716 strings out of 482371
- 605819 string characters out of 5946016
- 922542 words of memory out of 5000000
- 45752 multiletter control sequences out of 15000+600000
- 595887 words of font info for 92 fonts, out of 8000000 for 9000
- 36 hyphenation exceptions out of 8191
- 68i,19n,106p,1242b,1518s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/local/texlive/2020/texmf-dist/fonts/enc/dvips/base/8r.enc}{/usr/local/texlive/2020/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}</usr/local/texlive/2020/texmf-dist/fonts/type1/public/fourier/fourier-mex.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/fourier/fourier-ml.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/fourier/fourier-mlit.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/fourier/fourier-ms.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/adobe/utopia/putb8a.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/adobe/utopia/putr8a.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/adobe/utopia/putri8a.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/cm-super/sfrm1440.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/cm-super/sfrm2074.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/cm-super/sfrm2488.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/cm-super/sfrm3583.pfb>
-Output written on /home/neuromancer/OneDrive/Quantum_Information/Project/report_final/report.pdf (17 pages, 196093 bytes).
-PDF statistics:
- 364 PDF objects out of 1000 (max. 8388607)
- 284 compressed objects within 3 object streams
- 58 named destinations out of 1000 (max. 500000)
-=======
- 30191 strings out of 480608
- 595235 string characters out of 5903629
- 907511 words of memory out of 5000000
- 45342 multiletter control sequences out of 15000+600000
- 623284 words of font info for 99 fonts, out of 8000000 for 9000
+ 31027 strings out of 480608
+ 622574 string characters out of 5903629
+ 920218 words of memory out of 5000000
+ 46050 multiletter control sequences out of 15000+600000
+ 668215 words of font info for 142 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 68i,19n,106p,1240b,1562s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/local/texlive/2020/texmf-dist/fonts/enc/dvips/base/8r.enc}{/usr/local/texlive/2020/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}{/usr/local/texlive/2020/texmf-dist/fonts/enc/dvips/roboto/rbto_b5rac7.enc}</usr/local/texlive/2020/texmf-dist/fonts/type1/google/roboto/Roboto-Regular.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/fourier/fourier-mex.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/fourier/fourier-ml.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/fourier/fourier-mlit.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/fourier/fourier-ms.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/adobe/utopia/putb8a.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/adobe/utopia/putr8a.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/adobe/utopia/putri8a.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb>
-Output written on /Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report_final/report.pdf (17 pages, 161379 bytes).
+ 68i,19n,106p,1240b,1543s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/local/texlive/2020/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}{/usr/local/texlive/2020/texmf-dist/fonts/enc/dvips/base/8r.enc}{/usr/local/texlive/2020/texmf-dist/fonts/enc/dvips/roboto/rbto_b5rac7.enc}</usr/local/texlive/2020/texmf-dist/fonts/type1/google/roboto/Roboto-Regular.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/fourier/fourier-mex.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/fourier/fourier-ml.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/fourier/fourier-mlit.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/fourier/fourier-ms.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/adobe/utopia/putb8a.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/adobe/utopia/putbi8a.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/adobe/utopia/putr8a.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/adobe/utopia/putri8a.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/cm-super/sftt0800.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/cm-super/sftt1000.pfb>
+Output written on /Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report_final/report.pdf (33 pages, 9256844 bytes).
 PDF statistics:
- 347 PDF objects out of 1000 (max. 8388607)
- 270 compressed objects within 3 object streams
- 55 named destinations out of 1000 (max. 500000)
->>>>>>> 6d3967412bee50d3a764bac36bacbfcd758493d2
- 343 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 632 PDF objects out of 1000 (max. 8388607)
+ 464 compressed objects within 5 object streams
+ 125 named destinations out of 1000 (max. 500000)
+ 537 words of extra memory for PDF output out of 10000 (max. 10000000)
 

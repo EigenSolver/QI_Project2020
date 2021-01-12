@@ -1,5 +1,27 @@
 \chapter{Implementation}
 \label{sec:implementation}
+
+In this section it is explained in detail the procedure we followed in order to assess the performances of the QCMs discussed in the previous section when implemented on real quantum computers.
+When using noisy hardware, we expect the experimental fidelity to be different from the ideal one all, since the evolution is not unitary anymore.
+In particular, it should not be assumed the fidelity of the copies to be independent from the input state, for example some gates could work better when acting on certain states.
+Therefore, two more blocks have to be added to the circuits discussed in the previous section. 
+We have to prepare an arbitrary input state on the Bloch sphere and we have to measure the fidelity of the copies.
+It is worth mentioning that both the preparation and the fidelity measurement are not required in the normal use of QCMs, they are just a means of testing their performances.
+It should therefore be taken into account that the additional gates could decrease the quality of the copies because of the greater depth of the run circuits.
+
+This is the outline of a single experiment:
+\begin{enumerate}
+    \item Prepare a generic input state $\ket{\psi}=\cos(\theta/2)\ket{0}+e^{i\phi}\sin(\theta/2)\ket{1}$.
+    \item Run the QCM circuit using the previously prepared input state
+    \item Measure the fidelity of the copies $F_{1}(\theta,\phi)$ and $F_{2}(\theta,\phi)$.
+\end{enumerate}
+In addition, we have also performed a readout calibration periodically, correcting the classical errors associated to measurements.
+
+The circuits of the QCMs were studied in the previous chapter. In this chapter we are going to analyze the other details specific to our experiments.
+We are going to explain how we have implemented the preparation of a generic input state, the fidelity measurement and the readout calibration.
+Finally, we are going to discuss the software and hardware details.
+
+
 \section{Preparation of the input states}
 We have prepared a generic state on the Bloch sphere using the following two rotations:
 \[
@@ -22,13 +44,17 @@ For the preparation of an input state on the $xz$-equator, only the rotation abo
     \lstick{$\ket{0}$} & \gate{R_y(\theta)}   & \qw     & \rstick{\hspace{-4 mm}$\ket{\psi}$}  \\
 \end{quantikz}
 \]
+We have considered three sets of input states, namely the Bloch sphere, the $xz$-equator and the BB84 states ($\ket{0}$, $\ket{1}$, $\ket{+}$ and $\ket{-}$).
+For the Bloch sphere, we have considered $1000$ approximately equidistant point
+\footnote{Evenly distributing $N$ points on a sphere is not a trivial problem. We have used the Fibonacci spherical lattice method. A detailed explanation can be found at \url{http://extremelearning.com.au/evenly-distributing-points-on-a-sphere/}.}.
+ For the $xz$-equator we have considered $100$ equidistant point.
 \section{Measurement of the fidelity of the copies}
 The fidelity of the two copies can be measured directly. 
 If the input state was $\ket{\psi}$, it is sufficient to perform a measurement in the $\{\ket{\psi},\ket{\psi_{\perp}}\}$ basis.
 The fidelity corresponds to the probability of measuring $\ket{\psi}$.
 Indeed, if the copies are $\rho_{1,2}$ and their fidelities with respect to the input state are $F_{1,2}$:
 \[
-    p_{1,2}^{\psi}=\Tr[\ketbra{\psi}{\psi} \rho_{1,2}]=\bra{\psi}\rho_{1,2}\ket{\psi}=F_{1,2}.
+    p_{1,2}^{(\psi)}=\Tr[\ketbra{\psi}{\psi} \rho_{1,2}]=\bra{\psi}\rho_{1,2}\ket{\psi}=F_{1,2}.
 \]
 
 Since $\ket{\psi}$ was prepared with the rotation $R_z(\phi)R_y(\theta)$, 
@@ -36,14 +62,66 @@ it follows that a measurement in the $\left\{\ket{\psi},\ket{\psi_{\perp}}\right
 
 \[
 \begin{quantikz}
-    \lstick{$\rho_{1}$} & \gate{R_z(-\phi)}       & \gate{R_y(-\theta)}      & \meter{$\ket{0}$,$\ket{1}$} & p_0=F_1  \\
-    \lstick{$\rho_{2}$} & \gate{R_z(-\phi)}       & \gate{R_y(-\theta)}      & \meter{$\ket{0}$,$\ket{1}$} & p_0=F_2  \\
+    \lstick{$\rho_{1}$} & \gate{R_z(-\phi)}       & \gate{R_y(-\theta)}      & \meter{$\ket{0}$,$\ket{1}$} & \tilde{p}_1^{(0)}=F_1  \\
+    \lstick{$\rho_{2}$} & \gate{R_z(-\phi)}       & \gate{R_y(-\theta)}      & \meter{$\ket{0}$,$\ket{1}$} & \tilde{p}_2^{(0)}=F_2  \\
 \end{quantikz}
 \]
+In the above sketch, we denote with $\tilde{p}_1^{(0)}$ ($\tilde{p}_2^{(0)}$) the probability of finding $0$ when measuring the first (second) copy in the computational basis after the rotation.
+Note that the above probabilities have to be calculated marginalizing over the probability distributions of the qubits we are not interested in. 
+These are the probabilities of obtaining $0$ when measuring the first copy, regardless of what happens to the other qubits. 
+Ideally, after
 
-It is worth mentioning that both the preparation and the fidelity measurement are not required in the normal use of QCMs, they are just a means of testing their performances.
-It should therefore be taken into account that the additional gates could decrease the quality of the copies because of the greater depth of the run circuits.
-\section{Universal quantum cloning machine}
-\section{Phase covariant quantum cloning machine}
-\section{Economical phase covariant quantum cloning machine}
+A possible alternative to this way of measuring the fidelity would be to perform a quantum tomography experiment. However, the number of circuits necessary to run would have increased.
 \section{Readout calibration}
+\section{Software and hardware details}
+We have used the quantum systems freely available on Quantum Inspire \cite{quantuminspire} and IBM Quantum Experience \cite{ibmquantumexperience}.
+More specifically, we have used the following backends:
+\begin{itemize}
+    \item Spin-2 (Quantum Inspire), only for the EPCQCM;
+    \item Starmon-5 (Quantum Inspire);
+    \item Athens (IBM Quantum Experience);
+    \item Ourense (IBM Quantum Experience);
+    \item Santiago (IBM Quantum Experience);
+    \item Valencia (IBM Quantum Experience);
+    \item Vigo (IBM Quantum Experience);
+    \item Yorktown (IBM Quantum Experience).
+\end{itemize}
+All the quantum systems but Spin-2 are $5$-qubit processors based on superconducting qubits.
+Spin-2, on the other hand, is a $2$-qubit processor based on spin qubits in silicon.
+
+For Spin-2 and Starmon-5 we have implemented the experiments using the API provided by Quantum Inspire.
+For all the other backends, we have used Qiskit \cite{Qiskit}.
+
+It should be mentioned that we had no control on the used hardware nor on the access to it.
+We used the publicly available platforms without any priority.
+
+We have ran each experiment the maximum number of times allowed by each backend.
+The maximum number of shots allowed is $4096$ for Spin-2, $16384$ for Starmon-5 and $8192$ for all the other backends.
+This means that even if we had a perfect quantum computer, the results would still be affected by a statistical uncertainty.
+More specifically, each measurement can be considered a Bernoulli trial, where the success probability corresponds to the probability $p$ of measuring $0$, which is also the fidelity $F$ of the copy.
+The standard deviation of the Bernoulli distribution with success probability $p$ is:
+\[
+    \sigma_{Bernoulli}=\sqrt{p(1-p)}=\sqrt{F(1-F)}.
+\]
+If we are repeating the same experiment $N$ times (i.e. the maximum number of shots allowed), we expect the standard deviation to be:
+\begin{equation}
+    \sigma_{stat}^{(N)}=\frac{\sigma_{Bernoulli}}{\sqrt{N}}=\sqrt{\frac{F(1-F)}{N}}.
+\end{equation}
+
+We can calculate this standard deviation in all the different cases we are going to consider.
+For the UQCM ($F=\frac{5}{6}$), the expected standard deviation is:
+\begin{equation}
+    \sigma_{stat}^{(4096)}\approx 0.0058, \quad \sigma_{stat}^{(8192)}\approx 0.0041, \quad \sigma_{stat}^{(16384)}\approx 0.0029.
+    \label{eqn:dispersion_uqcm}
+\end{equation}
+For the PCQCM and for the EPCQCM ($F=\frac{1}{2}+\frac{1}{2\sqrt{2}}$) we expect:
+\begin{equation}
+    \sigma_{stat}^{(4096)}\approx 0.0055, \quad \sigma_{stat}^{(8192)}\approx 0.0039, \quad \sigma_{stat}^{(16384)}\approx 0.0028.
+    \label{eqn:dispersion_pcqcm}
+\end{equation}
+If we consider the uncertainties up to the first significant digit, there is no difference between the two cases.
+
+This is the dispersion of the results that we would expect even if we had an ideal QCM, given the finite sampling.
+If we want to verify whether a QCM copies equally well certain input states, we should take into account this statistical uncertainty.
+If the standard deviation of our results is compatible with the one calculated above, we can assume that the quality of the copies is state-independent.
+Note that this does not mean that the copies are as good as theoretically possible: it could be that a QCM copies all the states 'equally bad'.  

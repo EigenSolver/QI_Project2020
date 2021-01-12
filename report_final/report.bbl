@@ -1,0 +1,83 @@
+\begin{thebibliography}{11}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Abraham et~al.(2019)]{Qiskit}
+H{\'e}ctor Abraham et~al.
+\newblock Qiskit: An open-source framework for quantum computing, 2019.
+
+\bibitem[Bru\ss{} et~al.(2000)Bru\ss{}, Cinchetti, Mauro~D'Ariano, and
+  Macchiavello]{PhaseCovariantOptimalBruss}
+Dagmar Bru\ss{}, Mirko Cinchetti, G.~Mauro~D'Ariano, and Chiara Macchiavello.
+\newblock Phase-covariant quantum cloning.
+\newblock \emph{Phys. Rev. A}, 62:\penalty0 012302, Jun 2000.
+\newblock \doi{10.1103/PhysRevA.62.012302}.
+\newblock URL \url{https://link.aps.org/doi/10.1103/PhysRevA.62.012302}.
+
+\bibitem[Bu\ifmmode~\check{z}\else \v{z}\fi{}ek and Hillery(1996)]{Buzek1996}
+V.~Bu\ifmmode~\check{z}\else \v{z}\fi{}ek and M.~Hillery.
+\newblock Quantum copying: Beyond the no-cloning theorem.
+\newblock \emph{Phys. Rev. A}, 54:\penalty0 1844--1852, Sep 1996.
+\newblock \doi{10.1103/PhysRevA.54.1844}.
+\newblock URL \url{https://link.aps.org/doi/10.1103/PhysRevA.54.1844}.
+
+\bibitem[Durt and Du(2004)]{LowCostCloning}
+Thomas Durt and Jiangfeng Du.
+\newblock Characterization of low-cost one-to-two qubit cloning.
+\newblock \emph{Phys. Rev. A}, 69:\penalty0 062316, Jun 2004.
+\newblock \doi{10.1103/PhysRevA.69.062316}.
+\newblock URL \url{https://link.aps.org/doi/10.1103/PhysRevA.69.062316}.
+
+\bibitem[Durt et~al.(2005)Durt, Fiur\'a\ifmmode~\check{s}\else \v{s}\fi{}ek,
+  and Cerf]{EconomicalQCAnyDimension}
+Thomas Durt, Jarom\'{\i}r Fiur\'a\ifmmode~\check{s}\else \v{s}\fi{}ek, and
+  Nicolas~J. Cerf.
+\newblock Economical quantum cloning in any dimension.
+\newblock \emph{Phys. Rev. A}, 72:\penalty0 052322, Nov 2005.
+\newblock \doi{10.1103/PhysRevA.72.052322}.
+\newblock URL \url{https://link.aps.org/doi/10.1103/PhysRevA.72.052322}.
+
+\bibitem[Fan et~al.(2001)Fan, Matsumoto, Wang, and Wadati]{EquatorialQCM}
+Heng Fan, Keiji Matsumoto, Xiang-Bin Wang, and Miki Wadati.
+\newblock Quantum cloning machines for equatorial qubits.
+\newblock \emph{Phys. Rev. A}, 65:\penalty0 012304, Dec 2001.
+\newblock \doi{10.1103/PhysRevA.65.012304}.
+\newblock URL \url{https://link.aps.org/doi/10.1103/PhysRevA.65.012304}.
+
+\bibitem[{IBM}()]{ibmquantumexperience}
+{IBM}.
+\newblock {IBM Quantum Experience}.
+\newblock URL \url{https://quantum-computing.ibm.com}.
+
+\bibitem[Niu and Griffiths(1999)]{EconomicalNiuGriffiths}
+Chi-Sheng Niu and Robert~B. Griffiths.
+\newblock Two-qubit copying machine for economical quantum eavesdropping.
+\newblock \emph{Phys. Rev. A}, 60:\penalty0 2764--2776, Oct 1999.
+\newblock \doi{10.1103/PhysRevA.60.2764}.
+\newblock URL \url{https://link.aps.org/doi/10.1103/PhysRevA.60.2764}.
+
+\bibitem[{QuTech}()]{quantuminspire}
+{QuTech}.
+\newblock {Quantum Inspire Home}.
+\newblock URL \url{https://www.quantum-inspire.com}.
+
+\bibitem[Scarani et~al.(2005)Scarani, Iblisdir, Gisin, and
+  Ac\'{\i}n]{QuantumCloningReviewScarani}
+Valerio Scarani, Sofyan Iblisdir, Nicolas Gisin, and Antonio Ac\'{\i}n.
+\newblock Quantum cloning.
+\newblock \emph{Rev. Mod. Phys.}, 77:\penalty0 1225--1256, Nov 2005.
+\newblock \doi{10.1103/RevModPhys.77.1225}.
+\newblock URL \url{https://link.aps.org/doi/10.1103/RevModPhys.77.1225}.
+
+\bibitem[Wootters and Zurek(1982)]{Wootters1982}
+W.~K. Wootters and W.~H. Zurek.
+\newblock A single quantum cannot be cloned.
+\newblock \emph{Nature}, 299\penalty0 (5886):\penalty0 802--803, Oct 1982.
+\newblock ISSN 1476-4687.
+\newblock \doi{10.1038/299802a0}.
+\newblock URL \url{https://doi.org/10.1038/299802a0}.
+
+\end{thebibliography}

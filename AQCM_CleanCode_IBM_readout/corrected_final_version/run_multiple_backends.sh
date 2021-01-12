@@ -6,4 +6,4 @@ python aqcm_v4.py   vigo    &
 python aqcm_v4.py   ourense &
 # python aqcm_v4.py   valencia    &
 python aqcm_v4.py   athens  &
-python aqcm_v4.py   santiago    &
+python aqcm_v4.py   santiago
