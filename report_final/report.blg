@@ -13,45 +13,45 @@ Warning--entry type for "ibmquantumexperience" isn't style-file defined
 --line 168 of file bibliography.bib
 Warning--empty year in ibmquantumexperience
 Warning--empty year in quantuminspire
-You've used 10 entries,
+You've used 11 entries,
             2773 wiz_defined-function locations,
-            682 strings with 6878 characters,
-and the built_in function-call counts, 4797 in all, are:
-= -- 453
-> -- 251
-< -- 6
-+ -- 85
-- -- 75
-* -- 415
-:= -- 753
-add.period$ -- 47
-call.type$ -- 10
-change.case$ -- 55
-chr.to.int$ -- 10
-cite$ -- 22
-duplicate$ -- 194
-empty$ -- 384
-format.name$ -- 93
-if$ -- 994
+            688 strings with 6999 characters,
+and the built_in function-call counts, 5133 in all, are:
+= -- 481
+> -- 271
+< -- 7
++ -- 92
+- -- 81
+* -- 433
+:= -- 804
+add.period$ -- 49
+call.type$ -- 11
+change.case$ -- 59
+chr.to.int$ -- 11
+cite$ -- 24
+duplicate$ -- 209
+empty$ -- 416
+format.name$ -- 101
+if$ -- 1067
 int.to.chr$ -- 1
 int.to.str$ -- 1
 missing$ -- 8
-newline$ -- 75
-num.names$ -- 40
-pop$ -- 87
+newline$ -- 79
+num.names$ -- 44
+pop$ -- 100
 preamble$ -- 1
-purify$ -- 45
+purify$ -- 48
 quote$ -- 0
-skip$ -- 148
+skip$ -- 164
 stack$ -- 0
-substring$ -- 206
-swap$ -- 18
+substring$ -- 208
+swap$ -- 19
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 110
+type$ -- 121
 warning$ -- 2
-while$ -- 41
+while$ -- 44
 width$ -- 0
-write$ -- 167
+write$ -- 177
 (There was 1 error message)

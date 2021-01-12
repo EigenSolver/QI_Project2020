@@ -134,30 +134,34 @@ It is possible to observe that if $\phi=0$ is set, the fidelity becomes a consta
 Therefore, for input states on the $xz$-equator, the fidelity of the PCQCM is:
 \begin{equation}
     F_{equator}^{ideal}=\frac{1}{2}+\frac{1}{\sqrt{8}}\approx 0.854.
+    \label{eqn:fidelity_pcqcm}
 \end{equation}
 
 As discussed in \cite{PhaseCovariantOptimalBruss} this is the optimal fidelity for a PCQCM. 
 Moreover, this is the optimal result attainable also when trying to maximize the fidelity for BB84 input states.
-Indeed, the optimization over the two different sets of output is equivalent and leads therefore to the same result \cite{PhaseCovariantOptimalBruss}.
+Indeed, the optimization over the two different sets of input states is equivalent and leads therefore to the same result \cite{PhaseCovariantOptimalBruss}.
 
 It might be of some interest to consider the performances of the PCQCM over the whole Bloch sphere.
 The average fidelity over the Bloch sphere $S$ is (integrating over solid angle):
 \begin{equation}
     \overline{F}=\frac{1}{\int_S \dd{\Omega}}\int_S F(\Omega)\dd{\Omega}=\frac{1}{4\pi}\int_0^{2\pi}\int_0^\pi F(\theta,\phi)\sin(\theta)\dd{\theta}\dd{\phi}=\frac{7+2\sqrt{2}}{12}\approx 0.819.
+    \label{eqn:avg_fidelity_pcqcm}
 \end{equation}
 The standard deviation can be calculated similarly:
 \begin{equation}
     \sigma_{F}=\sqrt{\overline{F^2}-\overline{F}^2}=\frac{1}{6}\sqrt{\frac{3-2\sqrt{2}}{5}}\approx0.031.
+    \label{eqn:std_fidelity_pcqcm}
 \end{equation}
 
 We conclude that when considering the PCQCM over the whole Bloch sphere, it is not too far from the optimal bound of the UQCM (which was $F=5/6\approx 0.833$).
 This could have some interesting consequences: since we managed to greatly simplify its circuit, the PCQCM could turn to be better than the UQCM when using real hardware, in contrast with what is expected theoretically.
-A similar analysis was carried out in \cite{LowCostCloning} in the context of economical QCM.
+A similar analysis regarding the performances of a real QCM was carried out in \cite{LowCostCloning} in the context of economical QCMs.
 
 \subsection*{Rotated PCQCM}
 The found expression for the fidelity is rather complicated. When considering a PCQCM that optimally clones the states on the $xy$-equator, the expression simplifies.
 It is possible to obtain the fidelity for an arbitrary state on the Bloch sphere starting from the expression previously found, without analyzing a new circuit.
 Given a point $(\theta,\phi)$ on the Bloch sphere, we want to find the coordinates $(\theta',\phi')$ of such point after a rotation of $\pi/2$ about the $x$-axis is performed.
+Indeed, such rotation transforms the $xy$-equator into the $xz$-equator.
 
 We start considering a generic vector on a sphere of unit radius:
 \[
@@ -201,25 +205,26 @@ Finally, the new angular coordiantes can be calculated:
 \]
 The fidelity for a PCQCM that optimally clones the state on the $xy$-equator is obtained from the one previously found simply changing the variables:
 \[
-    F_{xy}(\theta',\phi')=F(\theta(\theta',\phi'),\phi(\theta',\phi')).
+    F_{xy}(\theta,\phi)=F(\theta'(\theta,\phi),\phi'(\theta,\phi)).
 \]
-After some manipulations, it is possible to obtain the following expression (renaming $\theta' \to \theta$ and $\phi' \to \phi$):
+After some manipulations, it is possible to obtain the following expression:
 \begin{equation}
     F_{xy}(\theta,\phi)=\frac{5+\sqrt{2}}{8}+\frac{1-\sqrt{2}}{8}\cos(2\theta).
 \end{equation}
 \begin{figure}[H]
-\begin{minipage}{.5\textwidth}
-    \centering
-    \includegraphics[width=\textwidth]{Figures/plot_1D_phase_covariant_different_labels.png}
-    \label{fig:phase_covariant_rotated_1d}
-    \caption{Caption (TO FIX)}
-  \end{minipage}%
-  \begin{minipage}{.5\textwidth}
-    \centering
-    \includegraphics[width=\textwidth]{Figures/phase_covariant_rotated.png}
-    \label{fig:phase_covariant_rotated}
-    \caption{Caption (TO FIX)}
-  \end{minipage}
+\centering
+    \begin{minipage}[t]{.5\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{Figures/plot_1D_phase_covariant_different_labels.png}
+        \label{fig:phase_covariant_rotated_1d}
+        \caption{Caption (TO FIX)}
+    \end{minipage}%
+    \begin{minipage}[t]{.5\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{Figures/phase_covariant_rotated.png}
+        \label{fig:phase_covariant_rotated}
+        \caption{Caption (TO FIX)}
+    \end{minipage}
 \end{figure}
 
 It is possible to observe that the fidelity does not depend on $\phi$, which means that it is constant across sections parallel to the $xy$-plane.
@@ -245,6 +250,15 @@ The circuit to implement a PCEQCM that optimally clones that states on the $xy$-
     \lstick{$\ket{0}_{a_1}$}    & \gate{H}              & \ctrl{-1}     &\qw & \rstick{\hspace{-4 mm}$\rho_2$} 
     \end{quantikz}
 \end{center}
+where the controlled-Hadamard can be rewritteng using more elementary gates:
+\begin{center}
+    \begin{quantikz}
+        & \ctrl{2}   & \qw           &   && \qw              & \qw      & \qw               & \ctrl{2}   &\qw      &\qw      &\qw    &\qw \\[-0.3cm]
+        &            &               & = &&                 &          &                   &            &         &         &        &\\[-0.3cm]
+        & \gate{H}   & \qw           &   && \gate{S^\dagger} & \gate{H} & \gate{T^\dagger}  & \targ{}    &\gate{T} &\gate{H} &\gate{S}& \qw\\
+    \end{quantikz}
+\end{center}
+
 We are going to analyze the circuit considering an arbitrary input state $\ket{\psi}=\cos(\theta/2)\ket{0}+e^{i\phi}\sin(\theta/2)\ket{1}$.
 The initial state is
 \[
@@ -306,13 +320,14 @@ This is the same value obtained in the previous section for the PCQCM with the e
     \end{figure}
 The average fidelity on the whole Bloch sphere is
 \begin{equation}
-    \overline{F}_{xy}=\frac{1}{\int_S \dd{\Omega}}\int_S F_{xy}(\Omega)\dd{\Omega}=\frac{1}{2}\int_0^\pi F_{xy}(\theta,\phi)\sin(\theta)\dd{\theta}.
-    =\frac{7+2\sqrt{2}}{12}\approx 0.819.
+    \overline{F}_{xy}=\frac{1}{\int_S \dd{\Omega}}\int_S F_{xy}(\Omega)\dd{\Omega}=\frac{1}{2}\int_0^\pi F_{xy}(\theta,\phi)\sin(\theta)\dd{\theta}=\frac{7+2\sqrt{2}}{12}\approx 0.819.
+    \label{eqn:avg_fidelity_epcqcm}
 \end{equation}
 The standard deviation is
 \begin{equation}
     \sigma_{{F}_{xy}}=\sqrt{\overline{F^2}_{xy}-\overline{F}^2_{xy}}
     =\frac{1}{12} \sqrt{\frac{1}{5} \left(27-8 \sqrt{2}\right)}\approx 0.148.
+    \label{eqn:std_fidelity_epcqcm}
 \end{equation}
 
 The average fidelity is the same obtained in the previous section for the PCQCM, but in this case the standard deviation is larger.
@@ -332,7 +347,7 @@ The EPCQCM that optimally clones the $xz$-equator can be implemented using the f
 \begin{center}
     \begin{quantikz}
     \lstick{$\ket{\psi}_{a_0}$}             & \gate{R_x(-\pi/2)}  & \ctrl{1}    & \targ{}       & \gate{R_x(\pi/2)} & \qw &  \rstick{\hspace{-4 mm}$\rho_1$}\\
-    \lstick{\hspace{-1cm}$\ket{0}_{a_1}$}    & \qw                  &\gate{H}    & \ctrl{-1}    & \gate{R_x(\pi/2)} & \qw & \rstick{\hspace{-4 mm}$\rho_2$} 
+    \lstick{$\ket{0}_{a_1}$}    & \qw                  &\gate{H}    & \ctrl{-1}    & \gate{R_x(\pi/2)} & \qw & \rstick{\hspace{-4 mm}$\rho_2$} 
     \end{quantikz}
 \end{center}
 The fidelity of the copies using the rotated EPCQCM can be calculated as we have shown for the PCQCM. In this case it was more convenient to analyze the circuit for the $xy$-equator.

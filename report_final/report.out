@@ -8,22 +8,24 @@
 \BOOKMARK [0][-]{chapter.3}{Implementation}{}% 8
 \BOOKMARK [1][-]{section.3.1}{Preparation of the input states}{chapter.3}% 9
 \BOOKMARK [1][-]{section.3.2}{Measurement of the fidelity of the copies}{chapter.3}% 10
-\BOOKMARK [1][-]{section.3.3}{Universal quantum cloning machine}{chapter.3}% 11
-\BOOKMARK [1][-]{section.3.4}{Phase covariant quantum cloning machine}{chapter.3}% 12
-\BOOKMARK [1][-]{section.3.5}{Economical phase covariant quantum cloning machine}{chapter.3}% 13
-\BOOKMARK [1][-]{section.3.6}{Readout calibration}{chapter.3}% 14
-\BOOKMARK [0][-]{chapter.4}{Results}{}% 15
-\BOOKMARK [1][-]{section.4.1}{Universal quantum cloning machine}{chapter.4}% 16
-\BOOKMARK [2][-]{subsection.4.1.1}{Sphere}{section.4.1}% 17
-\BOOKMARK [2][-]{subsection.4.1.2}{Equator}{section.4.1}% 18
-\BOOKMARK [2][-]{subsection.4.1.3}{BB84 states}{section.4.1}% 19
-\BOOKMARK [1][-]{section.4.2}{Phase covariant quantum cloning machine}{chapter.4}% 20
-\BOOKMARK [2][-]{subsection.4.2.1}{Sphere}{section.4.2}% 21
-\BOOKMARK [2][-]{subsection.4.2.2}{Equator}{section.4.2}% 22
-\BOOKMARK [2][-]{subsection.4.2.3}{BB84 states}{section.4.2}% 23
-\BOOKMARK [1][-]{section.4.3}{Economical phase covariant quantum cloning machine}{chapter.4}% 24
-\BOOKMARK [2][-]{subsection.4.3.1}{Sphere}{section.4.3}% 25
-\BOOKMARK [2][-]{subsection.4.3.2}{Equator}{section.4.3}% 26
-\BOOKMARK [2][-]{subsection.4.3.3}{BB84 states}{section.4.3}% 27
-\BOOKMARK [0][-]{chapter.5}{Conclusions}{}% 28
-\BOOKMARK [0][-]{appendix*.32}{Bibliography}{}% 29
+\BOOKMARK [1][-]{section.3.3}{Readout calibration}{chapter.3}% 11
+\BOOKMARK [1][-]{section.3.4}{Software and hardware details}{chapter.3}% 12
+\BOOKMARK [0][-]{chapter.4}{Results}{}% 13
+\BOOKMARK [1][-]{section.4.1}{Universal quantum cloning machine}{chapter.4}% 14
+\BOOKMARK [2][-]{subsection.4.1.1}{Sphere}{section.4.1}% 15
+\BOOKMARK [2][-]{subsection.4.1.2}{Equator}{section.4.1}% 16
+\BOOKMARK [2][-]{subsection.4.1.3}{BB84 states}{section.4.1}% 17
+\BOOKMARK [1][-]{section.4.2}{Phase covariant quantum cloning machine}{chapter.4}% 18
+\BOOKMARK [2][-]{subsection.4.2.1}{Sphere}{section.4.2}% 19
+\BOOKMARK [2][-]{subsection.4.2.2}{Equator}{section.4.2}% 20
+\BOOKMARK [2][-]{subsection.4.2.3}{BB84 states}{section.4.2}% 21
+\BOOKMARK [1][-]{section.4.3}{Economical phase covariant quantum cloning machine}{chapter.4}% 22
+\BOOKMARK [2][-]{subsection.4.3.1}{Sphere}{section.4.3}% 23
+\BOOKMARK [2][-]{subsection.4.3.2}{Equator}{section.4.3}% 24
+\BOOKMARK [2][-]{subsection.4.3.3}{BB84 states}{section.4.3}% 25
+\BOOKMARK [0][-]{chapter.5}{Conclusions}{}% 26
+\BOOKMARK [0][-]{appendix.A}{Results without readout correction}{}% 27
+\BOOKMARK [1][-]{section.A.1}{Universal quantum cloning machine}{appendix.A}% 28
+\BOOKMARK [1][-]{section.A.2}{Phase covariant quantum cloning machine}{appendix.A}% 29
+\BOOKMARK [1][-]{section.A.3}{Economical phase covariant quantum cloning machine}{appendix.A}% 30
+\BOOKMARK [0][-]{appendix*.32}{Bibliography}{}% 31

@@ -1,5 +1,10 @@
 \chapter{Results}
 \label{sec:results}
+
+In this section we list and discuss the results obtained.
+It is worth mentioning that calibrations and/or modifications of the quantum processors might change significantly the results obtained here.
+
+
 NB: COMPARISON WITH OTHER EXPERIMENTAL RESULTS?\\
 https://arxiv.org/pdf/1909.03170.pdf UQCM with gates (not peer-reviewed, but it has some review of modern experimental results)\\
 https://link.aps.org/doi/10.1103/PhysRevLett.88.187901 UQCM with NMR (bad results)\\
@@ -12,245 +17,405 @@ https://arxiv.org/pdf/quant-ph/0311010.pdf economical phase covariant with NMR\\
 \subsection{BB84 states}
 \section{Phase covariant quantum cloning machine}
 \subsection{Sphere}
+In Chapter \ref{sec:approximateqcm}, we found that the expected average fidelity and the associated standard deviation on the whole Bloch sphere are (see Equation \ref{eqn:avg_fidelity_pcqcm} and Equation \ref{eqn:std_fidelity_pcqcm}):
+\[
+  \overline{F}\approx0.819, \quad \sigma_{F}\approx0.031.
+\]
 
-Without readout correction:
+The results we found are summarized in Table \ref{tab:results_pcqcm_fullsphere_corrected} (corrected with readout calibration).
 \begin{table}[H]
     \centering
     \begin{tabular}{|c|c|c|c|c|c|c|c|}
     \hline
     \textbf{} & \textbf{Starmon-5} & \textbf{Athens} & \textbf{Ourense} & \textbf{Santiago} & \textbf{Valencia} & \textbf{Vigo} & \textbf{Yorktown} \\ \hline
-    $F_1$              & 0.759 & 0.782 & 0.801 & 0.788 & 0.768 & 0.784 & 0.794 \\ \hline
-    $\sigma_{F_1}$     & 0.033 & 0.035 & 0.029 & 0.032 & 0.044 & 0.030 & 0.023 \\ \hline
-    $F_2$              & 0.760 & 0.825 & 0.779 & 0.772 & 0.797 & 0.807 & 0.793 \\ \hline
+    $F_1$              & 0.774 & 0.779 & 0.802 & 0.796 & 0.800 & 0.801 & 0.794 \\ \hline
+    $\sigma_{F_1}$     & 0.041 & 0.036 & 0.031 & 0.035 & 0.040 & 0.035 & 0.025 \\ \hline
+    $F_2$              & 0.766 & 0.823 & 0.780 & 0.773 & 0.791 & 0.807 & 0.755 \\ \hline
+    $\sigma_{F_2}$     & 0.041 & 0.031 & 0.034 & 0.045 & 0.034 & 0.036 & 0.042 \\ \hline
+    \end{tabular}
+    \caption{Average fidelity and corresponding standard deviation on the whole Bloch sphere for the two copies on each backend. The results are corrected with readout calibration.}
+    \label{tab:results_pcqcm_fullsphere_corrected}
+\end{table}
+
+It is possible to observe that, on average, the PCQCM performs better than the UQCM, even if theoretically it should perform worse. 
+As mentioned in Chapter \ref{sec:approximateqcm}, this is because the PCQCM circuit is much simpler than the UQCM one.
+The dispersion of the results is close to the expected one, however the average fidelity is lower than the ideal one (with the exception of the fidelity of the second copy for Athens).
+This suggests that the expected fidelity of the ideal PCQCM on the Bloch sphere is lowered more or less equally across the Bloch sphere, so that the qualitative pattern is preserved.
+Indeed, in the pictures below, it is possible to observe that the $xz$-equator performs better than the rest of the two emisphere (the darker lobes).
+
+In the following we report the projection of the results obtained on the Bloch sphere, corrected with the readout calibration (the non-corrected results can be observed in the appendix). 
+In general, we can see the expected pattern for the fidelity.
+In certain cases, for example for Starmon-5 (Figure \ref{fig:pc_corrected_starmon_sphere}), the results are not symmetric: the region around $\ket{-}$ (i.e. the left lobe) is copied better than the region around $\ket{+}$ (i.e. the right lobe) on both the qubits (this happens in both the copies).
+Sometimes, for example looking at the results for Santiago (Figure \ref{fig:pc_corrected_santiago_sphere}), it is possible to observe some sudden discontinuities.
+These artefacts, present both in the corrected and the non-corrected results, correspond to one batch of circuits (on the IBM backends it is possible to group $75$ circuits together).
+This could be due to the fact that two subsequent batches of circuits could be run hours apart, depending on the length of the queue.
+Therefore, it should not be assumed that the condition and the calibration of the quantum processors are the same throughout the sampling.
+The quality of the results could be improved if we could run all the circuits together.
+Finally, we observe again that the results obtained on Yorktown (\ref{fig:pc_corrected_yorktown_sphere}) are quite different compared to the others, even if in this case the connectivity of the quantum processor should not play a role.
+
+\begin{figure}[H]
+  \centering
+  \begin{subfigure}{.5\textwidth}
+    \centering
+    \includegraphics[width=\textwidth]{Figures/PhaseCovariant/Starmon/FullSphere/results_starmon_corrected_copy1.png}
+    \label{fig:pc_corrected_starmon_sphere_1}
+  \end{subfigure}%
+  \begin{subfigure}{.5\textwidth}
+    \centering
+    \includegraphics[width=\textwidth]{Figures/PhaseCovariant/Starmon/FullSphere/results_starmon_corrected_copy2.png}
+    \label{fig:pc_corrected_starmon_sphere_2}
+  \end{subfigure}
+  \caption{Fidelity sampled over the Bloch sphere using the PCQCM implemented on Starmon-5 using readout correction.}
+  \label{fig:pc_corrected_starmon_sphere}
+\end{figure}
+
+\begin{figure}[H]
+  \centering
+  \begin{subfigure}{.5\textwidth}
+    \centering
+    \includegraphics[width=\textwidth]{Figures/PhaseCovariant/IBM/FullSphere/results_corrected_athens_copy1.png}
+    \label{fig:pc_corrected_athens_sphere_1}
+  \end{subfigure}%
+  \begin{subfigure}{.5\textwidth}
+    \centering
+    \includegraphics[width=\textwidth]{Figures/PhaseCovariant/IBM/FullSphere/results_corrected_athens_copy2.png}
+    \label{fig:pc_corrected_athens_sphere_2}
+  \end{subfigure}
+  \caption{Fidelity sampled over the Bloch sphere using the PCQCM implemented on Athens using readout correction.}
+  \label{fig:pc_corrected_athens_sphere}
+\end{figure}
+
+
+\begin{figure}[H]
+  \centering
+  \begin{subfigure}{.5\textwidth}
+    \centering
+    \includegraphics[width=\textwidth]{Figures/PhaseCovariant/IBM/FullSphere/results_corrected_ourense_copy1.png}
+    
+    \label{fig:pc_corrected_ourense_sphere_1}
+  \end{subfigure}%
+  \begin{subfigure}{.5\textwidth}
+    \centering
+    \includegraphics[width=\textwidth]{Figures/PhaseCovariant/IBM/FullSphere/results_corrected_ourense_copy2.png}
+    
+    \label{fig:pc_corrected_ourense_sphere_2}
+  \end{subfigure}
+  \caption{Fidelity sampled over the Bloch sphere using the PCQCM implemented on Ourense using readout correction.}
+  \label{fig:pc_corrected_ourense_sphere}
+\end{figure}
+
+\begin{figure}[H]
+  \centering
+  \begin{subfigure}{.5\textwidth}
+    \centering
+    \includegraphics[width=\textwidth]{Figures/PhaseCovariant/IBM/FullSphere/results_corrected_santiago_copy1.png}
+    
+    \label{fig:pc_corrected_santiago_sphere_1}
+  \end{subfigure}%
+  \begin{subfigure}{.5\textwidth}
+    \centering
+    \includegraphics[width=\textwidth]{Figures/PhaseCovariant/IBM/FullSphere/results_corrected_santiago_copy2.png}
+    
+    \label{fig:pc_corrected_santiago_sphere_2}
+  \end{subfigure}
+  \caption{Fidelity sampled over the Bloch sphere using the PCQCM implemented on Santiago using readout correction.}
+  \label{fig:pc_corrected_santiago_sphere}
+\end{figure}
+
+\begin{figure}[H]
+  \centering
+  \begin{subfigure}{.5\textwidth}
+    \centering
+    \includegraphics[width=\textwidth]{Figures/PhaseCovariant/IBM/FullSphere/results_corrected_valencia_copy1.png}
+    \label{fig:pc_corrected_valencia_sphere_1}
+  \end{subfigure}%
+  \begin{subfigure}{.5\textwidth}
+    \centering
+    \includegraphics[width=\textwidth]{Figures/PhaseCovariant/IBM/FullSphere/results_corrected_valencia_copy2.png}
+    \label{fig:pc_corrected_valencia_sphere_2}
+  \end{subfigure}
+  \caption{Fidelity sampled over the Bloch sphere using the PCQCM implemented on Valencia using readout correction.}
+  \label{fig:pc_corrected_valencia_sphere}
+\end{figure}
+
+
+\begin{figure}[H]
+  \centering
+  \begin{subfigure}{.5\textwidth}
+    \centering
+    \includegraphics[width=\textwidth]{Figures/PhaseCovariant/IBM/FullSphere/results_corrected_vigo_copy1.png}
+    
+    \label{fig:pc_corrected_vigo_sphere_1}
+  \end{subfigure}%
+  \begin{subfigure}{.5\textwidth}
+    \centering
+    \includegraphics[width=\textwidth]{Figures/PhaseCovariant/IBM/FullSphere/results_corrected_vigo_copy2.png}
+    
+    \label{fig:pc_corrected_vigo_sphere_2}
+  \end{subfigure}
+  \caption{Fidelity sampled over the Bloch sphere using the PCQCM implemented on Vigo using readout correction.}
+  \label{fig:pc_corrected_vigo_sphere}
+\end{figure}
+
+\begin{figure}[H]
+  \centering
+  \begin{subfigure}{.5\textwidth}
+    \centering
+    \includegraphics[width=\textwidth]{Figures/PhaseCovariant/IBM/FullSphere/results_corrected_ibmqx2_copy1.png}
+    
+    \label{fig:pc_corrected_yorktown_sphere_1}
+  \end{subfigure}%
+  \begin{subfigure}{.5\textwidth}
+    \centering
+    \includegraphics[width=\textwidth]{Figures/PhaseCovariant/IBM/FullSphere/results_corrected_ibmqx2_copy2.png}
+    
+    \label{fig:pc_corrected_yorktown_sphere_2}
+  \end{subfigure}
+  \caption{Fidelity sampled over the Bloch sphere using the PCQCM implemented on Yorktown using readout correction.}
+  \label{fig:pc_corrected_yorktown_sphere}
+\end{figure}
+
+We conclude the analysis for the full sphere reporting also the results without readout correction.
+\begin{table}[H]
+    \centering
+    \begin{tabular}{|c|c|c|c|c|c|c|c|}
+    \hline
+    \textbf{} & \textbf{Starmon-5} & \textbf{Athens} & \textbf{Ourense} & \textbf{Santiago} & \textbf{Valencia} & \textbf{Vigo} & \textbf{Yorktown} \\ \hline
+    $F_1$              & 0.761 & 0.782 & 0.801 & 0.788 & 0.768 & 0.784 & 0.794 \\ \hline
+    $\sigma_{F_1}$     & 0.036 & 0.035 & 0.029 & 0.032 & 0.044 & 0.030 & 0.023 \\ \hline
+    $F_2$              & 0.757 & 0.825 & 0.779 & 0.772 & 0.797 & 0.807 & 0.793 \\ \hline
     $\sigma_{F_2}$     & 0.038 & 0.030 & 0.033 & 0.043 & 0.030 & 0.035 & 0.009 \\ \hline
     \end{tabular}
+    \caption{Average fidelity and corresponding standard deviation on the whole Bloch sphere for the two copies on each backend. The results are not corrected with readout calibration.}
+    \label{tab:results_pcqcm_fullsphere_not_corrected}
 \end{table}
-
-With readout correction:
-\begin{table}[H]
-    \centering
-    \begin{tabular}{|c|c|c|c|c|c|c|c|}
-    \hline
-    \textbf{} & \textbf{Starmon-5} & \textbf{Athens} & \textbf{Ourense} & \textbf{Santiago} & \textbf{Valencia} & \textbf{Vigo} & \textbf{Yorktown} \\ \hline
-    $F_1$              & 0.786 & 0.779 & 0.802 & 0.796 & 0.800 & 0.801 & 0.794 \\ \hline
-    $\sigma_{F_1}$     & 0.034 & 0.036 & 0.031 & 0.035 & 0.040 & 0.035 & 0.025 \\ \hline
-    $F_2$              & 0.767 & 0.823 & 0.780 & 0.773 & 0.791 & 0.807 & 0.755 \\ \hline
-    $\sigma_{F_2}$     & 0.040 & 0.031 & 0.034 & 0.045 & 0.034 & 0.036 & 0.042 \\ \hline
-    \end{tabular}
-\end{table}
-
-
-\begin{figure}[H]
-    \centering
-    \begin{subfigure}{.5\textwidth}
-      \centering
-      \includegraphics[width=\textwidth]{Figures/PhaseCovariant/Starmon/FullSphere/results_starmon.txt_copy1.png}
-      \caption{A subfigure}
-      \label{fig:pc_starmon5_sphere_1}
-    \end{subfigure}%
-    \begin{subfigure}{.5\textwidth}
-      \centering
-      \includegraphics[width=\textwidth]{Figures/PhaseCovariant/Starmon/FullSphere/results_starmon.txt_copy2.png}
-      \caption{A subfigure}
-      \label{fig:pc_starmon5_sphere_2}
-    \end{subfigure}
-    \caption{Starmon-5 (not corrected)}
-    \label{fig:pc_starmon5_sphere}
-\end{figure}
-\begin{figure}[H]
-    \centering
-    \begin{subfigure}{.5\textwidth}
-      \centering
-      \includegraphics[width=\textwidth]{Figures/PhaseCovariant/Starmon/FullSphere/results_starmon_corrected.txt_copy1.png}
-      \caption{A subfigure}
-      \label{fig:pc_starmon5_sphere_1_corrected}
-    \end{subfigure}%
-    \begin{subfigure}{.5\textwidth}
-      \centering
-      \includegraphics[width=\textwidth]{Figures/PhaseCovariant/Starmon/FullSphere/results_starmon_corrected.txt_copy2.png}
-      \caption{A subfigure}
-      \label{fig:pc_starmon5_sphere_2_corrected}
-    \end{subfigure}
-    \caption{Starmon-5 (corrected)}
-    \label{fig:pc_starmon5_sphere_corrected}
-\end{figure}
-
-\begin{figure}[H]
-    \centering
-    \begin{subfigure}{.5\textwidth}
-      \centering
-      \includegraphics[width=\textwidth]{Figures/PhaseCovariant/IBM/FullSphere/results_valencia.txt_copy1.png}
-      \caption{A subfigure}
-      \label{fig:pc_valencia_sphere_1}
-    \end{subfigure}%
-    \begin{subfigure}{.5\textwidth}
-      \centering
-      \includegraphics[width=\textwidth]{Figures/PhaseCovariant/IBM/FullSphere/results_valencia.txt_copy2.png}
-      \caption{A subfigure}
-      \label{fig:pc_valencia_sphere_2}
-    \end{subfigure}
-    \caption{Valencia (not corrected)}
-    \label{fig:pc_valencia_sphere}
-\end{figure}
-
-\begin{figure}[H]
-    \centering
-    \begin{subfigure}{.5\textwidth}
-      \centering
-      \includegraphics[width=\textwidth]{Figures/PhaseCovariant/IBM/FullSphere/results_corrected_valencia.txt_copy1.png}
-      \caption{A subfigure}
-      \label{fig:pc_valencia_sphere_1_corrected}
-    \end{subfigure}%
-    \begin{subfigure}{.5\textwidth}
-      \centering
-      \includegraphics[width=\textwidth]{Figures/PhaseCovariant/IBM/FullSphere/results_corrected_valencia.txt_copy2.png}
-      \caption{A subfigure}
-      \label{fig:pc_valencia_sphere_2_corrected}
-    \end{subfigure}
-    \caption{Valencia (corrected)}
-    \label{fig:pc_valencia_sphere_corrected}
-\end{figure}
-
-\begin{figure}[H]
-    \centering
-    \begin{subfigure}{.5\textwidth}
-      \centering
-      \includegraphics[width=\textwidth]{Figures/PhaseCovariant/IBM/FullSphere/results_ibmqx2.txt_copy1.png}
-      \caption{A subfigure}
-      \label{fig:pc_yorktown_sphere_1}
-    \end{subfigure}%
-    \begin{subfigure}{.5\textwidth}
-      \centering
-      \includegraphics[width=\textwidth]{Figures/PhaseCovariant/IBM/FullSphere/results_ibmqx2.txt_copy2.png}
-      \caption{A subfigure}
-      \label{fig:pc_yorktown_sphere_2}
-    \end{subfigure}
-    \caption{Yorktown (not corrected)}
-    \label{fig:pc_yorktown_sphere}
-\end{figure}
-
-\begin{figure}[H]
-    \centering
-    \begin{subfigure}{.5\textwidth}
-      \centering
-      \includegraphics[width=\textwidth]{Figures/PhaseCovariant/IBM/FullSphere/results_santiago.txt_copy1.png}
-      \caption{A subfigure}
-      \label{fig:pc_santiago_sphere_1}
-    \end{subfigure}%
-    \begin{subfigure}{.5\textwidth}
-      \centering
-      \includegraphics[width=\textwidth]{Figures/PhaseCovariant/IBM/FullSphere/results_santiago.txt_copy2.png}
-      \caption{A subfigure}
-      \label{fig:pc_santiago_sphere_2}
-    \end{subfigure}
-    \caption{Santiago (not corrected)}
-    \label{fig:pc_santiago_sphere}
-\end{figure}
-
-\begin{figure}[H]
-    \centering
-    \begin{subfigure}{.5\textwidth}
-      \centering
-      \includegraphics[width=\textwidth]{Figures/PhaseCovariant/IBM/FullSphere/results_athens.txt_copy1.png}
-      \caption{A subfigure}
-      \label{fig:pc_athens_sphere_1}
-    \end{subfigure}%
-    \begin{subfigure}{.5\textwidth}
-      \centering
-      \includegraphics[width=\textwidth]{Figures/PhaseCovariant/IBM/FullSphere/results_athens.txt_copy2.png}
-      \caption{A subfigure}
-      \label{fig:pc_athens_sphere_2}
-    \end{subfigure}
-    \caption{Yorktown (not corrected)}
-    \label{fig:pc_athens_sphere}
-\end{figure}
-
-\begin{figure}[H]
-    \centering
-    \begin{subfigure}{.5\textwidth}
-      \centering
-      \includegraphics[width=\textwidth]{Figures/PhaseCovariant/IBM/FullSphere/results_ourense.txt_copy1.png}
-      \caption{A subfigure}
-      \label{fig:pc_ourense_sphere_1}
-    \end{subfigure}%
-    \begin{subfigure}{.5\textwidth}
-      \centering
-      \includegraphics[width=\textwidth]{Figures/PhaseCovariant/IBM/FullSphere/results_ourense.txt_copy2.png}
-      \caption{A subfigure}
-      \label{fig:pc_ourense_sphere_2}
-    \end{subfigure}
-    \caption{Ourense (not corrected)}
-    \label{fig:pc_ourense_sphere}
-\end{figure}
-
-\begin{figure}[H]
-    \centering
-    \begin{subfigure}{.5\textwidth}
-      \centering
-      \includegraphics[width=\textwidth]{Figures/PhaseCovariant/IBM/FullSphere/results_vigo.txt_copy1.png}
-      \caption{A subfigure}
-      \label{fig:pc_vigo_sphere_1}
-    \end{subfigure}%
-    \begin{subfigure}{.5\textwidth}
-      \centering
-      \includegraphics[width=\textwidth]{Figures/PhaseCovariant/IBM/FullSphere/results_vigo.txt_copy2.png}
-      \caption{A subfigure}
-      \label{fig:pc_vigo_sphere_2}
-    \end{subfigure}
-    \caption{Vigo (not corrected)}
-    \label{fig:pc_vigo_sphere}
-\end{figure}
+As discussed in the previous section for the UQCM, the readout calibration corrects a classical error associated to a measurement.
+Therefore, we expect the measured fidelity to be more accurate, but not necessarily closer to the ideal case. 
+Indeed, sometimes the readout correction increases the fidelity and sometimes it decreases it.
 
 \subsection{Equator}
+The fidelity for the copies of equatorial states using an ideal PCQCM is (see Equation \ref{eqn:fidelity_pcqcm}):
+\[
+  F=\frac{1}{2}+\frac{1}{2\sqrt{2}}\approx0.854.
+\]
+All the states should be copied equally well. However, we still expect a dispersion of the results because of the finite sampling (we are using $16384$ shots for each input state for Starmon-5 and $8192$ for the IBM backends).
+As discussed previously in Chapter \ref{sec:implementation}, the expected statistical uncertainty is (see \ref{eqn:dispersion_pcqcm}):
+\[
+    \sigma_{stat}^{(8192)}\approx 0.004, \quad \sigma_{stat}^{(16384)}\approx 0.003.
+\]
+If the dispersion of the results is significantly greater than the expected one, it means that the states are not copied equally well.
 
+The results we found are summarized in Table \ref{tab:results_pcqcm_onlyequator_corrected} (corrected with readout calibration).
 \begin{table}[H]
     \centering
     \begin{tabular}{|c|c|c|c|c|c|c|c|}
     \hline
     \textbf{} & \textbf{Starmon-5} & \textbf{Athens} & \textbf{Ourense} & \textbf{Santiago} & \textbf{Valencia} & \textbf{Vigo} & \textbf{Yorktown} \\ \hline
-    $F_1$              & 0.780 & 0.817 & 0.836 & 0.822 & 0.820 & 0.798 & 0.802 \\ \hline
-    $\sigma_{F_1}$     & 0.029 & 0.019 & 0.017 & 0.013 & 0.017 & 0.019 & 0.028 \\ \hline
-    $F_2$              & 0.785 & 0.858 & 0.811 & 0.815 & 0.836 & 0.836 & 0.807 \\ \hline
-    $\sigma_{F_2}$     & 0.038 & 0.015 & 0.015 & 0.011 & 0.018 & 0.021 & 0.008 \\ \hline
+    $F_1$              & 0.817 & 0.814 & 0.839 & 0.825 & 0.834 & 0.836 & 0.804 \\ \hline
+    $\sigma_{F_1}$     & 0.014 & 0.019 & 0.018 & 0.014 & 0.023 & 0.022 & 0.030 \\ \hline
+    $F_2$              & 0.815 & 0.858 & 0.811 & 0.857 & 0.836 & 0.839 & 0.819 \\ \hline
+    $\sigma_{F_2}$     & 0.027 & 0.015 & 0.015 & 0.018 & 0.019 & 0.022 & 0.034 \\ \hline
     \end{tabular}
+    \caption{Average fidelity and corresponding standard deviation on the $xz$-equator for the two copies on each backend. The results are corrected with readout calibration.}
+    \label{tab:results_pcqcm_onlyequator_corrected}
+\end{table}
+The average fidelity has significantly increased compared to the sampling on the whole sphere (and of course compared to the UQCM).
+In several cases the fidelity is greater than the bound of the UQCM (i.e. $F\approx 0.833$). 
+The average fidelity of the second copy of Athens and Santiago achieves the theoretical bound for the PCQCM (i.e. $F\approx 0.854$).
+
+However, the measured dispersion of the results is significantly greater than the statistical uncertainty in every backend. 
+This means that we can not conclude that all the input states on the $xz$-equator are copied equally well. 
+This can be more clearly seen in the pictures below, where we have reported the measured fidelity of each input state.
+
+There is a recurring pattern occuring in several backends, for example Athens (see Figure \ref{fig:pc_corrected_athens_equator}):
+moving across the equator, the fidelity oscillates. There is a peak around $\ket{0}$ and $\ket{1}$ and a dip around $\ket{+}$ and $\ket{-}$.
+For Vigo (see \ref{fig:pc_corrected_ourense_equator}) the oscillating pattern is not symmetric (the dips and the peaks are not at the same height). 
+For Valencia (see \ref{fig:pc_corrected_valencia_equator}) the oscillating pattern is translated: the peaks are around $\ket{+}$ and $\ket{-}$, whereas the dips are around $\ket{0}$ and $\ket{1}$.
+In all these cases, the patterns are consistent with the results obtained on $xz$-equator while sampling the full sphere. 
+Considering, for example, the results for the second copy of Valencia in the right panel of Figure \ref{fig:pc_corrected_valencia_sphere}, it is possible to see a bright spot around $\ket{+}$ (exactly where we see the peak in Figure \ref{fig:pc_corrected_valencia_equator}).
+For Santiago, we can again see the artefacts previously discussed. In this case they affect the last $25$ points, which are significantly displaced with respect to the first $75$.
+Finally, we observe that the results for the two copies of Yorktown are qualitatively different, as previously seen: the fidelity of the first copy has a clear dependence from the angle, whereas the second one is uniformly distributed around the average value.
+
+\begin{figure}[H]
+  \centering
+  \begin{subfigure}{.5\textwidth}
+    \centering
+    \includegraphics[width=\textwidth]{Figures/PhaseCovariant/Starmon/OnlyEquator/results_starmon_corrected_copy1.png}
+    \label{fig:pc_corrected_starmon_equator_1}
+  \end{subfigure}%
+  \begin{subfigure}{.5\textwidth}
+    \centering
+    \includegraphics[width=\textwidth]{Figures/PhaseCovariant/Starmon/OnlyEquator/results_starmon_corrected_copy2.png}
+    \label{fig:pc_corrected_starmon_equator_2}
+  \end{subfigure}
+  \vspace{-0.5cm}
+  \caption{Fidelity sampled over the $xz$-equator using the PCQCM implemented on Starmon-5 using readout correction.
+  The solid green line is the expected fidelity, the solid blue line is the measured average fidelity, the dashed red lines indicate the expected dispersion and the dashed blue line indicate the measured dispersion. The orange points are the $BB84$ states.}
+  \label{fig:pc_corrected_starmon_equator}
+\end{figure}
+
+\begin{figure}[H]
+  \centering
+  \begin{subfigure}{.5\textwidth}
+    \centering
+    \includegraphics[width=\textwidth]{Figures/PhaseCovariant/IBM/OnlyEquator/results_corrected_athens_copy1.png}
+    \label{fig:pc_corrected_athens_equator_1}
+  \end{subfigure}%
+  \begin{subfigure}{.5\textwidth}
+    \centering
+    \includegraphics[width=\textwidth]{Figures/PhaseCovariant/IBM/OnlyEquator/results_corrected_athens_copy2.png}
+    \label{fig:pc_corrected_athens_equator_2}
+  \end{subfigure}
+  \vspace{-0.5cm}
+  \caption{Fidelity sampled over the $xz$-equator using the PCQCM implemented on Athens using readout correction. The solid green line is the expected fidelity, the solid blue line is the measured average fidelity, the dashed red lines indicate the expected dispersion and the dashed blue line indicate the measured dispersion.}
+  \label{fig:pc_corrected_athens_equator}
+\end{figure}
+
+
+\begin{figure}[H]
+  \centering
+  \begin{subfigure}{.5\textwidth}
+    \centering
+    \includegraphics[width=\textwidth]{Figures/PhaseCovariant/IBM/OnlyEquator/results_corrected_ourense_copy1.png}
+    \label{fig:pc_corrected_ourense_equator_1}
+  \end{subfigure}%
+  \begin{subfigure}{.5\textwidth}
+    \centering
+    \includegraphics[width=\textwidth]{Figures/PhaseCovariant/IBM/OnlyEquator/results_corrected_ourense_copy2.png}
+    \label{fig:pc_corrected_ourense_equator_2}
+  \end{subfigure}
+  \vspace{-0.5cm}
+  \caption{Fidelity sampled over the $xz$-equator using the PCQCM implemented on Ourense using readout correction. The solid green line is the expected fidelity, the solid blue line is the measured average fidelity, the dashed red lines indicate the expected dispersion and the dashed blue line indicate the measured dispersion.}
+  \label{fig:pc_corrected_ourense_equator}
+\end{figure}
+
+
+\begin{figure}[H]
+  \centering
+  \begin{subfigure}{.5\textwidth}
+    \centering
+    \includegraphics[width=\textwidth]{Figures/PhaseCovariant/IBM/OnlyEquator/results_corrected_santiago_copy1.png}
+    \label{fig:pc_corrected_santiago_equator_1}
+  \end{subfigure}%
+  \begin{subfigure}{.5\textwidth}
+    \centering
+    \includegraphics[width=\textwidth]{Figures/PhaseCovariant/IBM/OnlyEquator/results_corrected_santiago_copy2.png}
+    \label{fig:pc_corrected_santiago_equator_2}
+  \end{subfigure}
+  \vspace{-0.5cm}
+  \caption{Fidelity sampled over the $xz$-equator using the PCQCM implemented on Santiago using readout correction. The solid green line is the expected fidelity, the solid blue line is the measured average fidelity, the dashed red lines indicate the expected dispersion and the dashed blue line indicate the measured dispersion.}
+  \label{fig:pc_corrected_santiago_equator}
+\end{figure}
+
+
+\begin{figure}[H]
+  \centering
+  \begin{subfigure}{.5\textwidth}
+    \centering
+    \includegraphics[width=\textwidth]{Figures/PhaseCovariant/IBM/OnlyEquator/results_corrected_valencia_copy1.png}
+    \label{fig:pc_corrected_valencia_equator_1}
+  \end{subfigure}%
+  \begin{subfigure}{.5\textwidth}
+    \centering
+    \includegraphics[width=\textwidth]{Figures/PhaseCovariant/IBM/OnlyEquator/results_corrected_valencia_copy2.png}
+    \label{fig:pc_corrected_valencia_equator_2}
+  \end{subfigure}
+  \vspace{-0.5cm}
+  \caption{Fidelity sampled over the $xz$-equator using the PCQCM implemented on Valencia using readout correction. The solid green line is the expected fidelity, the solid blue line is the measured average fidelity, the dashed red lines indicate the expected dispersion and the dashed blue line indicate the measured dispersion.}
+  \label{fig:pc_corrected_valencia_equator}
+\end{figure}
+
+
+\begin{figure}[H]
+  \centering
+  \begin{subfigure}{.5\textwidth}
+    \centering
+    \includegraphics[width=\textwidth]{Figures/PhaseCovariant/IBM/OnlyEquator/results_corrected_vigo_copy1.png}
+    \label{fig:pc_corrected_vigo_equator_1}
+  \end{subfigure}%
+  \begin{subfigure}{.5\textwidth}
+    \centering
+    \includegraphics[width=\textwidth]{Figures/PhaseCovariant/IBM/OnlyEquator/results_corrected_vigo_copy2.png}
+    \label{fig:pc_corrected_vigo_equator_2}
+  \end{subfigure}
+  \vspace{-0.5cm}
+  \caption{Fidelity sampled over the $xz$-equator using the PCQCM implemented on Vigo using readout correction. The solid green line is the expected fidelity, the solid blue line is the measured average fidelity, the dashed red lines indicate the expected dispersion and the dashed blue line indicate the measured dispersion.}
+  \label{fig:pc_corrected_vigo_equator}
+\end{figure}
+
+
+\begin{figure}[H]
+  \centering
+  \begin{subfigure}{.5\textwidth}
+    \centering
+    \includegraphics[width=\textwidth]{Figures/PhaseCovariant/IBM/OnlyEquator/results_corrected_ibmqx2_copy1.png}
+    \label{fig:pc_corrected_yorktown_equator_1}
+  \end{subfigure}%
+  \begin{subfigure}{.5\textwidth}
+    \centering
+    \includegraphics[width=\textwidth]{Figures/PhaseCovariant/IBM/OnlyEquator/results_corrected_ibmqx2_copy2.png}
+    \label{fig:pc_corrected_yorktown_equator_2}
+  \end{subfigure}
+  \vspace{-0.5cm}
+  \caption{Fidelity sampled over the $xz$-equator using the PCQCM implemented on Yorktown using readout correction. The solid green line is the expected fidelity, the solid blue line is the measured average fidelity, the dashed red lines indicate the expected dispersion and the dashed blue line indicate the measured dispersion.}
+  \label{fig:pc_corrected_yorktown_equator}
+\end{figure}
+
+
+
+
+
+For the sake of completeness, we also report the non-corrected results.
+\begin{table}[H]
+  \centering
+  \begin{tabular}{|c|c|c|c|c|c|c|c|}
+  \hline
+  \textbf{} & \textbf{Starmon-5} & \textbf{Athens} & \textbf{Ourense} & \textbf{Santiago} & \textbf{Valencia} & \textbf{Vigo} & \textbf{Yorktown} \\ \hline
+  $F_1$              & 0.807 & 0.817 & 0.836 & 0.822 & 0.820 & 0.798 & 0.802 \\ \hline
+  $\sigma_{F_1}$     & 0.014 & 0.019 & 0.017 & 0.013 & 0.017 & 0.019 & 0.028 \\ \hline
+  $F_2$              & 0.798 & 0.858 & 0.811 & 0.815 & 0.836 & 0.836 & 0.807 \\ \hline
+  $\sigma_{F_2}$     & 0.025 & 0.015 & 0.015 & 0.011 & 0.018 & 0.021 & 0.008 \\ \hline
+  \end{tabular}
+  \caption{Average fidelity and corresponding standard deviation on the $xz$-equator for the two copies on each backend. The results are not corrected with readout calibration.}
+  \label{tab:results_pcqcm_onlyequator_not_corrected}
 \end{table}
 
-\begin{table}[H]
-    \centering
-    \begin{tabular}{|c|c|c|c|c|c|c|c|}
-    \hline
-    \textbf{} & \textbf{Starmon-5} & \textbf{Athens} & \textbf{Ourense} & \textbf{Santiago} & \textbf{Valencia} & \textbf{Vigo} & \textbf{Yorktown} \\ \hline
-    $F_1$              & 0.801 & 0.814 & 0.839 & 0.825 & 0.834 & 0.836 & 0.804 \\ \hline
-    $\sigma_{F_1}$     & 0.032 & 0.019 & 0.018 & 0.014 & 0.023 & 0.022 & 0.030 \\ \hline
-    $F_2$              & 0.791 & 0.858 & 0.811 & 0.857 & 0.836 & 0.839 & 0.819 \\ \hline
-    $\sigma_{F_2}$     & 0.040 & 0.015 & 0.015 & 0.018 & 0.019 & 0.022 & 0.034 \\ \hline
-    \end{tabular}
-\end{table}
 \subsection{BB84 states}
+In Table \ref{tab:results_pcqcm_bb84_corrected} are presented the results obtained considering the BB84 states as input states, considering the readout correction.
+There is not a significant difference when comparing these results with the one obtained for the full equator.
+This is reasonable: since the BB84 states correspond to the peaks or dips of the fidelity on the equator discussed before, 
+both the average and the standard deviation should remain more or less unchanged.
 
+\begin{table}[H]
+  \centering
+  \begin{tabular}{|c|c|c|c|c|c|c|c|}
+  \hline
+  \textbf{} & \textbf{Starmon-5} & \textbf{Athens} & \textbf{Ourense} & \textbf{Santiago} & \textbf{Valencia} & \textbf{Vigo} & \textbf{Yorktown} \\ \hline
+  $F_1$              & 0.838 & 0.818 & 0.840 & 0.833 & 0.841 & 0.820 & 0.807 \\ \hline
+  $\sigma_{F_1}$     & 0.027 & 0.023 & 0.022 & 0.011 & 0.009 & 0.031 & 0.028 \\ \hline
+  $F_2$              & 0.808 & 0.852 & 0.817 & 0.833 & 0.820 & 0.830 & 0.788 \\ \hline
+  $\sigma_{F_2}$     & 0.029 & 0.024 & 0.018 & 0.016 & 0.005 & 0.032 & 0.038 \\ \hline
+  \end{tabular}
+  \caption{Average fidelity and corresponding standard deviation for the BB84 for the two copies on each backend. The results are corrected with readout calibration.}
+  \label{tab:results_pcqcm_bb84_corrected}
+\end{table}
+
+We conclude the discusison of the results for the PCQCM with the results for the BB84 states without readout correction.
 \begin{table}[H]
     \centering
     \begin{tabular}{|c|c|c|c|c|c|c|c|}
     \hline
     \textbf{} & \textbf{Starmon-5} & \textbf{Athens} & \textbf{Ourense} & \textbf{Santiago} & \textbf{Valencia} & \textbf{Vigo} & \textbf{Yorktown} \\ \hline
-    $F_1$              & 0.787 & 0.820 & 0.838 & 0.829 & 0.821 & 0.797 & 0.806 \\ \hline
-    $\sigma_{F_1}$     & 0.037 & 0.023 & 0.021 & 0.011 & 0.008 & 0.026 & 0.027 \\ \hline
-    $F_2$              & 0.790 & 0.853 & 0.815 & 0.832 & 0.824 & 0.829 & 0.793 \\ \hline
-    $\sigma_{F_2}$     & 0.029 & 0.023 & 0.017 & 0.015 & 0.005 & 0.030 & 0.008 \\ \hline
+    $F_1$              & 0.802 & 0.820 & 0.838 & 0.829 & 0.821 & 0.797 & 0.806 \\ \hline
+    $\sigma_{F_1}$     & 0.024 & 0.023 & 0.021 & 0.011 & 0.008 & 0.026 & 0.027 \\ \hline
+    $F_2$              & 0.796 & 0.853 & 0.815 & 0.832 & 0.824 & 0.829 & 0.793 \\ \hline
+    $\sigma_{F_2}$     & 0.027 & 0.023 & 0.017 & 0.015 & 0.005 & 0.030 & 0.008 \\ \hline
     \end{tabular}
+    \caption{Average fidelity and corresponding standard deviation for the BB84 for the two copies on each backend. The results are not corrected with readout calibration.}
+    \label{tab:results_pcqcm_bb84_not_corrected}
 \end{table}
 
-\begin{table}[H]
-    \centering
-    \begin{tabular}{|c|c|c|c|c|c|c|c|}
-    \hline
-    \textbf{} & \textbf{Starmon-5} & \textbf{Athens} & \textbf{Ourense} & \textbf{Santiago} & \textbf{Valencia} & \textbf{Vigo} & \textbf{Yorktown} \\ \hline
-    $F_1$              & 0.809 & 0.818 & 0.840 & 0.833 & 0.841 & 0.820 & 0.807 \\ \hline
-    $\sigma_{F_1}$     & 0.041 & 0.023 & 0.022 & 0.011 & 0.009 & 0.031 & 0.028 \\ \hline
-    $F_2$              & 0.796 & 0.852 & 0.817 & 0.833 & 0.820 & 0.830 & 0.788 \\ \hline
-    $\sigma_{F_2}$     & 0.031 & 0.024 & 0.018 & 0.016 & 0.005 & 0.032 & 0.038 \\ \hline
-    \end{tabular}
-\end{table}
+
 \section{Economical phase covariant quantum cloning machine}
 \subsection{Sphere}
 Without readout correction:
@@ -259,10 +424,10 @@ Without readout correction:
     \begin{tabular}{|c|c|c|c|c|c|c|c|c|}
     \hline
     \textbf{} & \textbf{Spin-2} & \textbf{Starmon-5} & \textbf{Athens} & \textbf{Ourense} & \textbf{Santiago} & \textbf{Valencia} & \textbf{Vigo} & \textbf{Yorktown} \\ \hline
-    $F_1$              & 0.714  & 0.759NO & 0.810 & 0.776 & 0.811 & 0.819 & 0.803 & 0.789 \\ \hline
-    $\sigma_{F_1}$     & 0.128  & 0.033NO & 0.142 & 0.159 & 0.132 & 0.132 & 0.112 & 0.129 \\ \hline
-    $F_2$              & 0.690  & 0.760NO & 0.812 & 0.834 & 0.794 & 0.826 & 0.802 & 0.777 \\ \hline
-    $\sigma_{F_2}$     & 0.083  & 0.038NO & 0.136 & 0.119 & 0.149 & 0.133 & 0.149 & 0.137 \\ \hline
+    $F_1$              & 0.714  & 0.741 & 0.810 & 0.776 & 0.811 & 0.819 & 0.803 & 0.789 \\ \hline
+    $\sigma_{F_1}$     & 0.128  & 0.142 & 0.142 & 0.159 & 0.132 & 0.132 & 0.112 & 0.129 \\ \hline
+    $F_2$              & 0.690  & 0.788 & 0.812 & 0.834 & 0.794 & 0.826 & 0.802 & 0.777 \\ \hline
+    $\sigma_{F_2}$     & 0.083  & 0.126 & 0.136 & 0.119 & 0.149 & 0.133 & 0.149 & 0.137 \\ \hline
     \end{tabular}
 \end{table}
 
@@ -272,24 +437,24 @@ With readout correction:
     \begin{tabular}{|c|c|c|c|c|c|c|c|c|}
     \hline
     \textbf{} & \textbf{Spin-2} & \textbf{Starmon-5} & \textbf{Athens} & \textbf{Ourense} & \textbf{Santiago} & \textbf{Valencia} & \textbf{Vigo} & \textbf{Yorktown} \\ \hline
-    $F_1$              & 0.731 & 0.786NO & 0.810 & 0.777 & 0.814 & 0.820 & 0.824 & 0.781 \\ \hline
-    $\sigma_{F_1}$     & 0.172 & 0.034NO & 0.144 & 0.166 & 0.138 & 0.138 & 0.131 & 0.140 \\ \hline
-    $F_2$              & 0.821 & 0.767NO & 0.811 & 0.844 & 0.799 & 0.807 & 0.801 & 0.776 \\ \hline
-    $\sigma_{F_2}$     & 0.130 & 0.040NO & 0.139 & 0.127 & 0.153 & 0.153 & 0.154 & 0.145 \\ \hline
+    $F_1$              & 0.731 & 0.753 & 0.810 & 0.777 & 0.814 & 0.820 & 0.824 & 0.781 \\ \hline
+    $\sigma_{F_1}$     & 0.172 & 0.151 & 0.144 & 0.166 & 0.138 & 0.138 & 0.131 & 0.140 \\ \hline
+    $F_2$              & 0.821 & 0.791 & 0.811 & 0.844 & 0.799 & 0.807 & 0.801 & 0.776 \\ \hline
+    $\sigma_{F_2}$     & 0.130 & 0.133 & 0.139 & 0.127 & 0.153 & 0.153 & 0.154 & 0.145 \\ \hline
     \end{tabular}
 \end{table}
-
+\iffalse
 \begin{figure}[H]
     \centering
     \begin{subfigure}{.5\textwidth}
       \centering
-      \includegraphics[width=\textwidth]{Figures/Economical/Spin2/FullSphere/results_spin2.txt_copy1.png}
+      \includegraphics[width=\textwidth]{Figures/Economical/Spin2/FullSphere/results_spin2_copy1.png}
       \caption{A subfigure}
       \label{fig:ec_spin2_sphere_1}
     \end{subfigure}%
     \begin{subfigure}{.5\textwidth}
       \centering
-      \includegraphics[width=\textwidth]{Figures/Economical/Spin2/FullSphere/results_spin2.txt_copy2.png}
+      \includegraphics[width=\textwidth]{Figures/Economical/Spin2/FullSphere/results_spin2_copy2.png}
       \caption{A subfigure}
       \label{fig:ec_spin2_sphere_2}
     \end{subfigure}
@@ -300,13 +465,13 @@ With readout correction:
     \centering
     \begin{subfigure}{.5\textwidth}
       \centering
-      \includegraphics[width=\textwidth]{Figures/Economical/Spin2/FullSphere/results_spin2_corrected.txt_copy1.png}
+      \includegraphics[width=\textwidth]{Figures/Economical/Spin2/FullSphere/results_spin2_corrected_copy1.png}
       \caption{A subfigure}
       \label{fig:ec_pin2_sphere_1_corrected}
     \end{subfigure}%
     \begin{subfigure}{.5\textwidth}
       \centering
-      \includegraphics[width=\textwidth]{Figures/Economical/Spin2/FullSphere/results_spin2_corrected.txt_copy2.png}
+      \includegraphics[width=\textwidth]{Figures/Economical/Spin2/FullSphere/results_spin2_corrected_copy2.png}
       \caption{A subfigure}
       \label{fig:ec_spin2_sphere_2_corrected}
     \end{subfigure}
@@ -318,13 +483,13 @@ With readout correction:
     \centering
     \begin{subfigure}{.5\textwidth}
       \centering
-      \includegraphics[width=\textwidth]{Figures/Economical/IBM/FullSphere/results_valencia.txt_copy1.png}
+      \includegraphics[width=\textwidth]{Figures/Economical/IBM/FullSphere/results_valencia_copy1.png}
       \caption{A subfigure}
       \label{fig:ec_valencia_sphere_1}
     \end{subfigure}%
     \begin{subfigure}{.5\textwidth}
       \centering
-      \includegraphics[width=\textwidth]{Figures/Economical/IBM/FullSphere/results_valencia.txt_copy2.png}
+      \includegraphics[width=\textwidth]{Figures/Economical/IBM/FullSphere/results_valencia_copy2.png}
       \caption{A subfigure}
       \label{fig:ec_valencia_sphere_2}
     \end{subfigure}
@@ -336,13 +501,13 @@ With readout correction:
     \centering
     \begin{subfigure}{.5\textwidth}
       \centering
-      \includegraphics[width=\textwidth]{Figures/Economical/IBM/FullSphere/results_ibmqx2.txt_copy1.png}
+      \includegraphics[width=\textwidth]{Figures/Economical/IBM/FullSphere/results_ibmqx2_copy1.png}
       \caption{A subfigure}
       \label{fig:ec_yorktown_sphere_1}
     \end{subfigure}%
     \begin{subfigure}{.5\textwidth}
       \centering
-      \includegraphics[width=\textwidth]{Figures/Economical/IBM/FullSphere/results_ibmqx2.txt_copy2.png}
+      \includegraphics[width=\textwidth]{Figures/Economical/IBM/FullSphere/results_ibmqx2_copy2.png}
       \caption{A subfigure}
       \label{fig:ec_yorktown_sphere_2}
     \end{subfigure}
@@ -354,22 +519,22 @@ With readout correction:
     \centering
     \begin{subfigure}{.5\textwidth}
       \centering
-      \includegraphics[width=\textwidth]{Figures/Economical/IBM/FullSphere/results_santiago.txt_copy1.png}
+      \includegraphics[width=\textwidth]{Figures/Economical/IBM/FullSphere/results_santiago_copy1.png}
       \caption{A subfigure}
       \label{fig:ec_santiago_sphere_1}
     \end{subfigure}%
     \begin{subfigure}{.5\textwidth}
       \centering
-      \includegraphics[width=\textwidth]{Figures/Economical/IBM/FullSphere/results_santiago.txt_copy2.png}
+      \includegraphics[width=\textwidth]{Figures/Economical/IBM/FullSphere/results_santiago_copy2.png}
       \caption{A subfigure}
       \label{fig:ec_santiago_sphere_2}
     \end{subfigure}
     \caption{Santiago (not corrected)}
     \label{fig:ec_santiago_sphere}
 \end{figure}
+\fi
 
 \subsection{Equator}
-
 
 Without readout correction:
 \begin{table}[H]
@@ -377,13 +542,12 @@ Without readout correction:
     \begin{tabular}{|c|c|c|c|c|c|c|c|c|}
     \hline
     \textbf{} & \textbf{Spin-2} & \textbf{Starmon-5} & \textbf{Athens} & \textbf{Ourense} & \textbf{Santiago} & \textbf{Valencia} & \textbf{Vigo} & \textbf{Yorktown} \\ \hline
-    $F_1$              & 0.751  & 0.759NO & 0.839 & 0.813 & 0.837 & 0.852 & 0.824 & 0.819 \\ \hline
-    $\sigma_{F_1}$     & 0.029  & 0.033NO & 0.010 & 0.018 & 0.009 & 0.005 & 0.012 & 0.037 \\ \hline
-    $F_2$              & 0.704  & 0.760NO & 0.838 & 0.867 & 0.799 & 0.850 & 0.826 & 0.832 \\ \hline
-    $\sigma_{F_2}$     & 0.025  & 0.038NO & 0.009 & 0.019 & 0.022 & 0.012 & 0.018 & 0.026 \\ \hline
+    $F_1$              & 0.751  & 0.784 & 0.839 & 0.813 & 0.837 & 0.852 & 0.824 & 0.819 \\ \hline
+    $\sigma_{F_1}$     & 0.029  & 0.021 & 0.010 & 0.018 & 0.009 & 0.005 & 0.012 & 0.037 \\ \hline
+    $F_2$              & 0.704  & 0.841 & 0.838 & 0.867 & 0.799 & 0.850 & 0.826 & 0.832 \\ \hline
+    $\sigma_{F_2}$     & 0.025  & 0.022 & 0.009 & 0.019 & 0.022 & 0.012 & 0.018 & 0.026 \\ \hline
     \end{tabular}
 \end{table}
-
 
 With readout correction:
 \begin{table}[H]
@@ -391,10 +555,10 @@ With readout correction:
     \begin{tabular}{|c|c|c|c|c|c|c|c|c|}
     \hline
     \textbf{} & \textbf{Spin-2} & \textbf{Starmon-5} & \textbf{Athens} & \textbf{Ourense} & \textbf{Santiago} & \textbf{Valencia} & \textbf{Vigo} & \textbf{Yorktown} \\ \hline
-    $F_1$              & 0.751 & 0.786NO & 0.840 & 0.815 & 0.838 & 0.851 & 0.850 & 0.814 \\ \hline
-    $\sigma_{F_1}$     & 0.042 & 0.034NO & 0.011 & 0.019 & 0.010 & 0.005 & 0.014 & 0.041 \\ \hline
-    $F_2$              & 0.862 & 0.767NO & 0.837 & 0.879 & 0.811 & 0.832 & 0.828 & 0.835 \\ \hline
-    $\sigma_{F_2}$     & 0.037 & 0.040NO & 0.009 & 0.022 & 0.019 & 0.015 & 0.019 & 0.028 \\ \hline
+    $F_1$              & 0.751 & 0.792 & 0.840 & 0.815 & 0.838 & 0.851 & 0.850 & 0.814 \\ \hline
+    $\sigma_{F_1}$     & 0.042 & 0.022 & 0.011 & 0.019 & 0.010 & 0.005 & 0.014 & 0.041 \\ \hline
+    $F_2$              & 0.862 & 0.846 & 0.837 & 0.879 & 0.811 & 0.832 & 0.828 & 0.835 \\ \hline
+    $\sigma_{F_2}$     & 0.037 & 0.023 & 0.009 & 0.022 & 0.019 & 0.015 & 0.019 & 0.028 \\ \hline
     \end{tabular}
 \end{table}
 
@@ -406,10 +570,10 @@ Without readout correction:
     \begin{tabular}{|c|c|c|c|c|c|c|c|c|}
     \hline
     \textbf{} & \textbf{Spin-2} & \textbf{Starmon-5} & \textbf{Athens} & \textbf{Ourense} & \textbf{Santiago} & \textbf{Valencia} & \textbf{Vigo} & \textbf{Yorktown} \\ \hline
-    $F_1$              & 0.742  & 0.759NO & 0.840 & 0.812 & 0.851 & 0.844 & 0.832 & 0.814 \\ \hline
-    $\sigma_{F_1}$     & 0.010  & 0.033NO & 0.008 & 0.027 & 0.008 & 0.003 & 0.017 & 0.027 \\ \hline
-    $F_2$              & 0.693  & 0.760NO & 0.842 & 0.866 & 0.825 & 0.848 & 0.827 & 0.833 \\ \hline
-    $\sigma_{F_2}$     & 0.018  & 0.038NO & 0.003 & 0.020 & 0.010 & 0.010 & 0.022 & 0.022 \\ \hline
+    $F_1$              & 0.666  & 0.788 & 0.840 & 0.812 & 0.846 & 0.844 & 0.832 & 0.814 \\ \hline
+    $\sigma_{F_1}$     & 0.018  & 0.024 & 0.008 & 0.027 & 0.008 & 0.003 & 0.017 & 0.027 \\ \hline
+    $F_2$              & 0.765  & 0.845 & 0.842 & 0.866 & 0.831 & 0.848 & 0.827 & 0.833 \\ \hline
+    $\sigma_{F_2}$     & 0.022  & 0.023 & 0.003 & 0.020 & 0.012 & 0.010 & 0.022 & 0.022 \\ \hline
     \end{tabular}
 \end{table}
 
@@ -419,9 +583,9 @@ With readout correction:
     \begin{tabular}{|c|c|c|c|c|c|c|c|c|}
     \hline
     \textbf{} & \textbf{Spin-2} & \textbf{Starmon-5} & \textbf{Athens} & \textbf{Ourense} & \textbf{Santiago} & \textbf{Valencia} & \textbf{Vigo} & \textbf{Yorktown} \\ \hline
-    $F_1$              & 0.737 & 0.786NO & 0.841 & 0.815 & 0.939 & 0.858 & 0.850 & 0.809 \\ \hline
-    $\sigma_{F_1}$     & 0.023 & 0.034NO & 0.008 & 0.028 & 0.009 & 0.003 & 0.020 & 0.029 \\ \hline
-    $F_2$              & 0.847 & 0.767NO & 0.840 & 0.874 & 0.799 & 0.843 & 0.829 & 0.835 \\ \hline
-    $\sigma_{F_2}$     & 0.026 & 0.040NO & 0.003 & 0.021 & 0.012 & 0.011 & 0.023 & 0.023 \\ \hline
+    $F_1$              & 0.823 & 0.801 & 0.841 & 0.815 & 0.851 & 0.858 & 0.850 & 0.809 \\ \hline
+    $\sigma_{F_1}$     & 0.027 & 0.025 & 0.008 & 0.028 & 0.008 & 0.003 & 0.020 & 0.029 \\ \hline
+    $F_2$              & 0.847 & 0.848 & 0.840 & 0.874 & 0.833 & 0.843 & 0.829 & 0.835 \\ \hline
+    $\sigma_{F_2}$     & 0.041 & 0.024 & 0.003 & 0.021 & 0.012 & 0.011 & 0.023 & 0.023 \\ \hline
     \end{tabular}
 \end{table}
