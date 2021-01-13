@@ -10,7 +10,7 @@ title = "EPCQCM - Sphere"
 # Put the path for IBM averages
 path_IBM = "Economical/IBM/FullSphere/average_fidelities.txt"
 # Put the path for Starmon averages
-path_starmon = "Economical/Starmon/FullSphere/average_fidelities.txt"
+path_starmon = "UQCM/Starmon/FullSphere/average_fidelities.txt"
 # Put the path for Spin2 averages (just leave this if you are not using it)
 path_spin2 = "Economical/Spin2/FullSphere/average_fidelities.txt"
 # Choose whether you are using spin2 or not

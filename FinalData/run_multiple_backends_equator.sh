@@ -36,5 +36,5 @@ python equator_plotter.py  PhaseCovariant/Starmon/OnlyEquator/results_starmon.tx
 python equator_plotter.py  PhaseCovariant/Starmon/OnlyEquator/results_starmon_corrected.txt Starmon-5 16384 0 &
 python equator_plotter.py  Economical/Starmon/OnlyEquator/results_starmon.txt Starmon-5 16384 0 &
 python equator_plotter.py  Economical/Starmon/OnlyEquator/results_starmon_corrected.txt Starmon-5 16384 0 &
-python equator_plotter.py  Economical/Spin2/FullSphere/results_spin2.txt Spin-2 4096 0 &
-python equator_plotter.py  Economical/Spin2/FullSphere/results_spin2_corrected.txt Spin-2 4096 0
+python equator_plotter.py  Economical/Spin2/OnlyEquator/results_spin2.txt Spin-2 4096 0 &
+python equator_plotter.py  Economical/Spin2/Only/results_spin2_corrected.txt Spin-2 4096 0
