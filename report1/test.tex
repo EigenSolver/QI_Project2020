@@ -1,0 +1,58 @@
+\documentclass[11p]{article}
+\usepackage{physics}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{float}
+\usepackage{tikz}
+\usepackage{dsfont}
+\usetikzlibrary{quantikz}
+\title{Quantum project: Report 1}
+\author{}
+\begin{document}
+\maketitle
+\section{Introduction}
+Copying arbitrary quantum information is forbiden by the laws of quantum mechanics. Quantum communication protocols, e.g. QKD, rely on the fact that an eveasdroper will be noticed when intercepting and reading the information, which ensures that communication remains private. In this work we explore an imperfect quantum copy machine and its implementation on quantum computting platforms such as Quantum Inspire (QI). First, we will analyze the circuit that implements this copy machine and obtain a clear idea of what the output state is. Secondly, we implement this circuit for all single qubit states and show the results of the devices Starmon5 and the QXsimulator.
+\begin{center}
+    \begin{quantikz}
+        \lstick{$|\psi\rangle $} & \gate[2][1.5cm]{U_{copy}}  &\qw & \rstick{\hspace{-4 mm}$\rho_{1}$}\\
+        \lstick{$|0\rangle $} &                             &\qw & \rstick{\hspace{-4 mm}$\rho_{2}$}
+    \end{quantikz}
+\end{center}
+
+\begin{quantikz}
+    \lstick{$\ket{\psi}_{a_0}$} & \qw                  & \qw        & \qw                   & \qw       & \qw                   & \ctrl{2}  & \ctrl{1}      & \targ{}       & \targ{}        & \qw & \rstick{\hspace{-4 mm}$\rho_{1}$} \\
+    \lstick{$\ket{0}_{b_1}$}    & \qw                  & \targ{}    & \gate{R_y(\theta_2)}  & \ctrl{1}  & \qw                   & \qw       & \targ{}       & \qw           & \ctrl{-1}      & \qw &   \\
+    \lstick{$\ket{0}_{a_1}$}    & \gate{R_y(\theta_1)} & \ctrl{-1}  & \qw                   & \targ{}   & \gate{R_y(\theta_3)}  & \targ{}   & \qw           & \ctrl{-2}     & \qw            & \qw & \rstick{\hspace{-4 mm}$\rho_{2}$}
+\end{quantikz}
+
+\begin{quantikz}
+    \lstick{$\ket{\psi}_{a_0}$} & \qw                  & \qw        & \qw                   & \qw       & \qw                   & \swap{2}  & \targ{}   & \qw       & \ctrl{2} & \qw        & \qw & \rstick{\hspace{-4 mm}$\rho_{1}$}\\
+    \lstick{$\ket{0}_{b_1}$}    & \qw                  & \targ{}    & \gate{R_y(\theta_2)}  & \ctrl{1}  & \qw                   & \qw       & \qw       & \targ{}   & \qw      & \ctrl{1}   & \qw         \\
+    \lstick{$\ket{0}_{a_1}$}    & \gate{R_y(\theta_1)} & \ctrl{-1}  & \qw                   & \targ{}   & \gate{R_y(\theta_3)}  & \targX{}  & \ctrl{-2} & \ctrl{-1} & \targ{}  & \targ{}    & \qw & \rstick{\hspace{-4 mm}$\rho_{2}$}   \\
+\end{quantikz}
+
+
+
+\[
+\begin{quantikz}
+    \lstick{$\ket{\psi}_{a_0}$} & \qw                  & \qw        & \qw                   & \qw       & \qw                   & \ctrl{2}  & \ctrl{1}      & \targ{}       & \targ{}        & \qw &  \\
+    \lstick{$\ket{0}_{a_1}$}    & \qw                  & \targ{}    & \gate{R_y(\theta_2)}  & \ctrl{1}  & \qw                   & \qw       & \targ{}       & \qw           & \ctrl{-1}      & \qw & \rstick{\hspace{-4 mm}$\rho_{1}$}  \\
+    \lstick{$\ket{0}_{a_2}$}    & \gate{R_y(\theta_1)} & \ctrl{-1}  & \qw                   & \targ{}   & \gate{R_y(\theta_3)}  & \targ{}   & \qw           & \ctrl{-2}     & \qw            & \qw & \rstick{\hspace{-4 mm}$\rho_{2}$}
+\end{quantikz}
+\]
+\[
+\begin{quantikz}
+    \lstick{$\ket{\psi}_{a_0}$} & \qw               & \ctrl{2}  & \ctrl{1} & \targ{}       & \targ{}   & \qw  &  \\
+    \lstick{$\ket{0}_{a_1}$}    & \gate{R_y(\pi/4)} & \qw       & \targ{}  & \qw           & \ctrl{-1} & \qw & \rstick{\hspace{-4 mm}$\rho_{1}$}  \\
+    \lstick{$\ket{0}_{a_2}$}    & \gate{R_y(\pi/4)} & \targ{}   & \qw      & \ctrl{-2}     & \qw       & \qw & \rstick{\hspace{-4 mm}$\rho_{2}$}  
+\end{quantikz}
+\]
+
+\begin{center}
+    \begin{quantikz}
+    \lstick{$\ket{\psi}_{a_0}$} & \ctrl{1}  & \targ{}    &\qw &\rstick{\hspace{-4 mm}$\rho_1$}\\
+    \lstick{$\ket{0}_{a_1}$}    & \gate{H}  & \ctrl{-1}  &\qw &\rstick{\hspace{-4 mm}$\rho_2$} 
+    \end{quantikz}
+\end{center}
+
+\end{document}
