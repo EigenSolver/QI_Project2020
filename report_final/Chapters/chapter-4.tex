@@ -13,8 +13,268 @@ https://arxiv.org/pdf/quant-ph/0311010.pdf economical phase covariant with NMR\\
 
 \section{Universal quantum cloning machine}
 \subsection{Sphere}
+
+In Sec. \ref{sec:approximateqcm} we found that the UQCM returns a fidelity of $F=5/6$ for all the states in the Bloch sphere. The results that we found are summarized in Table \ref{tab:uqcm_results_full_sphere}. 
+
+\begin{table}[H]
+    \centering
+    \begin{tabular}{|c|c|c|c|c|c|c|c|}
+    \hline
+    \textbf{} & \textbf{Starmon-5} & \textbf{Athens} & \textbf{Ourense} & \textbf{Santiago} & \textbf{Valencia} & \textbf{Vigo} & \textbf{Yorktown} \\ \hline
+    $F_1$              &  &  & 0.777 & 0.777 & 0.752 & 0.687 & 0.752\\ \hline
+    $\sigma_{F_1}$     &  &  & 0.029 & 0.025 & 0.091 & 0.036 & 0.025 \\ \hline
+    $F_2$              &  &  & 0.771 & 0.732 & 0.724 & 0.714 & 0.762 \\ \hline
+    $\sigma_{F_2}$     &  &  & 0.035 & 0.030 & 0.064 & 0.068 & 0.017 \\ \hline
+    \end{tabular}
+    \caption{Average fidelity and corresponding standard deviation on the whole Bloch sphere for the two copies on each backend. The results are corrected with readout calibration.}\label{tab:uqcm_results_full_sphere}
+\end{table}
+
+In general, we find that the first copy performs better than the second one for all the cases. Also, the fidelity is lower than the expected one, and even lower than other copy machines (as will be discussed later), which are supposed to be worse. The standart deviations are close to the theoretical expectation. We found that the backend that have the highest fidelities is Ourense from IBM. The backend with the lowest standart deviation is Yorktown from IBM. We attirbute the later to the connectivity found in this device, which maps idealy the one of the UQCM. Nevertheless, this circuit is has a high cost of CNOT gates, which significantly increases the error in the fidelity.
+
+\begin{figure}[H]
+    \centering
+    \begin{subfigure}{.5\textwidth}
+      \centering
+      \includegraphics[width=\textwidth]{Figures/UQCM/IBM/FullSphere/results_corrected_athens_copy1.png}
+    \end{subfigure}%
+    \begin{subfigure}{.5\textwidth}
+      \centering
+      \includegraphics[width=\textwidth]{Figures/UQCM/IBM/FullSphere/results_corrected_athens_copy2.png}
+    \end{subfigure}
+    \caption{Fidelity sampled over the Bloch sphere using the UQCM implemented on Athens using readout correction.}
+    \label{fig:uqcm_athens}
+\end{figure}
+
+
+\begin{figure}[H]
+    \centering
+    \begin{subfigure}{.5\textwidth}
+      \centering
+      \includegraphics[width=\textwidth]{Figures/UQCM/IBM/FullSphere/results_corrected_ourense_copy1.png}
+    \end{subfigure}%
+    \begin{subfigure}{.5\textwidth}
+      \centering
+      \includegraphics[width=\textwidth]{Figures/UQCM/IBM/FullSphere/results_corrected_ourense_copy2.png}
+    \end{subfigure}
+    \caption{Fidelity sampled over the Bloch sphere using the UQCM implemented on Ourense using readout correction.}
+    \label{fig:uqcm_our}
+\end{figure}
+
+
+\begin{figure}[H]
+    \centering
+    \begin{subfigure}{.5\textwidth}
+      \centering
+      \includegraphics[width=\textwidth]{Figures/UQCM/IBM/FullSphere/results_corrected_vigo_copy1.png}
+    \end{subfigure}%
+    \begin{subfigure}{.5\textwidth}
+      \centering
+      \includegraphics[width=\textwidth]{Figures/UQCM/IBM/FullSphere/results_corrected_vigo_copy2.png}
+    \end{subfigure}
+    \caption{Fidelity sampled over the Bloch sphere using the UQCM implemented on Vigo using readout correction.}
+    \label{fig:uqcm_vigo}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \begin{subfigure}{.5\textwidth}
+      \centering
+      \includegraphics[width=\textwidth]{Figures/UQCM/IBM/FullSphere/results_corrected_valencia_copy1.png}
+    \end{subfigure}%
+    \begin{subfigure}{.5\textwidth}
+      \centering
+      \includegraphics[width=\textwidth]{Figures/UQCM/IBM/FullSphere/results_corrected_valencia_copy2.png}
+    \end{subfigure}
+    \caption{Fidelity sampled over the Bloch sphere using the UQCM implemented on Valencia using readout correction.}
+    \label{fig:uqcm_vigo}
+\end{figure}
+
+
+
+\begin{figure}[H]
+    \centering
+    \begin{subfigure}{.5\textwidth}
+      \centering
+      \includegraphics[width=\textwidth]{Figures/UQCM/IBM/FullSphere/results_corrected_santiago_copy1.png}
+    \end{subfigure}%
+    \begin{subfigure}{.5\textwidth}
+      \centering
+      \includegraphics[width=\textwidth]{Figures/UQCM/IBM/FullSphere/results_corrected_santiago_copy2.png}
+    \end{subfigure}
+    \caption{Fidelity sampled over the Bloch sphere using the UQCM implemented on Santiago using readout correction.}
+    \label{fig:uqcm_sant}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \begin{subfigure}{.5\textwidth}
+      \centering
+      \includegraphics[width=\textwidth]{Figures/UQCM/IBM/FullSphere/results_corrected_ibmqx2_copy1.png}
+    \end{subfigure}%
+    \begin{subfigure}{.5\textwidth}
+      \centering
+      \includegraphics[width=\textwidth]{Figures/UQCM/IBM/FullSphere/results_corrected_ibmqx2_copy2.png}
+    \end{subfigure}
+\caption{Fidelity sampled over the Bloch sphere using the UQCM implemented on Yorktown using readout correction.}
+    \label{fig:uqcm_york}
+\end{figure}
+
+We are not expecting any recognizable pattern in the Bloch sphere since the fidelity should be equal for all single qubit states. This is the case for most of the backends. We found an almost uniform sampling along the equatorial region as shown in Figs. \ref{fig:uqcm_athens}, \ref{fig:uqcm_our}, \ref{fig:uqcm_sant}, \ref{fig:uqcm_vigo}. In Fig. \ref{fig:uqcm_york} we find a recognizable pattern which improves the fidelity along the axis of the Bloch sphere. We may attribute this to the internal working of the Yorktown machine rather than to any specific feature of the circuit.
+
+For completeness, we include the results without the readout correction in Table \ref{tab:uqcm_results_full_sphere_non}. We can appreciate that the values have sightly changed. In general, we find that the readout correction improves the fidelity of one of the two copies, while decreases the fidelity of the other copy. We do not expect always an improvement, but a results closer to the real output of the machine, which already includes errors from other sources during the execution.
+ 
+\begin{table}[H]
+    \centering
+    \begin{tabular}{|c|c|c|c|c|c|c|c|}
+    \hline
+    \textbf{} & \textbf{Starmon-5} & \textbf{Athens} & \textbf{Ourense} & \textbf{Santiago} & \textbf{Valencia} & \textbf{Vigo} & \textbf{Yorktown} \\ \hline
+    $F_1$              &  &  & 0.777 & 0.777 & 0.752 & 0.687 & 0.752\\ \hline
+    $\sigma_{F_1}$     &  &  & 0.029 & 0.025 & 0.091 & 0.036 & 0.025 \\ \hline
+    $F_2$              &  &  & 0.771 & 0.732 & 0.724 & 0.714 & 0.762 \\ \hline
+    $\sigma_{F_2}$     &  &  & 0.035 & 0.030 & 0.064 & 0.068 & 0.017 \\ \hline
+    \end{tabular}
+    \caption{Average fidelity and corresponding standard deviation on the whole Bloch sphere for the two copies on each backend. The
+results are not corrected with readout calibration.}\label{tab:uqcm_results_full_sphere_non}
+\end{table}
+
 \subsection{Equator}
-\subsection{BB84 states}
+
+For a sample of 100 points along the xz equator of the Bloch sphere we run the UQCM and obtain the results listed in Table \ref{tab:uqcm_results_eq}. We found that the fidelity has improved with respect to the full sphere case for both copies. Since the fidelity presented here is an average over all the sampled points, it is not expected to have an improvement with respect to the previous case. Nevertheless, preparing the qubit in a state along the equator involves less operations than preparing it in an arbitrary state. Then, it is possible to expect an improvement in the fidelities.
+
+\begin{table}[H]
+    \centering
+    \begin{tabular}{|c|c|c|c|c|c|c|c|}
+    \hline
+    \textbf{} & \textbf{Starmon-5} & \textbf{Athens} & \textbf{Ourense} & \textbf{Santiago} & \textbf{Valencia} & \textbf{Vigo} & \textbf{Yorktown} \\ \hline
+    $F_1$              & 0.747 & 0.792 & 0.790 &  &  & 0.729 & 0.737\\ \hline
+    $\sigma_{F_1}$     & 0.026 & 0.016 & 0.031 &  &  & 0.033 & 0.020 \\ \hline
+    $F_2$              & 0.719 & 0.793 & 0.795 &  &  & 0.736 & 0.763 \\ \hline
+    $\sigma_{F_2}$     & 0.039 & 0.020 & 0.036 &  &  & 0.074 & 0.020 \\ \hline
+    \end{tabular}
+    \caption{Average fidelity and corresponding standard deviation on the $xz$ equator of the Bloch sphere for the two copies on each backend. The results are corrected with readout calibration.}\label{tab:uqcm_results_eq}
+\end{table}
+
+In the following figures, we observe the fidelity of the states along the equator. We found that the fidelity of these states has a oscillatory behaviour. We expect it to be uniform, as is the case for Athens in Fig. \ref{fig:uqcm_eq_athens}. However, most of the previous figures show a clear oscillatory pattern. We attribute this behaviour to the error induced during the preparation of the states.
+
+\begin{figure}[H]
+    \centering
+    \begin{subfigure}{.45\textwidth}
+      \centering
+      \includegraphics[width=\textwidth]{Figures/UQCM/Starmon/OnlyEquator/results_corrected_starmon5_copy1.png}
+    \end{subfigure}%
+    \begin{subfigure}{.45\textwidth}
+      \centering
+      \includegraphics[width=\textwidth]{Figures/UQCM/Starmon/OnlyEquator/results_corrected_starmon5_copy2.png}
+    \end{subfigure}
+    \caption{Fidelity sampled over the $xz$-equator using the UQCM implemented on Starmon-5 using readout correction. The solid green line is the expected fidelity, the solid blue line is the measured average fidelity, the dashed red lines indicate the expected dispersion and the dashed blue line indicate the measured dispersion. The orange points are the BB84 states.}
+    \label{fig:uqcm_eq_starmon}
+\end{figure}
+
+
+\begin{figure}[H]
+    \centering
+    \begin{subfigure}{.45\textwidth}
+      \centering
+      \includegraphics[width=\textwidth]{Figures/UQCM/IBM/OnlyEquator/results_corrected_ourense_copy1.png}
+    \end{subfigure}%
+    \begin{subfigure}{.45\textwidth}
+      \centering
+      \includegraphics[width=\textwidth]{Figures/UQCM/IBM/OnlyEquator/results_corrected_ourense_copy2.png}
+    \end{subfigure}
+    \caption{Fidelity sampled over the $xz$-equator using the UQCM implemented on Ourense using readout correction. The solid green line is the expected fidelity, the solid blue line is the measured average fidelity, the dashed red lines indicate the expected dispersion and the dashed blue line indicate the measured dispersion. The orange points are the BB84 states.}
+    \label{fig:uqcm_eq_our}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \begin{subfigure}{.45\textwidth}
+      \centering
+      \includegraphics[width=\textwidth]{Figures/UQCM/IBM/OnlyEquator/results_corrected_athens_copy1.png}
+    \end{subfigure}%
+    \begin{subfigure}{.45\textwidth}
+      \centering
+      \includegraphics[width=\textwidth]{Figures/UQCM/IBM/OnlyEquator/results_corrected_athens_copy2.png}
+    \end{subfigure}
+    \caption{Fidelity sampled over the $xz$-equator using the UQCM implemented on Athens using readout correction. The solid green line is the expected fidelity, the solid blue line is the measured average fidelity, the dashed red lines indicate the expected dispersion and the dashed blue line indicate the measured dispersion. The orange points are the BB84 states.}
+    \label{fig:uqcm_eq_athens}
+\end{figure}
+
+
+\begin{figure}[H]
+    \centering
+    \begin{subfigure}{.45\textwidth}
+      \centering
+      \includegraphics[width=\textwidth]{Figures/UQCM/IBM/OnlyEquator/results_corrected_vigo_copy1.png}
+    \end{subfigure}%
+    \begin{subfigure}{.45\textwidth}
+      \centering
+      \includegraphics[width=\textwidth]{Figures/UQCM/IBM/OnlyEquator/results_corrected_vigo_copy2.png}
+    \end{subfigure}
+    \caption{Fidelity sampled over the $xz$-equator using the UQCM implemented on Vigo using readout correction. The solid green line is the expected fidelity, the solid blue line is the measured average fidelity, the dashed red lines indicate the expected dispersion and the dashed blue line indicate the measured dispersion. The orange points are the BB84 states.}
+    \label{fig:uqcm_eq_vigo}
+\end{figure}
+
+
+\begin{figure}[H]
+    \centering
+    \begin{subfigure}{.45\textwidth}
+      \centering
+      \includegraphics[width=\textwidth]{Figures/UQCM/IBM/OnlyEquator/results_corrected_ibmqx2_copy1.png}
+    \end{subfigure}%
+    \begin{subfigure}{.45\textwidth}
+      \centering
+      \includegraphics[width=\textwidth]{Figures/UQCM/IBM/OnlyEquator/results_corrected_ibmqx2_copy2.png}
+    \end{subfigure}
+    \caption{Fidelity sampled over the $xz$-equator using the UQCM implemented on Yorktown using readout correction. The solid green line is the expected fidelity, the solid blue line is the measured average fidelity, the dashed red lines indicate the expected dispersion and the dashed blue line indicate the measured dispersion. The orange points are the BB84 states.}
+    \label{fig:uqcm_eq_york}
+\end{figure}
+
+For completeness, we include the results without the readout correction. The results are shown in Table \ref{tab:uqcm_results_eq_non}. As before, we find that the readout improves the readout in few cases, e.g. Athens, and it decreases in most of them. The results are within the statistical uncertanty attributed to the finite sampling.
+
+\begin{table}[H]
+    \centering
+    \begin{tabular}{|c|c|c|c|c|c|c|c|}
+    \hline
+    \textbf{} & \textbf{Starmon-5} & \textbf{Athens} & \textbf{Ourense} & \textbf{Santiago} & \textbf{Valencia} & \textbf{Vigo} & \textbf{Yorktown} \\ \hline
+    $F_1$              & 0.741 & 0.793 & 0.788 &  &  & 0.741 & 0.748\\ \hline
+    $\sigma_{F_1}$     & 0.025 & 0.016 & 0.029 &  &  & 0.030 & 0.018 \\ \hline
+    $F_2$              & 0.721 & 0.794 & 0.790 &  &  & 0.743 & 0.762 \\ \hline
+    $\sigma_{F_2}$     & 0.038 & 0.019 & 0.036 &  &  & 0.070 & 0.019 \\ \hline
+    \end{tabular}
+    \caption{Average fidelity and corresponding standard deviation on the $xz$ equator of the Bloch sphere for the two copies on each backend. The results are not corrected with readout calibration.}\label{tab:uqcm_results_eq_non}
+\end{table}
+
+\subsection{BB84 States}
+
+We have sampled the BB84 states corresponding to the states pointing along the $X$ and $Z$ axis of the Bloch sphere. The results are shown in Table \ref{tab:uqcm_results_bb} with readout correction, and in Table \ref{sec:results} without it. We omitted the graphics since the can be found as orange points in the graphics of the UCQM sampled along the equator.
+
+\begin{table}[H]
+    \centering
+    \begin{tabular}{|c|c|c|c|c|c|c|c|}
+    \hline
+    \textbf{} & \textbf{Starmon-5} & \textbf{Athens} & \textbf{Ourense} & \textbf{Santiago} & \textbf{Valencia} & \textbf{Vigo} & \textbf{Yorktown} \\ \hline
+    $F_1$              & 0.755 &  & 0.837 &  & 0.690 & 0.730 & 0.760\\ \hline
+    $\sigma_{F_1}$     & 0.035 &  & 0.040 &  & 0.034 & 0.0475 & 0.012 \\ \hline
+    $F_2$              & 0.720 &  & 0.765 &  & 0.690 & 0.735 & 0.761 \\ \hline
+    $\sigma_{F_2}$     & 0.041 &  & 0.065 &  & 0.045 & 0.052 & 0.026 \\ \hline
+    \end{tabular}
+    \caption{Average fidelity and corresponding standard deviation on the BB84 states for the two copies on each backend. The results are corrected with readout calibration.}\label{tab:uqcm_results_bb}
+\end{table}
+
+We observe that in most of the cases the fidelity is decreased by the readout correction. We found that Ourense performs the best for a copy of the BB84 states, while Vigo is the worst. These features are atributted to the details of each specific device. Nevertheless they would be suitable to simulate a noisy channel where the copied qubit has decreased its fidelity to the values presented here.
+
+\begin{table}[H]
+    \centering
+    \begin{tabular}{|c|c|c|c|c|c|c|c|}
+    \hline
+    \textbf{} & \textbf{Starmon-5} & \textbf{Athens} & \textbf{Ourense} & \textbf{Santiago} & \textbf{Valencia} & \textbf{Vigo} & \textbf{Yorktown} \\ \hline
+    $F_1$              & 0.755 &  & 0.835 &  & 0.690 & 0.762 & 0.772\\ \hline
+    $\sigma_{F_1}$     & 0.034 &  & 0.038 &  & 0.027 & 0.040 & 0.011 \\ \hline
+    $F_2$              & 0.719 &  & 0.777 &  & 0.699 & 0.742 & 0.764 \\ \hline
+    $\sigma_{F_2}$     & 0.039 &  & 0.057 &  & 0.042 & 0.049 & 0.026 \\ \hline
+    \end{tabular}
+    \caption{Average fidelity and corresponding standard deviation on the BB84 states for the two copies on each backend. The results are not corrected with readout calibration.}\label{tab:uqcm_results_bb_non}
+\end{table}
 \section{Phase covariant quantum cloning machine}
 \subsection{Sphere}
 In Chapter \ref{sec:approximateqcm}, we found that the expected average fidelity and the associated standard deviation on the whole Bloch sphere are (see Equation \ref{eqn:avg_fidelity_pcqcm} and Equation \ref{eqn:std_fidelity_pcqcm}):

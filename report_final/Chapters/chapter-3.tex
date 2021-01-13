@@ -72,7 +72,99 @@ These are the probabilities of obtaining $0$ when measuring the first copy, rega
 Ideally, after
 
 A possible alternative to this way of measuring the fidelity would be to perform a quantum tomography experiment. However, the number of circuits necessary to run would have increased.
+
 \section{Readout calibration}
+We considered that a classical error can affect the measurement process. Consider a state of the form $\ket{\psi} = \alpha\ket{0}+\beta\ket{1}$. The expectation value of a measurement along the Z axis is given by $\bar{m}=p_{+1}-p_{-1}$. However, this quantity can be affected by classical errors. 
+In a readout error, a measurement of $+1$ is transformed to $-1$ with a probability $\epsilon_{01}$. Similarly for $\epsilon_{10}$. Then, the expectation value will be transformed to,
+\begin{align}\label{eq:readout}
+\bar{m} &= (1-2\epsilon_{10})|\alpha|^2-(1-2\epsilon_{01})|\beta|^2\\
+&=(\epsilon_{01}-\epsilon_{10})+(1-\epsilon_{01}-\epsilon_{10})(|\alpha|^2-|\beta|^2)\\
+&= \beta_0 + \beta_1 \langle Z\rangle.
+\end{align}
+Note that $|\alpha|^2=p_{+1}$ and $|\beta|^2=p_{-1}$ are obtained from measuring the system. Then, we can express the corrected result from Eq. \eqref{eq:readout} as,
+\begin{equation}
+\langle Z\rangle = \frac{\bar{m}-\beta_0}{\beta_1}.
+\end{equation}
+Here $\beta_1$ and $\beta_2$ are the correction coeffcients. They are given by,
+\begin{align}\label{eq:betas}
+\beta_1 &= \frac{1}{2} (p_{+1}+p_{+1}),\\
+\beta_2 &= \frac{1}{2} (p_{+1}-p_{+1}).
+\end{align}
+They can be used to correct the outcome of future experiments, for example a quantum state tomography. However, they are subject to change during time depending on the details of each device. Furthermore, we extend them to correct the probabilities of single qubit measurements. Let $\tilde{p}_{+1}$ and $\tilde{p}_{-1}$ be the corrected probabilities. They satisfy the following conditions,
+\begin{align}
+\tilde{p}_{+1}+\tilde{p}_{-1} &= 1,\\
+\tilde{p}_{+1}-\tilde{p}_{-1} & = \frac{\bar{m}-\beta_0}{\beta_1}.
+\end{align}
+
+The solution of this two equations is given by,
+
+\begin{equation}\label{eq:corrected_ps}
+\tilde{p}_{+1} = \frac{\beta_0 - \beta_1 +Z}{2\beta_1},\qquad \tilde{p}_{-1} = \frac{\beta_0 + \beta_1 -Z}{2\beta_1}.
+\end{equation}
+
+\subsection{Single qubit calibration}
+
+We consider a single qubit tomography to observe the effect of the readout correction. Let us consider a normal singel qubit tomography. We run this experiment in different available experimental backends and correct the results according to Eq. \ref{eq:corrected_ps}. The readout parameters were calculated at the begining of the experiment, and then the results were correted. In the following figures, we show the results with and without readout correction.
+
+\begin{figure}[H]
+    \centering
+    \begin{subfigure}{.5\textwidth}
+      \centering
+      \includegraphics[width=\textwidth]{Figures/Calibrations/calibration_athens.png}
+    \end{subfigure}%
+    \begin{subfigure}{.5\textwidth}
+      \centering
+      \includegraphics[width=\textwidth]{Figures/Calibrations/calibration_ourense.png}
+    \end{subfigure}
+    \caption{Single qubit calibration on Athens and Ourense. Here the blue (orange) line corresponds to the data without (with) readout correction.}
+    \label{fig:pc_yorktown_sphere}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \begin{subfigure}{.5\textwidth}
+      \centering
+      \includegraphics[width=\textwidth]{Figures/Calibrations/calibration_valencia.png}
+    \end{subfigure}%
+    \begin{subfigure}{.5\textwidth}
+      \centering
+      \includegraphics[width=\textwidth]{Figures/Calibrations/calibration_vigo.png}
+    \end{subfigure}
+    \caption{Single qubit calibration on Valencia and Vigo. Here the blue (orange) line corresponds to the data without (with) readout correction.}
+    \label{fig:pc_yorktown_sphere}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \begin{subfigure}{.5\textwidth}
+      \centering
+      \includegraphics[width=\textwidth]{Figures/Calibrations/calibration_santiago.png}
+    \end{subfigure}%
+    \begin{subfigure}{.5\textwidth}
+      \centering
+      \includegraphics[width=\textwidth]{Figures/Calibrations/calibration_ibmqx2.png}
+    \end{subfigure}
+    \caption{Single qubit calibration on Santiago and Yorktown. Here the blue (orange) line corresponds to the data without (with) readout correction.}
+    \label{fig:pc_yorktown_sphere}
+\end{figure}
+
+
+\begin{figure}[H]
+    \centering
+    \begin{subfigure}{.5\textwidth}
+      \centering
+      \includegraphics[width=\textwidth]{Figures/Calibrations/calibration_simulator.png}
+    \end{subfigure}%
+    \begin{subfigure}{.5\textwidth}
+      \centering
+      \includegraphics[width=\textwidth]{Figures/Calibrations/calibration_melbourne.png}
+    \end{subfigure}
+    \caption{Single qubit calibration on Simulator and Melbourne. Here the blue (orange) line corresponds to the data without (with) readout correction. For the Simulator there is a single blue line since results do not require correction.}
+    \label{fig:pc_yorktown_sphere}
+\end{figure}
+
+
+
 \section{Software and hardware details}
 We have used the quantum systems freely available on Quantum Inspire \cite{quantuminspire} and IBM Quantum Experience \cite{ibmquantumexperience}.
 More specifically, we have used the following backends:

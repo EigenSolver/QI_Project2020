@@ -1,8 +1,161 @@
 \chapter{Approximate quantum cloning}
 \label{sec:approximateqcm}
-\section{No-cloning theorem}
-It is a fundamental result of quantum mechanics that a generic quantum states can not be copied exactly.
+
 \section{Universal quantum cloning machine}
+It is well known that an arbitrary quantum state cannot be copied due to the unitarity of quantum mechanics. Nevertheless, there are several approaches to produce an imperfect quantum copy\cite{Buzek1996,buvzek1998universal,EquatorialQCM,PhaseCovariantOptimalBruss}. Here, we discuss a well known approach for copying arbitrary quantum states with a maximum possible fidelity of $F=5/6$. This fidelity was initially found to be a high fidelity for quantum copies\cite{Buzek1996}. Later studies\cite{Gisin1998,QuantumCloningReviewScarani} found that this is the highest possible fidelity that can be achieved by a quantum copy machine.
+
+Let us start by considering an arbitrary state,
+\begin{equation}
+\ket{\Psi}_{a_0} = \alpha \ket{0}_{a_0} + \beta \ket{1}_{a_0}.
+\end{equation}
+We are interested in copy this state using the copy machine devised in Ref. \cite{Buzek1996}. For such purpose, we reiquire two ancillary registers. The full quantum circuit corresponding to the UQCM contains two stages, as can be seen in Fig. \ref{fig:uqcm}.
+\begin{figure}
+\begin{center}
+\begin{quantikz}
+\lstick{$|\psi \rangle_{a_0}$}   &\qw &  \gate[3][2cm]{U_{copy}}&\qw\\
+\lstick{$|0\rangle_{a_1}$} & \gate[2][2cm]{U_{prepare}}  && \qw\\
+\lstick{$|0\rangle_{b_1}$} &   & &\qw
+\end{quantikz}\caption{General circuit for the universal quantum cloning machine initially presented in Ref. \cite{Buzek1996}.}\label{fig:uqcm}
+\end{center}
+\end{figure}
+
+\subsection{Preparation of the state}
+The first stage of the UQCM starts before interacting with the input qubit. The two bottom qubits are required to be in an arbitrary state,
+\begin{equation}
+| \phi \rangle_{a_1b_1} = C_1|00\rangle + C_2|01\rangle + C_3|10\rangle +C_4 |11\rangle.
+\end{equation}
+For such purpose we use the circuit shown in Fig. \ref{circuit:preparation_uqcm} with an input state $\ket{00}_{a_1b_1}$. 
+
+\begin{figure}
+\begin{center}
+\begin{quantikz}
+\lstick{$|0\rangle_{a_1}$} & \gate[2][1cm]{U_{prepare}}  & \qw\\
+\lstick{$|0\rangle_{b_1}$} &   &\qw
+\end{quantikz}=
+\begin{quantikz}[slice all]
+\lstick{$|0\rangle_{a_1}$} & \gate{R_y(\theta_1)}  & \ctrl{1}& \qw  &\targ{} &\gate{R_y(\theta_3)}&\qw\\
+\lstick{$|0\rangle_{b_1}$} & \qw & \targ{}& \gate{R_y(\theta_2)}  &\ctrl{-1} &\qw&\qw
+\end{quantikz}.\caption{Preparation stage of the circuit shown in Fig. \ref{fig:uqcm}. Each step of the process is labeled.}\label{circuit:preparation_uqcm}
+\end{center}
+\end{figure}
+
+We analyse each stage of the preparation process. To simplify the notation used, we label $\ket{00}_{a_1b_1}=\ket{00}$, where the qubit from left to right side is always $a_1b_1$.
+
+The rotation gate shown in Fig. \ref{circuit:preparation_uqcm} is defined as,
+\begin{align*}
+    R_y(\theta)&
+    =\cos(\theta/2) \hat I-i \sin(\theta/2)\hat Y
+    =\begin{pmatrix}
+        \cos(\theta/2) & -\sin(\theta/2)\\
+        \sin(\theta/2) & \cos (\theta/2)
+    \end{pmatrix}.
+\end{align*}
+
+The evolution of the ancilla qubits along each stage of the circuit is given by,
+\begin{align*}
+|\phi_0\rangle &= |00 \rangle \\
+|\phi_1\rangle &= (\cos(\theta_1/2)|0\rangle + \sin(\theta_1/2)|1\rangle)|0\rangle\\
+|\phi_2\rangle & = \cos(\theta_1/2)|00\rangle + \sin(\theta_1/2)|11\rangle\\
+|\phi_3\rangle &=\cos(\theta_1/2)|0\rangle(\cos(\theta_2/2)|0\rangle + \sin(\theta_2/2)|1\rangle) + \sin(\theta_1/2)|1\rangle(-\sin(\theta_2/2)|0\rangle + \cos(\theta_2/2)|1\rangle)\\
+&=\cos(\theta_1/2)\cos(\theta_2/2)\ket{00}+\cos(\theta_1/2)\sin(\theta_2/2)\ket{01}\\&\qquad\qquad\qquad\qquad-\sin(\theta_1/2)\sin(\theta_2/2)\ket{10}+\sin(\theta_1/2)\cos(\theta_2/2)\ket{11}\\
+|\phi_4\rangle &=\cos(\theta_1/2)\cos(\theta_2/2)|00\rangle + \cos(\theta_1/2)\sin(\theta_2/2)|11\rangle\\&\qquad\qquad\qquad\qquad- \sin(\theta_1/2)\sin(\theta_2/2)|10\rangle + \sin(\theta_1/2)\cos(\theta_2/2)|01\rangle\\
+|\phi_5\rangle&=(\cos(\theta_3/2)|0\rangle + \sin(\theta_3/2)|1\rangle) 
+(\cos(\theta_1/2)\cos(\theta_2/2)|0\rangle+\sin(\theta_1/2)\cos(\theta_2/2)|1\rangle)\\
+&+(-\sin(\theta_3/2)|0\rangle + \cos(\theta_3/2)|1\rangle)
+(\cos(\theta_1/2)\sin(\theta_2/2)|1\rangle- \sin(\theta_1/2)\sin(\theta_2/2)|0\rangle)
+\end{align*}
+
+After these transformation, we can express it as an arbitrary two-qubit quantum state,
+\begin{equation}
+|\phi\rangle= C_1|00\rangle + C_2|01\rangle + C_3|10\rangle +C_4 |11\rangle.
+\end{equation}
+
+From which we can observe that the coefficients depend explicitly on the rotation angles as,
+
+\begin{align}
+    C_1 &=     \sin(\theta_1/2)  \sin(\theta_2/2)  \sin(\theta_3/2) +  \cos(\theta_1/2) \cos(\theta_2/2)  \cos(\theta_3/2)\\
+    C_2 &=   \sin(\theta_1/2)  \cos(\theta_2/2) \cos(\theta_3/2) -   \cos(\theta_1/2) \sin(\theta_2/2)  \sin(\theta_3/2)   \\
+    C_3 &=   \cos(\theta_1/2)  \cos(\theta_2/2) \sin(\theta_3/2) -  \sin(\theta_1/2)  \sin(\theta_2/2)  \cos(\theta_3/2)\\
+    C_4 &=   \sin(\theta_1/2)  \cos(\theta_2/2) \sin(\theta_3/2)  +    \cos(\theta_1/2) \sin(\theta_2/2) \cos(\theta_3/2)
+\end{align}
+
+The angles used to produce an arbitrary state have been previously studied in Ref. \cite{Buzek1996, Buzek1999}. The following angles were used for the preparation of the state given in Eq. \eqref{eq:uqcm_prep_state}, that is, 
+
+\begin{equation}
+\cos(2\theta_1)=\frac{1}{\sqrt{5}}, \quad \cos(2\theta_2)=\frac{\sqrt{5}}{3}, \quad \cos(2\theta_3)=\frac{2}{\sqrt{5}}.
+\end{equation}
+
+\subsection{Copying proccess}
+
+The copying process can be described as controlled entanglement between the input and prepared qubits. Once the ancilla qubits are prepared in the desired input state, we proceed to apply the copy machine. The circuit corresponding to the copy process can be observed in the following circuit, where the prepared initial state and the input state that we consider are given respectively by,
+\begin{equation}\label{eq:uqcm_prep_state}
+|\phi\rangle^{(prep)}_{a_1,b_1} = \frac{1}{\sqrt{6}} (2|00\rangle + |01\rangle + |11\rangle),\qquad |\psi\rangle^{(in)}_{a_0} = \alpha|0\rangle +\beta|1\rangle.
+\end{equation}
+
+\begin{figure}
+\begin{center}
+\begin{quantikz}
+% \lstick{$|\psi\rangle_{a_0}$}   & \gate[3][2cm]{U_{copy}}&\qw\\
+% \lstick{$|0\rangle_{a_1}$} & & \qw\\
+% \lstick{$|0\rangle_{b_1}$} &  &\qw
+\lstick{}   & \gate[3][2cm]{U_{copy}}&\qw\\
+\lstick{} & & \qw\\
+\lstick{} &  &\qw
+\end{quantikz}=\begin{quantikz}[slice all]
+\lstick{}   & \ctrl{1}&\ctrl{2}&\targ{}&\targ{}&\qw\\
+\lstick{} &\targ{} & \qw & \ctrl{-1} &\qw&\qw\\
+\lstick{} & \qw&\targ{}&\qw&\ctrl{-2}&\qw
+\end{quantikz}.
+\caption{Copying stage of the circuit shown in Fig. \ref{fig:uqcm}. Each step of the process is labeled.}\label{circuit:full}
+\end{center}
+\end{figure}
+
+We consider that the input state of the copy machine is $|\Psi_0\rangle = |\psi\rangle^{(in)}_{a_0}|\phi\rangle^{(prep)}_{a_1,b_1}$. Then, it will transform in each stage of the copy process as,
+\begin{align}
+|\Psi_1\rangle &= \frac{\alpha}{\sqrt{6}}|0\rangle(2|00\rangle +|01\rangle + |11\rangle) + \frac{\beta}{\sqrt{6}}|1\rangle(2|10\rangle +|11\rangle + |01\rangle)\notag \\
+|\Psi_2\rangle &= \frac{\alpha}{\sqrt{6}}|0\rangle(2|00\rangle +|01\rangle + |11\rangle) + \frac{\beta}{\sqrt{6}}|1\rangle(2|11\rangle +|10\rangle + |00\rangle)\notag \\
+&= \sqrt{\frac{2}{3}}(\alpha|000\rangle+\beta|111\rangle) + \frac{1}{\sqrt{6}}(\alpha|001\rangle +\alpha|011\rangle + \beta|110\rangle + \beta |100\rangle)\notag \\
+|\Psi_3\rangle &= \sqrt{\frac{2}{3}}(\alpha|000\rangle+\beta|011\rangle) + \frac{1}{\sqrt{6}}(\alpha|001\rangle +\alpha|111\rangle + \beta|010\rangle + \beta |100\rangle)\notag \\
+|\Psi_4\rangle &= \sqrt{\frac{2}{3}}(\alpha|000\rangle+\beta|111\rangle) + \frac{1}{\sqrt{6}}(\alpha|101\rangle +\alpha|011\rangle + \beta|010\rangle + \beta |100\rangle)\notag \\
+&=\left( \sqrt{\frac{2}{3}}\alpha|00\rangle +\beta \frac{1}{\sqrt{6}}(|10\rangle+|01\rangle)\right)|0\rangle  + \left( \sqrt{\frac{2}{3}}\beta|11\rangle + \frac{1}{\sqrt{6}}\alpha(|10\rangle + |01\rangle )\right)|1\rangle.\notag
+\end{align}
+The final state, after the application of the copy machine, can be written as,
+\begin{equation}
+\ket{\Psi}=\ket{\chi_0}\ket{0}+\ket{\chi_1}\ket{1}=\left(\sqrt{\frac{2}{3}}\alpha\ket{00}+\sqrt{\frac{1}{3}}\beta\ket{\Phi_+}\right)\ket{0}+\left(\sqrt{\frac{2}{3}}\beta\ket{11}+\sqrt{\frac{1}{3}}\alpha\ket{\Phi_+}\right)\ket{1},
+\end{equation}
+where we have defined,
+\begin{align}
+|\chi_0\rangle &= \sqrt{\frac{2}{3}}\alpha|00\rangle + \sqrt{\frac{1}{3}}\beta|\Phi_+\rangle=\sqrt{\frac{2}{3}}\alpha\ket{00}+\sqrt{\frac{1}{6}}\beta\ket{01}+\sqrt{\frac{1}{6}}\beta\ket{10}\\
+|\chi_1\rangle &= \sqrt{\frac{2}{3}}\beta|11\rangle +\sqrt{\frac{1}{3}}\alpha |\Phi_+\rangle=\sqrt{\frac{2}{3}}\beta\ket{11}+\sqrt{\frac{1}{6}}\alpha\ket{01}+\sqrt{\frac{1}{6}}\alpha\ket{10}.
+\end{align}
+Note that both $\ket{\chi_0}$ and $\ket{\chi_1}$ are invariant under exchange of the qubits. This implies that the density matrices associated to the copy and to the original qubit are identical, $\rho_{a_0}=\rho_{a_1}$. Then, when we calculate the fidelity of these qubits, they would retrieve the same result.
+
+\subsection{Single qubit fidelity}
+
+After performing the copying process, the input qubit is separated from the copying qubits and measured in a different laboratory. Thus, they can only have access to the partial system involving only the input qubit. To determine the properties of this qubit, we trace out the qubits associated to the copying process, and express the density matrix of the system only in terms of the input qubit. That is,
+
+\begin{align*}
+    \rho_{a_0}&=\Tr_{a_1}[\ketbra{\chi_0}{\chi_0}+\ketbra{\chi_1}{\chi_1}]=\Tr_{a_1}[\ketbra{\chi_0}{\chi_0}]+\Tr_{a_1}[\ketbra{\chi_1}{\chi_1}]\\
+    &=\frac{2}{3}\abs{\alpha}^2\ketbra{0}{0}+\frac{1}{6}\abs{\beta}^2\ketbra{0}{0}+\frac{1}{6}\abs{\beta}^2\ketbra{1}{1}+\frac{1}{3}\alpha\beta^*\ketbra{0}{1}+\frac{1}{3}\alpha^*\beta\ketbra{1}{0}\\
+    &+\frac{2}{3}\abs{\beta}^2\ketbra{1}{1}+\frac{1}{6}\abs{\alpha}^2\ketbra{0}{0}+\frac{1}{6}\abs{\alpha}^2\ketbra{1}{1}+\frac{1}{3}\alpha\beta^*\ketbra{0}{1}+\frac{1}{3}\alpha^*\beta\ketbra{1}{0}\\
+    &=\frac{5}{6}\abs{\alpha}^2\ketbra{0}{0}+\frac{5}{6}\abs{\beta}^2\ketbra{1}{1}+\frac{1}{6}\abs{\beta}^2\ketbra{0}{0}+\frac{1}{6}\abs{\alpha}^2\ketbra{1}{1}+\frac{2}{3}\alpha\beta^*\ketbra{0}{1}+\frac{2}{3}\alpha^*\beta\ketbra{1}{0}\\
+    &=\frac{5}{6}\abs{\alpha}^2\ketbra{0}{0}+\frac{5}{6}\abs{\beta}^2\ketbra{1}{1}+\frac{5}{6}\alpha\beta^*\ketbra{0}{1}+\frac{5}{6}\alpha^*\beta\ketbra{1}{0}\\
+    &-\frac{1}{6}\alpha\beta^*\ketbra{0}{1}-\frac{1}{6}\alpha^*\beta\ketbra{1}{0}+\frac{1}{6}\abs{\beta}^2\ketbra{0}{0}+\frac{1}{6}\abs{\alpha}^2\ketbra{1}{1}\\
+    &=\frac{5}{6}\ketbra{\psi}{\psi}+\frac{1}{6}\ketbra{\psi_{\perp}}{\psi_{\perp}}.
+\end{align*}
+Finally, the density matrix of the input qubit, or the first copying qubit, is given by,
+\begin{equation}
+\rho_{a_0}=\frac{5}{6}\ketbra{\psi}{\psi}+\frac{1}{6}\ketbra{\psi_{\perp}}{\psi_{\perp}}=\frac{1}{2}\left(\mathbf{1} + \frac{2}{3} \hat{m}\cdot\vec{\sigma} \right),
+\end{equation}
+where $\ket{\psi}=\alpha\ket{0}+\beta\ket{1}$ is the input state aligned along $\hat{m}$, and $\ket{\psi_{\perp}}=\beta^*\ket{0}-\alpha^*\ket{1}$ is its orthogonal state. Then, we calculate the fidelity of a pure state with a mixed state, which is given by,
+\begin{equation}
+    F(\ket{\psi},\rho)=\bra{\psi}\rho\ket{\psi}.
+\end{equation}
+In our case, the fidelity of the output copies is:
+\begin{equation}
+F(\ket{\psi},\rho_{a_0})=\bra{\psi}\rho_{a_0}\ket{\psi}=\frac{5}{6}= F(\ket{\psi},\rho_{a_1}).
+\end{equation}
+This is the maximum possible fidelity that can be obtained when one tries to copy an arbitrary quantum state. The final state is the same for the input qubit, and for the first copying qubit. One can think of the copying process as the interaction of the input qubit with an environment modeled by the copying qubits. After the copying process, the initial information is evenly distributed between the environment and the input qubit. This copy machine makes copies that are aligned along the same direction as the input qubit, but their magnitude decreases by a factor $2/3$ as shown in Ref. \cite{QuantumCloningReviewScarani}.
 \section{Phase covariant quantum cloning machine}
 A phase covariant quantum cloning machine (PCQCM) is a QCM optimized to clone states on an equator of the Bloch sphere.
 The circuit for the optimal PCQCM proposed in  \cite{EquatorialQCM} is similar to the one for the UQCM, but the output copies are on the registers of the ancillae:
