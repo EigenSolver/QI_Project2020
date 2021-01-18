@@ -1,5 +1,24 @@
 \chapter{Conclusions}
 \label{sec:conclusions}
 
-More backends with different technologies.
-Thorough investigation on different choice of qubits.
+In this report we have implemented successfullu three different QCMs.
+In Section \ref{sec:approximateqcm} we have introduced the circuits used for the QCMs and studied the theoretical expectations.
+For the PCQCM we have also greatly simplified the starting circuit.
+In Section \ref{sec:implementation} we have described the procedure we have followed in order to assess the quality of the implemented QCMs, using the publicly available backends on Quantum Inspire and IBM Quantum Experiences.
+In Section \ref{sec:results} we discussed the results that we obtained.
+
+For the UQCM we have found that the performances on the real backends we have considered are still distant from the ideal case, due to the circuit depth.
+On the other hand, both the PCQCM and EPCQCM are close to optimality. 
+We confirmed that a real PCQCM (or EPCQCM) performs on average better than the UQCM when used to clone an arbitrary input state on the Bloch sphere because of the simplicity of the circuit.
+The experimental results we have obtained are close to those already known in the literature, with the relevant difference that we did not have direct access to the hardware backend (which we were sharing with other users). 
+
+A natural continuation of this project would be to study more backends. 
+IBM is launching three new backends on February, 10th.
+Backends based on a different techonology could also be studied (such as IonQ's hardare), since all the systems studied but Spin-2 were superconducting quantum computers.
+
+Another possible development would be to study more carefully and systematically how the choice of the physical qubits influences the result.
+In this project we did not pay too much attention to this because of the amount of possible combinations.
+
+Finally, it would be interesting to study some error models. 
+We have found that states around the $\ket{0}$ and the $\ket{1}$ state on the Bloch sphere are copied better than those on the $xy$-equator, regardless of the type of QCM.
+This is not expected theoretically and it is due to the hardware. Some error models might help to understand this pattern better.

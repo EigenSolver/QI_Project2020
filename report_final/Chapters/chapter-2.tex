@@ -2,18 +2,22 @@
 \label{sec:approximateqcm}
 
 \section{Universal quantum cloning machine}
-It is well known that an arbitrary quantum state cannot be copied due to the unitarity of quantum mechanics. Nevertheless, there are several approaches to produce an imperfect quantum copy\cite{Buzek1996,buvzek1998universal,EquatorialQCM,PhaseCovariantOptimalBruss}. Here, we discuss a well known approach for copying arbitrary quantum states with a maximum possible fidelity of $F=5/6$. This fidelity was initially found to be a high fidelity for quantum copies\cite{Buzek1996}. Later studies\cite{Gisin1998,QuantumCloningReviewScarani} found that this is the highest possible fidelity that can be achieved by a quantum copy machine.
+It is well known that an arbitrary quantum state cannot be copied due to the no-cloning theorem.
+Nevertheless, there are several approaches to produce an imperfect quantum copy \cite{Buzek1996,buvzek1998universal,EquatorialQCM,PhaseCovariantOptimalBruss}. 
+Here, we discuss the so-called universal quantum cloning machine (UQCM), which copies all the states on the Bloch sphere with the same fidelity $F=5/6$ \cite{Buzek1996}. 
+Later studies showed that this is this fidelity is indeed optimal for an arbitrary input state as input. 
+The proof of the optimality relies on the no-signalling theorem: if a better QCM existed, it would allow to communicate faster than light \cite{Gisin1998, QuantumCloningReviewScarani}.
 
 Let us start by considering an arbitrary state,
 \begin{equation}
-\ket{\Psi}_{a_0} = \alpha \ket{0}_{a_0} + \beta \ket{1}_{a_0}.
+\ket{\psi}_{a_0} = \alpha \ket{0}_{a_0} + \beta \ket{1}_{a_0}.
 \end{equation}
 We are interested in copy this state using the copy machine devised in Ref. \cite{Buzek1996}. For such purpose, we reiquire two ancillary registers. The full quantum circuit corresponding to the UQCM contains two stages, as can be seen in Fig. \ref{fig:uqcm}.
 \begin{figure}
 \begin{center}
 \begin{quantikz}
-\lstick{$|\psi \rangle_{a_0}$}   &\qw &  \gate[3][2cm]{U_{copy}}&\qw\\
-\lstick{$|0\rangle_{a_1}$} & \gate[2][2cm]{U_{prepare}}  && \qw\\
+\lstick{$|\psi \rangle_{a_0}$}   &\qw &  \gate[3][2cm]{U_{copy}}&\qw & \rstick{\hspace{-4 mm}$\rho_1$} \\
+\lstick{$|0\rangle_{a_1}$} & \gate[2][2cm]{U_{prepare}}  && \qw & \rstick{\hspace{-4 mm}$\rho_2$} \\
 \lstick{$|0\rangle_{b_1}$} &   & &\qw
 \end{quantikz}\caption{General circuit for the universal quantum cloning machine initially presented in Ref. \cite{Buzek1996}.}\label{fig:uqcm}
 \end{center}
@@ -102,8 +106,8 @@ The copying process can be described as controlled entanglement between the inpu
 \lstick{} & & \qw\\
 \lstick{} &  &\qw
 \end{quantikz}=\begin{quantikz}[slice all]
-\lstick{}   & \ctrl{1}&\ctrl{2}&\targ{}&\targ{}&\qw\\
-\lstick{} &\targ{} & \qw & \ctrl{-1} &\qw&\qw\\
+\lstick{}   & \ctrl{1}&\ctrl{2}&\targ{}&\targ{}&\qw & \rstick{\hspace{-4 mm}$\rho_1$} \\
+\lstick{} &\targ{} & \qw & \ctrl{-1} &\qw&\qw & \rstick{\hspace{-4 mm}$\rho_2$} \\
 \lstick{} & \qw&\targ{}&\qw&\ctrl{-2}&\qw
 \end{quantikz}.
 \caption{Copying stage of the circuit shown in Fig. \ref{fig:uqcm}. Each step of the process is labeled.}\label{circuit:full}
@@ -119,7 +123,7 @@ We consider that the input state of the copy machine is $|\Psi_0\rangle = |\psi\
 |\Psi_4\rangle &= \sqrt{\frac{2}{3}}(\alpha|000\rangle+\beta|111\rangle) + \frac{1}{\sqrt{6}}(\alpha|101\rangle +\alpha|011\rangle + \beta|010\rangle + \beta |100\rangle)\notag \\
 &=\left( \sqrt{\frac{2}{3}}\alpha|00\rangle +\beta \frac{1}{\sqrt{6}}(|10\rangle+|01\rangle)\right)|0\rangle  + \left( \sqrt{\frac{2}{3}}\beta|11\rangle + \frac{1}{\sqrt{6}}\alpha(|10\rangle + |01\rangle )\right)|1\rangle.\notag
 \end{align}
-The final state, after the application of the copy machine, can be written as,
+The final state, after the copying process, can be written as,
 \begin{equation}
 \ket{\Psi}=\ket{\chi_0}\ket{0}+\ket{\chi_1}\ket{1}=\left(\sqrt{\frac{2}{3}}\alpha\ket{00}+\sqrt{\frac{1}{3}}\beta\ket{\Phi_+}\right)\ket{0}+\left(\sqrt{\frac{2}{3}}\beta\ket{11}+\sqrt{\frac{1}{3}}\alpha\ket{\Phi_+}\right)\ket{1},
 \end{equation}
@@ -128,7 +132,7 @@ where we have defined,
 |\chi_0\rangle &= \sqrt{\frac{2}{3}}\alpha|00\rangle + \sqrt{\frac{1}{3}}\beta|\Phi_+\rangle=\sqrt{\frac{2}{3}}\alpha\ket{00}+\sqrt{\frac{1}{6}}\beta\ket{01}+\sqrt{\frac{1}{6}}\beta\ket{10}\\
 |\chi_1\rangle &= \sqrt{\frac{2}{3}}\beta|11\rangle +\sqrt{\frac{1}{3}}\alpha |\Phi_+\rangle=\sqrt{\frac{2}{3}}\beta\ket{11}+\sqrt{\frac{1}{6}}\alpha\ket{01}+\sqrt{\frac{1}{6}}\alpha\ket{10}.
 \end{align}
-Note that both $\ket{\chi_0}$ and $\ket{\chi_1}$ are invariant under exchange of the qubits. This implies that the density matrices associated to the copy and to the original qubit are identical, $\rho_{a_0}=\rho_{a_1}$. Then, when we calculate the fidelity of these qubits, they would retrieve the same result.
+Note that both $\ket{\chi_0}$ and $\ket{\chi_1}$ are invariant under exchange of the qubits. This implies that the density matrices associated to the copy and to the original qubit are identical, $\rho_{a_0}=\rho_{a_1}$. Then, when we calculate the fidelity of these qubits, they would yield the same result.
 
 \subsection{Single qubit fidelity}
 
@@ -518,10 +522,12 @@ The fidelity for an EPCQCM that optimally clones the $xz$-equator is:
 \end{figure}
 This is the circuit that we have run and the fidelity that we will compare our results with.
 
-\section{Quantum cloning and quantum key distribution}
+\section{Past experimental results}
+In the literature there are some experimental realization of QCMs. 
+In 2002 Cummins et al. \cite{UQCMwithNMR} implemented the UQCM on a NMR quantum computer, obtaining a state independent copy but a low fidelity $F=0.58$ (compared to the ideral one $F \approx 0.83$).
+An experiment implementing an EPCQCM on a NMR quantum computer followed \cite{EPCQCMwithNMR}, where $F=0.848$ was reached.
+More recently, the UQCM has been implemented in \cite{UQCMwithSuperconducting}, reaching a fidelity $F\approx 0.83$ on one qubit and $F\approx 0.79$ on the other.
+An implementation of the optimal phase cloning on solid-state system can be found, for example, in \cite{PCQCMwithSuperconducting}, with $F=0.8392$ (using a superconducting system), and in \cite{PCQCMwithNV} with $F=0.852$ (using NV centers).
 
-NB: optimal cloning and optimal eavesdropping are different!
-When using the 3 qubit phase covariant QCM Eve also has the ancilla, which carries some additional information. See \cite{QuantumCloningReviewScarani}
-"In summary: without ancilla, Eve can make the best possible guess on the bit sent by Alice (because the machine realizes the optimal phase-covariant cloning) but has very poor information about the result obtained by Bob. 
-Adding the ancilla does not modify the estimation of Alice’s bit but allows Eve to deterministically symmetrize her information on Alice and Bob’s symbols. 
-However, the two machines are equally good from the point of view of cloning."
+Differently from the experiments carried out in the mentioned papers, we did not have direct access to the hardware. 
+Therefore, we could not finely tune it nor calibrate it. Moreover, we had to share the backends with other users.

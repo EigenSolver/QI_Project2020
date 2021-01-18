@@ -1,4 +1,4 @@
-\begin{thebibliography}{11}
+\begin{thebibliography}{19}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -24,6 +24,37 @@ V.~Bu\ifmmode~\check{z}\else \v{z}\fi{}ek and M.~Hillery.
 \newblock \doi{10.1103/PhysRevA.54.1844}.
 \newblock URL \url{https://link.aps.org/doi/10.1103/PhysRevA.54.1844}.
 
+\bibitem[Bu\ifmmode~\check{z}\else \v{z}\fi{}ek and Hillery(1999)]{Buzek1999}
+V.~Bu\ifmmode~\check{z}\else \v{z}\fi{}ek and M.~Hillery.
+\newblock Universal optimal cloning of qubits and quantum registers.
+\newblock In \emph{Quantum Computing and Quantum Communications}, pages
+  235--246. Springer Berlin Heidelberg, 1999.
+\newblock \doi{10.1007/3-540-49208-9_20}.
+\newblock URL \url{https://doi.org/10.1007/3-540-49208-9_20}.
+
+\bibitem[Bu\ifmmode~\check{z}\else \v{z}\fi{}ek and
+  Hillery(1998)]{buvzek1998universal}
+V.~Bu\ifmmode~\check{z}\else \v{z}\fi{}ek and Mark Hillery.
+\newblock Universal optimal cloning of qubits and quantum registers.
+\newblock In \emph{NASA International Conference on Quantum Computing and
+  Quantum Communications}, pages 235--246. Springer, 1998.
+
+\bibitem[Cummins et~al.(2002)Cummins, Jones, Furze, Soffe, Mosca, Peach, and
+  Jones]{UQCMwithNMR}
+Holly~K. Cummins, Claire Jones, Alistair Furze, Nicholas~F. Soffe, Michele
+  Mosca, Josephine~M. Peach, and Jonathan~A. Jones.
+\newblock Approximate quantum cloning with nuclear magnetic resonance.
+\newblock \emph{Phys. Rev. Lett.}, 88:\penalty0 187901, Apr 2002.
+\newblock \doi{10.1103/PhysRevLett.88.187901}.
+\newblock URL \url{https://link.aps.org/doi/10.1103/PhysRevLett.88.187901}.
+
+\bibitem[Du et~al.(2003)Du, Durt, Zou, Kwek, Lai, Oh, and Ekert]{EPCQCMwithNMR}
+Jiangfeng Du, Thomas Durt, Ping Zou, L.~C. Kwek, C.~H. Lai, C.~H. Oh, and Artur
+  Ekert.
+\newblock Experimental demonstration of an efficient quantum phase-covariant
+  cloning and its possible applications to simulating eavesdropping in quantum
+  cryptography, 2003.
+
 \bibitem[Durt and Du(2004)]{LowCostCloning}
 Thomas Durt and Jiangfeng Du.
 \newblock Characterization of low-cost one-to-two qubit cloning.
@@ -47,10 +78,29 @@ Heng Fan, Keiji Matsumoto, Xiang-Bin Wang, and Miki Wadati.
 \newblock \doi{10.1103/PhysRevA.65.012304}.
 \newblock URL \url{https://link.aps.org/doi/10.1103/PhysRevA.65.012304}.
 
+\bibitem[Gisin(1998)]{Gisin1998}
+N.~Gisin.
+\newblock Quantum cloning without signaling.
+\newblock \emph{Physics Letters A}, 242\penalty0 (1):\penalty0 1 -- 3, 1998.
+\newblock ISSN 0375-9601.
+\newblock \doi{https://doi.org/10.1016/S0375-9601(98)00170-4}.
+\newblock URL
+  \url{http://www.sciencedirect.com/science/article/pii/S0375960198001704}.
+
 \bibitem[{IBM}()]{ibmquantumexperience}
 {IBM}.
 \newblock {IBM Quantum Experience}.
 \newblock URL \url{https://quantum-computing.ibm.com}.
+
+\bibitem[Lan et~al.(2016)Lan, Tan, Yu, and Yu]{PCQCMwithSuperconducting}
+Dong Lan, Xinsheng Tan, Haifeng Yu, and Yang Yu.
+\newblock Optimal phase cloning machine in a three-dimensional transmon qubit
+  system.
+\newblock \emph{physica status solidi (b)}, 253\penalty0 (10):\penalty0
+  2027--2030, 2016.
+\newblock \doi{https://doi.org/10.1002/pssb.201600385}.
+\newblock URL
+  \url{https://onlinelibrary.wiley.com/doi/abs/10.1002/pssb.201600385}.
 
 \bibitem[Niu and Griffiths(1999)]{EconomicalNiuGriffiths}
 Chi-Sheng Niu and Robert~B. Griffiths.
@@ -58,6 +108,14 @@ Chi-Sheng Niu and Robert~B. Griffiths.
 \newblock \emph{Phys. Rev. A}, 60:\penalty0 2764--2776, Oct 1999.
 \newblock \doi{10.1103/PhysRevA.60.2764}.
 \newblock URL \url{https://link.aps.org/doi/10.1103/PhysRevA.60.2764}.
+
+\bibitem[Pan et~al.(2011)Pan, Liu, Yang, and Fan]{PCQCMwithNV}
+Xin-Yu Pan, Gang-Qin Liu, Li-Li Yang, and Heng Fan.
+\newblock Solid-state optimal phase-covariant quantum cloning machine.
+\newblock \emph{Applied Physics Letters}, 99\penalty0 (5):\penalty0 051113,
+  2011.
+\newblock \doi{10.1063/1.3624595}.
+\newblock URL \url{https://doi.org/10.1063/1.3624595}.
 
 \bibitem[{QuTech}()]{quantuminspire}
 {QuTech}.
@@ -79,5 +137,12 @@ W.~K. Wootters and W.~H. Zurek.
 \newblock ISSN 1476-4687.
 \newblock \doi{10.1038/299802a0}.
 \newblock URL \url{https://doi.org/10.1038/299802a0}.
+
+\bibitem[Yang et~al.(2019)Yang, Han, Huang, Ning, Li, Xu, Zheng, Fan, and
+  Zheng]{UQCMwithSuperconducting}
+Zhen-Biao Yang, Pei-Rong Han, Xin-Jie Huang, Wen Ning, Hekang Li, Kai Xu,
+  Dongning Zheng, Heng Fan, and Shi-Biao Zheng.
+\newblock Experimental demonstration of universal quantum cloning in a circuit,
+  2019.
 
 \end{thebibliography}
