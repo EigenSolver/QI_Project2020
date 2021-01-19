@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.11.24)  17 JAN 2021 01:12
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.11.24)  19 JAN 2021 16:05
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -938,6 +938,9 @@ LaTeX Warning: Label `fig:pc_yorktown_sphere' multiply defined.
 
 LaTeX Warning: Label `fig:uqcm_vigo' multiply defined.
 
+
+LaTeX Warning: Label `fig:pc_histo_bb84_corrected' multiply defined.
+
 )
 \openout1 = `report.aux'.
 
@@ -1137,12 +1140,12 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 \GPT@outputbox=\box73
-<Figures/cover.png, id=167, 462.528pt x 346.896pt>
+<Figures/cover.png, id=171, 462.528pt x 346.896pt>
 File: Figures/cover.png Graphic file (type png)
 <use Figures/cover.png>
 Package pdftex.def Info: Figures/cover.png  used on input line 53.
 (pdftex.def)             Requested size: 597.50787pt x 448.15405pt.
-<cover/logo_black.pdf, id=169, 125.46875pt x 77.28876pt>
+<cover/logo_black.pdf, id=173, 125.46875pt x 77.28876pt>
 File: cover/logo_black.pdf Graphic file (type pdf)
 <use cover/logo_black.pdf>
 Package pdftex.def Info: cover/logo_black.pdf  used on input line 53.
@@ -1247,35 +1250,35 @@ Chapter 2.
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [5] [6] [7]
-<Figures/phase_covariant.png, id=359, 462.528pt x 346.896pt>
+<Figures/phase_covariant.png, id=365, 462.528pt x 346.896pt>
 File: Figures/phase_covariant.png Graphic file (type png)
 <use Figures/phase_covariant.png>
 Package pdftex.def Info: Figures/phase_covariant.png  used on input line 283.
 (pdftex.def)             Requested size: 224.06544pt x 168.0485pt.
  [8 </Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report_final/Figures/phase_covariant.png>]
-<Figures/plot_1D_phase_covariant_different_labels.png, id=370, 1420.30624pt x 905.3825pt>
+<Figures/plot_1D_phase_covariant_different_labels.png, id=376, 1420.30624pt x 905.3825pt>
 File: Figures/plot_1D_phase_covariant_different_labels.png Graphic file (type png)
 <use Figures/plot_1D_phase_covariant_different_labels.png>
 Package pdftex.def Info: Figures/plot_1D_phase_covariant_different_labels.png  used on input line 375.
 (pdftex.def)             Requested size: 224.06544pt x 142.81953pt.
-<Figures/phase_covariant_rotated.png, id=371, 462.528pt x 324.0105pt>
+<Figures/phase_covariant_rotated.png, id=377, 462.528pt x 324.0105pt>
 File: Figures/phase_covariant_rotated.png Graphic file (type png)
 <use Figures/phase_covariant_rotated.png>
 Package pdftex.def Info: Figures/phase_covariant_rotated.png  used on input line 381.
 (pdftex.def)             Requested size: 224.06544pt x 156.96198pt.
  [9] [10 </Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report_final/Figures/plot_1D_phase_covariant_different_labels.png (PNG copy)> </Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report_final/Figures/phase_covariant_rotated.png>]
-<Figures/plot_1D_economical_phase_covariant.png, id=393, 1420.30624pt x 909.3975pt>
+<Figures/plot_1D_economical_phase_covariant.png, id=399, 1420.30624pt x 909.3975pt>
 File: Figures/plot_1D_economical_phase_covariant.png Graphic file (type png)
 <use Figures/plot_1D_economical_phase_covariant.png>
 Package pdftex.def Info: Figures/plot_1D_economical_phase_covariant.png  used on input line 467.
 (pdftex.def)             Requested size: 224.06544pt x 143.45288pt.
-<Figures/economical_phase_covariant_rotated.png, id=394, 462.528pt x 324.0105pt>
+<Figures/economical_phase_covariant_rotated.png, id=400, 462.528pt x 324.0105pt>
 File: Figures/economical_phase_covariant_rotated.png Graphic file (type png)
 <use Figures/economical_phase_covariant_rotated.png>
 Package pdftex.def Info: Figures/economical_phase_covariant_rotated.png  used on input line 473.
 (pdftex.def)             Requested size: 224.06544pt x 156.96198pt.
  [11 </Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report_final/Figures/plot_1D_economical_phase_covariant.png (PNG copy)> </Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report_final/Figures/economical_phase_covariant_rotated.png>]
-<Figures/economical_phase_covariant.png, id=403, 462.528pt x 346.896pt>
+<Figures/economical_phase_covariant.png, id=409, 462.528pt x 346.896pt>
 File: Figures/economical_phase_covariant.png Graphic file (type png)
 <use Figures/economical_phase_covariant.png>
 Package pdftex.def Info: Figures/economical_phase_covariant.png  used on input line 519.
@@ -1429,12 +1432,12 @@ LaTeX Font Info:    Trying to load font information for TS1+futs on input line 1
 File: ts1futs.fd 2003/09/14 Fontinst v1.801 font definitions for TS1/futs.
 ) [19]) (/Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report_final/Chapters/chapter-4.tex [20]
 Chapter 4.
-<Figures/UQCM/IBM/FullSphere/results_corrected_athens_copy1.png, id=489, 462.528pt x 346.896pt>
+<Figures/UQCM/IBM/FullSphere/results_corrected_athens_copy1.png, id=495, 462.528pt x 346.896pt>
 File: Figures/UQCM/IBM/FullSphere/results_corrected_athens_copy1.png Graphic file (type png)
 <use Figures/UQCM/IBM/FullSphere/results_corrected_athens_copy1.png>
 Package pdftex.def Info: Figures/UQCM/IBM/FullSphere/results_corrected_athens_copy1.png  used on input line 31.
 (pdftex.def)             Requested size: 224.06544pt x 168.0485pt.
-<Figures/UQCM/IBM/FullSphere/results_corrected_athens_copy2.png, id=490, 462.528pt x 346.896pt>
+<Figures/UQCM/IBM/FullSphere/results_corrected_athens_copy2.png, id=496, 462.528pt x 346.896pt>
 File: Figures/UQCM/IBM/FullSphere/results_corrected_athens_copy2.png Graphic file (type png)
 <use Figures/UQCM/IBM/FullSphere/results_corrected_athens_copy2.png>
 Package pdftex.def Info: Figures/UQCM/IBM/FullSphere/results_corrected_athens_copy2.png  used on input line 35.
@@ -1445,32 +1448,32 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
  [21
 
 ]
-<Figures/UQCM/IBM/FullSphere/results_corrected_ourense_copy1.png, id=497, 462.528pt x 346.896pt>
+<Figures/UQCM/IBM/FullSphere/results_corrected_ourense_copy1.png, id=503, 462.528pt x 346.896pt>
 File: Figures/UQCM/IBM/FullSphere/results_corrected_ourense_copy1.png Graphic file (type png)
 <use Figures/UQCM/IBM/FullSphere/results_corrected_ourense_copy1.png>
 Package pdftex.def Info: Figures/UQCM/IBM/FullSphere/results_corrected_ourense_copy1.png  used on input line 46.
 (pdftex.def)             Requested size: 224.06544pt x 168.0485pt.
-<Figures/UQCM/IBM/FullSphere/results_corrected_ourense_copy2.png, id=498, 462.528pt x 346.896pt>
+<Figures/UQCM/IBM/FullSphere/results_corrected_ourense_copy2.png, id=504, 462.528pt x 346.896pt>
 File: Figures/UQCM/IBM/FullSphere/results_corrected_ourense_copy2.png Graphic file (type png)
 <use Figures/UQCM/IBM/FullSphere/results_corrected_ourense_copy2.png>
 Package pdftex.def Info: Figures/UQCM/IBM/FullSphere/results_corrected_ourense_copy2.png  used on input line 50.
 (pdftex.def)             Requested size: 224.06544pt x 168.0485pt.
-<Figures/UQCM/IBM/FullSphere/results_corrected_vigo_copy1.png, id=499, 462.528pt x 346.896pt>
+<Figures/UQCM/IBM/FullSphere/results_corrected_vigo_copy1.png, id=505, 462.528pt x 346.896pt>
 File: Figures/UQCM/IBM/FullSphere/results_corrected_vigo_copy1.png Graphic file (type png)
 <use Figures/UQCM/IBM/FullSphere/results_corrected_vigo_copy1.png>
 Package pdftex.def Info: Figures/UQCM/IBM/FullSphere/results_corrected_vigo_copy1.png  used on input line 61.
 (pdftex.def)             Requested size: 224.06544pt x 168.0485pt.
-<Figures/UQCM/IBM/FullSphere/results_corrected_vigo_copy2.png, id=500, 462.528pt x 346.896pt>
+<Figures/UQCM/IBM/FullSphere/results_corrected_vigo_copy2.png, id=506, 462.528pt x 346.896pt>
 File: Figures/UQCM/IBM/FullSphere/results_corrected_vigo_copy2.png Graphic file (type png)
 <use Figures/UQCM/IBM/FullSphere/results_corrected_vigo_copy2.png>
 Package pdftex.def Info: Figures/UQCM/IBM/FullSphere/results_corrected_vigo_copy2.png  used on input line 65.
 (pdftex.def)             Requested size: 224.06544pt x 168.0485pt.
-<Figures/UQCM/IBM/FullSphere/results_corrected_valencia_copy1.png, id=501, 462.528pt x 346.896pt>
+<Figures/UQCM/IBM/FullSphere/results_corrected_valencia_copy1.png, id=507, 462.528pt x 346.896pt>
 File: Figures/UQCM/IBM/FullSphere/results_corrected_valencia_copy1.png Graphic file (type png)
 <use Figures/UQCM/IBM/FullSphere/results_corrected_valencia_copy1.png>
 Package pdftex.def Info: Figures/UQCM/IBM/FullSphere/results_corrected_valencia_copy1.png  used on input line 75.
 (pdftex.def)             Requested size: 224.06544pt x 168.0485pt.
-<Figures/UQCM/IBM/FullSphere/results_corrected_valencia_copy2.png, id=502, 462.528pt x 346.896pt>
+<Figures/UQCM/IBM/FullSphere/results_corrected_valencia_copy2.png, id=508, 462.528pt x 346.896pt>
 File: Figures/UQCM/IBM/FullSphere/results_corrected_valencia_copy2.png Graphic file (type png)
 <use Figures/UQCM/IBM/FullSphere/results_corrected_valencia_copy2.png>
 Package pdftex.def Info: Figures/UQCM/IBM/FullSphere/results_corrected_valencia_copy2.png  used on input line 79.
@@ -1479,43 +1482,43 @@ Package pdftex.def Info: Figures/UQCM/IBM/FullSphere/results_corrected_valencia_
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [22 </Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report_final/Figures/UQCM/IBM/FullSphere/results_corrected_athens_copy1.png> </Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report_final/Figures/UQCM/IBM/FullSphere/results_corrected_athens_copy2.png> </Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report_final/Figures/UQCM/IBM/FullSphere/results_corrected_ourense_copy1.png> </Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report_final/Figures/UQCM/IBM/FullSphere/results_corrected_ourense_copy2.png> </Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report_final/Figures/UQCM/IBM/FullSphere/results_corrected_vigo_copy1.png> </Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report_final/Figures/UQCM/IBM/FullSphere/results_corrected_vigo_copy2.png>]
-<Figures/UQCM/IBM/FullSphere/results_corrected_santiago_copy1.png, id=516, 462.528pt x 346.896pt>
+<Figures/UQCM/IBM/FullSphere/results_corrected_santiago_copy1.png, id=522, 462.528pt x 346.896pt>
 File: Figures/UQCM/IBM/FullSphere/results_corrected_santiago_copy1.png Graphic file (type png)
 <use Figures/UQCM/IBM/FullSphere/results_corrected_santiago_copy1.png>
 Package pdftex.def Info: Figures/UQCM/IBM/FullSphere/results_corrected_santiago_copy1.png  used on input line 91.
 (pdftex.def)             Requested size: 224.06544pt x 168.0485pt.
-<Figures/UQCM/IBM/FullSphere/results_corrected_santiago_copy2.png, id=517, 462.528pt x 346.896pt>
+<Figures/UQCM/IBM/FullSphere/results_corrected_santiago_copy2.png, id=523, 462.528pt x 346.896pt>
 File: Figures/UQCM/IBM/FullSphere/results_corrected_santiago_copy2.png Graphic file (type png)
 <use Figures/UQCM/IBM/FullSphere/results_corrected_santiago_copy2.png>
 Package pdftex.def Info: Figures/UQCM/IBM/FullSphere/results_corrected_santiago_copy2.png  used on input line 95.
 (pdftex.def)             Requested size: 224.06544pt x 168.0485pt.
-<Figures/UQCM/IBM/FullSphere/results_corrected_ibmqx2_copy1.png, id=518, 462.528pt x 346.896pt>
+<Figures/UQCM/IBM/FullSphere/results_corrected_ibmqx2_copy1.png, id=524, 462.528pt x 346.896pt>
 File: Figures/UQCM/IBM/FullSphere/results_corrected_ibmqx2_copy1.png Graphic file (type png)
 <use Figures/UQCM/IBM/FullSphere/results_corrected_ibmqx2_copy1.png>
 Package pdftex.def Info: Figures/UQCM/IBM/FullSphere/results_corrected_ibmqx2_copy1.png  used on input line 105.
 (pdftex.def)             Requested size: 224.06544pt x 168.0485pt.
-<Figures/UQCM/IBM/FullSphere/results_corrected_ibmqx2_copy2.png, id=519, 462.528pt x 346.896pt>
+<Figures/UQCM/IBM/FullSphere/results_corrected_ibmqx2_copy2.png, id=525, 462.528pt x 346.896pt>
 File: Figures/UQCM/IBM/FullSphere/results_corrected_ibmqx2_copy2.png Graphic file (type png)
 <use Figures/UQCM/IBM/FullSphere/results_corrected_ibmqx2_copy2.png>
 Package pdftex.def Info: Figures/UQCM/IBM/FullSphere/results_corrected_ibmqx2_copy2.png  used on input line 109.
 (pdftex.def)             Requested size: 224.06544pt x 168.0485pt.
  [23 </Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report_final/Figures/UQCM/IBM/FullSphere/results_corrected_valencia_copy1.png> </Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report_final/Figures/UQCM/IBM/FullSphere/results_corrected_valencia_copy2.png> </Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report_final/Figures/UQCM/IBM/FullSphere/results_corrected_santiago_copy1.png> </Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report_final/Figures/UQCM/IBM/FullSphere/results_corrected_santiago_copy2.png> </Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report_final/Figures/UQCM/IBM/FullSphere/results_corrected_ibmqx2_copy1.png> </Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report_final/Figures/UQCM/IBM/FullSphere/results_corrected_ibmqx2_copy2.png>]
-<Figures/UQCM/Starmon/OnlyEquator/results_corrected_starmon5_copy1.png, id=541, 462.528pt x 346.896pt>
+<Figures/UQCM/Starmon/OnlyEquator/results_corrected_starmon5_copy1.png, id=547, 462.528pt x 346.896pt>
 File: Figures/UQCM/Starmon/OnlyEquator/results_corrected_starmon5_copy1.png Graphic file (type png)
 <use Figures/UQCM/Starmon/OnlyEquator/results_corrected_starmon5_copy1.png>
 Package pdftex.def Info: Figures/UQCM/Starmon/OnlyEquator/results_corrected_starmon5_copy1.png  used on input line 156.
 (pdftex.def)             Requested size: 201.65753pt x 151.24258pt.
-<Figures/UQCM/Starmon/OnlyEquator/results_corrected_starmon5_copy2.png, id=542, 462.528pt x 346.896pt>
+<Figures/UQCM/Starmon/OnlyEquator/results_corrected_starmon5_copy2.png, id=548, 462.528pt x 346.896pt>
 File: Figures/UQCM/Starmon/OnlyEquator/results_corrected_starmon5_copy2.png Graphic file (type png)
 <use Figures/UQCM/Starmon/OnlyEquator/results_corrected_starmon5_copy2.png>
 Package pdftex.def Info: Figures/UQCM/Starmon/OnlyEquator/results_corrected_starmon5_copy2.png  used on input line 160.
 (pdftex.def)             Requested size: 201.65753pt x 151.24258pt.
-<Figures/UQCM/IBM/OnlyEquator/results_corrected_ourense_copy1.png, id=543, 462.528pt x 346.896pt>
+<Figures/UQCM/IBM/OnlyEquator/results_corrected_ourense_copy1.png, id=549, 462.528pt x 346.896pt>
 File: Figures/UQCM/IBM/OnlyEquator/results_corrected_ourense_copy1.png Graphic file (type png)
 <use Figures/UQCM/IBM/OnlyEquator/results_corrected_ourense_copy1.png>
 Package pdftex.def Info: Figures/UQCM/IBM/OnlyEquator/results_corrected_ourense_copy1.png  used on input line 171.
 (pdftex.def)             Requested size: 201.65753pt x 151.24258pt.
-<Figures/UQCM/IBM/OnlyEquator/results_corrected_ourense_copy2.png, id=544, 462.528pt x 346.896pt>
+<Figures/UQCM/IBM/OnlyEquator/results_corrected_ourense_copy2.png, id=550, 462.528pt x 346.896pt>
 File: Figures/UQCM/IBM/OnlyEquator/results_corrected_ourense_copy2.png Graphic file (type png)
 <use Figures/UQCM/IBM/OnlyEquator/results_corrected_ourense_copy2.png>
 Package pdftex.def Info: Figures/UQCM/IBM/OnlyEquator/results_corrected_ourense_copy2.png  used on input line 175.
@@ -1524,32 +1527,32 @@ Package pdftex.def Info: Figures/UQCM/IBM/OnlyEquator/results_corrected_ourense_
 Underfull \vbox (badness 4454) has occurred while \output is active []
 
  [24 </Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report_final/Figures/UQCM/Starmon/OnlyEquator/results_corrected_starmon5_copy1.png> </Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report_final/Figures/UQCM/Starmon/OnlyEquator/results_corrected_starmon5_copy2.png>]
-<Figures/UQCM/IBM/OnlyEquator/results_corrected_athens_copy1.png, id=555, 462.528pt x 346.896pt>
+<Figures/UQCM/IBM/OnlyEquator/results_corrected_athens_copy1.png, id=561, 462.528pt x 346.896pt>
 File: Figures/UQCM/IBM/OnlyEquator/results_corrected_athens_copy1.png Graphic file (type png)
 <use Figures/UQCM/IBM/OnlyEquator/results_corrected_athens_copy1.png>
 Package pdftex.def Info: Figures/UQCM/IBM/OnlyEquator/results_corrected_athens_copy1.png  used on input line 185.
 (pdftex.def)             Requested size: 201.65753pt x 151.24258pt.
-<Figures/UQCM/IBM/OnlyEquator/results_corrected_athens_copy2.png, id=556, 462.528pt x 346.896pt>
+<Figures/UQCM/IBM/OnlyEquator/results_corrected_athens_copy2.png, id=562, 462.528pt x 346.896pt>
 File: Figures/UQCM/IBM/OnlyEquator/results_corrected_athens_copy2.png Graphic file (type png)
 <use Figures/UQCM/IBM/OnlyEquator/results_corrected_athens_copy2.png>
 Package pdftex.def Info: Figures/UQCM/IBM/OnlyEquator/results_corrected_athens_copy2.png  used on input line 189.
 (pdftex.def)             Requested size: 201.65753pt x 151.24258pt.
-<Figures/UQCM/IBM/OnlyEquator/results_corrected_vigo_copy1.png, id=557, 462.528pt x 346.896pt>
+<Figures/UQCM/IBM/OnlyEquator/results_corrected_vigo_copy1.png, id=563, 462.528pt x 346.896pt>
 File: Figures/UQCM/IBM/OnlyEquator/results_corrected_vigo_copy1.png Graphic file (type png)
 <use Figures/UQCM/IBM/OnlyEquator/results_corrected_vigo_copy1.png>
 Package pdftex.def Info: Figures/UQCM/IBM/OnlyEquator/results_corrected_vigo_copy1.png  used on input line 200.
 (pdftex.def)             Requested size: 201.65753pt x 151.24258pt.
-<Figures/UQCM/IBM/OnlyEquator/results_corrected_vigo_copy2.png, id=558, 462.528pt x 346.896pt>
+<Figures/UQCM/IBM/OnlyEquator/results_corrected_vigo_copy2.png, id=564, 462.528pt x 346.896pt>
 File: Figures/UQCM/IBM/OnlyEquator/results_corrected_vigo_copy2.png Graphic file (type png)
 <use Figures/UQCM/IBM/OnlyEquator/results_corrected_vigo_copy2.png>
 Package pdftex.def Info: Figures/UQCM/IBM/OnlyEquator/results_corrected_vigo_copy2.png  used on input line 204.
 (pdftex.def)             Requested size: 201.65753pt x 151.24258pt.
-<Figures/UQCM/IBM/OnlyEquator/results_corrected_ibmqx2_copy1.png, id=559, 462.528pt x 346.896pt>
+<Figures/UQCM/IBM/OnlyEquator/results_corrected_ibmqx2_copy1.png, id=565, 462.528pt x 346.896pt>
 File: Figures/UQCM/IBM/OnlyEquator/results_corrected_ibmqx2_copy1.png Graphic file (type png)
 <use Figures/UQCM/IBM/OnlyEquator/results_corrected_ibmqx2_copy1.png>
 Package pdftex.def Info: Figures/UQCM/IBM/OnlyEquator/results_corrected_ibmqx2_copy1.png  used on input line 215.
 (pdftex.def)             Requested size: 201.65753pt x 151.24258pt.
-<Figures/UQCM/IBM/OnlyEquator/results_corrected_ibmqx2_copy2.png, id=560, 462.528pt x 346.896pt>
+<Figures/UQCM/IBM/OnlyEquator/results_corrected_ibmqx2_copy2.png, id=566, 462.528pt x 346.896pt>
 File: Figures/UQCM/IBM/OnlyEquator/results_corrected_ibmqx2_copy2.png Graphic file (type png)
 <use Figures/UQCM/IBM/OnlyEquator/results_corrected_ibmqx2_copy2.png>
 Package pdftex.def Info: Figures/UQCM/IBM/OnlyEquator/results_corrected_ibmqx2_copy2.png  used on input line 219.
@@ -1558,193 +1561,226 @@ Package pdftex.def Info: Figures/UQCM/IBM/OnlyEquator/results_corrected_ibmqx2_c
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [25 </Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report_final/Figures/UQCM/IBM/OnlyEquator/results_corrected_ourense_copy1.png> </Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report_final/Figures/UQCM/IBM/OnlyEquator/results_corrected_ourense_copy2.png> </Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report_final/Figures/UQCM/IBM/OnlyEquator/results_corrected_athens_copy1.png> </Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report_final/Figures/UQCM/IBM/OnlyEquator/results_corrected_athens_copy2.png> </Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report_final/Figures/UQCM/IBM/OnlyEquator/results_corrected_vigo_copy1.png> </Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report_final/Figures/UQCM/IBM/OnlyEquator/results_corrected_vigo_copy2.png>] [26 </Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report_final/Figures/UQCM/IBM/OnlyEquator/results_corrected_ibmqx2_copy1.png> </Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report_final/Figures/UQCM/IBM/OnlyEquator/results_corrected_ibmqx2_copy2.png>]
-<Figures/PhaseCovariant/Starmon/FullSphere/results_starmon_corrected_copy1.png, id=594, 462.528pt x 346.896pt>
+<Figures/PhaseCovariant/Histograms/histo_sphere_corrected.png, id=596, 867.24pt x 433.62pt>
+File: Figures/PhaseCovariant/Histograms/histo_sphere_corrected.png Graphic file (type png)
+<use Figures/PhaseCovariant/Histograms/histo_sphere_corrected.png>
+Package pdftex.def Info: Figures/PhaseCovariant/Histograms/histo_sphere_corrected.png  used on input line 294.
+(pdftex.def)             Requested size: 358.50609pt x 179.25421pt.
+<Figures/PhaseCovariant/Starmon/FullSphere/results_starmon_corrected_copy1.png, id=601, 462.528pt x 346.896pt>
 File: Figures/PhaseCovariant/Starmon/FullSphere/results_starmon_corrected_copy1.png Graphic file (type png)
 <use Figures/PhaseCovariant/Starmon/FullSphere/results_starmon_corrected_copy1.png>
-Package pdftex.def Info: Figures/PhaseCovariant/Starmon/FullSphere/results_starmon_corrected_copy1.png  used on input line 313.
+Package pdftex.def Info: Figures/PhaseCovariant/Starmon/FullSphere/results_starmon_corrected_copy1.png  used on input line 319.
 (pdftex.def)             Requested size: 224.06544pt x 168.0485pt.
-<Figures/PhaseCovariant/Starmon/FullSphere/results_starmon_corrected_copy2.png, id=595, 462.528pt x 346.896pt>
+<Figures/PhaseCovariant/Starmon/FullSphere/results_starmon_corrected_copy2.png, id=602, 462.528pt x 346.896pt>
 File: Figures/PhaseCovariant/Starmon/FullSphere/results_starmon_corrected_copy2.png Graphic file (type png)
 <use Figures/PhaseCovariant/Starmon/FullSphere/results_starmon_corrected_copy2.png>
-Package pdftex.def Info: Figures/PhaseCovariant/Starmon/FullSphere/results_starmon_corrected_copy2.png  used on input line 318.
+Package pdftex.def Info: Figures/PhaseCovariant/Starmon/FullSphere/results_starmon_corrected_copy2.png  used on input line 324.
 (pdftex.def)             Requested size: 224.06544pt x 168.0485pt.
-<Figures/PhaseCovariant/IBM/FullSphere/results_corrected_athens_copy1.png, id=596, 462.528pt x 346.896pt>
+ [27 </Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report_final/Figures/PhaseCovariant/Histograms/histo_sphere_corrected.png>]
+<Figures/PhaseCovariant/IBM/FullSphere/results_corrected_athens_copy1.png, id=613, 462.528pt x 346.896pt>
 File: Figures/PhaseCovariant/IBM/FullSphere/results_corrected_athens_copy1.png Graphic file (type png)
 <use Figures/PhaseCovariant/IBM/FullSphere/results_corrected_athens_copy1.png>
-Package pdftex.def Info: Figures/PhaseCovariant/IBM/FullSphere/results_corrected_athens_copy1.png  used on input line 329.
+Package pdftex.def Info: Figures/PhaseCovariant/IBM/FullSphere/results_corrected_athens_copy1.png  used on input line 335.
 (pdftex.def)             Requested size: 224.06544pt x 168.0485pt.
-<Figures/PhaseCovariant/IBM/FullSphere/results_corrected_athens_copy2.png, id=597, 462.528pt x 346.896pt>
+<Figures/PhaseCovariant/IBM/FullSphere/results_corrected_athens_copy2.png, id=614, 462.528pt x 346.896pt>
 File: Figures/PhaseCovariant/IBM/FullSphere/results_corrected_athens_copy2.png Graphic file (type png)
 <use Figures/PhaseCovariant/IBM/FullSphere/results_corrected_athens_copy2.png>
-Package pdftex.def Info: Figures/PhaseCovariant/IBM/FullSphere/results_corrected_athens_copy2.png  used on input line 334.
+Package pdftex.def Info: Figures/PhaseCovariant/IBM/FullSphere/results_corrected_athens_copy2.png  used on input line 340.
 (pdftex.def)             Requested size: 224.06544pt x 168.0485pt.
- [27 </Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report_final/Figures/PhaseCovariant/Starmon/FullSphere/results_starmon_corrected_copy1.png> </Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report_final/Figures/PhaseCovariant/Starmon/FullSphere/results_starmon_corrected_copy2.png>]
-<Figures/PhaseCovariant/IBM/FullSphere/results_corrected_ourense_copy1.png, id=609, 462.528pt x 346.896pt>
+<Figures/PhaseCovariant/IBM/FullSphere/results_corrected_ourense_copy1.png, id=615, 462.528pt x 346.896pt>
 File: Figures/PhaseCovariant/IBM/FullSphere/results_corrected_ourense_copy1.png Graphic file (type png)
 <use Figures/PhaseCovariant/IBM/FullSphere/results_corrected_ourense_copy1.png>
-Package pdftex.def Info: Figures/PhaseCovariant/IBM/FullSphere/results_corrected_ourense_copy1.png  used on input line 346.
+Package pdftex.def Info: Figures/PhaseCovariant/IBM/FullSphere/results_corrected_ourense_copy1.png  used on input line 352.
 (pdftex.def)             Requested size: 224.06544pt x 168.0485pt.
-<Figures/PhaseCovariant/IBM/FullSphere/results_corrected_ourense_copy2.png, id=610, 462.528pt x 346.896pt>
+<Figures/PhaseCovariant/IBM/FullSphere/results_corrected_ourense_copy2.png, id=616, 462.528pt x 346.896pt>
 File: Figures/PhaseCovariant/IBM/FullSphere/results_corrected_ourense_copy2.png Graphic file (type png)
 <use Figures/PhaseCovariant/IBM/FullSphere/results_corrected_ourense_copy2.png>
-Package pdftex.def Info: Figures/PhaseCovariant/IBM/FullSphere/results_corrected_ourense_copy2.png  used on input line 352.
+Package pdftex.def Info: Figures/PhaseCovariant/IBM/FullSphere/results_corrected_ourense_copy2.png  used on input line 358.
 (pdftex.def)             Requested size: 224.06544pt x 168.0485pt.
-<Figures/PhaseCovariant/IBM/FullSphere/results_corrected_santiago_copy1.png, id=611, 462.528pt x 346.896pt>
+<Figures/PhaseCovariant/IBM/FullSphere/results_corrected_santiago_copy1.png, id=617, 462.528pt x 346.896pt>
 File: Figures/PhaseCovariant/IBM/FullSphere/results_corrected_santiago_copy1.png Graphic file (type png)
 <use Figures/PhaseCovariant/IBM/FullSphere/results_corrected_santiago_copy1.png>
-Package pdftex.def Info: Figures/PhaseCovariant/IBM/FullSphere/results_corrected_santiago_copy1.png  used on input line 364.
+Package pdftex.def Info: Figures/PhaseCovariant/IBM/FullSphere/results_corrected_santiago_copy1.png  used on input line 370.
 (pdftex.def)             Requested size: 224.06544pt x 168.0485pt.
-<Figures/PhaseCovariant/IBM/FullSphere/results_corrected_santiago_copy2.png, id=612, 462.528pt x 346.896pt>
+<Figures/PhaseCovariant/IBM/FullSphere/results_corrected_santiago_copy2.png, id=618, 462.528pt x 346.896pt>
 File: Figures/PhaseCovariant/IBM/FullSphere/results_corrected_santiago_copy2.png Graphic file (type png)
 <use Figures/PhaseCovariant/IBM/FullSphere/results_corrected_santiago_copy2.png>
-Package pdftex.def Info: Figures/PhaseCovariant/IBM/FullSphere/results_corrected_santiago_copy2.png  used on input line 370.
+Package pdftex.def Info: Figures/PhaseCovariant/IBM/FullSphere/results_corrected_santiago_copy2.png  used on input line 376.
 (pdftex.def)             Requested size: 224.06544pt x 168.0485pt.
-<Figures/PhaseCovariant/IBM/FullSphere/results_corrected_valencia_copy1.png, id=613, 462.528pt x 346.896pt>
+ [28 </Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report_final/Figures/PhaseCovariant/Starmon/FullSphere/results_starmon_corrected_copy1.png> </Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report_final/Figures/PhaseCovariant/Starmon/FullSphere/results_starmon_corrected_copy2.png> </Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report_final/Figures/PhaseCovariant/IBM/FullSphere/results_corrected_athens_copy1.png> </Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report_final/Figures/PhaseCovariant/IBM/FullSphere/results_corrected_athens_copy2.png> </Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report_final/Figures/PhaseCovariant/IBM/FullSphere/results_corrected_ourense_copy1.png> </Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report_final/Figures/PhaseCovariant/IBM/FullSphere/results_corrected_ourense_copy2.png>]
+<Figures/PhaseCovariant/IBM/FullSphere/results_corrected_valencia_copy1.png, id=632, 462.528pt x 346.896pt>
 File: Figures/PhaseCovariant/IBM/FullSphere/results_corrected_valencia_copy1.png Graphic file (type png)
 <use Figures/PhaseCovariant/IBM/FullSphere/results_corrected_valencia_copy1.png>
-Package pdftex.def Info: Figures/PhaseCovariant/IBM/FullSphere/results_corrected_valencia_copy1.png  used on input line 382.
+Package pdftex.def Info: Figures/PhaseCovariant/IBM/FullSphere/results_corrected_valencia_copy1.png  used on input line 388.
 (pdftex.def)             Requested size: 224.06544pt x 168.0485pt.
-<Figures/PhaseCovariant/IBM/FullSphere/results_corrected_valencia_copy2.png, id=614, 462.528pt x 346.896pt>
+<Figures/PhaseCovariant/IBM/FullSphere/results_corrected_valencia_copy2.png, id=633, 462.528pt x 346.896pt>
 File: Figures/PhaseCovariant/IBM/FullSphere/results_corrected_valencia_copy2.png Graphic file (type png)
 <use Figures/PhaseCovariant/IBM/FullSphere/results_corrected_valencia_copy2.png>
-Package pdftex.def Info: Figures/PhaseCovariant/IBM/FullSphere/results_corrected_valencia_copy2.png  used on input line 387.
+Package pdftex.def Info: Figures/PhaseCovariant/IBM/FullSphere/results_corrected_valencia_copy2.png  used on input line 393.
+(pdftex.def)             Requested size: 224.06544pt x 168.0485pt.
+<Figures/PhaseCovariant/IBM/FullSphere/results_corrected_vigo_copy1.png, id=634, 462.528pt x 346.896pt>
+File: Figures/PhaseCovariant/IBM/FullSphere/results_corrected_vigo_copy1.png Graphic file (type png)
+<use Figures/PhaseCovariant/IBM/FullSphere/results_corrected_vigo_copy1.png>
+Package pdftex.def Info: Figures/PhaseCovariant/IBM/FullSphere/results_corrected_vigo_copy1.png  used on input line 405.
+(pdftex.def)             Requested size: 224.06544pt x 168.0485pt.
+<Figures/PhaseCovariant/IBM/FullSphere/results_corrected_vigo_copy2.png, id=635, 462.528pt x 346.896pt>
+File: Figures/PhaseCovariant/IBM/FullSphere/results_corrected_vigo_copy2.png Graphic file (type png)
+<use Figures/PhaseCovariant/IBM/FullSphere/results_corrected_vigo_copy2.png>
+Package pdftex.def Info: Figures/PhaseCovariant/IBM/FullSphere/results_corrected_vigo_copy2.png  used on input line 411.
+(pdftex.def)             Requested size: 224.06544pt x 168.0485pt.
+<Figures/PhaseCovariant/IBM/FullSphere/results_corrected_ibmqx2_copy1.png, id=636, 462.528pt x 346.896pt>
+File: Figures/PhaseCovariant/IBM/FullSphere/results_corrected_ibmqx2_copy1.png Graphic file (type png)
+<use Figures/PhaseCovariant/IBM/FullSphere/results_corrected_ibmqx2_copy1.png>
+Package pdftex.def Info: Figures/PhaseCovariant/IBM/FullSphere/results_corrected_ibmqx2_copy1.png  used on input line 423.
+(pdftex.def)             Requested size: 224.06544pt x 168.0485pt.
+<Figures/PhaseCovariant/IBM/FullSphere/results_corrected_ibmqx2_copy2.png, id=637, 462.528pt x 346.896pt>
+File: Figures/PhaseCovariant/IBM/FullSphere/results_corrected_ibmqx2_copy2.png Graphic file (type png)
+<use Figures/PhaseCovariant/IBM/FullSphere/results_corrected_ibmqx2_copy2.png>
+Package pdftex.def Info: Figures/PhaseCovariant/IBM/FullSphere/results_corrected_ibmqx2_copy2.png  used on input line 429.
 (pdftex.def)             Requested size: 224.06544pt x 168.0485pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [28 </Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report_final/Figures/PhaseCovariant/IBM/FullSphere/results_corrected_athens_copy1.png> </Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report_final/Figures/PhaseCovariant/IBM/FullSphere/results_corrected_athens_copy2.png> </Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report_final/Figures/PhaseCovariant/IBM/FullSphere/results_corrected_ourense_copy1.png> </Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report_final/Figures/PhaseCovariant/IBM/FullSphere/results_corrected_ourense_copy2.png> </Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report_final/Figures/PhaseCovariant/IBM/FullSphere/results_corrected_santiago_copy1.png> </Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report_final/Figures/PhaseCovariant/IBM/FullSphere/results_corrected_santiago_copy2.png>]
-<Figures/PhaseCovariant/IBM/FullSphere/results_corrected_vigo_copy1.png, id=627, 462.528pt x 346.896pt>
-File: Figures/PhaseCovariant/IBM/FullSphere/results_corrected_vigo_copy1.png Graphic file (type png)
-<use Figures/PhaseCovariant/IBM/FullSphere/results_corrected_vigo_copy1.png>
-Package pdftex.def Info: Figures/PhaseCovariant/IBM/FullSphere/results_corrected_vigo_copy1.png  used on input line 399.
-(pdftex.def)             Requested size: 224.06544pt x 168.0485pt.
-<Figures/PhaseCovariant/IBM/FullSphere/results_corrected_vigo_copy2.png, id=628, 462.528pt x 346.896pt>
-File: Figures/PhaseCovariant/IBM/FullSphere/results_corrected_vigo_copy2.png Graphic file (type png)
-<use Figures/PhaseCovariant/IBM/FullSphere/results_corrected_vigo_copy2.png>
-Package pdftex.def Info: Figures/PhaseCovariant/IBM/FullSphere/results_corrected_vigo_copy2.png  used on input line 405.
-(pdftex.def)             Requested size: 224.06544pt x 168.0485pt.
-<Figures/PhaseCovariant/IBM/FullSphere/results_corrected_ibmqx2_copy1.png, id=629, 462.528pt x 346.896pt>
-File: Figures/PhaseCovariant/IBM/FullSphere/results_corrected_ibmqx2_copy1.png Graphic file (type png)
-<use Figures/PhaseCovariant/IBM/FullSphere/results_corrected_ibmqx2_copy1.png>
-Package pdftex.def Info: Figures/PhaseCovariant/IBM/FullSphere/results_corrected_ibmqx2_copy1.png  used on input line 417.
-(pdftex.def)             Requested size: 224.06544pt x 168.0485pt.
-<Figures/PhaseCovariant/IBM/FullSphere/results_corrected_ibmqx2_copy2.png, id=630, 462.528pt x 346.896pt>
-File: Figures/PhaseCovariant/IBM/FullSphere/results_corrected_ibmqx2_copy2.png Graphic file (type png)
-<use Figures/PhaseCovariant/IBM/FullSphere/results_corrected_ibmqx2_copy2.png>
-Package pdftex.def Info: Figures/PhaseCovariant/IBM/FullSphere/results_corrected_ibmqx2_copy2.png  used on input line 423.
-(pdftex.def)             Requested size: 224.06544pt x 168.0485pt.
+ [29 </Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report_final/Figures/PhaseCovariant/IBM/FullSphere/results_corrected_santiago_copy1.png> </Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report_final/Figures/PhaseCovariant/IBM/FullSphere/results_corrected_santiago_copy2.png> </Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report_final/Figures/PhaseCovariant/IBM/FullSphere/results_corrected_valencia_copy1.png> </Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report_final/Figures/PhaseCovariant/IBM/FullSphere/results_corrected_valencia_copy2.png> </Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report_final/Figures/PhaseCovariant/IBM/FullSphere/results_corrected_vigo_copy1.png> </Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report_final/Figures/PhaseCovariant/IBM/FullSphere/results_corrected_vigo_copy2.png>]
+<Figures/PhaseCovariant/Histograms/histo_sphere.png, id=650, 867.24pt x 433.62pt>
+File: Figures/PhaseCovariant/Histograms/histo_sphere.png Graphic file (type png)
+<use Figures/PhaseCovariant/Histograms/histo_sphere.png>
+Package pdftex.def Info: Figures/PhaseCovariant/Histograms/histo_sphere.png  used on input line 453.
+(pdftex.def)             Requested size: 358.50609pt x 179.25421pt.
 
-Underfull \vbox (badness 1540) has occurred while \output is active []
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [29 </Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report_final/Figures/PhaseCovariant/IBM/FullSphere/results_corrected_valencia_copy1.png> </Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report_final/Figures/PhaseCovariant/IBM/FullSphere/results_corrected_valencia_copy2.png> </Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report_final/Figures/PhaseCovariant/IBM/FullSphere/results_corrected_vigo_copy1.png> </Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report_final/Figures/PhaseCovariant/IBM/FullSphere/results_corrected_vigo_copy2.png> </Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report_final/Figures/PhaseCovariant/IBM/FullSphere/results_corrected_ibmqx2_copy1.png> </Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report_final/Figures/PhaseCovariant/IBM/FullSphere/results_corrected_ibmqx2_copy2.png>]
-<Figures/PhaseCovariant/Starmon/OnlyEquator/results_starmon_corrected_copy1.png, id=652, 462.528pt x 346.896pt>
+ [30 </Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report_final/Figures/PhaseCovariant/IBM/FullSphere/results_corrected_ibmqx2_copy1.png> </Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report_final/Figures/PhaseCovariant/IBM/FullSphere/results_corrected_ibmqx2_copy2.png> </Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report_final/Figures/PhaseCovariant/Histograms/histo_sphere.png>]
+<Figures/PhaseCovariant/Histograms/histo_equator_corrected.png, id=664, 867.24pt x 433.62pt>
+File: Figures/PhaseCovariant/Histograms/histo_equator_corrected.png Graphic file (type png)
+<use Figures/PhaseCovariant/Histograms/histo_equator_corrected.png>
+Package pdftex.def Info: Figures/PhaseCovariant/Histograms/histo_equator_corrected.png  used on input line 489.
+(pdftex.def)             Requested size: 358.50609pt x 179.25421pt.
+ [31 </Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report_final/Figures/PhaseCovariant/Histograms/histo_equator_corrected.png>]
+<Figures/PhaseCovariant/Starmon/OnlyEquator/results_starmon_corrected_copy1.png, id=681, 462.528pt x 346.896pt>
 File: Figures/PhaseCovariant/Starmon/OnlyEquator/results_starmon_corrected_copy1.png Graphic file (type png)
 <use Figures/PhaseCovariant/Starmon/OnlyEquator/results_starmon_corrected_copy1.png>
-Package pdftex.def Info: Figures/PhaseCovariant/Starmon/OnlyEquator/results_starmon_corrected_copy1.png  used on input line 496.
+Package pdftex.def Info: Figures/PhaseCovariant/Starmon/OnlyEquator/results_starmon_corrected_copy1.png  used on input line 514.
 (pdftex.def)             Requested size: 224.06544pt x 168.0485pt.
-<Figures/PhaseCovariant/Starmon/OnlyEquator/results_starmon_corrected_copy2.png, id=653, 462.528pt x 346.896pt>
+<Figures/PhaseCovariant/Starmon/OnlyEquator/results_starmon_corrected_copy2.png, id=682, 462.528pt x 346.896pt>
 File: Figures/PhaseCovariant/Starmon/OnlyEquator/results_starmon_corrected_copy2.png Graphic file (type png)
 <use Figures/PhaseCovariant/Starmon/OnlyEquator/results_starmon_corrected_copy2.png>
-Package pdftex.def Info: Figures/PhaseCovariant/Starmon/OnlyEquator/results_starmon_corrected_copy2.png  used on input line 501.
+Package pdftex.def Info: Figures/PhaseCovariant/Starmon/OnlyEquator/results_starmon_corrected_copy2.png  used on input line 519.
 (pdftex.def)             Requested size: 224.06544pt x 168.0485pt.
- [30]
-<Figures/PhaseCovariant/IBM/OnlyEquator/results_corrected_athens_copy1.png, id=663, 462.528pt x 346.896pt>
+<Figures/PhaseCovariant/IBM/OnlyEquator/results_corrected_athens_copy1.png, id=683, 462.528pt x 346.896pt>
 File: Figures/PhaseCovariant/IBM/OnlyEquator/results_corrected_athens_copy1.png Graphic file (type png)
 <use Figures/PhaseCovariant/IBM/OnlyEquator/results_corrected_athens_copy1.png>
-Package pdftex.def Info: Figures/PhaseCovariant/IBM/OnlyEquator/results_corrected_athens_copy1.png  used on input line 514.
+Package pdftex.def Info: Figures/PhaseCovariant/IBM/OnlyEquator/results_corrected_athens_copy1.png  used on input line 532.
 (pdftex.def)             Requested size: 224.06544pt x 168.0485pt.
-<Figures/PhaseCovariant/IBM/OnlyEquator/results_corrected_athens_copy2.png, id=664, 462.528pt x 346.896pt>
+<Figures/PhaseCovariant/IBM/OnlyEquator/results_corrected_athens_copy2.png, id=684, 462.528pt x 346.896pt>
 File: Figures/PhaseCovariant/IBM/OnlyEquator/results_corrected_athens_copy2.png Graphic file (type png)
 <use Figures/PhaseCovariant/IBM/OnlyEquator/results_corrected_athens_copy2.png>
-Package pdftex.def Info: Figures/PhaseCovariant/IBM/OnlyEquator/results_corrected_athens_copy2.png  used on input line 519.
+Package pdftex.def Info: Figures/PhaseCovariant/IBM/OnlyEquator/results_corrected_athens_copy2.png  used on input line 537.
 (pdftex.def)             Requested size: 224.06544pt x 168.0485pt.
-<Figures/PhaseCovariant/IBM/OnlyEquator/results_corrected_ourense_copy1.png, id=665, 462.528pt x 346.896pt>
+<Figures/PhaseCovariant/IBM/OnlyEquator/results_corrected_ourense_copy1.png, id=685, 462.528pt x 346.896pt>
 File: Figures/PhaseCovariant/IBM/OnlyEquator/results_corrected_ourense_copy1.png Graphic file (type png)
 <use Figures/PhaseCovariant/IBM/OnlyEquator/results_corrected_ourense_copy1.png>
-Package pdftex.def Info: Figures/PhaseCovariant/IBM/OnlyEquator/results_corrected_ourense_copy1.png  used on input line 532.
+Package pdftex.def Info: Figures/PhaseCovariant/IBM/OnlyEquator/results_corrected_ourense_copy1.png  used on input line 550.
 (pdftex.def)             Requested size: 224.06544pt x 168.0485pt.
-<Figures/PhaseCovariant/IBM/OnlyEquator/results_corrected_ourense_copy2.png, id=666, 462.528pt x 346.896pt>
+<Figures/PhaseCovariant/IBM/OnlyEquator/results_corrected_ourense_copy2.png, id=686, 462.528pt x 346.896pt>
 File: Figures/PhaseCovariant/IBM/OnlyEquator/results_corrected_ourense_copy2.png Graphic file (type png)
 <use Figures/PhaseCovariant/IBM/OnlyEquator/results_corrected_ourense_copy2.png>
-Package pdftex.def Info: Figures/PhaseCovariant/IBM/OnlyEquator/results_corrected_ourense_copy2.png  used on input line 537.
+Package pdftex.def Info: Figures/PhaseCovariant/IBM/OnlyEquator/results_corrected_ourense_copy2.png  used on input line 555.
 (pdftex.def)             Requested size: 224.06544pt x 168.0485pt.
-<Figures/PhaseCovariant/IBM/OnlyEquator/results_corrected_santiago_copy1.png, id=667, 462.528pt x 346.896pt>
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [32 </Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report_final/Figures/PhaseCovariant/Starmon/OnlyEquator/results_starmon_corrected_copy1.png> </Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report_final/Figures/PhaseCovariant/Starmon/OnlyEquator/results_starmon_corrected_copy2.png> </Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report_final/Figures/PhaseCovariant/IBM/OnlyEquator/results_corrected_athens_copy1.png> </Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report_final/Figures/PhaseCovariant/IBM/OnlyEquator/results_corrected_athens_copy2.png>]
+<Figures/PhaseCovariant/IBM/OnlyEquator/results_corrected_santiago_copy1.png, id=696, 462.528pt x 346.896pt>
 File: Figures/PhaseCovariant/IBM/OnlyEquator/results_corrected_santiago_copy1.png Graphic file (type png)
 <use Figures/PhaseCovariant/IBM/OnlyEquator/results_corrected_santiago_copy1.png>
-Package pdftex.def Info: Figures/PhaseCovariant/IBM/OnlyEquator/results_corrected_santiago_copy1.png  used on input line 550.
+Package pdftex.def Info: Figures/PhaseCovariant/IBM/OnlyEquator/results_corrected_santiago_copy1.png  used on input line 568.
 (pdftex.def)             Requested size: 224.06544pt x 168.0485pt.
-<Figures/PhaseCovariant/IBM/OnlyEquator/results_corrected_santiago_copy2.png, id=668, 462.528pt x 346.896pt>
+<Figures/PhaseCovariant/IBM/OnlyEquator/results_corrected_santiago_copy2.png, id=697, 462.528pt x 346.896pt>
 File: Figures/PhaseCovariant/IBM/OnlyEquator/results_corrected_santiago_copy2.png Graphic file (type png)
 <use Figures/PhaseCovariant/IBM/OnlyEquator/results_corrected_santiago_copy2.png>
-Package pdftex.def Info: Figures/PhaseCovariant/IBM/OnlyEquator/results_corrected_santiago_copy2.png  used on input line 555.
+Package pdftex.def Info: Figures/PhaseCovariant/IBM/OnlyEquator/results_corrected_santiago_copy2.png  used on input line 573.
 (pdftex.def)             Requested size: 224.06544pt x 168.0485pt.
- [31 </Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report_final/Figures/PhaseCovariant/Starmon/OnlyEquator/results_starmon_corrected_copy1.png> </Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report_final/Figures/PhaseCovariant/Starmon/OnlyEquator/results_starmon_corrected_copy2.png> </Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report_final/Figures/PhaseCovariant/IBM/OnlyEquator/results_corrected_athens_copy1.png> </Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report_final/Figures/PhaseCovariant/IBM/OnlyEquator/results_corrected_athens_copy2.png> </Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report_final/Figures/PhaseCovariant/IBM/OnlyEquator/results_corrected_ourense_copy1.png> </Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report_final/Figures/PhaseCovariant/IBM/OnlyEquator/results_corrected_ourense_copy2.png>]
-<Figures/PhaseCovariant/IBM/OnlyEquator/results_corrected_valencia_copy1.png, id=681, 462.528pt x 346.896pt>
+<Figures/PhaseCovariant/IBM/OnlyEquator/results_corrected_valencia_copy1.png, id=698, 462.528pt x 346.896pt>
 File: Figures/PhaseCovariant/IBM/OnlyEquator/results_corrected_valencia_copy1.png Graphic file (type png)
 <use Figures/PhaseCovariant/IBM/OnlyEquator/results_corrected_valencia_copy1.png>
-Package pdftex.def Info: Figures/PhaseCovariant/IBM/OnlyEquator/results_corrected_valencia_copy1.png  used on input line 568.
+Package pdftex.def Info: Figures/PhaseCovariant/IBM/OnlyEquator/results_corrected_valencia_copy1.png  used on input line 586.
 (pdftex.def)             Requested size: 224.06544pt x 168.0485pt.
-<Figures/PhaseCovariant/IBM/OnlyEquator/results_corrected_valencia_copy2.png, id=682, 462.528pt x 346.896pt>
+<Figures/PhaseCovariant/IBM/OnlyEquator/results_corrected_valencia_copy2.png, id=699, 462.528pt x 346.896pt>
 File: Figures/PhaseCovariant/IBM/OnlyEquator/results_corrected_valencia_copy2.png Graphic file (type png)
 <use Figures/PhaseCovariant/IBM/OnlyEquator/results_corrected_valencia_copy2.png>
-Package pdftex.def Info: Figures/PhaseCovariant/IBM/OnlyEquator/results_corrected_valencia_copy2.png  used on input line 573.
+Package pdftex.def Info: Figures/PhaseCovariant/IBM/OnlyEquator/results_corrected_valencia_copy2.png  used on input line 591.
 (pdftex.def)             Requested size: 224.06544pt x 168.0485pt.
-<Figures/PhaseCovariant/IBM/OnlyEquator/results_corrected_vigo_copy1.png, id=683, 462.528pt x 346.896pt>
+<Figures/PhaseCovariant/IBM/OnlyEquator/results_corrected_vigo_copy1.png, id=700, 462.528pt x 346.896pt>
 File: Figures/PhaseCovariant/IBM/OnlyEquator/results_corrected_vigo_copy1.png Graphic file (type png)
 <use Figures/PhaseCovariant/IBM/OnlyEquator/results_corrected_vigo_copy1.png>
-Package pdftex.def Info: Figures/PhaseCovariant/IBM/OnlyEquator/results_corrected_vigo_copy1.png  used on input line 586.
+Package pdftex.def Info: Figures/PhaseCovariant/IBM/OnlyEquator/results_corrected_vigo_copy1.png  used on input line 604.
 (pdftex.def)             Requested size: 224.06544pt x 168.0485pt.
-<Figures/PhaseCovariant/IBM/OnlyEquator/results_corrected_vigo_copy2.png, id=684, 462.528pt x 346.896pt>
+<Figures/PhaseCovariant/IBM/OnlyEquator/results_corrected_vigo_copy2.png, id=701, 462.528pt x 346.896pt>
 File: Figures/PhaseCovariant/IBM/OnlyEquator/results_corrected_vigo_copy2.png Graphic file (type png)
 <use Figures/PhaseCovariant/IBM/OnlyEquator/results_corrected_vigo_copy2.png>
-Package pdftex.def Info: Figures/PhaseCovariant/IBM/OnlyEquator/results_corrected_vigo_copy2.png  used on input line 591.
+Package pdftex.def Info: Figures/PhaseCovariant/IBM/OnlyEquator/results_corrected_vigo_copy2.png  used on input line 609.
 (pdftex.def)             Requested size: 224.06544pt x 168.0485pt.
-<Figures/PhaseCovariant/IBM/OnlyEquator/results_corrected_ibmqx2_copy1.png, id=685, 462.528pt x 346.896pt>
+ [33 </Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report_final/Figures/PhaseCovariant/IBM/OnlyEquator/results_corrected_ourense_copy1.png> </Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report_final/Figures/PhaseCovariant/IBM/OnlyEquator/results_corrected_ourense_copy2.png> </Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report_final/Figures/PhaseCovariant/IBM/OnlyEquator/results_corrected_santiago_copy1.png> </Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report_final/Figures/PhaseCovariant/IBM/OnlyEquator/results_corrected_santiago_copy2.png> </Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report_final/Figures/PhaseCovariant/IBM/OnlyEquator/results_corrected_valencia_copy1.png> </Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report_final/Figures/PhaseCovariant/IBM/OnlyEquator/results_corrected_valencia_copy2.png>]
+<Figures/PhaseCovariant/IBM/OnlyEquator/results_corrected_ibmqx2_copy1.png, id=714, 462.528pt x 346.896pt>
 File: Figures/PhaseCovariant/IBM/OnlyEquator/results_corrected_ibmqx2_copy1.png Graphic file (type png)
 <use Figures/PhaseCovariant/IBM/OnlyEquator/results_corrected_ibmqx2_copy1.png>
-Package pdftex.def Info: Figures/PhaseCovariant/IBM/OnlyEquator/results_corrected_ibmqx2_copy1.png  used on input line 604.
+Package pdftex.def Info: Figures/PhaseCovariant/IBM/OnlyEquator/results_corrected_ibmqx2_copy1.png  used on input line 622.
 (pdftex.def)             Requested size: 224.06544pt x 168.0485pt.
-<Figures/PhaseCovariant/IBM/OnlyEquator/results_corrected_ibmqx2_copy2.png, id=686, 462.528pt x 346.896pt>
+<Figures/PhaseCovariant/IBM/OnlyEquator/results_corrected_ibmqx2_copy2.png, id=715, 462.528pt x 346.896pt>
 File: Figures/PhaseCovariant/IBM/OnlyEquator/results_corrected_ibmqx2_copy2.png Graphic file (type png)
 <use Figures/PhaseCovariant/IBM/OnlyEquator/results_corrected_ibmqx2_copy2.png>
-Package pdftex.def Info: Figures/PhaseCovariant/IBM/OnlyEquator/results_corrected_ibmqx2_copy2.png  used on input line 609.
+Package pdftex.def Info: Figures/PhaseCovariant/IBM/OnlyEquator/results_corrected_ibmqx2_copy2.png  used on input line 627.
 (pdftex.def)             Requested size: 224.06544pt x 168.0485pt.
- [32 </Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report_final/Figures/PhaseCovariant/IBM/OnlyEquator/results_corrected_santiago_copy1.png> </Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report_final/Figures/PhaseCovariant/IBM/OnlyEquator/results_corrected_santiago_copy2.png> </Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report_final/Figures/PhaseCovariant/IBM/OnlyEquator/results_corrected_valencia_copy1.png> </Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report_final/Figures/PhaseCovariant/IBM/OnlyEquator/results_corrected_valencia_copy2.png> </Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report_final/Figures/PhaseCovariant/IBM/OnlyEquator/results_corrected_vigo_copy1.png> </Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report_final/Figures/PhaseCovariant/IBM/OnlyEquator/results_corrected_vigo_copy2.png>] [33 </Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report_final/Figures/PhaseCovariant/IBM/OnlyEquator/results_corrected_ibmqx2_copy1.png> </Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report_final/Figures/PhaseCovariant/IBM/OnlyEquator/results_corrected_ibmqx2_copy2.png>]) (/Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report_final/Chapters/chapter-5.tex [34]
-Chapter 5.
-) (/Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report_final/Chapters/appendix-a.tex [35
+<Figures/PhaseCovariant/Histograms/histo_equator.png, id=716, 867.24pt x 433.62pt>
+File: Figures/PhaseCovariant/Histograms/histo_equator.png Graphic file (type png)
+<use Figures/PhaseCovariant/Histograms/histo_equator.png>
+Package pdftex.def Info: Figures/PhaseCovariant/Histograms/histo_equator.png  used on input line 652.
+(pdftex.def)             Requested size: 358.50609pt x 179.25421pt.
 
-] [36
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [34 </Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report_final/Figures/PhaseCovariant/IBM/OnlyEquator/results_corrected_vigo_copy1.png> </Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report_final/Figures/PhaseCovariant/IBM/OnlyEquator/results_corrected_vigo_copy2.png> </Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report_final/Figures/PhaseCovariant/IBM/OnlyEquator/results_corrected_ibmqx2_copy1.png> </Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report_final/Figures/PhaseCovariant/IBM/OnlyEquator/results_corrected_ibmqx2_copy2.png>]
+<Figures/PhaseCovariant/Histograms/histo_bb84_corrected.png, id=729, 867.24pt x 433.62pt>
+File: Figures/PhaseCovariant/Histograms/histo_bb84_corrected.png Graphic file (type png)
+<use Figures/PhaseCovariant/Histograms/histo_bb84_corrected.png>
+Package pdftex.def Info: Figures/PhaseCovariant/Histograms/histo_bb84_corrected.png  used on input line 678.
+(pdftex.def)             Requested size: 358.50609pt x 179.25421pt.
+<Figures/PhaseCovariant/Histograms/histo_bb84.png, id=730, 867.24pt x 433.62pt>
+File: Figures/PhaseCovariant/Histograms/histo_bb84.png Graphic file (type png)
+<use Figures/PhaseCovariant/Histograms/histo_bb84.png>
+Package pdftex.def Info: Figures/PhaseCovariant/Histograms/histo_bb84.png  used on input line 699.
+(pdftex.def)             Requested size: 358.50609pt x 179.25421pt.
+ [35 </Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report_final/Figures/PhaseCovariant/Histograms/histo_equator.png> </Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report_final/Figures/PhaseCovariant/Histograms/histo_bb84_corrected.png>] [36 </Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report_final/Figures/PhaseCovariant/Histograms/histo_bb84.png>]) (/Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report_final/Chapters/chapter-5.tex [37] [38
+
+]
+Chapter 5.
+) (/Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report_final/Chapters/appendix-a.tex [39] [40
 
 ]
 Appendix A.
-) (/Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report_final/Chapters/appendix-b.tex [37] [38
+) (/Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report_final/Chapters/appendix-b.tex [41] [42
 
 ]
 Appendix B.
-) (/Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report_final/report.bbl [39] [40
+) (/Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report_final/report.bbl [43] [44
 
-] [41])
+] [45])
 \Changes@OutFile=\write6
 \openout6 = `report.soc'.
 
 \tf@loc=\write7
 \openout7 = `report.loc'.
 
- [42]
+ [46]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 77.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 77.
  (/Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report_final/report.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 77.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 77.
+Package rerunfilecheck Info: File `report.out' has not changed.
+(rerunfilecheck)             Checksum: CAA626DA535F6B254275E1735F8F237C;2436.
 
-
-Package rerunfilecheck Warning: File `report.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `report.out':
-(rerunfilecheck)             Before: 107FCEDC36ED2B260C41FD3F20899D57;2395
-(rerunfilecheck)             After:  0C805623478E9B178D5E8EAF5735D59E;2436.
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
@@ -1754,18 +1790,18 @@ LaTeX Warning: There were multiply-defined labels.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 77.
  ) 
 Here is how much of TeX's memory you used:
- 32363 strings out of 480608
- 663406 string characters out of 5903629
- 931741 words of memory out of 5000000
- 47276 multiletter control sequences out of 15000+600000
- 668215 words of font info for 142 fonts, out of 8000000 for 9000
+ 32421 strings out of 480608
+ 665673 string characters out of 5903629
+ 932067 words of memory out of 5000000
+ 47312 multiletter control sequences out of 15000+600000
+ 669591 words of font info for 147 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  68i,20n,106p,1240b,1543s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2020/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}{/usr/local/texlive/2020/texmf-dist/fonts/enc/dvips/base/8r.enc}{/usr/local/texlive/2020/texmf-dist/fonts/enc/dvips/roboto/rbto_b5rac7.enc}</usr/local/texlive/2020/texmf-dist/fonts/type1/google/roboto/Roboto-Regular.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/fourier/fourier-mex.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/fourier/fourier-ml.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/fourier/fourier-mlit.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/fourier/fourier-ms.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/adobe/utopia/putb8a.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/adobe/utopia/putbi8a.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/adobe/utopia/putr8a.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/adobe/utopia/putri8a.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/cm-super/sftt0800.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/cm-super/sftt1000.pfb>
-Output written on /Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report_final/report.pdf (46 pages, 14894472 bytes).
+Output written on /Users/francescozatelli/Desktop/FQIPR/QI_Project2020/report_final/report.pdf (50 pages, 15723146 bytes).
 PDF statistics:
- 873 PDF objects out of 1000 (max. 8388607)
- 643 compressed objects within 7 object streams
- 198 named destinations out of 1000 (max. 500000)
- 671 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 915 PDF objects out of 1000 (max. 8388607)
+ 668 compressed objects within 7 object streams
+ 208 named destinations out of 1000 (max. 500000)
+ 709 words of extra memory for PDF output out of 10000 (max. 10000000)
 

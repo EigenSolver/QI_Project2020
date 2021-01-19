@@ -21,17 +21,17 @@
 \contentsline {subsection}{\numberline {4.1.3}BB84 States}{26}{subsection.4.1.3}%
 \contentsline {section}{\numberline {4.2}Phase covariant quantum cloning machine}{27}{section.4.2}%
 \contentsline {subsection}{\numberline {4.2.1}Sphere}{27}{subsection.4.2.1}%
-\contentsline {subsection}{\numberline {4.2.2}Equator}{30}{subsection.4.2.2}%
-\contentsline {subsection}{\numberline {4.2.3}BB84 states}{33}{subsection.4.2.3}%
-\contentsline {section}{\numberline {4.3}Economical phase covariant quantum cloning machine}{34}{section.4.3}%
-\contentsline {subsection}{\numberline {4.3.1}Sphere}{34}{subsection.4.3.1}%
-\contentsline {subsection}{\numberline {4.3.2}Equator}{34}{subsection.4.3.2}%
-\contentsline {subsection}{\numberline {4.3.3}BB84 states}{34}{subsection.4.3.3}%
-\contentsline {chapter}{\numberline {5}Conclusions}{35}{chapter.5}%
-\contentsline {chapter}{\numberline {A}Results without readout correction}{37}{appendix.A}%
-\contentsline {section}{\numberline {A.1}Universal quantum cloning machine}{37}{section.A.1}%
-\contentsline {section}{\numberline {A.2}Phase covariant quantum cloning machine}{37}{section.A.2}%
-\contentsline {section}{\numberline {A.3}Economical phase covariant quantum cloning machine}{37}{section.A.3}%
-\contentsline {chapter}{\numberline {B}Code}{39}{appendix.B}%
-\contentsline {chapter}{Bibliography}{41}{appendix*.56}%
+\contentsline {subsection}{\numberline {4.2.2}Equator}{31}{subsection.4.2.2}%
+\contentsline {subsection}{\numberline {4.2.3}BB84 states}{35}{subsection.4.2.3}%
+\contentsline {section}{\numberline {4.3}Economical phase covariant quantum cloning machine}{36}{section.4.3}%
+\contentsline {subsection}{\numberline {4.3.1}Sphere}{36}{subsection.4.3.1}%
+\contentsline {subsection}{\numberline {4.3.2}Equator}{36}{subsection.4.3.2}%
+\contentsline {subsection}{\numberline {4.3.3}BB84 states}{37}{subsection.4.3.3}%
+\contentsline {chapter}{\numberline {5}Conclusions}{39}{chapter.5}%
+\contentsline {chapter}{\numberline {A}Results without readout correction}{41}{appendix.A}%
+\contentsline {section}{\numberline {A.1}Universal quantum cloning machine}{41}{section.A.1}%
+\contentsline {section}{\numberline {A.2}Phase covariant quantum cloning machine}{41}{section.A.2}%
+\contentsline {section}{\numberline {A.3}Economical phase covariant quantum cloning machine}{41}{section.A.3}%
+\contentsline {chapter}{\numberline {B}Code}{43}{appendix.B}%
+\contentsline {chapter}{Bibliography}{45}{appendix*.62}%
 \contentsfinish 

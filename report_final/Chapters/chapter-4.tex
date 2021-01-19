@@ -289,6 +289,12 @@ The results we found are summarized in Table \ref{tab:results_pcqcm_fullsphere_c
     \caption{Average fidelity and corresponding standard deviation on the whole Bloch sphere for the two copies on each backend. The results are corrected with readout calibration.}
     \label{tab:results_pcqcm_fullsphere_corrected}
 \end{table}
+\begin{figure}[H]
+  \centering
+          \includegraphics[width=0.8\textwidth]{Figures/PhaseCovariant/Histograms/histo_sphere_corrected.png}
+      \label{fig:pc_histo_sphere_corrected}
+      \caption{Comparison of the average fidelity on the Bloch sphere for both the copies on different backends using readout correction. The uncertainty on the average is calculated as $\sigma_{\overline{F}_i}=\sigma_{F_i}/\sqrt{N}$, where $N$ is the number of points sampled ($N=1000$ in this case).}
+\end{figure}
 
 It is possible to observe that, on average, the PCQCM performs better than the UQCM, even if theoretically it should perform worse. 
 As mentioned in Chapter \ref{sec:approximateqcm}, this is because the PCQCM circuit is much simpler than the UQCM one.
@@ -442,6 +448,12 @@ We conclude the analysis for the full sphere reporting also the results without 
     \caption{Average fidelity and corresponding standard deviation on the whole Bloch sphere for the two copies on each backend. The results are not corrected with readout calibration.}
     \label{tab:results_pcqcm_fullsphere_not_corrected}
 \end{table}
+\begin{figure}[H]
+  \centering
+          \includegraphics[width=0.8\textwidth]{Figures/PhaseCovariant/Histograms/histo_sphere.png}
+      \label{fig:pc_histo_sphere_not_corrected}
+      \caption{Comparison of the average fidelity on the Bloch sphere for both the copies on different backends without using readout correction. The uncertainty on the average is calculated as $\sigma_{\overline{F}_i}=\sigma_{F_i}/\sqrt{N}$, where $N$ is the number of points sampled ($N=1000$ in this case).}
+\end{figure}
 As discussed in the previous section for the UQCM, the readout calibration corrects a classical error associated to a measurement.
 Therefore, we expect the measured fidelity to be more accurate, but not necessarily closer to the ideal case. 
 Indeed, sometimes the readout correction increases the fidelity and sometimes it decreases it.
@@ -472,6 +484,12 @@ The results we found are summarized in Table \ref{tab:results_pcqcm_onlyequator_
     \caption{Average fidelity and corresponding standard deviation on the $xz$-equator for the two copies on each backend. The results are corrected with readout calibration.}
     \label{tab:results_pcqcm_onlyequator_corrected}
 \end{table}
+\begin{figure}[H]
+  \centering
+          \includegraphics[width=0.8\textwidth]{Figures/PhaseCovariant/Histograms/histo_equator_corrected.png}
+      \label{fig:pc_histo_equator_corrected}
+      \caption{Comparison of the average fidelity on the $xz$-equator for both the copies on different backends using readout correction. The uncertainty on the average is calculated as $\sigma_{\overline{F}_i}=\sigma_{F_i}/\sqrt{N}$, where $N$ is the number of points sampled ($N=100$ in this case).}
+\end{figure}
 The average fidelity has significantly increased compared to the sampling on the whole sphere (and of course compared to the UQCM).
 In several cases the fidelity is greater than the bound of the UQCM (i.e. $F\approx 0.833$). 
 The average fidelity of the second copy of Athens and Santiago achieves the theoretical bound for the PCQCM (i.e. $F\approx 0.854$).
@@ -615,9 +633,6 @@ Finally, we observe that the results for the two copies of Yorktown are qualitat
 \end{figure}
 
 
-
-
-
 For the sake of completeness, we also report the non-corrected results.
 \begin{table}[H]
   \centering
@@ -632,6 +647,12 @@ For the sake of completeness, we also report the non-corrected results.
   \caption{Average fidelity and corresponding standard deviation on the $xz$-equator for the two copies on each backend. The results are not corrected with readout calibration.}
   \label{tab:results_pcqcm_onlyequator_not_corrected}
 \end{table}
+\begin{figure}[H]
+  \centering
+          \includegraphics[width=0.8\textwidth]{Figures/PhaseCovariant/Histograms/histo_equator.png}
+      \label{fig:pc_histo_equator_not_corrected}
+      \caption{Comparison of the average fidelity on the $xz$-equator for both the copies on different backends without using readout correction. The uncertainty on the average is calculated as $\sigma_{\overline{F}_i}=\sigma_{F_i}/\sqrt{N}$, where $N$ is the number of points sampled ($N=100$ in this case).}
+\end{figure}
 
 \subsection{BB84 states}
 In Table \ref{tab:results_pcqcm_bb84_corrected} are presented the results obtained considering the BB84 states as input states, considering the readout correction.
@@ -652,6 +673,12 @@ both the average and the standard deviation should remain more or less unchanged
   \caption{Average fidelity and corresponding standard deviation for the BB84 for the two copies on each backend. The results are corrected with readout calibration.}
   \label{tab:results_pcqcm_bb84_corrected}
 \end{table}
+\begin{figure}[H]
+  \centering
+          \includegraphics[width=0.8\textwidth]{Figures/PhaseCovariant/Histograms/histo_bb84_corrected.png}
+      \label{fig:pc_histo_bb84_corrected}
+      \caption{Comparison of the average fidelity for the BB84 states for both the copies on different backends using readout correction. The uncertainty on the average is calculated as $\sigma_{\overline{F}_i}=\sigma_{F_i}/\sqrt{N}$, where $N$ is the number of points sampled ($N=4$ in this case).}
+\end{figure}
 
 We conclude the discusison of the results for the PCQCM with the results for the BB84 states without readout correction.
 \begin{table}[H]
@@ -667,7 +694,12 @@ We conclude the discusison of the results for the PCQCM with the results for the
     \caption{Average fidelity and corresponding standard deviation for the BB84 for the two copies on each backend. The results are not corrected with readout calibration.}
     \label{tab:results_pcqcm_bb84_not_corrected}
 \end{table}
-
+\begin{figure}[H]
+  \centering
+          \includegraphics[width=0.8\textwidth]{Figures/PhaseCovariant/Histograms/histo_bb84.png}
+      \label{fig:pc_histo_bb84_corrected}
+      \caption{Comparison of the average fidelity for the BB84 states for both the copies on different backends without using readout correction. The uncertainty on the average is calculated as $\sigma_{\overline{F}_i}=\sigma_{F_i}/\sqrt{N}$, where $N$ is the number of points sampled ($N=4$ in this case).}
+\end{figure}
 
 \section{Economical phase covariant quantum cloning machine}
 \subsection{Sphere}
