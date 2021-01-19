@@ -13,7 +13,7 @@
 \contentsline {section}{\numberline {3.2}Measurement of the fidelity of the copies}{16}{section.3.2}%
 \contentsline {section}{\numberline {3.3}Readout calibration}{16}{section.3.3}%
 \contentsline {subsection}{\numberline {3.3.1}Single qubit calibration}{17}{subsection.3.3.1}%
-\contentsline {section}{\numberline {3.4}Software and hardware details}{19}{section.3.4}%
+\contentsline {section}{\numberline {3.4}Software and hardware details}{18}{section.3.4}%
 \contentsline {chapter}{\numberline {4}Results}{21}{chapter.4}%
 \contentsline {section}{\numberline {4.1}Universal quantum cloning machine}{21}{section.4.1}%
 \contentsline {subsection}{\numberline {4.1.1}Sphere}{21}{subsection.4.1.1}%
@@ -25,13 +25,9 @@
 \contentsline {subsection}{\numberline {4.2.3}BB84 states}{35}{subsection.4.2.3}%
 \contentsline {section}{\numberline {4.3}Economical phase covariant quantum cloning machine}{36}{section.4.3}%
 \contentsline {subsection}{\numberline {4.3.1}Sphere}{36}{subsection.4.3.1}%
-\contentsline {subsection}{\numberline {4.3.2}Equator}{36}{subsection.4.3.2}%
-\contentsline {subsection}{\numberline {4.3.3}BB84 states}{37}{subsection.4.3.3}%
-\contentsline {chapter}{\numberline {5}Conclusions}{39}{chapter.5}%
-\contentsline {chapter}{\numberline {A}Results without readout correction}{41}{appendix.A}%
-\contentsline {section}{\numberline {A.1}Universal quantum cloning machine}{41}{section.A.1}%
-\contentsline {section}{\numberline {A.2}Phase covariant quantum cloning machine}{41}{section.A.2}%
-\contentsline {section}{\numberline {A.3}Economical phase covariant quantum cloning machine}{41}{section.A.3}%
-\contentsline {chapter}{\numberline {B}Code}{43}{appendix.B}%
-\contentsline {chapter}{Bibliography}{45}{appendix*.62}%
+\contentsline {subsection}{\numberline {4.3.2}Equator}{40}{subsection.4.3.2}%
+\contentsline {subsection}{\numberline {4.3.3}BB84 states}{44}{subsection.4.3.3}%
+\contentsline {chapter}{\numberline {5}Conclusions}{47}{chapter.5}%
+\contentsline {chapter}{\numberline {A}Code}{49}{appendix.A}%
+\contentsline {chapter}{Bibliography}{51}{appendix*.84}%
 \contentsfinish 
