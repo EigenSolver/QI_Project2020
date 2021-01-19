@@ -163,7 +163,26 @@ We consider a single qubit tomography to observe the effect of the readout corre
     \label{fig:pc_yorktown_sphere}
 \end{figure}
 
+\subsection{Time dependence of readout parameters}
 
+The readout error is caused by calibration of the measuring device. Then, we expect an evolution of the readout correction parameters. This change would imply that a readout correction will negatively affect the corrected results. If they correspond to a previous calibration, they're no longer valid. In this case, we prepared a large block of $1000$ circuits, and every $75$ we run a readout calibration. The time between the running each block is not constant due to qeues.
+
+In the following picture we observe how the readout calibration parameters change for the backend IBMQ Valencia. On each picture, we observe the evolution of the readout parameters of each measuring qubit. We can observe that in one case, the change in $\beta_0$ and $\beta_1$ is appreciable, while the other case show an almost constant pattern. This different behavior indicates that the qubits do not behave uniformly in this device.
+
+
+\begin{figure}[H]
+    \centering
+    \begin{subfigure}{.5\textwidth}
+      \centering
+      \includegraphics[width=\textwidth]{Figures/Calibrations/readout_vigo_q1.png}
+    \end{subfigure}%
+    \begin{subfigure}{.5\textwidth}
+      \centering
+      \includegraphics[width=\textwidth]{Figures/Calibrations/readout_vigo_q2.png}
+    \end{subfigure}
+    \caption{Evolution of the readout parameters for a block of $1000$ circuits where readout was run each $75$ circuits. Left (Right): First (second) measuring qubit of the UQCM circuit. Orange (Blue): Correcting parameter $\beta_0$ ($\beta_1$).}
+    \label{fig:readout_time}
+\end{figure}
 
 \section{Software and hardware details}
 We have used the quantum systems freely available on Quantum Inspire \cite{quantuminspire} and IBM Quantum Experience \cite{ibmquantumexperience}.

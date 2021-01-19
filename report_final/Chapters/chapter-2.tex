@@ -12,14 +12,14 @@ Let us start by considering an arbitrary state,
 \begin{equation}
 \ket{\psi}_{a_0} = \alpha \ket{0}_{a_0} + \beta \ket{1}_{a_0}.
 \end{equation}
-We are interested in copy this state using the copy machine devised in Ref. \cite{Buzek1996}. For such purpose, we reiquire two ancillary registers. The full quantum circuit corresponding to the UQCM contains two stages, as can be seen in Fig. \ref{fig:uqcm}.
+We are interested in copy this state using the UQCM\cite{Buzek1996}. For such purpose, we reiquire two ancillary registers. The full quantum circuit corresponding to the UQCM contains two stages, as can be seen in Fig. \ref{fig:uqcm}.
 \begin{figure}
 \begin{center}
 \begin{quantikz}
 \lstick{$|\psi \rangle_{a_0}$}   &\qw &  \gate[3][2cm]{U_{copy}}&\qw & \rstick{\hspace{-4 mm}$\rho_1$} \\
 \lstick{$|0\rangle_{a_1}$} & \gate[2][2cm]{U_{prepare}}  && \qw & \rstick{\hspace{-4 mm}$\rho_2$} \\
 \lstick{$|0\rangle_{b_1}$} &   & &\qw
-\end{quantikz}\caption{General circuit for the universal quantum cloning machine initially presented in Ref. \cite{Buzek1996}.}\label{fig:uqcm}
+\end{quantikz}\caption{General circuit for the universal quantum cloning machine initially presented in \cite{Buzek1996}.}\label{fig:uqcm}
 \end{center}
 \end{figure}
 
@@ -83,7 +83,7 @@ From which we can observe that the coefficients depend explicitly on the rotatio
     C_4 &=   \sin(\theta_1/2)  \cos(\theta_2/2) \sin(\theta_3/2)  +    \cos(\theta_1/2) \sin(\theta_2/2) \cos(\theta_3/2)
 \end{align}
 
-The angles used to produce an arbitrary state have been previously studied in Ref. \cite{Buzek1996, Buzek1999}. The following angles were used for the preparation of the state given in Eq. \eqref{eq:uqcm_prep_state}, that is, 
+The angles used to produce an arbitrary state have been previously studied\cite{Buzek1996, Buzek1999}. The following angles were used for the preparation of the state given in Eq. \eqref{eq:uqcm_prep_state}, that is, 
 
 \begin{equation}
 \cos(2\theta_1)=\frac{1}{\sqrt{5}}, \quad \cos(2\theta_2)=\frac{\sqrt{5}}{3}, \quad \cos(2\theta_3)=\frac{2}{\sqrt{5}}.
@@ -149,7 +149,7 @@ After performing the copying process, the input qubit is separated from the copy
 \end{align*}
 Finally, the density matrix of the input qubit, or the first copying qubit, is given by,
 \begin{equation}
-\rho_{a_0}=\frac{5}{6}\ketbra{\psi}{\psi}+\frac{1}{6}\ketbra{\psi_{\perp}}{\psi_{\perp}}=\frac{1}{2}\left(\mathbf{1} + \frac{2}{3} \hat{m}\cdot\vec{\sigma} \right),
+\rho_{a_0}=\frac{5}{6}\ketbra{\psi}{\psi}+\frac{1}{6}\ketbra{\psi_{\perp}}{\psi_{\perp}},
 \end{equation}
 where $\ket{\psi}=\alpha\ket{0}+\beta\ket{1}$ is the input state aligned along $\hat{m}$, and $\ket{\psi_{\perp}}=\beta^*\ket{0}-\alpha^*\ket{1}$ is its orthogonal state. Then, we calculate the fidelity of a pure state with a mixed state, which is given by,
 \begin{equation}
@@ -159,7 +159,10 @@ In our case, the fidelity of the output copies is:
 \begin{equation}
 F(\ket{\psi},\rho_{a_0})=\bra{\psi}\rho_{a_0}\ket{\psi}=\frac{5}{6}= F(\ket{\psi},\rho_{a_1}).
 \end{equation}
-This is the maximum possible fidelity that can be obtained when one tries to copy an arbitrary quantum state. The final state is the same for the input qubit, and for the first copying qubit. One can think of the copying process as the interaction of the input qubit with an environment modeled by the copying qubits. After the copying process, the initial information is evenly distributed between the environment and the input qubit. This copy machine makes copies that are aligned along the same direction as the input qubit, but their magnitude decreases by a factor $2/3$ as shown in Ref. \cite{QuantumCloningReviewScarani}.
+This is the maximum possible fidelity that can be obtained when one tries to copy an arbitrary quantum state. The final state is the same for the input qubit, and for the first copying qubit. One can think of the copying process as the interaction of the input qubit with an environment modeled by the copying qubits. After the copying process, the initial information is evenly distributed between the environment and the input qubit. This copy machine makes copies that are aligned along the same direction as the input qubit, but their magnitude decreases by a factor $2/3$\cite{QuantumCloningReviewScarani}. In the implementation of the UQCM on Starmon we had to map the particular connectivity of the qubits found in this device. This imply that we add an extra swap gate to connect the qubits as required. This extra swap gate would have a significant effect on the results from experimental backends due to the three extra CNOT gates included.
+
+
+
 \section{Phase covariant quantum cloning machine}
 A phase covariant quantum cloning machine (PCQCM) is a QCM optimized to clone states on an equator of the Bloch sphere.
 The circuit for the optimal PCQCM proposed in  \cite{EquatorialQCM} is similar to the one for the UQCM, but the output copies are on the registers of the ancillae:
