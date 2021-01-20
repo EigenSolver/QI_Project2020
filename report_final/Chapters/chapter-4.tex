@@ -8,7 +8,7 @@ It is worth mentioning that calibrations and/or modifications of the quantum pro
     
 \subsection{Sphere}
 
-In Sec. \ref{sec:approximateqcm} we found that the UQCM returns a uniform fidelity for all the points on the Bloch sphere. Then, we expect that the average fidelity is exact for all states, that is $\bar{F} = 5/6 \approx 0.863$ ,$\sigma_{F} = 0$, here $\sigma_F$ is the standart deviation in the average fidelity along the Bloch sphere. It is zero since all the states have the same fidelity. On the other hand, we have the statistical deviation $\sigma_{stat}^{(N=8192)}\approx 0.003$ due to the finite number of shots. The results that we found are summarized in Table \ref{tab:uqcm_results_full_sphere}. These results include readout correction. Also, the data is represented in a histogram in Figure \ref{fig:hist_uqcm_sphere}. 
+In Sec. \ref{sec:approximateqcm} we found that the UQCM returns a uniform fidelity for all the points on the Bloch sphere. Then, we expect that the average fidelity is exact for all states, that is $\bar{F} = 5/6 \approx 0.863$ ,$\sigma_{F} = 0$, here $\sigma_F$ is the standard deviation in the average fidelity along the Bloch sphere. It is zero since all the states have the same fidelity. On the other hand, we have the statistical deviation $\sigma_{stat}^{(N=8192)}\approx 0.003$ due to the finite number of shots. The results that we found are summarized in Table \ref{tab:uqcm_results_full_sphere}. These results include readout correction. Also, the data is represented in a histogram in Figure \ref{fig:hist_uqcm_sphere}. 
 
 \begin{table}[H]
     \centering
@@ -30,7 +30,7 @@ In Sec. \ref{sec:approximateqcm} we found that the UQCM returns a uniform fideli
         \caption{Comparison of the average fidelity on the Bloch sphere for both copies on different backends using readout correction. The uncertainty on the average is calculated as $\sigma_{\overline{F}_i}=\sigma_{F_i}/\sqrt{N}$, where $N$ is the number of points sampled ($N=1000$ in this case).}\label{fig:hist_uqcm_sphere}
 \end{figure}
 
-First of all, we found that the fidelity is much smaller than the exact result. From Figure \ref{fig:hist_uqcm_sphere}, we observe that the average fidelity for all the backends is around $\sim 0.75$. The standart deviations are much higher than the theoretical expectations. As we mentioned, the only variations should be caused by statistical errors. The obtained deviations are one order of magnitude larger than $\sigma_{stat}^{(N=8192)}$. We attribute this large deviation to the details of each device. 
+First of all, we found that the fidelity is much smaller than the exact result. From Figure \ref{fig:hist_uqcm_sphere}, we observe that the average fidelity for all the backends is around $\sim 0.75$. The standard deviations are much higher than the theoretical expectations. As we mentioned, the only variations should be caused by statistical errors. The obtained deviations are one order of magnitude larger than $\sigma_{stat}^{(N=8192)}$. We attribute this large deviation to the details of each device. 
 
 We are not expecting any recognizable pattern in the Bloch sphere since the fidelity should be equal for all single qubit states. This is the case for most of the backends. We found an almost uniform sampling along the equatorial region as shown in Figures \ref{fig:uqcm_athens}, \ref{fig:uqcm_our}, \ref{fig:uqcm_sant}, \ref{fig:uqcm_vigo}. In Figure \ref{fig:uqcm_york} we find a recognizable pattern which improves the fidelity along the axis of the Bloch sphere. We may attribute this to the internal working of the Yorktown machine rather than to any specific feature of the circuit. 
 
@@ -167,7 +167,7 @@ results are not corrected with readout calibration.}\label{tab:uqcm_results_full
 
 \subsection{Equator}
 
-For a sample of 100 points along the xz equator of the Bloch sphere we run the UQCM and obtain the results listed in Table \ref{tab:uqcm_results_eq} and Figure \ref{fig:hist_uqcm_eq}. We found that the fidelity has improved with respect to the full sphere case for both copies compared to the full sphere. Since the fidelity presented here is an average over all the sampled points, it is not expected to have an improvement with respect to the previous case. Nevertheless, preparing the qubit in a state along the equator involves less operations than preparing it in an arbitrary state. Then, it is possible to expect an improvement in the fidelities. In Figure \ref{fig:hist_uqcm_eq} we can observe that the pattern of fidelities for all backends is similar to the one of the full sphere shown in Figure \ref{fig:hist_uqcm_sphere}.
+For a sample of 100 points along the $xz$-equator of the Bloch sphere we run the UQCM and obtain the results listed in Table \ref{tab:uqcm_results_eq} and Figure \ref{fig:hist_uqcm_eq}. We found that the fidelity has improved with respect to the full sphere case for both copies compared to the full sphere. Since the fidelity presented here is an average over all the sampled points, it is not expected to have an improvement with respect to the previous case. Nevertheless, preparing the qubit in a state along the equator involves less operations than preparing it in an arbitrary state. Then, it is possible to expect an improvement in the fidelities. In Figure \ref{fig:hist_uqcm_eq} we can observe that the pattern of fidelities for all backends is similar to the one of the full sphere shown in Figure \ref{fig:hist_uqcm_sphere}.
 
 \begin{table}[H]
     \centering
@@ -189,7 +189,7 @@ For a sample of 100 points along the xz equator of the Bloch sphere we run the U
         \caption{Comparison of the average fidelity on the equator of the Bloch sphere for both copies on different backends using readout correction. The uncertainty on the average is calculated as $\sigma_{\overline{F}_i}=\sigma_{F_i}/\sqrt{N}$, where $N$ is the number of points sampled ($N=100$ in this case).}\label{fig:hist_uqcm_eq}
 \end{figure} 
 
-In the following figures, we observe the fidelity of the states along the equator. We found that the fidelity of these states has a oscillatory behaviour in Figures \ref{fig:uqcm_eq_our}, \ref{fig:uqcm_eq_vigo}, and \ref{fig:uqcm_eq_york}. We were expecting to have uniform results, as is the case for Athens in Fig. \ref{fig:uqcm_eq_athens}. The oscillatory patter in Yorktown is the most clear of them, and this is in agreement with the image of the full sphere with a clear pattern (see Figure \ref{fig:uqcm_york}). We attribute this behaviour to this device.  
+In the following figures, we observe the fidelity of the states along the equator. We found that the fidelity of these states has a oscillatory behavior in Figures \ref{fig:uqcm_eq_our}, \ref{fig:uqcm_eq_vigo}, and \ref{fig:uqcm_eq_york}. We were expecting to have uniform results, as is the case for Athens in Fig. \ref{fig:uqcm_eq_athens}. The oscillatory patter in Yorktown is the most clear of them, and this is in agreement with the image of the full sphere with a clear pattern (see Figure \ref{fig:uqcm_york}). We attribute this behavior to this device.  
 
 \begin{figure}[H]
     \centering
@@ -291,7 +291,7 @@ In the following figures, we observe the fidelity of the states along the equato
     \label{fig:uqcm_eq_york}
 \end{figure}
 
-For completeness, we include the results without the readout correction. The results are shown in Table \ref{tab:uqcm_results_eq_non}. As before, we find that the readout improves the readout in few cases, e.g. Athens, and it decreases in most of them. The results are within the statistical uncertanty attributed to the finite sampling.
+For completeness, we include the results without the readout correction. The results are shown in Table \ref{tab:uqcm_results_eq_non}. As before, we find that the readout improves the readout in few cases, e.g. Athens, and it decreases in most of them. The results are within the statistical uncertainty attributed to the finite sampling.
 
 \begin{table}[H]
     \centering
@@ -315,7 +315,7 @@ For completeness, we include the results without the readout correction. The res
 
 \subsection{BB84 States}
 
-We have sampled the BB84 states corresponding to the states pointing along the $X$ and $Z$ axis of the Bloch sphere. The results are shown in Table \ref{tab:uqcm_results_bb} with readout correction, and in Table \ref{sec:results} without it. We omitted the graphics since the can be found as orange points in the graphics of the UCQM sampled along the equator. They can be observed as orange dots in the figures of the equator. That is, see the orange dots in Figures \ref{fig:uqcm_eq_athens}, \ref{fig:uqcm_eq_our}, \ref{fig:uqcm_eq_starmon}, \ref{fig:uqcm_eq_vigo}, and \ref{fig:uqcm_eq_york}. In those results that have an oscillatory behaviour along the equator, we observe that the BB84 states are located in the peaks and dips of those oscillations. Consequently, the fidelities shown in Table \ref{tab:uqcm_results_bb} and Figure \ref{fig:hist_uqcm_bb84} are higher. Similarly as before, Ourense has the higher fidelity. It copies better the states at the poles of the Bloch sphere (see Figure \ref{fig:uqcm_eq_our}). This bar is larger than the expected value. However, this excess is inside the error range due to statistical uncertanty.
+We have sampled the BB84 states corresponding to the states pointing along the $X$ and $Z$ axis of the Bloch sphere. The results are shown in Table \ref{tab:uqcm_results_bb} with readout correction, and in Table \ref{sec:results} without it. We omitted the graphics since the can be found as orange points in the graphics of the UCQM sampled along the equator. They can be observed as orange dots in the figures of the equator. That is, see the orange dots in Figures \ref{fig:uqcm_eq_athens}, \ref{fig:uqcm_eq_our}, \ref{fig:uqcm_eq_starmon}, \ref{fig:uqcm_eq_vigo}, and \ref{fig:uqcm_eq_york}. In those results that have an oscillatory behavior along the equator, we observe that the BB84 states are located in the peaks and dips of those oscillations. Consequently, the fidelities shown in Table \ref{tab:uqcm_results_bb} and Figure \ref{fig:hist_uqcm_bb84} are higher. Similarly as before, Ourense has the higher fidelity. It copies better the states at the poles of the Bloch sphere (see Figure \ref{fig:uqcm_eq_our}). This bar is larger than the expected value. However, this excess is inside the error range due to statistical uncertainty.
 
 \begin{table}[H]
     \centering
@@ -390,13 +390,13 @@ It is possible to observe that, on average, the PCQCM performs better than the U
 As mentioned in Chapter \ref{sec:approximateqcm}, this is because the PCQCM circuit is much simpler than the UQCM one.
 The dispersion of the results is close to the expected one, however the average fidelity is lower than the ideal one (with the exception of the fidelity of the second copy for Athens).
 This suggests that the expected fidelity of the ideal PCQCM on the Bloch sphere is lowered more or less equally across the Bloch sphere, so that the qualitative pattern is preserved.
-Indeed, in the pictures below, it is possible to observe that the $xz$-equator performs better than the rest of the two emisphere (the darker lobes).
+Indeed, in the pictures below, it is possible to observe that the $xz$-equator performs better than the rest of the two hemisphere (the darker lobes).
 
 In the following we report the projection of the results obtained on the Bloch sphere, corrected with the readout calibration (the non-corrected results can be observed in the appendix). 
 In general, we can see the expected pattern for the fidelity.
 In certain cases, for example for Starmon-5 (Figure \ref{fig:pc_corrected_starmon_sphere}), the results are not symmetric: the region around $\ket{-}$ (i.e. the left lobe) is copied better than the region around $\ket{+}$ (i.e. the right lobe) on both the qubits (this happens in both the copies).
 Sometimes, for example looking at the results for Santiago (Figure \ref{fig:pc_corrected_santiago_sphere}), it is possible to observe some sudden discontinuities.
-These artefacts, present both in the corrected and the non-corrected results, correspond to one batch of circuits (on the IBM backends it is possible to group $75$ circuits together).
+These artifacts, present both in the corrected and the non-corrected results, correspond to one batch of circuits (on the IBM backends it is possible to group $75$ circuits together).
 This could be due to the fact that two subsequent batches of circuits could be run hours apart, depending on the length of the queue.
 Therefore, it should not be assumed that the condition and the calibration of the quantum processors are the same throughout the sampling.
 The quality of the results could be improved if we could run all the circuits together.
@@ -588,13 +588,13 @@ However, the measured dispersion of the results is significantly greater than th
 This means that we can not conclude that all the input states on the $xz$-equator are copied equally well. 
 This can be more clearly seen in the pictures below, where we have reported the measured fidelity of each input state.
 
-There is a recurring pattern occuring in several backends, for example Athens (see Figure \ref{fig:pc_corrected_athens_equator}):
+There is a recurring pattern occurring in several backends, for example Athens (see Figure \ref{fig:pc_corrected_athens_equator}):
 moving across the equator, the fidelity oscillates. There is a peak around $\ket{0}$ and $\ket{1}$ and a dip around $\ket{+}$ and $\ket{-}$.
 For Vigo (see \ref{fig:pc_corrected_ourense_equator}) the oscillating pattern is not symmetric (the dips and the peaks are not at the same height). 
 For Valencia (see \ref{fig:pc_corrected_valencia_equator}) the oscillating pattern is translated: the peaks are around $\ket{+}$ and $\ket{-}$, whereas the dips are around $\ket{0}$ and $\ket{1}$.
 In all these cases, the patterns are consistent with the results obtained on $xz$-equator while sampling the full sphere. 
 Considering, for example, the results for the second copy of Valencia in the right panel of Figure \ref{fig:pc_corrected_valencia_sphere}, it is possible to see a bright spot around $\ket{+}$ (exactly where we see the peak in Figure \ref{fig:pc_corrected_valencia_equator}).
-For Santiago, we can again see the artefacts previously discussed. In this case they affect the last $25$ points, which are significantly displaced with respect to the first $75$.
+For Santiago, we can again see the artifacts previously discussed. In this case they affect the last $25$ points, which are significantly displaced with respect to the first $75$.
 Finally, we observe that the results for the two copies of Yorktown are qualitatively different, as previously seen: the fidelity of the first copy has a clear dependence from the angle, whereas the second one is uniformly distributed around the average value.
 
 \begin{figure}[H]
@@ -611,7 +611,7 @@ Finally, we observe that the results for the two copies of Yorktown are qualitat
   \end{subfigure}
   \vspace{-0.5cm}
   \caption{Fidelity sampled over the $xz$-equator using the PCQCM implemented on Starmon-5 using readout correction.
-  The solid green line is the expected fidelity, the solid blue line is the measured average fidelity, the dashed red lines indicate the expected dispersion and the dashed blue line indicate the measured dispersion. The orange points are the $BB84$ states.}
+  The solid green line is the expected fidelity, the solid blue line is the measured average fidelity, the dashed red lines indicate the expected dispersion and the dashed blue line indicate the measured dispersion. The orange points are the BB84 states.}
   \label{fig:pc_corrected_starmon_equator}
 \end{figure}
 
@@ -628,7 +628,7 @@ Finally, we observe that the results for the two copies of Yorktown are qualitat
     \label{fig:pc_corrected_athens_equator_2}
   \end{subfigure}
   \vspace{-0.5cm}
-  \caption{Fidelity sampled over the $xz$-equator using the PCQCM implemented on Athens using readout correction. The solid green line is the expected fidelity, the solid blue line is the measured average fidelity, the dashed red lines indicate the expected dispersion and the dashed blue line indicate the measured dispersion.}
+  \caption{Fidelity sampled over the $xz$-equator using the PCQCM implemented on Athens using readout correction. The solid green line is the expected fidelity, the solid blue line is the measured average fidelity, the dashed red lines indicate the expected dispersion and the dashed blue line indicate the measured dispersion. The orange points are the BB84 states.}
   \label{fig:pc_corrected_athens_equator}
 \end{figure}
 
@@ -646,7 +646,7 @@ Finally, we observe that the results for the two copies of Yorktown are qualitat
     \label{fig:pc_corrected_ourense_equator_2}
   \end{subfigure}
   \vspace{-0.5cm}
-  \caption{Fidelity sampled over the $xz$-equator using the PCQCM implemented on Ourense using readout correction. The solid green line is the expected fidelity, the solid blue line is the measured average fidelity, the dashed red lines indicate the expected dispersion and the dashed blue line indicate the measured dispersion.}
+  \caption{Fidelity sampled over the $xz$-equator using the PCQCM implemented on Ourense using readout correction. The solid green line is the expected fidelity, the solid blue line is the measured average fidelity, the dashed red lines indicate the expected dispersion and the dashed blue line indicate the measured dispersion. The orange points are the BB84 states.}
   \label{fig:pc_corrected_ourense_equator}
 \end{figure}
 
@@ -664,7 +664,7 @@ Finally, we observe that the results for the two copies of Yorktown are qualitat
     \label{fig:pc_corrected_santiago_equator_2}
   \end{subfigure}
   \vspace{-0.5cm}
-  \caption{Fidelity sampled over the $xz$-equator using the PCQCM implemented on Santiago using readout correction. The solid green line is the expected fidelity, the solid blue line is the measured average fidelity, the dashed red lines indicate the expected dispersion and the dashed blue line indicate the measured dispersion.}
+  \caption{Fidelity sampled over the $xz$-equator using the PCQCM implemented on Santiago using readout correction. The solid green line is the expected fidelity, the solid blue line is the measured average fidelity, the dashed red lines indicate the expected dispersion and the dashed blue line indicate the measured dispersion. The orange points are the BB84 states.}
   \label{fig:pc_corrected_santiago_equator}
 \end{figure}
 
@@ -682,7 +682,7 @@ Finally, we observe that the results for the two copies of Yorktown are qualitat
     \label{fig:pc_corrected_valencia_equator_2}
   \end{subfigure}
   \vspace{-0.5cm}
-  \caption{Fidelity sampled over the $xz$-equator using the PCQCM implemented on Valencia using readout correction. The solid green line is the expected fidelity, the solid blue line is the measured average fidelity, the dashed red lines indicate the expected dispersion and the dashed blue line indicate the measured dispersion.}
+  \caption{Fidelity sampled over the $xz$-equator using the PCQCM implemented on Valencia using readout correction. The solid green line is the expected fidelity, the solid blue line is the measured average fidelity, the dashed red lines indicate the expected dispersion and the dashed blue line indicate the measured dispersion. The orange points are the BB84 states.}
   \label{fig:pc_corrected_valencia_equator}
 \end{figure}
 
@@ -700,7 +700,7 @@ Finally, we observe that the results for the two copies of Yorktown are qualitat
     \label{fig:pc_corrected_vigo_equator_2}
   \end{subfigure}
   \vspace{-0.5cm}
-  \caption{Fidelity sampled over the $xz$-equator using the PCQCM implemented on Vigo using readout correction. The solid green line is the expected fidelity, the solid blue line is the measured average fidelity, the dashed red lines indicate the expected dispersion and the dashed blue line indicate the measured dispersion.}
+  \caption{Fidelity sampled over the $xz$-equator using the PCQCM implemented on Vigo using readout correction. The solid green line is the expected fidelity, the solid blue line is the measured average fidelity, the dashed red lines indicate the expected dispersion and the dashed blue line indicate the measured dispersion. The orange points are the BB84 states.}
   \label{fig:pc_corrected_vigo_equator}
 \end{figure}
 
@@ -718,7 +718,7 @@ Finally, we observe that the results for the two copies of Yorktown are qualitat
     \label{fig:pc_corrected_yorktown_equator_2}
   \end{subfigure}
   \vspace{-0.5cm}
-  \caption{Fidelity sampled over the $xz$-equator using the PCQCM implemented on Yorktown using readout correction. The solid green line is the expected fidelity, the solid blue line is the measured average fidelity, the dashed red lines indicate the expected dispersion and the dashed blue line indicate the measured dispersion.}
+  \caption{Fidelity sampled over the $xz$-equator using the PCQCM implemented on Yorktown using readout correction. The solid green line is the expected fidelity, the solid blue line is the measured average fidelity, the dashed red lines indicate the expected dispersion and the dashed blue line indicate the measured dispersion. The orange points are the BB84 states.}
   \label{fig:pc_corrected_yorktown_equator}
 \end{figure}
 
@@ -770,7 +770,7 @@ both the average and the standard deviation should remain more or less unchanged
       \caption{Comparison of the average fidelity for the BB84 states for both the copies on different backends using the PCQCM with readout correction. The uncertainty on the average is calculated as $\sigma_{\overline{F}_i}=\sigma_{F_i}/\sqrt{N}$, where $N$ is the number of points sampled ($N=4$ in this case).}
 \end{figure}
 
-We conclude the discusison of the results for the PCQCM with the results for the BB84 states without readout correction.
+We conclude the discussion of the results for the PCQCM with the results for the BB84 states without readout correction.
 \begin{table}[H]
     \centering
     \begin{tabular}{|c|c|c|c|c|c|c|c|}
@@ -799,7 +799,7 @@ Things to mention:
   \item Pattern of ideal case well reproduced. Yorktown has some differences again, as seen in the previous sections too.
   \item Readout correction influences greatly the result of Spin-2. 
   \item Having fidelity greater than the ideal one should not be a concern. Half the Bloch sphere is copied better than the equator. 
-  It could be that the prepartion and measurement of the points is not very precise. For example, it could be that instead of preparing and measuring the state $\ket{+}$, we are preparing and measuring a slightly rotated version which in the better emisphere.
+  It could be that the preparation and measurement of the points is not very precise. For example, it could be that instead of preparing and measuring the state $\ket{+}$, we are preparing and measuring a slightly rotated version which in the better hemisphere.
 \end{enumerate} 
 
 With readout correction:
@@ -983,7 +983,7 @@ Things to mention:
   \item Readout correction influences greatly the result of Spin-2. 
   \item Copy 1 of Valencia is almost ideal (both for the fidelity and the dispersion)
   \item Having fidelity greater than the ideal one should not be a concern. Half the Bloch sphere is copied better than the equator. 
-  It could be that the prepartion and measurement of the points is not very precise. For example, it could be that instead of preparing and measuring the state $\ket{+}$, we are preparing and measuring a slightly rotated version which in the better emisphere.
+  It could be that the preparation and measurement of the points is not very precise. For example, it could be that instead of preparing and measuring the state $\ket{+}$, we are preparing and measuring a slightly rotated version which in the better hemisphere.
 \end{enumerate} 
 
 With readout correction:
@@ -1019,7 +1019,7 @@ With readout correction:
   \end{subfigure}
   \vspace{-0.5cm}
   \caption{Fidelity sampled over the $xz$-equator using the EPCQCM implemented on Spin-2 using readout correction.
-  The solid green line is the expected fidelity, the solid blue line is the measured average fidelity, the dashed red lines indicate the expected dispersion and the dashed blue line indicate the measured dispersion. The orange points are the $BB84$ states.}
+  The solid green line is the expected fidelity, the solid blue line is the measured average fidelity, the dashed red lines indicate the expected dispersion and the dashed blue line indicate the measured dispersion. The orange points are the BB84 states.}
   \label{fig:epc_corrected_spin2_equator}
 \end{figure}
 
@@ -1037,7 +1037,7 @@ With readout correction:
   \end{subfigure}
   \vspace{-0.5cm}
   \caption{Fidelity sampled over the $xz$-equator using the EPCQCM implemented on Starmon-5 using readout correction.
-  The solid green line is the expected fidelity, the solid blue line is the measured average fidelity, the dashed red lines indicate the expected dispersion and the dashed blue line indicate the measured dispersion. The orange points are the $BB84$ states.}
+  The solid green line is the expected fidelity, the solid blue line is the measured average fidelity, the dashed red lines indicate the expected dispersion and the dashed blue line indicate the measured dispersion. The orange points are the BB84 states.}
   \label{fig:epc_corrected_starmon_equator}
 \end{figure}
 
@@ -1054,7 +1054,7 @@ With readout correction:
     \label{fig:epc_corrected_athens_equator_2}
   \end{subfigure}
   \vspace{-0.5cm}
-  \caption{Fidelity sampled over the $xz$-equator using the EPCQCM implemented on Athens using readout correction. The solid green line is the expected fidelity, the solid blue line is the measured average fidelity, the dashed red lines indicate the expected dispersion and the dashed blue line indicate the measured dispersion.}
+  \caption{Fidelity sampled over the $xz$-equator using the EPCQCM implemented on Athens using readout correction. The solid green line is the expected fidelity, the solid blue line is the measured average fidelity, the dashed red lines indicate the expected dispersion and the dashed blue line indicate the measured dispersion. The orange points are the BB84 states.}
   \label{fig:epc_corrected_athens_equator}
 \end{figure}
 
@@ -1071,7 +1071,7 @@ With readout correction:
     \label{fig:epc_corrected_ourense_equator_2}
   \end{subfigure}
   \vspace{-0.5cm}
-  \caption{Fidelity sampled over the $xz$-equator using the EPCQCM implemented on Ourense using readout correction. The solid green line is the expected fidelity, the solid blue line is the measured average fidelity, the dashed red lines indicate the expected dispersion and the dashed blue line indicate the measured dispersion.}
+  \caption{Fidelity sampled over the $xz$-equator using the EPCQCM implemented on Ourense using readout correction. The solid green line is the expected fidelity, the solid blue line is the measured average fidelity, the dashed red lines indicate the expected dispersion and the dashed blue line indicate the measured dispersion. The orange points are the BB84 states.}
   \label{fig:epc_corrected_ourense_equator}
 \end{figure}
 
@@ -1088,7 +1088,7 @@ With readout correction:
     \label{fig:epc_corrected_santiago_equator_2}
   \end{subfigure}
   \vspace{-0.5cm}
-  \caption{Fidelity sampled over the $xz$-equator using the EPCQCM implemented on Santiago using readout correction. The solid green line is the expected fidelity, the solid blue line is the measured average fidelity, the dashed red lines indicate the expected dispersion and the dashed blue line indicate the measured dispersion.}
+  \caption{Fidelity sampled over the $xz$-equator using the EPCQCM implemented on Santiago using readout correction. The solid green line is the expected fidelity, the solid blue line is the measured average fidelity, the dashed red lines indicate the expected dispersion and the dashed blue line indicate the measured dispersion. The orange points are the BB84 states.}
   \label{fig:epc_corrected_santiago_equator}
 \end{figure}
 
@@ -1105,7 +1105,7 @@ With readout correction:
     \label{fig:epc_corrected_valencia_equator_2}
   \end{subfigure}
   \vspace{-0.5cm}
-  \caption{Fidelity sampled over the $xz$-equator using the EPCQCM implemented on Valencia using readout correction. The solid green line is the expected fidelity, the solid blue line is the measured average fidelity, the dashed red lines indicate the expected dispersion and the dashed blue line indicate the measured dispersion.}
+  \caption{Fidelity sampled over the $xz$-equator using the EPCQCM implemented on Valencia using readout correction. The solid green line is the expected fidelity, the solid blue line is the measured average fidelity, the dashed red lines indicate the expected dispersion and the dashed blue line indicate the measured dispersion. The orange points are the BB84 states.}
   \label{fig:epc_corrected_valencia_equator}
 \end{figure}
 
@@ -1122,7 +1122,7 @@ With readout correction:
     \label{fig:epc_corrected_vigo_equator_2}
   \end{subfigure}
   \vspace{-0.5cm}
-  \caption{Fidelity sampled over the $xz$-equator using the EPCQCM implemented on Vigo using readout correction. The solid green line is the expected fidelity, the solid blue line is the measured average fidelity, the dashed red lines indicate the expected dispersion and the dashed blue line indicate the measured dispersion.}
+  \caption{Fidelity sampled over the $xz$-equator using the EPCQCM implemented on Vigo using readout correction. The solid green line is the expected fidelity, the solid blue line is the measured average fidelity, the dashed red lines indicate the expected dispersion and the dashed blue line indicate the measured dispersion. The orange points are the BB84 states.}
   \label{fig:epc_corrected_vigo_equator}
 \end{figure}
 
@@ -1139,7 +1139,7 @@ With readout correction:
     \label{fig:epc_corrected_yorktown_equator_2}
   \end{subfigure}
   \vspace{-0.5cm}
-  \caption{Fidelity sampled over the $xz$-equator using the EPCQCM implemented on Yorktown using readout correction. The solid green line is the expected fidelity, the solid blue line is the measured average fidelity, the dashed red lines indicate the expected dispersion and the dashed blue line indicate the measured dispersion.}
+  \caption{Fidelity sampled over the $xz$-equator using the EPCQCM implemented on Yorktown using readout correction. The solid green line is the expected fidelity, the solid blue line is the measured average fidelity, the dashed red lines indicate the expected dispersion and the dashed blue line indicate the measured dispersion. The orange points are the BB84 states.}
   \label{fig:epc_corrected_yorktown_equator}
 \end{figure}
 

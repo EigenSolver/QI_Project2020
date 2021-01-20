@@ -97,7 +97,7 @@ Note that $|\alpha|^2=p_{+1}$ and $|\beta|^2=p_{-1}$ are obtained from measuring
 \begin{equation}
 \langle Z\rangle = \frac{\bar{m}-\beta_0}{\beta_1}.
 \end{equation}
-Here $\beta_1$ and $\beta_2$ are the correction coeffcients. They are given by,
+Here $\beta_1$ and $\beta_2$ are the correction coefficients. They are given by,
 \begin{align}\label{eq:betas}
 \beta_1 &= \frac{1}{2} (p_{+1}+p_{+1}),\\
 \beta_2 &= \frac{1}{2} (p_{+1}-p_{+1}).
@@ -116,7 +116,7 @@ The solution of this two equations is given by,
 
 \subsection{Single qubit calibration}
 
-We consider a single qubit tomography to observe the effect of the readout correction. Let us consider a normal singel qubit tomography. We run this experiment in different available experimental backends and correct the results according to Eq. \ref{eq:corrected_ps}. The readout parameters were calculated at the begining of the experiment, and then the results were correted. In the following figures, we show the results with and without readout correction.
+We consider a single qubit tomography to observe the effect of the readout correction. Let us consider a normal single qubit tomography. We run this experiment in different available experimental backends and correct the results according to Eq. \ref{eq:corrected_ps}. The readout parameters were calculated at the beginning of the experiment, and then the results were corrected. In the following figures, we show the results with and without readout correction.
 
 \begin{figure}[H]
     \centering
@@ -177,7 +177,7 @@ We consider a single qubit tomography to observe the effect of the readout corre
 
 \subsection{Time dependence of readout parameters}
 
-The readout error is caused by calibration of the measuring device. Then, we expect an evolution of the readout correction parameters. This change would imply that a readout correction will negatively affect the corrected results. If they correspond to a previous calibration, they're no longer valid. In this case, we prepared a large block of $1000$ circuits, and every $75$ we run a readout calibration. The time between the running each block is not constant due to qeues.
+The readout error is caused by calibration of the measuring device. Then, we expect an evolution of the readout correction parameters. This change would imply that a readout correction will negatively affect the corrected results. If they correspond to a previous calibration, they're no longer valid. In this case, we prepared a large block of $1000$ circuits, and every $75$ we run a readout calibration. The time between the running each block is not constant due to queue.
 
 In the following picture we observe how the readout calibration parameters change for the backend IBMQ Valencia. On each picture, we observe the evolution of the readout parameters of each measuring qubit. We can observe that in one case, the change in $\beta_0$ and $\beta_1$ is appreciable, while the other case show an almost constant pattern. This different behavior indicates that the qubits do not behave uniformly in this device.
 
