@@ -96,7 +96,7 @@ The copying process can be described as controlled entanglement between the inpu
 |\phi\rangle^{(prep)}_{a_1,b_1} = \frac{1}{\sqrt{6}} (2|00\rangle + |01\rangle + |11\rangle),\qquad |\psi\rangle^{(in)}_{a_0} = \alpha|0\rangle +\beta|1\rangle.
 \end{equation}
 
-\begin{figure}
+\begin{figure}[H]
 \begin{center}
 \begin{quantikz}
 % \lstick{$|\psi\rangle_{a_0}$}   & \gate[3][2cm]{U_{copy}}&\qw\\
@@ -159,21 +159,37 @@ In our case, the fidelity of the output copies is:
 \begin{equation}
 F(\ket{\psi},\rho_{a_0})=\bra{\psi}\rho_{a_0}\ket{\psi}=\frac{5}{6}= F(\ket{\psi},\rho_{a_1}).
 \end{equation}
-This is the maximum possible fidelity that can be obtained when one tries to copy an arbitrary quantum state. The final state is the same for the input qubit, and for the first copying qubit. One can think of the copying process as the interaction of the input qubit with an environment modeled by the copying qubits. After the copying process, the initial information is evenly distributed between the environment and the input qubit. This copy machine makes copies that are aligned along the same direction as the input qubit, but their magnitude decreases by a factor $2/3$\cite{QuantumCloningReviewScarani}. In the implementation of the UQCM on Starmon we had to map the particular connectivity of the qubits found in this device. This imply that we add an extra swap gate to connect the qubits as required. This extra swap gate would have a significant effect on the results from experimental backends due to the three extra CNOT gates included.
+This is the maximum possible fidelity that can be obtained when one tries to copy an arbitrary quantum state. The final state is the same for the input qubit, and for the first copying qubit. One can think of the copying process as the interaction of the input qubit with an environment modeled by the copying qubits. After the copying process, the initial information is evenly distributed between the environment and the input qubit. This copy machine makes copies that are aligned along the same direction as the input qubit, but their magnitude decreases by a factor $2/3$\cite{QuantumCloningReviewScarani}. 
 
+In the implementation of the UQCM we must care about the connectivity of the qubits found in each device. If we observe Figure \ref{circuit:full}, we note that full connectivity is required between the three qubits of the circuit. However, this is not always the case in experimental devices. The, we require an extra swap gate to connect the qubits that are not close to each other. This extra swap gate would have a significant effect on the results from experimental backends due to the three extra CNOT gates included. The circuit implemented with this extra consideration can be observed in Figure \ref{circuit:uqcm_exp}.
+
+\begin{figure}[H]
+\begin{center}
+\begin{quantikz}
+    \lstick{$\ket{\psi}_{a_0}$} & \qw & \qw & \qw & \qw & \qw & \swap{2} & \targ{} & \qw & \ctrl{2}  & \qw & \qw &  \\
+    \lstick{$\ket{0}_{a_1}$}    & \qw & \targ{} & \gate{R_y(\theta_2)}  & \ctrl{1}  & \qw & \qw & \qw & \targ{} & \qw & \ctrl{1}  & \qw & \rstick{\hspace{-4 mm}$\rho_{1}$}  \\
+    \lstick{$\ket{0}_{a_2}$} & \gate{R_y(\theta_1)} & \ctrl{-1}  & \qw & \targ{} & \gate{R_y(\theta_3)}  & \targX{}  & \ctrl{-2} & \ctrl{-1} & \targ{} & \targ{} & \qw & \rstick{\hspace{-4 mm}$\rho_{2}$}
+\end{quantikz}.
+\caption{Circuit of the UQCM with an extra SWAP gate required in devices without full qubit connectivity.}\label{circuit:uqcm_exp}
+\end{center}
+\end{figure}
 
 
 \section{Phase covariant quantum cloning machine}
 A phase covariant quantum cloning machine (PCQCM) is a QCM optimized to clone states on an equator of the Bloch sphere.
 The circuit for the optimal PCQCM proposed in  \cite{EquatorialQCM} is similar to the one for the UQCM, but the output copies are on the registers of the ancillae:
 
-\[
+\begin{figure}[H]
+\begin{center}
 \begin{quantikz}
     \lstick{$\ket{\psi}_{a_0}$} & \qw                  & \qw        & \qw                   & \qw       & \qw                   & \ctrl{2}  & \ctrl{1}      & \targ{}       & \targ{}        & \qw &  \\
     \lstick{$\ket{0}_{a_1}$}    & \qw                  & \targ{}    & \gate{R_y(\theta_2)}  & \ctrl{1}  & \qw                   & \qw       & \targ{}       & \qw           & \ctrl{-1}      & \qw & \rstick{\hspace{-4 mm}$\rho_{1}$}  \\
     \lstick{$\ket{0}_{a_2}$}    & \gate{R_y(\theta_1)} & \ctrl{-1}  & \qw                   & \targ{}   & \gate{R_y(\theta_3)}  & \targ{}   & \qw           & \ctrl{-2}     & \qw            & \qw & \rstick{\hspace{-4 mm}$\rho_{2}$}
-\end{quantikz}
-\]
+\end{quantikz}.
+\caption{Initial circuit of the PCQCM.}\label{circuit:pcqcm1}
+\end{center}
+\end{figure}
+
 
 The only significant difference is the preparation of the two ancillae. In this case, different angles of rotation are used.
 In order to optimally clone the states on the $xz$ equator, the following angles have to be chosen:
@@ -182,23 +198,29 @@ In order to optimally clone the states on the $xz$ equator, the following angles
 \]
 
 Hence, the circuit above can be rewritten removing the rotation $R_y(\theta_2)$:
-\[
+\begin{figure}[H]
+\begin{center}
 \begin{quantikz}
     \lstick{$\ket{\psi}_{a_0}$} & \qw                  & \qw         & \qw       & \qw                   & \ctrl{2}  & \ctrl{1}      & \targ{}        & \targ{}       & \qw &  \\
     \lstick{$\ket{0}_{a_1}$}    & \qw                  & \targ{}     & \ctrl{1}  & \qw                   & \qw       & \targ{}       & \qw           & \ctrl{-1}      & \qw & \rstick{\hspace{-4 mm}$\rho_{1}$}  \\
     \lstick{$\ket{0}_{a_2}$}    & \gate{R_y(\theta_1)} & \ctrl{-1}   & \targ{}   & \gate{R_y(\theta_3)}  & \targ{}   & \qw           & \ctrl{-2}     & \qw            & \qw & \rstick{\hspace{-4 mm}$\rho_{2}$}
-\end{quantikz}
-\]
+\end{quantikz}.
+\caption{Simplified circuit of the PCQCM.}\label{circuit:pcqcm2}
+\end{center}
+\end{figure}
+
 The first two CNOT gates in this circuit act as a SWAP gate (because $\ket{0}_{a_1}$ is the input state of the central qubit). 
 Hence, these two CNOT gates are not necessary. It is possible to ignore them, provided that $R_y(\theta_3)$ is moved to the second qubit. Since $\theta_1=\theta_3=\theta=\frac{\pi}{4}$, the final circuit is obtained
-
-\[
+\begin{figure}[H]
+\begin{center}
 \begin{quantikz}
     \lstick{$\ket{\psi}_{a_0}$} \slice{0} & \qw                           & \ctrl{2}  & \ctrl{1}  \slice{2}    & \targ{}       & \targ{}      \slice{3} & \qw  &  \\
     \lstick{$\ket{0}_{a_1}$}    & \gate{R_y(\pi/4)}                       & \qw       & \targ{}                & \qw           & \ctrl{-1}              & \qw & \rstick{\hspace{-4 mm}$\rho_{1}$}  \\
     \lstick{$\ket{0}_{a_2}$}    & \gate{R_y(\pi/4)} \slice{1}            & \targ{}    & \qw                    & \ctrl{-2}     & \qw                    & \qw & \rstick{\hspace{-4 mm}$\rho_{2}$}  
-\end{quantikz}
-\]
+\end{quantikz}.
+\caption{Fully simplified circuit of the PCQCM.}\label{circuit:pcqcm3}
+\end{center}
+\end{figure}
 
 We have managed to greatly simplify the circuit. We have removed 5 CNOT gates from the circuit that we were using on real quantum processors with linear connectivity: the 2 CNOT gates mentioned here and the 3 CNOT gates that were necessary in order to implement the SWAP gate that was necessary to respect the connectivity constraints.
 With this new circuit, only the top qubit has to be able to connect to the other two qubits.
@@ -285,7 +307,7 @@ The fidelity can be computed analytically. The final result is:
     \centering
             \includegraphics[width=0.5\textwidth]{Figures/phase_covariant.png}
         \label{fig:phase_covariant}
-        \caption{Caption}
+        \caption{Fidelity of the PCQCM ploted on the Bloch sphere.}
 \end{figure}
 It is possible to observe that if $\phi=0$ is set, the fidelity becomes a constant:
 \[
@@ -377,13 +399,13 @@ After some manipulations, it is possible to obtain the following expression:
         \centering
         \includegraphics[width=\textwidth]{Figures/plot_1D_phase_covariant_different_labels.png}
         \label{fig:phase_covariant_rotated_1d}
-        \caption{Caption (TO FIX)}
+        \caption{Fidelity of the rotated PCQCM over the $xz$ equator of the Bloch sphere.}
     \end{minipage}%
     \begin{minipage}[t]{.5\textwidth}
         \centering
         \includegraphics[width=\textwidth]{Figures/phase_covariant_rotated.png}
         \label{fig:phase_covariant_rotated}
-        \caption{Caption (TO FIX)}
+        \caption{Fidelity of the rotated PCQCM ploted over the Bloch sphere. One can appreciate that is rotated with respect to Figure \ref{fig:phase_covariant}.}
     \end{minipage}
 \end{figure}
 
@@ -404,20 +426,30 @@ In particular, it was proven that a universal EQCM does not exist \cite{Economic
 On the other hand, it is possible to build a phase covariant economical quantum cloning machine (PCEQCM), as discussed in the references above.
 
 The circuit to implement a PCEQCM that optimally clones that states on the $xy$-equator is 
+
+\begin{figure}[H]
 \begin{center}
     \begin{quantikz}
     \lstick{$\ket{\psi}_{a_0}$}  \slice{0}   & \ctrl{1}   \slice{1}  & \targ{}   \slice{2}    &\qw &  \rstick{\hspace{-4 mm}$\rho_1$}\\
     \lstick{$\ket{0}_{a_1}$}    & \gate{H}              & \ctrl{-1}     &\qw & \rstick{\hspace{-4 mm}$\rho_2$} 
-    \end{quantikz}
+    \end{quantikz}.
+\caption{Circuit of the PCEQCM.}\label{circuit:pceqcm1}
 \end{center}
+\end{figure}
+
 where the controlled-Hadamard can be rewritteng using more elementary gates:
+
+\begin{figure}[H]
 \begin{center}
     \begin{quantikz}
         & \ctrl{2}   & \qw           &   && \qw              & \qw      & \qw               & \ctrl{2}   &\qw      &\qw      &\qw    &\qw \\[-0.3cm]
         &            &               & = &&                 &          &                   &            &         &         &        &\\[-0.3cm]
         & \gate{H}   & \qw           &   && \gate{S^\dagger} & \gate{H} & \gate{T^\dagger}  & \targ{}    &\gate{T} &\gate{H} &\gate{S}& \qw\\
-    \end{quantikz}
+    \end{quantikz}.
+\caption{Circuit of the PCEQCM with a simplified Hadamard gate.}\label{circuit:pceqcm2}
 \end{center}
+\end{figure}
+
 
 We are going to analyze the circuit considering an arbitrary input state $\ket{\psi}=\cos(\theta/2)\ket{0}+e^{i\phi}\sin(\theta/2)\ket{1}$.
 The initial state is
@@ -469,13 +501,13 @@ This is the same value obtained in the previous section for the PCQCM with the e
         \centering
         \includegraphics[width=\textwidth]{Figures/plot_1D_economical_phase_covariant.png}
         \label{fig:economical_phase_covariant_rotated_1d}
-        \caption{Caption (TO FIX)}
+        \caption{Fidelity of the PCEQCM along the $xz$ equator of the Bloch sphere.}
       \end{minipage}%
       \begin{minipage}{.5\textwidth}
         \centering
         \includegraphics[width=\textwidth]{Figures/economical_phase_covariant_rotated.png}
         \label{fig:economical_phase_covariant_rotated}
-        \caption{Caption (TO FIX)}
+        \caption{Fidelity of the PCEQCM ploted over the Bloch sphere.}
       \end{minipage}
     \end{figure}
 The average fidelity on the whole Bloch sphere is
@@ -503,13 +535,16 @@ whereas those in the southern emisphere are cloned worse.
 \subsection*{Rotated EPCQCM}
 Since we are interested in cloning the states on the $xz$-equator, we have to perform a rotation before and after the circuit discussed above.
 The EPCQCM that optimally clones the $xz$-equator can be implemented using the following circuit:
-
+\begin{figure}[H]
 \begin{center}
     \begin{quantikz}
     \lstick{$\ket{\psi}_{a_0}$}             & \gate{R_x(-\pi/2)}  & \ctrl{1}    & \targ{}       & \gate{R_x(\pi/2)} & \qw &  \rstick{\hspace{-4 mm}$\rho_1$}\\
     \lstick{$\ket{0}_{a_1}$}    & \qw                  &\gate{H}    & \ctrl{-1}    & \gate{R_x(\pi/2)} & \qw & \rstick{\hspace{-4 mm}$\rho_2$} 
-    \end{quantikz}
+    \end{quantikz}.
+\caption{Circuit of the rotated PCEQCM.}\label{circuit:pceqcm3}
 \end{center}
+\end{figure}
+
 The fidelity of the copies using the rotated EPCQCM can be calculated as we have shown for the PCQCM. In this case it was more convenient to analyze the circuit for the $xy$-equator.
 The fidelity for an EPCQCM that optimally clones the $xz$-equator is:
 
@@ -521,7 +556,7 @@ The fidelity for an EPCQCM that optimally clones the $xz$-equator is:
     \centering
             \includegraphics[width=0.5\textwidth]{Figures/economical_phase_covariant.png}
         \label{fig:economical_phase_covariant}
-        \caption{Caption}
+        \caption{Fidelity of the rotated PCEQCM ploted over the Bloch sphere. One can appreciate that is rotated with respect to Figure \ref{fig:economical_phase_covariant_rotated}.}
 \end{figure}
 This is the circuit that we have run and the fidelity that we will compare our results with.
 

@@ -28,22 +28,30 @@ We have prepared a generic state on the Bloch sphere using the following two rot
     \ket{\psi}=R_z(\phi)R_y(\theta)\ket{0}=\cos(\theta/2)\ket{0}+e^{i\phi}\sin(\theta/2)\ket{1},
 \]
 
-\[
+\begin{figure}[H]
+\begin{center}
 \begin{quantikz}
     \lstick{$\ket{0}$} & \gate{R_y(\theta)}      & \gate{R_z(\phi)}      & \qw     & \rstick{\hspace{-4 mm}$\ket{\psi}$}  \\
 \end{quantikz}
-\]
+\caption{Preparation of an arbitrary single qubit state.}\label{circuit:preparation}
+\end{center}
+\end{figure}
 
 where $\theta$ is the polar angle and $\phi$ is the azimuthal angle.
 For the preparation of an input state on the $xz$-equator, only the rotation about the $y$ axis is needed:
 \[
     \ket{\psi}=R_y(\theta)\ket{0}=\cos(\theta/2)\ket{0}+\sin(\theta/2)\ket{1}.
 \]
-\[
+
+\begin{figure}[H]
+\begin{center}
 \begin{quantikz}
     \lstick{$\ket{0}$} & \gate{R_y(\theta)}   & \qw     & \rstick{\hspace{-4 mm}$\ket{\psi}$}  \\
 \end{quantikz}
-\]
+\caption{Preparation of a single qubit state on the $xz$ equator.}\label{circuit:preparation_xz}
+\end{center}
+\end{figure}
+
 We have considered three sets of input states, namely the Bloch sphere, the $xz$-equator and the BB84 states ($\ket{0}$, $\ket{1}$, $\ket{+}$ and $\ket{-}$).
 For the Bloch sphere, we have considered $1000$ approximately equidistant point
 \footnote{Evenly distributing $N$ points on a sphere is not a trivial problem. We have used the Fibonacci spherical lattice method. A detailed explanation can be found at \url{http://extremelearning.com.au/evenly-distributing-points-on-a-sphere/}.}.
@@ -60,12 +68,16 @@ Indeed, if the copies are $\rho_{1,2}$ and their fidelities with respect to the 
 Since $\ket{\psi}$ was prepared with the rotation $R_z(\phi)R_y(\theta)$, 
 it follows that a measurement in the $\left\{\ket{\psi},\ket{\psi_{\perp}}\right\}$ basis can be performed implementing the opposite rotation and then measuring in the computational basis.
 
-\[
+\begin{figure}[H]
+\begin{center}
 \begin{quantikz}
     \lstick{$\rho_{1}$} & \gate{R_z(-\phi)}       & \gate{R_y(-\theta)}      & \meter{$\ket{0}$,$\ket{1}$} & \tilde{p}_1^{(0)}=F_1  \\
     \lstick{$\rho_{2}$} & \gate{R_z(-\phi)}       & \gate{R_y(-\theta)}      & \meter{$\ket{0}$,$\ket{1}$} & \tilde{p}_2^{(0)}=F_2  \\
 \end{quantikz}
-\]
+\caption{Rotation of an arbitrary single qubit state back to the computational basis. A measurement on the computation basis is going to correspond to the fidelity of the copies.}\label{circuit:measurement}
+\end{center}
+\end{figure}
+
 In the above sketch, we denote with $\tilde{p}_1^{(0)}$ ($\tilde{p}_2^{(0)}$) the probability of finding $0$ when measuring the first (second) copy in the computational basis after the rotation.
 Note that the above probabilities have to be calculated marginalizing over the probability distributions of the qubits we are not interested in. 
 These are the probabilities of obtaining $0$ when measuring the first copy, regardless of what happens to the other qubits. 
