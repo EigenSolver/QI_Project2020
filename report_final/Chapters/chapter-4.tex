@@ -794,13 +794,21 @@ We conclude the discusison of the results for the PCQCM with the results for the
 \section{Economical phase covariant quantum cloning machine}
 \subsection{Sphere}
 
-Things to mention:
-\begin{enumerate}
-  \item Pattern of ideal case well reproduced. Yorktown has some differences again, as seen in the previous sections too.
-  \item Readout correction influences greatly the result of Spin-2. 
-  \item Having fidelity greater than the ideal one should not be a concern. Half the Bloch sphere is copied better than the equator. 
-  It could be that the prepartion and measurement of the points is not very precise. For example, it could be that instead of preparing and measuring the state $\ket{+}$, we are preparing and measuring a slightly rotated version which in the better emisphere.
-\end{enumerate} 
+% Things to mention:
+% \begin{enumerate}
+%   \item Pattern of ideal case well reproduced. Yorktown has some differences again, as seen in the previous sections too.
+%   \item Readout correction influences greatly the result of Spin-2. 
+%   \item Having fidelity greater than the ideal one should not be a concern. Half the Bloch sphere is copied better than the equator. 
+%   It could be that the prepartion and measurement of the points is not very precise. For example, it could be that instead of preparing and measuring the state $\ket{+}$, we are preparing and measuring a slightly rotated version which in the better emisphere.
+% \end{enumerate} 
+
+In Chapter \ref{sec:approximateqcm}, we found that the expected average fidelity and the associated standard deviation on the whole Bloch sphere are (see Equation \ref{eqn:avg_fidelity_epcqcm} and Equation \ref{eqn:std_fidelity_epcqcm}):
+\[
+  \overline{F}\approx0.819, \quad \sigma_{F}\approx0.148.
+\]
+
+The results we found are summarized in Table \ref{tab:result} (corrected with readout calibration).
+
 
 With readout correction:
 \begin{table}[H]
@@ -813,6 +821,8 @@ With readout correction:
     $F_2$              & 0.821 & 0.791 & 0.811 & 0.844 & 0.799 & 0.807 & 0.801 & 0.776 \\ \hline
     $\sigma_{F_2}$     & 0.130 & 0.133 & 0.139 & 0.127 & 0.153 & 0.153 & 0.154 & 0.145 \\ \hline
     \end{tabular}
+    \caption{Average fidelity and corresponding standard deviation on the whole Bloch sphere for the two copies on each backend. The results are corrected with readout calibration.}
+    \label{tab:results_epcqcm_fullsphere_corrected}
 \end{table}
 \begin{figure}[H]
   \centering
@@ -820,6 +830,12 @@ With readout correction:
       \label{fig:epc_histo_sphere_corrected}
       \caption{Comparison of the average fidelity on the Bloch sphere for both the copies on different backends using the EPCQCM with readout correction. The uncertainty on the average is calculated as $\sigma_{\overline{F}_i}=\sigma_{F_i}/\sqrt{N}$, where $N$ is the number of points sampled ($N=1000$ in this case).}
 \end{figure}
+
+We observed that, by the indicator of average fidelity, the EPCQCM performs better than UQCM, as we have seen in the PCQCM case. The fidelities on the projection of the Bloch sphere comply with the theoretical pattern we predicted in Chapter \ref{sec:approximateqcm}. Similar patterns are well reproduced on all backends except the IBM Yorktown, as shown in the results of the previous section. 
+
+The pattern of Spin-2 is noisier compared with the results we get from other backends. It can be noticed that the fidelities on copy1 and copy2 of Spin-2 shows obvious deviation, as shown in the histogram \label{fig:epc_histo_sphere_corrected}. The asymmetry is a consequence of the readout corrections we performed on Spin-2, which has remarkably improved the fidelity of copy2 from 0.69 to 0.82 (the uncorrected results are shown in table \ref{tab:results_epcqcm_fullsphere_not_corrected}).
+
+It's worth mentioning that the fidelities can be greater than the theoretical value on some of the backends, like IBM Ourense and Vigo. This should not be a concern since the performance of EPQCM is not uniform on the Bloch sphere (where half of the Bloch sphere is copied better than the other). Therefore, some quantum states can be biased to other locations on the Bloch sphere with better cloning fidelity by noise, which will result in greater average fidelity than expected.
 
 \begin{figure}[H]
   \centering
@@ -968,6 +984,8 @@ Without readout correction:
     $F_2$              & 0.690  & 0.788 & 0.812 & 0.834 & 0.794 & 0.826 & 0.802 & 0.777 \\ \hline
     $\sigma_{F_2}$     & 0.083  & 0.126 & 0.136 & 0.119 & 0.149 & 0.133 & 0.149 & 0.137 \\ \hline
     \end{tabular}
+    \caption{Average fidelity and corresponding standard deviation on the whole Bloch sphere for the two copies on each backend. The results are not corrected with readout calibration.}
+    \label{tab:results_epcqcm_fullsphere_not_corrected}
 \end{table}
 \begin{figure}[H]
   \centering
@@ -977,14 +995,15 @@ Without readout correction:
 \end{figure}
 
 \subsection{Equator}
-Things to mention:
-\begin{enumerate}
-  \item Oscillatory pattern again (with few exceptions). Also details of oscillatory pattern are similar (e.g. Vigo is not symmetric and Valencia is translated, so $\ket{+}$ and $\ket{-}$ are copied better)
-  \item Readout correction influences greatly the result of Spin-2. 
-  \item Copy 1 of Valencia is almost ideal (both for the fidelity and the dispersion)
-  \item Having fidelity greater than the ideal one should not be a concern. Half the Bloch sphere is copied better than the equator. 
-  It could be that the prepartion and measurement of the points is not very precise. For example, it could be that instead of preparing and measuring the state $\ket{+}$, we are preparing and measuring a slightly rotated version which in the better emisphere.
-\end{enumerate} 
+
+The fidelity for the copies of equatorial states using an ideal EPCQCM is (see Equation \ref{eqn:fidelity_pcqcm}):
+\[
+  F=\frac{1}{2}+\frac{1}{2\sqrt{2}}\approx0.854.
+\]
+As we have mentioned in the previous section of PCQCM, the statistical dispersion of fidelities should be: 
+\[
+    \sigma_{stat}^{(8192)}\approx 0.004, \quad \sigma_{stat}^{(16384)}\approx 0.003.
+\]
 
 With readout correction:
 \begin{table}[H]
@@ -997,13 +1016,37 @@ With readout correction:
     $F_2$              & 0.862 & 0.846 & 0.837 & 0.879 & 0.811 & 0.832 & 0.828 & 0.835 \\ \hline
     $\sigma_{F_2}$     & 0.037 & 0.023 & 0.009 & 0.022 & 0.019 & 0.015 & 0.019 & 0.028 \\ \hline
     \end{tabular}
+    \caption{Average fidelity and corresponding standard deviation on the $xz$-equator for the two copies on each backend. The results are corrected with readout calibration.}
+    \label{tab:results_epcqcm_onlyequator_corrected}
 \end{table}
+
 \begin{figure}[H]
   \centering
           \includegraphics[width=0.8\textwidth]{Figures/Economical/Histograms/histo_equator_corrected.png}
       \label{fig:epc_histo_equator_corrected}
       \caption{Comparison of the average fidelity on the $xz$-equator for both the copies on different backends using the EPCQCM with readout correction. The uncertainty on the average is calculated as $\sigma_{\overline{F}_i}=\sigma_{F_i}/\sqrt{N}$, where $N$ is the number of points sampled ($N=100$ in this case).}
 \end{figure}
+% Things to mention:
+% \begin{enumerate}
+%   \item Oscillatory pattern again (with few exceptions). Also details of oscillatory pattern are similar (e.g. Vigo is not symmetric and Valencia is translated, so $\ket{+}$ and $\ket{-}$ are copied better)
+%   \item Readout correction influences greatly the result of Spin-2. 
+%   \item Copy 1 of Valencia is almost ideal (both for the fidelity and the dispersion)
+%   \item Having fidelity greater than the ideal one should not be a concern. Half the Bloch sphere is copied better than the equator. 
+%   It could be that the prepartion and measurement of the points is not very precise. For example, it could be that instead of preparing and measuring the state $\ket{+}$, we are preparing and measuring a slightly rotated version which in the better emisphere.
+% \end{enumerate} 
+
+
+As we expected, the average fidelity we get from the EPQCM on equatorial states is better than that of UQCM and is comparable with PCQCM.
+The measured dispersion of the results is of a similar scale with the dispersion of PCQCM and still far beyond the statistical uncertainty, which means we will suffer from noisy fluctuations as using PCQCM when cloning equatorial states. 
+This can be more clearly seen in the pictures below, where we have reported the measured fidelity of each input state. Most IBM backends (Vigo, Ourense, Yorktown, Athens) have demonstrated oscillatory similar patterns as what we have seen in the previous case of PCQCM.
+Also, there are differences in details. For example, the oscillation phase of Vigo is translated, we get $\ket{1},\ket{1}$ at wave peaks in PCQCM, while in EPCQCM they are at the wave bottom. It's worth mentioning that the copy1 we get from IBM Valencia is almost at the optimal fidelity, and the dispersion is well-bounded that the results of $\ket{0}, \ket{+}, \ket{-}$ all lies in the statistical uncertainty range while the $\ket{-}$ has an even better fidelity above the expectation. 
+
+
+As for the Quantum Inspire platforms, the Starmon-5 has demonstrated similar oscillatory patterns as IBM backends, while the noise of Spin-2 appears much more irregular, which could be the consequence that Spin-2 is based on semiconductor qubits. However, on Spin-2, we can see that the readout correction has significantly improved the cloning performance, as shown by the comparison of the two histograms \ref{fig:epc_histo_equator_corrected} and \ref{fig:epc_histo_equator_not_corrected}. 
+
+Again, the average fidelities on some of the backends are greater than the theoretical expectation, which should not be a concern as we have explained in the previous section of sphere states. The states we prepared could be deviated from the xz-equator by noise and thus get a higher fidelity when being cloned.
+
+The results we found are summarized in Table \ref{tab:results_epcqcm_onlyequator_corrected} (corrected with readout calibration).
 
 \begin{figure}[H]
   \centering
@@ -1154,6 +1197,7 @@ Without readout correction:
     $F_2$              & 0.704  & 0.841 & 0.838 & 0.867 & 0.799 & 0.850 & 0.826 & 0.832 \\ \hline
     $\sigma_{F_2}$     & 0.025  & 0.022 & 0.009 & 0.019 & 0.022 & 0.012 & 0.018 & 0.026 \\ \hline
     \end{tabular}
+    \caption{Average fidelity and corresponding standard deviation on the $xz$-equator for the two copies on each backend. The results are not corrected with readout calibration.}
 \end{table}
 \begin{figure}[H]
   \centering
@@ -1178,6 +1222,7 @@ With readout correction:
     $\sigma_{F_1}$     & 0.027 & 0.025 & 0.008 & 0.028 & 0.008 & 0.003 & 0.020 & 0.029 \\ \hline
     $F_2$              & 0.847 & 0.848 & 0.840 & 0.874 & 0.833 & 0.843 & 0.829 & 0.835 \\ \hline
     $\sigma_{F_2}$     & 0.041 & 0.024 & 0.003 & 0.021 & 0.012 & 0.011 & 0.023 & 0.023 \\ \hline
+    \caption{Average fidelity and corresponding standard deviation for the BB84 for the two copies on each backend. The results are corrected with readout calibration.}
     \end{tabular}
 \end{table}
 \begin{figure}[H]
@@ -1197,6 +1242,7 @@ Without readout correction:
     $\sigma_{F_1}$     & 0.018  & 0.024 & 0.008 & 0.027 & 0.008 & 0.003 & 0.017 & 0.027 \\ \hline
     $F_2$              & 0.765  & 0.845 & 0.842 & 0.866 & 0.831 & 0.848 & 0.827 & 0.833 \\ \hline
     $\sigma_{F_2}$     & 0.022  & 0.023 & 0.003 & 0.020 & 0.012 & 0.010 & 0.022 & 0.022 \\ \hline
+    \caption{Average fidelity and corresponding standard deviation for the BB84 for the two copies on each backend. The results are not corrected with readout calibration.}
     \end{tabular}
 \end{table}
 \begin{figure}[H]
