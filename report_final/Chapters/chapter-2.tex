@@ -307,7 +307,7 @@ The fidelity can be computed analytically. The final result is:
 \begin{figure}[H]
     \centering
             \includegraphics[width=0.5\textwidth]{Figures/phase_covariant.png}
-        \caption{Fidelity of the PCQCM plotted on the Bloch sphere. The Mollweide projection was used in order to represent the sphere in 2D.}
+        \caption{Fidelity of the PCQCM plotted on the Bloch sphere. The Mollweide projection \cite{2Dprojection} was used in order to represent the sphere in 2D.}
         \label{fig:phase_covariant}
 \end{figure}
 It is possible to observe that if $\phi=0$ is set, the fidelity becomes a constant:
@@ -493,9 +493,10 @@ When comparing the copies with the input state, the following fidelity is obtain
     F_{xy}(\theta,\phi)=\expval{\rho_1}{\psi}=\expval{\rho_2}{\psi}=\frac{1}{8} \left(2 \cos (\theta )-\left(\sqrt{2}-1\right) \cos (2 \theta )+\sqrt{2}+5\right).
 \end{equation}
 It is possible to observe that the fidelity does not depend on $\phi$. Moreover, for $\theta=\frac{\pi}{2}$ (i.e. on the $xy$-equator):
-\[
+\begin{equation}
     F_{xy}(\pi/2,\phi)=\left(\frac{1}{2}+\frac{1}{2\sqrt{2}}\right)\approx 0.854.
-\]
+    \label{eqn:fidelity_epcqcm}
+\end{equation}
 This is the same value obtained in the previous section for the PCQCM with the extra ancillary qubit.
 \begin{figure}[H]
     \begin{minipage}{.5\textwidth}
@@ -507,7 +508,7 @@ This is the same value obtained in the previous section for the PCQCM with the e
       \begin{minipage}{.5\textwidth}
         \centering
         \includegraphics[width=\textwidth]{Figures/economical_phase_covariant_rotated.png}
-        \caption{Fidelity of the PCEQCM plotted over the Bloch sphere. The Mollweide projection was used in order to represent the sphere in 2D.}
+        \caption{Fidelity of the PCEQCM plotted over the Bloch sphere. The Mollweide projection \cite{2Dprojection} was used in order to represent the sphere in 2D.}
         \label{fig:economical_phase_covariant_rotated}
       \end{minipage}
     \end{figure}

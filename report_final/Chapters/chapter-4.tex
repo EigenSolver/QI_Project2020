@@ -3,12 +3,19 @@
 
 In this section we list and discuss the results obtained.
 It is worth mentioning that calibrations and/or modifications of the quantum processors might change significantly the results obtained here.
+We mainly discuss the results corrected with readout calibration. The plots of the results not corrected with readout calibration are reported in Appendix A.
 
 \section{Universal quantum cloning machine}
     
 \subsection{Sphere}
 
-In Sec. \ref{sec:approximateqcm} we found that the UQCM returns a uniform fidelity for all the points on the Bloch sphere. Then, we expect that the average fidelity is exact for all states, that is $\bar{F} = 5/6 \approx 0.863$ ,$\sigma_{F} = 0$, here $\sigma_F$ is the standard deviation in the average fidelity along the Bloch sphere. It is zero since all the states have the same fidelity. On the other hand, we have the statistical deviation $\sigma_{stat}^{(N=8192)}\approx 0.003$ due to the finite number of shots. The results that we found are summarized in Table \ref{tab:uqcm_results_full_sphere}. These results include readout correction. Also, the data is represented in a histogram in Figure \ref{fig:hist_uqcm_sphere}. 
+In Section \ref{sec:approximateqcm} we found that the expected fidelity for the UQCM is $F=5/6$ for all the points on the Bloch sphere. 
+However, we expect the statistical uncertainty discussed Chapter \ref{sec:implementation} because of the finite sampling (we are using $16384$ shots for each input state for Starmon-5 and $8192$ for the IBM backends). The expected statistical uncertainty is (see \ref{eqn:dispersion_uqcm}):
+\[
+    \sigma_{stat}^{(8192)}\approx 0.004, \quad \sigma_{stat}^{(16384)}\approx 0.003.
+\]
+The average fidelities and the corresponding dispersions that we found for the difficult backends are summarized in Table \ref{tab:uqcm_results_full_sphere}. These results include readout correction.
+Also, the data is represented in a histogram in Figure \ref{fig:hist_uqcm_sphere}. 
 
 \begin{table}[H]
     \centering
@@ -23,20 +30,31 @@ In Sec. \ref{sec:approximateqcm} we found that the UQCM returns a uniform fideli
     \caption{Average fidelity and corresponding standard deviation on the whole Bloch sphere for the two copies on each backend. The results are corrected with readout calibration.}\label{tab:uqcm_results_full_sphere}
 \end{table}
 
+
+First of all, we found that the fidelity is lower than the ideal case. From Figure \ref{fig:hist_uqcm_sphere}, we observe that the average fidelity for all the backends is around $0.75$. 
+For all the backends the dispersion is also greater than expected. As we mentioned, the only variations should be caused by statistical errors. The obtained deviations are one order of magnitude larger than the expected statistical uncertainty. We attribute this large deviation to the details of the imperfections of each device. 
+
+
 \begin{figure}[H]
-    \centering
-            \includegraphics[width=0.8\textwidth]{Figures/UQCM/Histograms/histo_sphere.png}
-        
-        \caption{Comparison of the average fidelity on the Bloch sphere for both copies on different backends using readout correction. The uncertainty on the average is calculated as $\sigma_{\overline{F}_i}=\sigma_{F_i}/\sqrt{N}$, where $N$ is the number of points sampled ($N=1000$ in this case).}\label{fig:hist_uqcm_sphere}
+  \centering
+          \includegraphics[width=0.7\textwidth]{Figures/UQCM/Histograms/histo_sphere.png}
+      \caption{Comparison of the average fidelity on the Bloch sphere for both copies on different backends using readout correction. The uncertainty on the average is calculated as $\sigma_{\overline{F}_i}=\sigma_{F_i}/\sqrt{N}$, where $N$ is the number of points sampled ($N=1000$ in this case).}\label{fig:hist_uqcm_sphere}
 \end{figure}
 
-First of all, we found that the fidelity is much smaller than the exact result. From Figure \ref{fig:hist_uqcm_sphere}, we observe that the average fidelity for all the backends is around $\sim 0.75$. The standard deviations are much higher than the theoretical expectations. As we mentioned, the only variations should be caused by statistical errors. The obtained deviations are one order of magnitude larger than $\sigma_{stat}^{(N=8192)}$. We attribute this large deviation to the details of each device. 
+From the pictures below, we can observe that the quality of the copies is uniform only in a few cases (e.g. Athens in Figure \ref{fig:uqcm_athens}). 
+For most of the other backends, the quality of the copies is different for different regions of the Bloch sphere. For example, it is very clear in Ourense (see Figure \ref{fig:uqcm_our}) that the regions around $\ket{0}$ and $\ket{1}$ (the North and the South pole) are copied better than the region along the $xy$-equator.
+It is also possible to observe that the pattern visible for both the copies made on Yorktown (Figure \ref{fig:uqcm_york}) is different from all the others. In this case the better copied regions do not correspond to the poles.
 
-We are not expecting any recognizable pattern in the Bloch sphere since the fidelity should be equal for all single qubit states. This is the case for most of the backends. We found an almost uniform sampling along the equatorial region as shown in Figures \ref{fig:uqcm_athens}, \ref{fig:uqcm_our}, \ref{fig:uqcm_sant}, \ref{fig:uqcm_vigo}. In Figure \ref{fig:uqcm_york} we find a recognizable pattern which improves the fidelity along the axis of the Bloch sphere. We may attribute this to the internal working of the Yorktown machine rather than to any specific feature of the circuit. 
+Finally, we observe that something went wrong in the sampling of the Bloch sphere for Valencia (Figure \ref{fig:uqcm_valencia}).
+We can observe a strip in the lower hemisphere of the Bloch sphere that is uniformly different.  This strip has fidelities larger than $1$ (for the first copy).
+The results for Valencia on the whole Bloch sphere should therefore not be considered \footnote{One might think that this is due to no longer valid readout correction parameters. 
+However, the same strip can be seen also in the non corrected results (see Figure \ref{fig:uqcm_valencia_app} in Appendix A).}.
 
-The backend with the highest fidelity for the UQCM is Ourense from IBM. The pattern along the sphere is uniform, and the poles have higher fidelities. This indicates that for this backend, the states closer to the poles are copied better. We found a patter emerging in the results of Yorktown from IBM. This pattern is not a feature of the algorithm, but produced by the device.
-
-The effect of errors during the readout correction process can be observed as well in Fig. \ref{fig:uqcm_valencia}. In both figures we can observe a strip in the lower hemisphere of the Bloch sphere that is uniformly different. In fact, this strip has fidelities larger than $1$. They are introduced by the readout parameters that were no longer valid when the results where corrected. The figure without readout correction can be observed in the Appendix Figure \ref{fig:uqcm_valencia_app}
+We have seen similar artifacts on other IBM backends also for other QCMs, even if not as significant as for the UQCM on Valencia. They are usually present in both the corrected and non-corrected results.
+They correspond to one batch of circuits (on the IBM backends it is possible to group $75$ circuits together).
+They could be due to the fact that two subsequent batches of circuits are sometimes run hours apart, depending on the length of the queue.
+This would imply that the condition and the calibration of the quantum processors are not the same throughout the sampling.
+The quality of the results could be improved if we could run all the circuits together.
 
 \begin{figure}[H]
     \centering
@@ -140,10 +158,9 @@ The effect of errors during the readout correction process can be observed as we
     \label{fig:uqcm_york}
 \end{figure}
 
-
-
-For completeness, we include the results without the readout correction in Table \ref{tab:uqcm_results_full_sphere_non}. We can appreciate that the values have sightly changed. In general, we find that the readout correction improves the fidelity of one of the two copies, while decreases the fidelity of the other copy. We do not expect always an improvement, but a results closer to the real output of the machine, which already includes errors from other sources during the execution.
- 
+For completeness, we include the results without the readout correction in Table \ref{tab:uqcm_results_full_sphere_non}. It is possible to observe that the readout correction did not change the results significantly.
+Note that readout correction does not necessarily improves the results increasing the fidelity, in certain cases it decreases it.
+Indeed, implementing readout correction we should expect a results closer to the real output of the machine, which already includes errors from other sources during the execution.
 \begin{table}[H]
     \centering
     \begin{tabular}{|c|c|c|c|c|c|c|c|}
@@ -157,18 +174,18 @@ For completeness, we include the results without the readout correction in Table
     \caption{Average fidelity and corresponding standard deviation on the whole Bloch sphere for the two copies on each backend. The
 results are not corrected with readout calibration.}\label{tab:uqcm_results_full_sphere_non}
 \end{table}
-
 \begin{figure}[H]
     \centering
-            \includegraphics[width=0.8\textwidth]{Figures/UQCM/Histograms/histo_sphere_corrected.png}
-        
+            \includegraphics[width=0.7\textwidth]{Figures/UQCM/Histograms/histo_sphere_corrected.png}
         \caption{Comparison of the average fidelity on the Bloch sphere for both copies on different backends without readout correction. The uncertainty on the average is calculated as $\sigma_{\overline{F}_i}=\sigma_{F_i}/\sqrt{N}$, where $N$ is the number of points sampled ($N=1000$ in this case).}\label{fig:hist_uqcm_sphere_nonc}
 \end{figure}
-
+\vspace{-1cm}
 \subsection{Equator}
-
-For a sample of 100 points along the $xz$-equator of the Bloch sphere we run the UQCM and obtain the results listed in Table \ref{tab:uqcm_results_eq} and Figure \ref{fig:hist_uqcm_eq}. We found that the fidelity has improved with respect to the full sphere case for both copies compared to the full sphere. Since the fidelity presented here is an average over all the sampled points, it is not expected to have an improvement with respect to the previous case. Nevertheless, preparing the qubit in a state along the equator involves less operations than preparing it in an arbitrary state. Then, it is possible to expect an improvement in the fidelities. In Figure \ref{fig:hist_uqcm_eq} we can observe that the pattern of fidelities for all backends is similar to the one of the full sphere shown in Figure \ref{fig:hist_uqcm_sphere}.
-
+We also sampled the $xz$-equator of the Bloch sphere, in order to compare the results with the PCQCM and the EPCQCM. Theoretically, there should not be any difference between the $xz$-equator and the rest of the Bloch sphere for the UQCM, but this should not be assumed a priori.
+The results (readout corrected) are shown in Table \ref{tab:uqcm_results_eq} and Figure \ref{fig:hist_uqcm_eq}. We found that the fidelity has improved with respect to the full sphere case for both copies compared to the full sphere.
+Indeed, we do not see any significant difference when comparing these results with the previous ones. 
+The oscillatory patterns that can be seen for several backends (e.g. Ourense in Figure \ref{fig:uqcm_eq_our}) are consistent with the patterns visible on the whole Bloch sphere: the regions around $\ket{0}$ and $\ket{1}$ are copied better than the regions around $\ket{+}$ and $\ket{-}$.
+A more detailed analysis of such pattern can be found in the results for the PCQCM.
 \begin{table}[H]
     \centering
     \begin{tabular}{|c|c|c|c|c|c|c|c|}
@@ -181,16 +198,12 @@ For a sample of 100 points along the $xz$-equator of the Bloch sphere we run the
     \end{tabular}
     \caption{Average fidelity and corresponding standard deviation on the $xz$ equator of the Bloch sphere for the two copies on each backend. The results are corrected with readout calibration.}\label{tab:uqcm_results_eq}
 \end{table}
-
 \begin{figure}[H]
     \centering
-            \includegraphics[width=0.8\textwidth]{Figures/UQCM/Histograms/histo_equator.png}
-        
+            \includegraphics[width=0.7\textwidth]{Figures/UQCM/Histograms/histo_equator_corrected.png}
         \caption{Comparison of the average fidelity on the equator of the Bloch sphere for both copies on different backends using readout correction. The uncertainty on the average is calculated as $\sigma_{\overline{F}_i}=\sigma_{F_i}/\sqrt{N}$, where $N$ is the number of points sampled ($N=100$ in this case).}\label{fig:hist_uqcm_eq}
 \end{figure} 
-
-In the following figures, we observe the fidelity of the states along the equator. We found that the fidelity of these states has a oscillatory behavior in Figures \ref{fig:uqcm_eq_our}, \ref{fig:uqcm_eq_vigo}, and \ref{fig:uqcm_eq_york}. We were expecting to have uniform results, as is the case for Athens in Fig. \ref{fig:uqcm_eq_athens}. The oscillatory patter in Yorktown is the most clear of them, and this is in agreement with the image of the full sphere with a clear pattern (see Figure \ref{fig:uqcm_york}). We attribute this behavior to this device.  
-
+ 
 \begin{figure}[H]
     \centering
     \begin{subfigure}{.45\textwidth}
@@ -291,7 +304,7 @@ In the following figures, we observe the fidelity of the states along the equato
     \label{fig:uqcm_eq_york}
 \end{figure}
 
-For completeness, we include the results without the readout correction. The results are shown in Table \ref{tab:uqcm_results_eq_non}. As before, we find that the readout improves the readout in few cases, e.g. Athens, and it decreases in most of them. The results are within the statistical uncertainty attributed to the finite sampling.
+For completeness, we have included the results without the readout correction in Table \ref{tab:uqcm_results_eq_non}.
 
 \begin{table}[H]
     \centering
@@ -305,17 +318,17 @@ For completeness, we include the results without the readout correction. The res
     \end{tabular}
     \caption{Average fidelity and corresponding standard deviation on the $xz$ equator of the Bloch sphere for the two copies on each backend. The results are not corrected with readout calibration.}\label{tab:uqcm_results_eq_non}
 \end{table}
-
 \begin{figure}[H]
     \centering
-            \includegraphics[width=0.8\textwidth]{Figures/UQCM/Histograms/histo_equator_corrected.png}
-        
+            \includegraphics[width=0.7\textwidth]{Figures/UQCM/Histograms/histo_equator.png}
         \caption{Comparison of the average fidelity on the equator of the Bloch sphere for both copies on different backends without readout correction. The uncertainty on the average is calculated as $\sigma_{\overline{F}_i}=\sigma_{F_i}/\sqrt{N}$, where $N$ is the number of points sampled ($N=100$ in this case).}\label{fig:hist_uqcm_equator}
 \end{figure}
 
 \subsection{BB84 States}
 
-We have sampled the BB84 states corresponding to the states pointing along the $X$ and $Z$ axis of the Bloch sphere. The results are shown in Table \ref{tab:uqcm_results_bb} with readout correction, and in Table \ref{sec:results} without it. We omitted the graphics since the can be found as orange points in the graphics of the UCQM sampled along the equator. They can be observed as orange dots in the figures of the equator. That is, see the orange dots in Figures \ref{fig:uqcm_eq_athens}, \ref{fig:uqcm_eq_our}, \ref{fig:uqcm_eq_starmon}, \ref{fig:uqcm_eq_vigo}, and \ref{fig:uqcm_eq_york}. In those results that have an oscillatory behavior along the equator, we observe that the BB84 states are located in the peaks and dips of those oscillations. Consequently, the fidelities shown in Table \ref{tab:uqcm_results_bb} and Figure \ref{fig:hist_uqcm_bb84} are higher. Similarly as before, Ourense has the higher fidelity. It copies better the states at the poles of the Bloch sphere (see Figure \ref{fig:uqcm_eq_our}). This bar is larger than the expected value. However, this excess is inside the error range due to statistical uncertainty.
+Finally, we report the results considering only the BB84 states as input states, i.e. $\ket{0}$, $\ket{1}$, $\ket{+}$ and $\ket{+}$.
+The results are shown in Table \ref{tab:uqcm_results_bb} with readout correction, and in Table \ref{tab:uqcm_results_bb_non} without it.
+Looking at the plots of the previous section, it is not surprising that the results do not different significantly from the cloning of the equatorial states.
 
 \begin{table}[H]
     \centering
@@ -329,6 +342,13 @@ We have sampled the BB84 states corresponding to the states pointing along the $
     \end{tabular}
     \caption{Average fidelity and corresponding standard deviation on the BB84 states for the two copies on each backend. The results are corrected with readout calibration.}\label{tab:uqcm_results_bb}
 \end{table}
+\begin{figure}[H]
+  \centering
+          \includegraphics[width=0.7\textwidth]{Figures/UQCM/Histograms/histo_bb84_corrected.png}
+      
+      \caption{Comparison of the average fidelity on the BB84 states for both copies on different backends without readout correction. The uncertainty on the average is calculated as $\sigma_{\overline{F}_i}=\sigma_{F_i}/\sqrt{N}$, where $N$ is the number of points sampled ($N=4$ in this case).}\label{fig:hist_uqcm_bb84}
+\end{figure}
+
 
 \begin{table}[H]
     \centering
@@ -342,18 +362,9 @@ We have sampled the BB84 states corresponding to the states pointing along the $
     \end{tabular}
     \caption{Average fidelity and corresponding standard deviation on the BB84 states for the two copies on each backend. The results are not corrected with readout calibration.}\label{tab:uqcm_results_bb_non}
 \end{table}
-
-
-\begin{figure}[H]
-    \centering
-            \includegraphics[width=0.8\textwidth]{Figures/UQCM/Histograms/histo_bb84_corrected.png}
-        
-        \caption{Comparison of the average fidelity on the BB84 states for both copies on different backends without readout correction. The uncertainty on the average is calculated as $\sigma_{\overline{F}_i}=\sigma_{F_i}/\sqrt{N}$, where $N$ is the number of points sampled ($N=4$ in this case).}\label{fig:hist_uqcm_bb84}
-\end{figure}
-
 \begin{figure}[H]
   \centering
-          \includegraphics[width=0.8\textwidth]{Figures/UQCM/Histograms/histo_bb84.png}
+          \includegraphics[width=0.7\textwidth]{Figures/UQCM/Histograms/histo_bb84.png}
       
       \caption{Comparison of the average fidelity on the BB84 states for both copies on different backends using readout correction. The uncertainty on the average is calculated as $\sigma_{\overline{F}_i}=\sigma_{F_i}/\sqrt{N}$, where $N$ is the number of points sampled ($N=4$ in this case).}\label{fig:hist_uqcm_bb84_non}
 \end{figure}
@@ -365,7 +376,6 @@ In Chapter \ref{sec:approximateqcm}, we found that the expected average fidelity
 \[
   \overline{F}\approx0.819, \quad \sigma_{F}\approx0.031.
 \]
-
 The results we found are summarized in Table \ref{tab:results_pcqcm_fullsphere_corrected} (corrected with readout calibration).
 \begin{table}[H]
     \centering
@@ -382,9 +392,9 @@ The results we found are summarized in Table \ref{tab:results_pcqcm_fullsphere_c
 \end{table}
 \begin{figure}[H]
   \centering
-          \includegraphics[width=0.8\textwidth]{Figures/PhaseCovariant/Histograms/histo_sphere_corrected.png}
-      \label{fig:pc_histo_sphere_corrected}
+          \includegraphics[width=0.7\textwidth]{Figures/PhaseCovariant/Histograms/histo_sphere_corrected.png}
       \caption{Comparison of the average fidelity on the Bloch sphere for both the copies on different backends using the PCQCM with readout correction. The uncertainty on the average is calculated as $\sigma_{\overline{F}_i}=\sigma_{F_i}/\sqrt{N}$, where $N$ is the number of points sampled ($N=1000$ in this case).}
+      \label{fig:pc_histo_sphere_corrected}
 \end{figure}
 
 It is possible to observe that, on average, the PCQCM performs better than the UQCM, even if theoretically it should perform worse. 
@@ -397,10 +407,7 @@ In the following we report the projection of the results obtained on the Bloch s
 In general, we can see the expected pattern for the fidelity.
 In certain cases, for example for Starmon-5 (Figure \ref{fig:pc_corrected_starmon_sphere}), the results are not symmetric: the region around $\ket{-}$ (i.e. the left lobe) is copied better than the region around $\ket{+}$ (i.e. the right lobe) on both the qubits (this happens in both the copies).
 Sometimes, for example looking at the results for Santiago (Figure \ref{fig:pc_corrected_santiago_sphere}), it is possible to observe some sudden discontinuities.
-These artifacts, present both in the corrected and the non-corrected results, correspond to one batch of circuits (on the IBM backends it is possible to group $75$ circuits together).
-This could be due to the fact that two subsequent batches of circuits could be run hours apart, depending on the length of the queue.
-Therefore, it should not be assumed that the condition and the calibration of the quantum processors are the same throughout the sampling.
-The quality of the results could be improved if we could run all the circuits together.
+We have discussed such artifacts in the results for the UQCM on the whole sphere.
 Finally, we observe again that the results obtained on Yorktown (\ref{fig:pc_corrected_yorktown_sphere}) are quite different compared to the others, even if in this case the connectivity of the quantum processor should not play a role.
 
 \begin{figure}[H]
@@ -408,12 +415,10 @@ Finally, we observe again that the results obtained on Yorktown (\ref{fig:pc_cor
   \begin{subfigure}{.5\textwidth}
     \centering
     \includegraphics[width=\textwidth]{Figures/PhaseCovariant/Starmon/FullSphere/results_starmon_corrected_copy1.png}
-    \label{fig:pc_corrected_starmon_sphere_1}
   \end{subfigure}%
   \begin{subfigure}{.5\textwidth}
     \centering
     \includegraphics[width=\textwidth]{Figures/PhaseCovariant/Starmon/FullSphere/results_starmon_corrected_copy2.png}
-    \label{fig:pc_corrected_starmon_sphere_2}
   \end{subfigure}
   \caption{Fidelity sampled over the Bloch sphere using the PCQCM implemented on Starmon-5 using readout correction.}
   \label{fig:pc_corrected_starmon_sphere}
@@ -424,12 +429,10 @@ Finally, we observe again that the results obtained on Yorktown (\ref{fig:pc_cor
   \begin{subfigure}{.5\textwidth}
     \centering
     \includegraphics[width=\textwidth]{Figures/PhaseCovariant/IBM/FullSphere/results_corrected_athens_copy1.png}
-    \label{fig:pc_corrected_athens_sphere_1}
   \end{subfigure}%
   \begin{subfigure}{.5\textwidth}
     \centering
     \includegraphics[width=\textwidth]{Figures/PhaseCovariant/IBM/FullSphere/results_corrected_athens_copy2.png}
-    \label{fig:pc_corrected_athens_sphere_2}
   \end{subfigure}
   \caption{Fidelity sampled over the Bloch sphere using the PCQCM implemented on Athens using readout correction.}
   \label{fig:pc_corrected_athens_sphere}
@@ -441,14 +444,10 @@ Finally, we observe again that the results obtained on Yorktown (\ref{fig:pc_cor
   \begin{subfigure}{.5\textwidth}
     \centering
     \includegraphics[width=\textwidth]{Figures/PhaseCovariant/IBM/FullSphere/results_corrected_ourense_copy1.png}
-    
-    \label{fig:pc_corrected_ourense_sphere_1}
   \end{subfigure}%
   \begin{subfigure}{.5\textwidth}
     \centering
     \includegraphics[width=\textwidth]{Figures/PhaseCovariant/IBM/FullSphere/results_corrected_ourense_copy2.png}
-    
-    \label{fig:pc_corrected_ourense_sphere_2}
   \end{subfigure}
   \caption{Fidelity sampled over the Bloch sphere using the PCQCM implemented on Ourense using readout correction.}
   \label{fig:pc_corrected_ourense_sphere}
@@ -459,14 +458,10 @@ Finally, we observe again that the results obtained on Yorktown (\ref{fig:pc_cor
   \begin{subfigure}{.5\textwidth}
     \centering
     \includegraphics[width=\textwidth]{Figures/PhaseCovariant/IBM/FullSphere/results_corrected_santiago_copy1.png}
-    
-    \label{fig:pc_corrected_santiago_sphere_1}
   \end{subfigure}%
   \begin{subfigure}{.5\textwidth}
     \centering
     \includegraphics[width=\textwidth]{Figures/PhaseCovariant/IBM/FullSphere/results_corrected_santiago_copy2.png}
-    
-    \label{fig:pc_corrected_santiago_sphere_2}
   \end{subfigure}
   \caption{Fidelity sampled over the Bloch sphere using the PCQCM implemented on Santiago using readout correction.}
   \label{fig:pc_corrected_santiago_sphere}
@@ -477,12 +472,10 @@ Finally, we observe again that the results obtained on Yorktown (\ref{fig:pc_cor
   \begin{subfigure}{.5\textwidth}
     \centering
     \includegraphics[width=\textwidth]{Figures/PhaseCovariant/IBM/FullSphere/results_corrected_valencia_copy1.png}
-    \label{fig:pc_corrected_valencia_sphere_1}
   \end{subfigure}%
   \begin{subfigure}{.5\textwidth}
     \centering
     \includegraphics[width=\textwidth]{Figures/PhaseCovariant/IBM/FullSphere/results_corrected_valencia_copy2.png}
-    \label{fig:pc_corrected_valencia_sphere_2}
   \end{subfigure}
   \caption{Fidelity sampled over the Bloch sphere using the PCQCM implemented on Valencia using readout correction.}
   \label{fig:pc_corrected_valencia_sphere}
@@ -494,14 +487,10 @@ Finally, we observe again that the results obtained on Yorktown (\ref{fig:pc_cor
   \begin{subfigure}{.5\textwidth}
     \centering
     \includegraphics[width=\textwidth]{Figures/PhaseCovariant/IBM/FullSphere/results_corrected_vigo_copy1.png}
-    
-    \label{fig:pc_corrected_vigo_sphere_1}
   \end{subfigure}%
   \begin{subfigure}{.5\textwidth}
     \centering
     \includegraphics[width=\textwidth]{Figures/PhaseCovariant/IBM/FullSphere/results_corrected_vigo_copy2.png}
-    
-    \label{fig:pc_corrected_vigo_sphere_2}
   \end{subfigure}
   \caption{Fidelity sampled over the Bloch sphere using the PCQCM implemented on Vigo using readout correction.}
   \label{fig:pc_corrected_vigo_sphere}
@@ -512,14 +501,10 @@ Finally, we observe again that the results obtained on Yorktown (\ref{fig:pc_cor
   \begin{subfigure}{.5\textwidth}
     \centering
     \includegraphics[width=\textwidth]{Figures/PhaseCovariant/IBM/FullSphere/results_corrected_ibmqx2_copy1.png}
-    
-    \label{fig:pc_corrected_yorktown_sphere_1}
   \end{subfigure}%
   \begin{subfigure}{.5\textwidth}
     \centering
     \includegraphics[width=\textwidth]{Figures/PhaseCovariant/IBM/FullSphere/results_corrected_ibmqx2_copy2.png}
-    
-    \label{fig:pc_corrected_yorktown_sphere_2}
   \end{subfigure}
   \caption{Fidelity sampled over the Bloch sphere using the PCQCM implemented on Yorktown using readout correction.}
   \label{fig:pc_corrected_yorktown_sphere}
@@ -541,9 +526,9 @@ We conclude the analysis for the full sphere reporting also the results without 
 \end{table}
 \begin{figure}[H]
   \centering
-          \includegraphics[width=0.8\textwidth]{Figures/PhaseCovariant/Histograms/histo_sphere.png}
-      \label{fig:pc_histo_sphere_not_corrected}
+          \includegraphics[width=0.7\textwidth]{Figures/PhaseCovariant/Histograms/histo_sphere.png}
       \caption{Comparison of the average fidelity on the Bloch sphere for both the copies on different backends without using the PCQCM without readout correction. The uncertainty on the average is calculated as $\sigma_{\overline{F}_i}=\sigma_{F_i}/\sqrt{N}$, where $N$ is the number of points sampled ($N=1000$ in this case).}
+      \label{fig:pc_histo_sphere_not_corrected}
 \end{figure}
 As discussed in the previous section for the UQCM, the readout calibration corrects a classical error associated to a measurement.
 Therefore, we expect the measured fidelity to be more accurate, but not necessarily closer to the ideal case. 
@@ -559,8 +544,6 @@ As discussed previously in Chapter \ref{sec:implementation}, the expected statis
 \[
     \sigma_{stat}^{(8192)}\approx 0.004, \quad \sigma_{stat}^{(16384)}\approx 0.003.
 \]
-If the dispersion of the results is significantly greater than the expected one, it means that the states are not copied equally well.
-
 The results we found are summarized in Table \ref{tab:results_pcqcm_onlyequator_corrected} (corrected with readout calibration).
 \begin{table}[H]
     \centering
@@ -577,9 +560,9 @@ The results we found are summarized in Table \ref{tab:results_pcqcm_onlyequator_
 \end{table}
 \begin{figure}[H]
   \centering
-          \includegraphics[width=0.8\textwidth]{Figures/PhaseCovariant/Histograms/histo_equator_corrected.png}
-      \label{fig:pc_histo_equator_corrected}
+          \includegraphics[width=0.7\textwidth]{Figures/PhaseCovariant/Histograms/histo_equator_corrected.png}
       \caption{Comparison of the average fidelity on the $xz$-equator for both the copies on different backends using readout correction. The uncertainty on the average is calculated as $\sigma_{\overline{F}_i}=\sigma_{F_i}/\sqrt{N}$, where $N$ is the number of points sampled ($N=100$ in this case).}
+      \label{fig:pc_histo_equator_corrected}
 \end{figure}
 The average fidelity has significantly increased compared to the sampling on the whole sphere (and of course compared to the UQCM).
 In several cases the fidelity is greater than the bound of the UQCM (i.e. $F\approx 0.833$). 
@@ -603,12 +586,10 @@ Finally, we observe that the results for the two copies of Yorktown are qualitat
   \begin{subfigure}{.5\textwidth}
     \centering
     \includegraphics[width=\textwidth]{Figures/PhaseCovariant/Starmon/OnlyEquator/results_starmon_corrected_copy1.png}
-    \label{fig:pc_corrected_starmon_equator_1}
   \end{subfigure}%
   \begin{subfigure}{.5\textwidth}
     \centering
     \includegraphics[width=\textwidth]{Figures/PhaseCovariant/Starmon/OnlyEquator/results_starmon_corrected_copy2.png}
-    \label{fig:pc_corrected_starmon_equator_2}
   \end{subfigure}
   \vspace{-0.5cm}
   \caption{Fidelity sampled over the $xz$-equator using the PCQCM implemented on Starmon-5 using readout correction.
@@ -621,12 +602,10 @@ Finally, we observe that the results for the two copies of Yorktown are qualitat
   \begin{subfigure}{.5\textwidth}
     \centering
     \includegraphics[width=\textwidth]{Figures/PhaseCovariant/IBM/OnlyEquator/results_corrected_athens_copy1.png}
-    \label{fig:pc_corrected_athens_equator_1}
   \end{subfigure}%
   \begin{subfigure}{.5\textwidth}
     \centering
     \includegraphics[width=\textwidth]{Figures/PhaseCovariant/IBM/OnlyEquator/results_corrected_athens_copy2.png}
-    \label{fig:pc_corrected_athens_equator_2}
   \end{subfigure}
   \vspace{-0.5cm}
   \caption{Fidelity sampled over the $xz$-equator using the PCQCM implemented on Athens using readout correction. The solid green line is the expected fidelity, the solid blue line is the measured average fidelity, the dashed red lines indicate the expected dispersion and the dashed blue line indicate the measured dispersion. The orange points are the BB84 states.}
@@ -639,12 +618,10 @@ Finally, we observe that the results for the two copies of Yorktown are qualitat
   \begin{subfigure}{.5\textwidth}
     \centering
     \includegraphics[width=\textwidth]{Figures/PhaseCovariant/IBM/OnlyEquator/results_corrected_ourense_copy1.png}
-    \label{fig:pc_corrected_ourense_equator_1}
   \end{subfigure}%
   \begin{subfigure}{.5\textwidth}
     \centering
     \includegraphics[width=\textwidth]{Figures/PhaseCovariant/IBM/OnlyEquator/results_corrected_ourense_copy2.png}
-    \label{fig:pc_corrected_ourense_equator_2}
   \end{subfigure}
   \vspace{-0.5cm}
   \caption{Fidelity sampled over the $xz$-equator using the PCQCM implemented on Ourense using readout correction. The solid green line is the expected fidelity, the solid blue line is the measured average fidelity, the dashed red lines indicate the expected dispersion and the dashed blue line indicate the measured dispersion. The orange points are the BB84 states.}
@@ -657,12 +634,10 @@ Finally, we observe that the results for the two copies of Yorktown are qualitat
   \begin{subfigure}{.5\textwidth}
     \centering
     \includegraphics[width=\textwidth]{Figures/PhaseCovariant/IBM/OnlyEquator/results_corrected_santiago_copy1.png}
-    \label{fig:pc_corrected_santiago_equator_1}
   \end{subfigure}%
   \begin{subfigure}{.5\textwidth}
     \centering
     \includegraphics[width=\textwidth]{Figures/PhaseCovariant/IBM/OnlyEquator/results_corrected_santiago_copy2.png}
-    \label{fig:pc_corrected_santiago_equator_2}
   \end{subfigure}
   \vspace{-0.5cm}
   \caption{Fidelity sampled over the $xz$-equator using the PCQCM implemented on Santiago using readout correction. The solid green line is the expected fidelity, the solid blue line is the measured average fidelity, the dashed red lines indicate the expected dispersion and the dashed blue line indicate the measured dispersion. The orange points are the BB84 states.}
@@ -675,12 +650,10 @@ Finally, we observe that the results for the two copies of Yorktown are qualitat
   \begin{subfigure}{.5\textwidth}
     \centering
     \includegraphics[width=\textwidth]{Figures/PhaseCovariant/IBM/OnlyEquator/results_corrected_valencia_copy1.png}
-    \label{fig:pc_corrected_valencia_equator_1}
   \end{subfigure}%
   \begin{subfigure}{.5\textwidth}
     \centering
     \includegraphics[width=\textwidth]{Figures/PhaseCovariant/IBM/OnlyEquator/results_corrected_valencia_copy2.png}
-    \label{fig:pc_corrected_valencia_equator_2}
   \end{subfigure}
   \vspace{-0.5cm}
   \caption{Fidelity sampled over the $xz$-equator using the PCQCM implemented on Valencia using readout correction. The solid green line is the expected fidelity, the solid blue line is the measured average fidelity, the dashed red lines indicate the expected dispersion and the dashed blue line indicate the measured dispersion. The orange points are the BB84 states.}
@@ -693,12 +666,10 @@ Finally, we observe that the results for the two copies of Yorktown are qualitat
   \begin{subfigure}{.5\textwidth}
     \centering
     \includegraphics[width=\textwidth]{Figures/PhaseCovariant/IBM/OnlyEquator/results_corrected_vigo_copy1.png}
-    \label{fig:pc_corrected_vigo_equator_1}
   \end{subfigure}%
   \begin{subfigure}{.5\textwidth}
     \centering
     \includegraphics[width=\textwidth]{Figures/PhaseCovariant/IBM/OnlyEquator/results_corrected_vigo_copy2.png}
-    \label{fig:pc_corrected_vigo_equator_2}
   \end{subfigure}
   \vspace{-0.5cm}
   \caption{Fidelity sampled over the $xz$-equator using the PCQCM implemented on Vigo using readout correction. The solid green line is the expected fidelity, the solid blue line is the measured average fidelity, the dashed red lines indicate the expected dispersion and the dashed blue line indicate the measured dispersion. The orange points are the BB84 states.}
@@ -711,12 +682,10 @@ Finally, we observe that the results for the two copies of Yorktown are qualitat
   \begin{subfigure}{.5\textwidth}
     \centering
     \includegraphics[width=\textwidth]{Figures/PhaseCovariant/IBM/OnlyEquator/results_corrected_ibmqx2_copy1.png}
-    \label{fig:pc_corrected_yorktown_equator_1}
   \end{subfigure}%
   \begin{subfigure}{.5\textwidth}
     \centering
     \includegraphics[width=\textwidth]{Figures/PhaseCovariant/IBM/OnlyEquator/results_corrected_ibmqx2_copy2.png}
-    \label{fig:pc_corrected_yorktown_equator_2}
   \end{subfigure}
   \vspace{-0.5cm}
   \caption{Fidelity sampled over the $xz$-equator using the PCQCM implemented on Yorktown using readout correction. The solid green line is the expected fidelity, the solid blue line is the measured average fidelity, the dashed red lines indicate the expected dispersion and the dashed blue line indicate the measured dispersion. The orange points are the BB84 states.}
@@ -740,9 +709,9 @@ For the sake of completeness, we also report the non-corrected results.
 \end{table}
 \begin{figure}[H]
   \centering
-          \includegraphics[width=0.8\textwidth]{Figures/PhaseCovariant/Histograms/histo_equator.png}
-      \label{fig:pc_histo_equator_not_corrected}
+          \includegraphics[width=0.7\textwidth]{Figures/PhaseCovariant/Histograms/histo_equator.png}
       \caption{Comparison of the average fidelity on the $xz$-equator for both the copies on different backends without using the PCQCM without readout correction. The uncertainty on the average is calculated as $\sigma_{\overline{F}_i}=\sigma_{F_i}/\sqrt{N}$, where $N$ is the number of points sampled ($N=100$ in this case).}
+      \label{fig:pc_histo_equator_not_corrected}
 \end{figure}
 
 \subsection{BB84 states}
@@ -766,9 +735,9 @@ both the average and the standard deviation should remain more or less unchanged
 \end{table}
 \begin{figure}[H]
   \centering
-          \includegraphics[width=0.8\textwidth]{Figures/PhaseCovariant/Histograms/histo_bb84_corrected.png}
-      \label{fig:pc_histo_bb84_corrected}
+          \includegraphics[width=0.7\textwidth]{Figures/PhaseCovariant/Histograms/histo_bb84_corrected.png}
       \caption{Comparison of the average fidelity for the BB84 states for both the copies on different backends using the PCQCM with readout correction. The uncertainty on the average is calculated as $\sigma_{\overline{F}_i}=\sigma_{F_i}/\sqrt{N}$, where $N$ is the number of points sampled ($N=4$ in this case).}
+      \label{fig:pc_histo_bb84_corrected}
 \end{figure}
 
 We conclude the discussion of the results for the PCQCM with the results for the BB84 states without readout correction.
@@ -787,30 +756,20 @@ We conclude the discussion of the results for the PCQCM with the results for the
 \end{table}
 \begin{figure}[H]
   \centering
-          \includegraphics[width=0.8\textwidth]{Figures/PhaseCovariant/Histograms/histo_bb84.png}
-      \label{fig:pc_histo_bb84_corrected}
+          \includegraphics[width=0.7\textwidth]{Figures/PhaseCovariant/Histograms/histo_bb84.png}
       \caption{Comparison of the average fidelity for the BB84 states for both the copies on different backends using the PCQCM without readout correction. The uncertainty on the average is calculated as $\sigma_{\overline{F}_i}=\sigma_{F_i}/\sqrt{N}$, where $N$ is the number of points sampled ($N=4$ in this case).}
+      \label{fig:pc_histo_bb84_corrected}
 \end{figure}
 
 
 \section{Economical phase covariant quantum cloning machine}
+The EPCQCM only requires 2 qubits. Therefore, we could run it also on Spin-2.
 \subsection{Sphere}
-% Things to mention:
-%   \item Pattern of ideal case well reproduced. Yorktown has some differences again, as seen in the previous sections too.
-%   \item Readout correction influences greatly the result of Spin-2. 
-%   \item Having fidelity greater than the ideal one should not be a concern. Half the Bloch sphere is copied better than the equator. 
-%   It could be that the prepartion and measurement of the points is not very precise. For example, it could be that instead of preparing and measuring the state $\ket{+}$, we are preparing and measuring a slightly rotated version which in the better emisphere.
-% \end{enumerate} 
-
 In Chapter \ref{sec:approximateqcm}, we found that the expected average fidelity and the associated standard deviation on the whole Bloch sphere are (see Equation \ref{eqn:avg_fidelity_epcqcm} and Equation \ref{eqn:std_fidelity_epcqcm}):
 \[
   \overline{F}\approx0.819, \quad \sigma_{F}\approx0.148.
 \]
-
 The results we found are summarized in Table \ref{tab:results_epcqcm_fullsphere_corrected} (corrected with readout calibration).
-
-
-With readout correction:
 \begin{table}[H]
     \centering
     \begin{tabular}{|c|c|c|c|c|c|c|c|c|}
@@ -826,28 +785,29 @@ With readout correction:
 \end{table}
 \begin{figure}[H]
   \centering
-          \includegraphics[width=0.8\textwidth]{Figures/Economical/Histograms/histo_sphere_corrected.png}
-      \label{fig:epc_histo_sphere_corrected}
+          \includegraphics[width=0.7\textwidth]{Figures/Economical/Histograms/histo_sphere_corrected.png}
       \caption{Comparison of the average fidelity on the Bloch sphere for both the copies on different backends using the EPCQCM with readout correction. The uncertainty on the average is calculated as $\sigma_{\overline{F}_i}=\sigma_{F_i}/\sqrt{N}$, where $N$ is the number of points sampled ($N=1000$ in this case).}
+      \label{fig:epc_histo_sphere_corrected}
 \end{figure}
 
-We observed that, by the indicator of average fidelity, the EPCQCM performs better than UQCM, as we have seen in the PCQCM case. The fidelities on the projection of the Bloch sphere comply with the theoretical pattern we predicted in Chapter \ref{sec:approximateqcm}. Similar patterns are well reproduced on all backends except the IBM Yorktown, as shown in the results of the previous section. 
+It is possible to observe that the EPCQCM performs better than UQCM because of the simplicity of the circuit, as we have seen in the PCQCM case. 
+In the pictures below it is possible to see that the fidelity on the Bloch sphere varies as expected: it is clearly visible that one hemisphere is copied better than the other.
+The only backend for which a slightly different pattern is visible is Yorktown (which had different patterns compared to the other backends also for the other QCMs).
 
-The pattern of Spin-2 is noisier compared with the results we get from other backends. It can be noticed that the fidelities on copy1 and copy2 of Spin-2 shows obvious deviation, as shown in the histogram \ref{fig:epc_histo_sphere_corrected}. The asymmetry is a consequence of the readout corrections we performed on Spin-2, which has remarkably improved the fidelity of copy2 from 0.69 to 0.82 (the uncorrected results are shown in table \ref{tab:results_epcqcm_fullsphere_not_corrected}).
+For some backends a fidelity greater than the ideal one is achieved. 
+This could be due some systematic inaccuracy in the preparation of the input states or in the measurement of the fidelity of the copies.
+For example, the rotations could be skewed towards the better hemisphere, for some hardware inaccuracy. This would lead to an oversampling of such hemisphere and to an undersampling of the other one.
 
-It's worth mentioning that the fidelities can be greater than the theoretical value on some of the backends, like IBM Ourense and Vigo. This should not be a concern since the performance of EPQCM is not uniform on the Bloch sphere (where half of the Bloch sphere is copied better than the other). Therefore, some quantum states can be biased to other locations on the Bloch sphere with better cloning fidelity by noise, which will result in greater average fidelity than expected.
 
 \begin{figure}[H]
   \centering
   \begin{subfigure}{.5\textwidth}
     \centering
     \includegraphics[width=\textwidth]{Figures/Economical/Spin2/FullSphere/results_spin2_corrected_copy1.png}
-    \label{fig:epc_corrected_spin_sphere_1}
   \end{subfigure}%
   \begin{subfigure}{.5\textwidth}
     \centering
     \includegraphics[width=\textwidth]{Figures/Economical/Spin2/FullSphere/results_spin2_corrected_copy2.png}
-    \label{fig:epc_corrected_spin_sphere_2}
   \end{subfigure}
   \caption{Fidelity sampled over the Bloch sphere using the EPCQCM implemented on Spin-2 using readout correction.}
   \label{fig:epc_corrected_spin_sphere}
@@ -858,12 +818,10 @@ It's worth mentioning that the fidelities can be greater than the theoretical va
   \begin{subfigure}{.5\textwidth}
     \centering
     \includegraphics[width=\textwidth]{Figures/Economical/Starmon/FullSphere/results_starmon_corrected_copy1.png}
-    \label{fig:epc_corrected_starmon_sphere_1}
   \end{subfigure}%
   \begin{subfigure}{.5\textwidth}
     \centering
     \includegraphics[width=\textwidth]{Figures/Economical/Starmon/FullSphere/results_starmon_corrected_copy2.png}
-    \label{fig:epc_corrected_starmon_sphere_2}
   \end{subfigure}
   \caption{Fidelity sampled over the Bloch sphere using the EPCQCM implemented on Starmon-5 using readout correction.}
   \label{fig:epc_corrected_starmon_sphere}
@@ -874,12 +832,10 @@ It's worth mentioning that the fidelities can be greater than the theoretical va
   \begin{subfigure}{.5\textwidth}
     \centering
     \includegraphics[width=\textwidth]{Figures/Economical/IBM/FullSphere/results_corrected_athens_copy1.png}
-    \label{fig:epc_corrected_athens_sphere_1}
   \end{subfigure}%
   \begin{subfigure}{.5\textwidth}
     \centering
     \includegraphics[width=\textwidth]{Figures/Economical/IBM/FullSphere/results_corrected_athens_copy2.png}
-    \label{fig:epc_corrected_athens_sphere_2}
   \end{subfigure}
   \caption{Fidelity sampled over the Bloch sphere using the EPCQCM implemented on Athens using readout correction.}
   \label{fig:epc_corrected_athens_sphere}
@@ -890,14 +846,10 @@ It's worth mentioning that the fidelities can be greater than the theoretical va
   \begin{subfigure}{.5\textwidth}
     \centering
     \includegraphics[width=\textwidth]{Figures/Economical/IBM/FullSphere/results_corrected_ourense_copy1.png}
-    
-    \label{fig:epc_corrected_ourense_sphere_1}
   \end{subfigure}%
   \begin{subfigure}{.5\textwidth}
     \centering
     \includegraphics[width=\textwidth]{Figures/Economical/IBM/FullSphere/results_corrected_ourense_copy2.png}
-    
-    \label{fig:epc_corrected_ourense_sphere_2}
   \end{subfigure}
   \caption{Fidelity sampled over the Bloch sphere using the EPCQCM implemented on Ourense using readout correction.}
   \label{fig:epc_corrected_ourense_sphere}
@@ -908,14 +860,10 @@ It's worth mentioning that the fidelities can be greater than the theoretical va
   \begin{subfigure}{.5\textwidth}
     \centering
     \includegraphics[width=\textwidth]{Figures/Economical/IBM/FullSphere/results_corrected_santiago_copy1.png}
-    
-    \label{fig:epc_corrected_santiago_sphere_1}
   \end{subfigure}%
   \begin{subfigure}{.5\textwidth}
     \centering
     \includegraphics[width=\textwidth]{Figures/Economical/IBM/FullSphere/results_corrected_santiago_copy2.png}
-    
-    \label{fig:epc_corrected_santiago_sphere_2}
   \end{subfigure}
   \caption{Fidelity sampled over the Bloch sphere using the EPCQCM implemented on Santiago using readout correction.}
   \label{fig:epc_corrected_santiago_sphere}
@@ -926,12 +874,10 @@ It's worth mentioning that the fidelities can be greater than the theoretical va
   \begin{subfigure}{.5\textwidth}
     \centering
     \includegraphics[width=\textwidth]{Figures/Economical/IBM/FullSphere/results_corrected_valencia_copy1.png}
-    \label{fig:epc_corrected_valencia_sphere_1}
   \end{subfigure}%
   \begin{subfigure}{.5\textwidth}
     \centering
     \includegraphics[width=\textwidth]{Figures/Economical/IBM/FullSphere/results_corrected_valencia_copy2.png}
-    \label{fig:epc_corrected_valencia_sphere_2}
   \end{subfigure}
   \caption{Fidelity sampled over the Bloch sphere using the EPCQCM implemented on Valencia using readout correction.}
   \label{fig:epc_corrected_valencia_sphere}
@@ -942,14 +888,10 @@ It's worth mentioning that the fidelities can be greater than the theoretical va
   \begin{subfigure}{.5\textwidth}
     \centering
     \includegraphics[width=\textwidth]{Figures/Economical/IBM/FullSphere/results_corrected_vigo_copy1.png}
-    
-    \label{fig:epc_corrected_vigo_sphere_1}
   \end{subfigure}%
   \begin{subfigure}{.5\textwidth}
     \centering
     \includegraphics[width=\textwidth]{Figures/Economical/IBM/FullSphere/results_corrected_vigo_copy2.png}
-    
-    \label{fig:epc_corrected_vigo_sphere_2}
   \end{subfigure}
   \caption{Fidelity sampled over the Bloch sphere using the EPCQCM implemented on Vigo using readout correction.}
   \label{fig:epc_corrected_vigo_sphere}
@@ -960,20 +902,19 @@ It's worth mentioning that the fidelities can be greater than the theoretical va
   \begin{subfigure}{.5\textwidth}
     \centering
     \includegraphics[width=\textwidth]{Figures/Economical/IBM/FullSphere/results_corrected_ibmqx2_copy1.png}
-    
-    \label{fig:epc_corrected_yorktown_sphere_1}
   \end{subfigure}%
   \begin{subfigure}{.5\textwidth}
     \centering
     \includegraphics[width=\textwidth]{Figures/Economical/IBM/FullSphere/results_corrected_ibmqx2_copy2.png}
-    
-    \label{fig:epc_corrected_yorktown_sphere_2}
   \end{subfigure}
   \caption{Fidelity sampled over the Bloch sphere using the EPCQCM implemented on Yorktown using readout correction.}
   \label{fig:epc_corrected_yorktown_sphere}
 \end{figure}
 
-Without readout correction:
+
+Finally, we report the results obtained without readout correction. 
+In this case it is possible to observe that for Spin-2 the readout correction changes the results significantly. Indeed, for this backend the readout is more error-prone, possibly because of the different technology (Spin-2 uses spin qubits).
+
 \begin{table}[H]
     \centering
     \begin{tabular}{|c|c|c|c|c|c|c|c|c|}
@@ -989,23 +930,22 @@ Without readout correction:
 \end{table}
 \begin{figure}[H]
   \centering
-          \includegraphics[width=0.8\textwidth]{Figures/Economical/Histograms/histo_sphere.png}
-      \label{fig:epc_histo_sphere_not_corrected}
+          \includegraphics[width=0.7\textwidth]{Figures/Economical/Histograms/histo_sphere.png}
       \caption{Comparison of the average fidelity on the Bloch sphere for both the copies on different backends without using the EPCQCM without readout correction. The uncertainty on the average is calculated as $\sigma_{\overline{F}_i}=\sigma_{F_i}/\sqrt{N}$, where $N$ is the number of points sampled ($N=1000$ in this case).}
+      \label{fig:epc_histo_sphere_not_corrected}
 \end{figure}
 
 \subsection{Equator}
 
-The fidelity for the copies of equatorial states using an ideal EPCQCM is (see Equation \ref{eqn:fidelity_pcqcm}):
+The fidelity for the copies of equatorial states using an ideal EPCQCM is:
 \[
   F=\frac{1}{2}+\frac{1}{2\sqrt{2}}\approx0.854.
 \]
-As we have mentioned in the previous section of PCQCM, the statistical dispersion of fidelities should be: 
+As we have mentioned in the previous section of PCQCM, the statistical dispersion of fidelities should be (see Equation \eqref{eqn:dispersion_epcqcm}): 
 \[
-    \sigma_{stat}^{(8192)}\approx 0.004, \quad \sigma_{stat}^{(16384)}\approx 0.003.
+  \sigma_{stat}^{(4096)}\approx 0.006, \quad \sigma_{stat}^{(8192)}\approx 0.004, \quad \sigma_{stat}^{(16384)}\approx 0.003.
 \]
-
-With readout correction:
+The results for the equator are shown in Table \ref{tab:results_epcqcm_onlyequator_corrected_corrected} and in Figure \ref{fig:epc_histo_equator_corrected}.
 \begin{table}[H]
     \centering
     \begin{tabular}{|c|c|c|c|c|c|c|c|c|}
@@ -1022,43 +962,28 @@ With readout correction:
 
 \begin{figure}[H]
   \centering
-          \includegraphics[width=0.8\textwidth]{Figures/Economical/Histograms/histo_equator_corrected.png}
-      \label{fig:epc_histo_equator_corrected}
+          \includegraphics[width=0.7\textwidth]{Figures/Economical/Histograms/histo_equator_corrected.png}
       \caption{Comparison of the average fidelity on the $xz$-equator for both the copies on different backends using the EPCQCM with readout correction. The uncertainty on the average is calculated as $\sigma_{\overline{F}_i}=\sigma_{F_i}/\sqrt{N}$, where $N$ is the number of points sampled ($N=100$ in this case).}
+      \label{fig:epc_histo_equator_corrected}
 \end{figure}
-% Things to mention:
-% \begin{enumerate}
-%   \item Oscillatory pattern again (with few exceptions). Also details of oscillatory pattern are similar (e.g. Vigo is not symmetric and Valencia is translated, so $\ket{+}$ and $\ket{-}$ are copied better)
-%   \item Readout correction influences greatly the result of Spin-2. 
-%   \item Copy 1 of Valencia is almost ideal (both for the fidelity and the dispersion)
-%   \item Having fidelity greater than the ideal one should not be a concern. Half the Bloch sphere is copied better than the equator. 
-%   It could be that the prepartion and measurement of the points is not very precise. For example, it could be that instead of preparing and measuring the state $\ket{+}$, we are preparing and measuring a slightly rotated version which in the better emisphere.
-% \end{enumerate} 
 
+The average fidelity obtained using the EPQCM on equatorial states is better than that of UQCM and is comparable with PCQCM.
+Again, the average fidelities on some of the backends are greater than the theoretical expectation, which should not be a concern as we have explained in the previous section.
+It is also possible to observe again the already discussed oscillatory patterns.
+The first copy of Valencia is close to the ideal bound, both for the average fidelity and the dispersion of the data. In this case the quality of the copy is really state independent.
+For the other backends that do not show an oscillatory pattern, however, the dispersion is still greater than the expected statistical uncertainty. 
+Most of the backends are very close to the ideal bound.
 
-As we expected, the average fidelity we get from the EPQCM on equatorial states is better than that of UQCM and is comparable with PCQCM.
-The measured dispersion of the results is of a similar scale with the dispersion of PCQCM and still far beyond the statistical uncertainty, which means we will suffer from noisy fluctuations as using PCQCM when cloning equatorial states. 
-This can be more clearly seen in the pictures below, where we have reported the measured fidelity of each input state. Most IBM backends (Vigo, Ourense, Yorktown, Athens) have demonstrated oscillatory similar patterns as what we have seen in the previous case of PCQCM.
-Also, there are differences in details. For example, the oscillation phase of Vigo is translated, we get $\ket{1},\ket{1}$ at wave peaks in PCQCM, while in EPCQCM they are at the wave bottom. It's worth mentioning that the copy1 we get from IBM Valencia is almost at the optimal fidelity, and the dispersion is well-bounded that the results of $\ket{0}, \ket{+}, \ket{-}$ all lies in the statistical uncertainty range while the $\ket{-}$ has an even better fidelity above the expectation. 
-
-
-As for the Quantum Inspire platforms, the Starmon-5 has demonstrated similar oscillatory patterns as IBM backends, while the noise of Spin-2 appears much more irregular, which could be the consequence that Spin-2 is based on semiconductor qubits. However, on Spin-2, we can see that the readout correction has significantly improved the cloning performance, as shown by the comparison of the two histograms \ref{fig:epc_histo_equator_corrected} and \ref{fig:epc_histo_equator_not_corrected}. 
-
-Again, the average fidelities on some of the backends are greater than the theoretical expectation, which should not be a concern as we have explained in the previous section of sphere states. The states we prepared could be deviated from the xz-equator by noise and thus get a higher fidelity when being cloned.
-
-The results we found are summarized in Table \ref{tab:results_epcqcm_onlyequator_corrected} (corrected with readout calibration).
 
 \begin{figure}[H]
   \centering
   \begin{subfigure}{.5\textwidth}
     \centering
     \includegraphics[width=\textwidth]{Figures/Economical/Spin2/OnlyEquator/results_spin2_corrected_copy1.png}
-    \label{fig:epc_corrected_spin2_equator_1}
   \end{subfigure}%
   \begin{subfigure}{.5\textwidth}
     \centering
     \includegraphics[width=\textwidth]{Figures/Economical/Spin2/OnlyEquator/results_spin2_corrected_copy2.png}
-    \label{fig:epc_corrected_spin2_equator_2}
   \end{subfigure}
   \vspace{-0.5cm}
   \caption{Fidelity sampled over the $xz$-equator using the EPCQCM implemented on Spin-2 using readout correction.
@@ -1071,12 +996,10 @@ The results we found are summarized in Table \ref{tab:results_epcqcm_onlyequator
   \begin{subfigure}{.5\textwidth}
     \centering
     \includegraphics[width=\textwidth]{Figures/Economical/Starmon/OnlyEquator/results_starmon_corrected_copy1.png}
-    \label{fig:epc_corrected_starmon_equator_1}
   \end{subfigure}%
   \begin{subfigure}{.5\textwidth}
     \centering
     \includegraphics[width=\textwidth]{Figures/Economical/Starmon/OnlyEquator/results_starmon_corrected_copy2.png}
-    \label{fig:epc_corrected_starmon_equator_2}
   \end{subfigure}
   \vspace{-0.5cm}
   \caption{Fidelity sampled over the $xz$-equator using the EPCQCM implemented on Starmon-5 using readout correction.
@@ -1089,12 +1012,10 @@ The results we found are summarized in Table \ref{tab:results_epcqcm_onlyequator
   \begin{subfigure}{.5\textwidth}
     \centering
     \includegraphics[width=\textwidth]{Figures/Economical/IBM/OnlyEquator/results_corrected_athens_copy1.png}
-    \label{fig:epc_corrected_athens_equator_1}
   \end{subfigure}%
   \begin{subfigure}{.5\textwidth}
     \centering
     \includegraphics[width=\textwidth]{Figures/Economical/IBM/OnlyEquator/results_corrected_athens_copy2.png}
-    \label{fig:epc_corrected_athens_equator_2}
   \end{subfigure}
   \vspace{-0.5cm}
   \caption{Fidelity sampled over the $xz$-equator using the EPCQCM implemented on Athens using readout correction. The solid green line is the expected fidelity, the solid blue line is the measured average fidelity, the dashed red lines indicate the expected dispersion and the dashed blue line indicate the measured dispersion. The orange points are the BB84 states.}
@@ -1106,12 +1027,10 @@ The results we found are summarized in Table \ref{tab:results_epcqcm_onlyequator
   \begin{subfigure}{.5\textwidth}
     \centering
     \includegraphics[width=\textwidth]{Figures/Economical/IBM/OnlyEquator/results_corrected_ourense_copy1.png}
-    \label{fig:epc_corrected_ourense_equator_1}
   \end{subfigure}%
   \begin{subfigure}{.5\textwidth}
     \centering
     \includegraphics[width=\textwidth]{Figures/Economical/IBM/OnlyEquator/results_corrected_ourense_copy2.png}
-    \label{fig:epc_corrected_ourense_equator_2}
   \end{subfigure}
   \vspace{-0.5cm}
   \caption{Fidelity sampled over the $xz$-equator using the EPCQCM implemented on Ourense using readout correction. The solid green line is the expected fidelity, the solid blue line is the measured average fidelity, the dashed red lines indicate the expected dispersion and the dashed blue line indicate the measured dispersion. The orange points are the BB84 states.}
@@ -1123,12 +1042,10 @@ The results we found are summarized in Table \ref{tab:results_epcqcm_onlyequator
   \begin{subfigure}{.5\textwidth}
     \centering
     \includegraphics[width=\textwidth]{Figures/Economical/IBM/OnlyEquator/results_corrected_santiago_copy1.png}
-    \label{fig:epc_corrected_santiago_equator_1}
   \end{subfigure}%
   \begin{subfigure}{.5\textwidth}
     \centering
     \includegraphics[width=\textwidth]{Figures/Economical/IBM/OnlyEquator/results_corrected_santiago_copy2.png}
-    \label{fig:epc_corrected_santiago_equator_2}
   \end{subfigure}
   \vspace{-0.5cm}
   \caption{Fidelity sampled over the $xz$-equator using the EPCQCM implemented on Santiago using readout correction. The solid green line is the expected fidelity, the solid blue line is the measured average fidelity, the dashed red lines indicate the expected dispersion and the dashed blue line indicate the measured dispersion. The orange points are the BB84 states.}
@@ -1140,12 +1057,10 @@ The results we found are summarized in Table \ref{tab:results_epcqcm_onlyequator
   \begin{subfigure}{.5\textwidth}
     \centering
     \includegraphics[width=\textwidth]{Figures/Economical/IBM/OnlyEquator/results_corrected_valencia_copy1.png}
-    \label{fig:epc_corrected_valencia_equator_1}
   \end{subfigure}%
   \begin{subfigure}{.5\textwidth}
     \centering
     \includegraphics[width=\textwidth]{Figures/Economical/IBM/OnlyEquator/results_corrected_valencia_copy2.png}
-    \label{fig:epc_corrected_valencia_equator_2}
   \end{subfigure}
   \vspace{-0.5cm}
   \caption{Fidelity sampled over the $xz$-equator using the EPCQCM implemented on Valencia using readout correction. The solid green line is the expected fidelity, the solid blue line is the measured average fidelity, the dashed red lines indicate the expected dispersion and the dashed blue line indicate the measured dispersion. The orange points are the BB84 states.}
@@ -1157,12 +1072,10 @@ The results we found are summarized in Table \ref{tab:results_epcqcm_onlyequator
   \begin{subfigure}{.5\textwidth}
     \centering
     \includegraphics[width=\textwidth]{Figures/Economical/IBM/OnlyEquator/results_corrected_vigo_copy1.png}
-    \label{fig:epc_corrected_vigo_equator_1}
   \end{subfigure}%
   \begin{subfigure}{.5\textwidth}
     \centering
     \includegraphics[width=\textwidth]{Figures/Economical/IBM/OnlyEquator/results_corrected_vigo_copy2.png}
-    \label{fig:epc_corrected_vigo_equator_2}
   \end{subfigure}
   \vspace{-0.5cm}
   \caption{Fidelity sampled over the $xz$-equator using the EPCQCM implemented on Vigo using readout correction. The solid green line is the expected fidelity, the solid blue line is the measured average fidelity, the dashed red lines indicate the expected dispersion and the dashed blue line indicate the measured dispersion. The orange points are the BB84 states.}
@@ -1174,19 +1087,17 @@ The results we found are summarized in Table \ref{tab:results_epcqcm_onlyequator
   \begin{subfigure}{.5\textwidth}
     \centering
     \includegraphics[width=\textwidth]{Figures/Economical/IBM/OnlyEquator/results_corrected_ibmqx2_copy1.png}
-    \label{fig:epc_corrected_yorktown_equator_1}
   \end{subfigure}%
   \begin{subfigure}{.5\textwidth}
     \centering
     \includegraphics[width=\textwidth]{Figures/Economical/IBM/OnlyEquator/results_corrected_ibmqx2_copy2.png}
-    \label{fig:epc_corrected_yorktown_equator_2}
   \end{subfigure}
   \vspace{-0.5cm}
   \caption{Fidelity sampled over the $xz$-equator using the EPCQCM implemented on Yorktown using readout correction. The solid green line is the expected fidelity, the solid blue line is the measured average fidelity, the dashed red lines indicate the expected dispersion and the dashed blue line indicate the measured dispersion. The orange points are the BB84 states.}
   \label{fig:epc_corrected_yorktown_equator}
 \end{figure}
 
-Without readout correction:
+In Table \ref{tab:results_epcqcm_onlyequator_not_corrected} are shown the results without readout correction. It is possible to observe again that for Spin-2 the readout correction improves the fidelity significantly.
 \begin{table}[H]
     \centering
     \begin{tabular}{|c|c|c|c|c|c|c|c|c|}
@@ -1198,18 +1109,21 @@ Without readout correction:
     $\sigma_{F_2}$     & 0.025  & 0.022 & 0.009 & 0.019 & 0.022 & 0.012 & 0.018 & 0.026 \\ \hline
     \end{tabular}
     \caption{Average fidelity and corresponding standard deviation on the $xz$-equator for the two copies on each backend. The results are not corrected with readout calibration.}
+    \label{tab:results_epcqcm_onlyequator_not_corrected}
 \end{table}
 \begin{figure}[H]
   \centering
-          \includegraphics[width=0.8\textwidth]{Figures/Economical/Histograms/histo_equator.png}
-      \label{fig:epc_histo_equator_not_corrected}
+          \includegraphics[width=0.7\textwidth]{Figures/Economical/Histograms/histo_equator.png}
       \caption{Comparison of the average fidelity on the $xz$-equator for both the copies on different backends without using the EPCQCM without readout correction. The uncertainty on the average is calculated as $\sigma_{\overline{F}_i}=\sigma_{F_i}/\sqrt{N}$, where $N$ is the number of points sampled ($N=100$ in this case).}
+      \label{fig:epc_histo_equator_not_corrected}
 \end{figure}
 
 \subsection{BB84 states}
-For the BB84 states, almost all the backends have reached the optimal fidelity of EPQCM. The result we get is quite close to the equatorial states. Due to the simplicity and performance of EPQCM circuit, we would like use it as our choice to attack the BB84 protocols. 
+We conclude the results section with the results for the BB84 states. As for the previous QCMs, there is not a significant difference with respect to the cloning of the whole equator.
+Hence, the same considerations as for the equator hold. Again, most of the backends are very close to the ideal bound.
+In Table \ref{tab:results_epcqcm_bb84_corrected} and Figure \ref{fig:epc_histo_bb84_corrected} are reported the results corrected with readout calibration, 
+in Table \ref{tab:results_epcqcm_onlyequator_not_corrected} and Figure \ref{fig:epc_histo_bb84_not_corrected} are reported the non-corrected results.
 
-With readout correction:
 \begin{table}[H]
     \centering
     \begin{tabular}{|c|c|c|c|c|c|c|c|c|}
@@ -1221,16 +1135,16 @@ With readout correction:
     $\sigma_{F_2}$     & 0.041 & 0.024 & 0.003 & 0.021 & 0.012 & 0.011 & 0.023 & 0.023 \\ \hline
     \end{tabular}
     \caption{Average fidelity and corresponding standard deviation for the BB84 for the two copies on each backend. The results are corrected with readout calibration.}
+    \label{tab:results_epcqcm_bb84_corrected}
 \end{table}
 
 \begin{figure}[H]
   \centering
-          \includegraphics[width=0.8\textwidth]{Figures/Economical/Histograms/histo_bb84_corrected.png}
-      \label{fig:epc_histo_bb84_corrected}
+          \includegraphics[width=0.7\textwidth]{Figures/Economical/Histograms/histo_bb84_corrected.png}
       \caption{Comparison of the average fidelity for the BB84 states for both the copies on different backends using the EPCQCM with readout correction. The uncertainty on the average is calculated as $\sigma_{\overline{F}_i}=\sigma_{F_i}/\sqrt{N}$, where $N$ is the number of points sampled ($N=4$ in this case).}
+      \label{fig:epc_histo_bb84_corrected}
 \end{figure}
 
-Without readout correction:
 \begin{table}[H]
     \centering
     \begin{tabular}{|c|c|c|c|c|c|c|c|c|}
@@ -1242,11 +1156,12 @@ Without readout correction:
     $\sigma_{F_2}$     & 0.022  & 0.023 & 0.003 & 0.020 & 0.012 & 0.010 & 0.022 & 0.022 \\ \hline
     \end{tabular}
     \caption{Average fidelity and corresponding standard deviation for the BB84 for the two copies on each backend. The results are not corrected with readout calibration.}
+    \label{tab:results_epcqcm_bb84_not_corrected}
 \end{table}
 
 \begin{figure}[H]
   \centering
-          \includegraphics[width=0.8\textwidth]{Figures/Economical/Histograms/histo_bb84.png}
-      \label{fig:epc_histo_bb84_not_corrected}
+          \includegraphics[width=0.7\textwidth]{Figures/Economical/Histograms/histo_bb84.png}
       \caption{Comparison of the average fidelity for the BB84 states for both the copies on different backends using the EPCQCM without readout correction. The uncertainty on the average is calculated as $\sigma_{\overline{F}_i}=\sigma_{F_i}/\sqrt{N}$, where $N$ is the number of points sampled ($N=4$ in this case).}
+      \label{fig:epc_histo_bb84_not_corrected}
 \end{figure}
