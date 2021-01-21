@@ -5,14 +5,14 @@
 It is well known that an arbitrary quantum state cannot be copied due to the no-cloning theorem.
 Nevertheless, there are several approaches to produce an imperfect quantum copy \cite{Buzek1996,buvzek1998universal,EquatorialQCM,PhaseCovariantOptimalBruss}. 
 Here, we discuss the so-called universal quantum cloning machine (UQCM), which copies all the states on the Bloch sphere with the same fidelity $F=5/6$ \cite{Buzek1996}. 
-Later studies showed that this is this fidelity is indeed optimal for an arbitrary input state as input. 
+Later studies showed that this is this fidelity is indeed optimal for the cloning an arbitrary input state. 
 The proof of the optimality relies on the no-signalling theorem: if a better QCM existed, it would allow to communicate faster than light \cite{Gisin1998, QuantumCloningReviewScarani}.
 
 Let us start by considering an arbitrary state,
 \begin{equation}
 \ket{\psi}_{a_0} = \alpha \ket{0}_{a_0} + \beta \ket{1}_{a_0}.
 \end{equation}
-We are interested in copy this state using the UQCM\cite{Buzek1996}. For such purpose, we require two ancillary registers. The full quantum circuit corresponding to the UQCM contains two stages, as can be seen in Fig. \ref{fig:uqcm}.
+We are interested in copy this state using the UQCM \cite{Buzek1996}. For such purpose, we require two ancillary registers. The full quantum circuit corresponding to the UQCM contains two stages, as can be seen in Fig. \ref{fig:uqcm}.
 \begin{figure}
 \begin{center}
 \begin{quantikz}
@@ -83,7 +83,7 @@ From which we can observe that the coefficients depend explicitly on the rotatio
     C_4 &=   \sin(\theta_1/2)  \cos(\theta_2/2) \sin(\theta_3/2)  +    \cos(\theta_1/2) \sin(\theta_2/2) \cos(\theta_3/2)
 \end{align}
 
-The angles used to produce an arbitrary state have been previously studied\cite{Buzek1996, Buzek1999}. The following angles were used for the preparation of the state given in Eq. \eqref{eq:uqcm_prep_state}, that is, 
+The angles used to produce an arbitrary state have been previously studied \cite{Buzek1996, Buzek1999}. The following angles were used for the preparation of the state given in Eq. \eqref{eq:uqcm_prep_state}, that is, 
 
 \begin{equation}
 \cos(2\theta_1)=\frac{1}{\sqrt{5}}, \quad \cos(2\theta_2)=\frac{\sqrt{5}}{3}, \quad \cos(2\theta_3)=\frac{2}{\sqrt{5}}.
@@ -151,7 +151,7 @@ Finally, the density matrix of the input qubit, or the first copying qubit, is g
 \begin{equation}
 \rho_{a_0}=\frac{5}{6}\ketbra{\psi}{\psi}+\frac{1}{6}\ketbra{\psi_{\perp}}{\psi_{\perp}},
 \end{equation}
-where $\ket{\psi}=\alpha\ket{0}+\beta\ket{1}$ is the input state aligned along $\hat{m}$, and $\ket{\psi_{\perp}}=\beta^*\ket{0}-\alpha^*\ket{1}$ is its orthogonal state. Then, we calculate the fidelity of a pure state with a mixed state, which is given by,
+Then, we calculate the fidelity of a pure state with a mixed state, which is given by,
 \begin{equation}
     F(\ket{\psi},\rho)=\bra{\psi}\rho\ket{\psi}.
 \end{equation}
@@ -159,9 +159,10 @@ In our case, the fidelity of the output copies is:
 \begin{equation}
 F(\ket{\psi},\rho_{a_0})=\bra{\psi}\rho_{a_0}\ket{\psi}=\frac{5}{6}= F(\ket{\psi},\rho_{a_1}).
 \end{equation}
-This is the maximum possible fidelity that can be obtained when one tries to copy an arbitrary quantum state. The final state is the same for the input qubit, and for the first copying qubit. One can think of the copying process as the interaction of the input qubit with an environment modeled by the copying qubits. After the copying process, the initial information is evenly distributed between the environment and the input qubit. This copy machine makes copies that are aligned along the same direction as the input qubit, but their magnitude decreases by a factor $2/3$\cite{QuantumCloningReviewScarani}. 
+This is the maximum possible fidelity that can be obtained when one tries to copy an arbitrary quantum state. The final state is the same for the input qubit, and for the first copying qubit, where the two clones are made.
 
-In the implementation of the UQCM we must care about the connectivity of the qubits found in each device. If we observe Figure \ref{circuit:full}, we note that full connectivity is required between the three qubits of the circuit. However, this is not always the case in experimental devices. The, we require an extra swap gate to connect the qubits that are not close to each other. This extra swap gate would have a significant effect on the results from experimental backends due to the three extra CNOT gates included. The circuit implemented with this extra consideration can be observed in Figure \ref{circuit:uqcm_exp}.
+In the implementation of the UQCM we must take into account connectivity of the qubits found in each device. If we consider both the preparation of the ancillary qubits and the copying itself, we note that all the three qubits have to be connected to each other. However, this is not always the case in most experimental devices. Thus, we require an additional SWAP gate to connect the qubits that are not physically connected to each other. 
+This extra SWAP gate greatly increases the depth of the circuits, since it is implemented using three CNOT gates. The full circuit implemented with the additional SWAP gate can be observed in Figure \ref{circuit:uqcm_exp}.
 
 \begin{figure}[H]
 \begin{center}
@@ -177,7 +178,7 @@ In the implementation of the UQCM we must care about the connectivity of the qub
 
 \section{Phase covariant quantum cloning machine}
 A phase covariant quantum cloning machine (PCQCM) is a QCM optimized to clone states on an equator of the Bloch sphere.
-The circuit for the optimal PCQCM proposed in  \cite{EquatorialQCM} is similar to the one for the UQCM, but the output copies are on the registers of the ancillae:
+The circuit for the optimal PCQCM proposed in \cite{EquatorialQCM} is similar to the one for the UQCM, but the output copies are on the registers of the ancillae:
 
 \begin{figure}[H]
 \begin{center}
@@ -225,7 +226,6 @@ Hence, these two CNOT gates are not necessary. It is possible to ignore them, pr
 
 We have managed to greatly simplify the circuit. We have removed 5 CNOT gates from the circuit that we were using on real quantum processors with linear connectivity: the 2 CNOT gates mentioned here and the 3 CNOT gates that were necessary in order to implement the SWAP gate that was necessary to respect the connectivity constraints.
 With this new circuit, only the top qubit has to be able to connect to the other two qubits.
-As a final observation, since this circuit is much more simple than the one for the universal QCM, the average fidelity over the whole Bloch sphere could be greater in this case than with the universal QCM.
 
 We will now show, step by step, that this circuit does clone states on the $xz$-equator.
 We consider a generic input state
@@ -307,8 +307,8 @@ The fidelity can be computed analytically. The final result is:
 \begin{figure}[H]
     \centering
             \includegraphics[width=0.5\textwidth]{Figures/phase_covariant.png}
+        \caption{Fidelity of the PCQCM plotted on the Bloch sphere. The Mollweide projection was used in order to represent the sphere in 2D.}
         \label{fig:phase_covariant}
-        \caption{Fidelity of the PCQCM plotted on the Bloch sphere.}
 \end{figure}
 It is possible to observe that if $\phi=0$ is set, the fidelity becomes a constant:
 \[
@@ -320,7 +320,7 @@ Therefore, for input states on the $xz$-equator, the fidelity of the PCQCM is:
     \label{eqn:fidelity_pcqcm}
 \end{equation}
 
-As discussed in \cite{PhaseCovariantOptimalBruss} this is the optimal fidelity for a PCQCM. 
+As discussed in \cite{PhaseCovariantOptimalBruss}, this is the optimal fidelity for a PCQCM. 
 Moreover, this is the optimal result attainable also when trying to maximize the fidelity for BB84 input states.
 Indeed, the optimization over the two different sets of input states is equivalent and leads therefore to the same result \cite{PhaseCovariantOptimalBruss}.
 
@@ -399,14 +399,14 @@ After some manipulations, it is possible to obtain the following expression:
     \begin{minipage}[t]{.5\textwidth}
         \centering
         \includegraphics[width=\textwidth]{Figures/plot_1D_phase_covariant_different_labels.png}
-        \label{fig:phase_covariant_rotated_1d}
         \caption{Fidelity of the rotated PCQCM over the $xz$ equator of the Bloch sphere.}
+        \label{fig:phase_covariant_rotated_1d}
     \end{minipage}%
     \begin{minipage}[t]{.5\textwidth}
         \centering
         \includegraphics[width=\textwidth]{Figures/phase_covariant_rotated.png}
-        \label{fig:phase_covariant_rotated}
         \caption{Fidelity of the rotated PCQCM plotted over the Bloch sphere. One can appreciate that is rotated with respect to Figure \ref{fig:phase_covariant}.}
+        \label{fig:phase_covariant_rotated}
     \end{minipage}
 \end{figure}
 
@@ -501,14 +501,14 @@ This is the same value obtained in the previous section for the PCQCM with the e
     \begin{minipage}{.5\textwidth}
         \centering
         \includegraphics[width=\textwidth]{Figures/plot_1D_economical_phase_covariant.png}
-        \label{fig:economical_phase_covariant_rotated_1d}
         \caption{Fidelity of the PCEQCM along the $xz$ equator of the Bloch sphere.}
+        \label{fig:economical_phase_covariant_rotated_1d}
       \end{minipage}%
       \begin{minipage}{.5\textwidth}
         \centering
         \includegraphics[width=\textwidth]{Figures/economical_phase_covariant_rotated.png}
+        \caption{Fidelity of the PCEQCM plotted over the Bloch sphere. The Mollweide projection was used in order to represent the sphere in 2D.}
         \label{fig:economical_phase_covariant_rotated}
-        \caption{Fidelity of the PCEQCM plotted over the Bloch sphere.}
       \end{minipage}
     \end{figure}
 The average fidelity on the whole Bloch sphere is
@@ -556,8 +556,8 @@ The fidelity for an EPCQCM that optimally clones the $xz$-equator is:
 \begin{figure}[H]
     \centering
             \includegraphics[width=0.5\textwidth]{Figures/economical_phase_covariant.png}
-        \label{fig:economical_phase_covariant}
         \caption{Fidelity of the rotated PCEQCM plotted over the Bloch sphere. One can appreciate that is rotated with respect to Figure \ref{fig:economical_phase_covariant_rotated}.}
+        \label{fig:economical_phase_covariant}
 \end{figure}
 This is the circuit that we have run and the fidelity that we will compare our results with.
 
@@ -565,7 +565,7 @@ This is the circuit that we have run and the fidelity that we will compare our r
 In the literature there are some experimental realization of QCMs. 
 In 2002 Cummins et al. \cite{UQCMwithNMR} implemented the UQCM on a NMR quantum computer, obtaining a state independent copy but a low fidelity $F=0.58$ (compared to the ideal one $F \approx 0.83$).
 An experiment implementing an EPCQCM on a NMR quantum computer followed \cite{EPCQCMwithNMR}, where $F=0.848$ was reached.
-More recently, the UQCM has been implemented in \cite{UQCMwithSuperconducting}, reaching a fidelity $F\approx 0.83$ on one qubit and $F\approx 0.79$ on the other.
+More recently, the UQCM has been implemented in a superconducting system \cite{UQCMwithSuperconducting}, reaching a fidelity $F\approx 0.83$ on one qubit and $F\approx 0.79$ on the other.
 An implementation of the optimal phase cloning on solid-state system can be found, for example, in \cite{PCQCMwithSuperconducting}, with $F=0.8392$ (using a superconducting system), and in \cite{PCQCMwithNV} with $F=0.852$ (using NV centers).
 
 Differently from the experiments carried out in the mentioned papers, we did not have direct access to the hardware. 

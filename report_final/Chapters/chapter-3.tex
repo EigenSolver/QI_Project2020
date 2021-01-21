@@ -7,7 +7,7 @@ In particular, it should not be assumed the fidelity of the copies to be indepen
 Therefore, two more blocks have to be added to the circuits discussed in the previous section. 
 We have to prepare an arbitrary input state on the Bloch sphere and we have to measure the fidelity of the copies.
 It is worth mentioning that both the preparation and the fidelity measurement are not required in the normal use of QCMs, they are just a means of testing their performances.
-It should therefore be taken into account that the additional gates could decrease the quality of the copies because of the greater depth of the run circuits.
+It should therefore be taken into account that the additional gates could influence the measured quality of the copies because of the greater depth of the run circuits.
 
 This is the outline of a single experiment:
 \begin{enumerate}
@@ -86,7 +86,7 @@ Ideally, after
 A possible alternative to this way of measuring the fidelity would be to perform a quantum tomography experiment. However, the number of circuits necessary to run would have increased.
 
 \section{Readout calibration}
-We considered that a classical error can affect the measurement process. Consider a state of the form $\ket{\psi} = \alpha\ket{0}+\beta\ket{1}$. The expectation value of a measurement along the Z axis is given by $\bar{m}=p_{+1}-p_{-1}$. However, this quantity can be affected by classical errors. 
+We considered that a classical error can affect the measurement process \cite{LeoDiCarloNotes}. Consider a state of the form $\ket{\psi} = \alpha\ket{0}+\beta\ket{1}$. The expectation value of a measurement along the Z axis is given by $\bar{m}=p_{+1}-p_{-1}$. However, this quantity can be affected by classical errors. 
 In a readout error, a measurement of $+1$ is transformed to $-1$ with a probability $\epsilon_{01}$. Similarly for $\epsilon_{10}$. Then, the expectation value will be transformed to,
 \begin{align}\label{eq:readout}
 \bar{m} &= (1-2\epsilon_{10})|\alpha|^2-(1-2\epsilon_{01})|\beta|^2\\
@@ -116,70 +116,29 @@ The solution of this two equations is given by,
 
 \subsection{Single qubit calibration}
 
-We consider a single qubit tomography to observe the effect of the readout correction. Let us consider a normal single qubit tomography. We run this experiment in different available experimental backends and correct the results according to Eq. \ref{eq:corrected_ps}. The readout parameters were calculated at the beginning of the experiment, and then the results were corrected. In the following figures, we show the results with and without readout correction.
-
-\begin{figure}[H]
-    \centering
-    \begin{subfigure}{.5\textwidth}
-      \centering
-      \includegraphics[width=\textwidth]{Figures/Calibrations/calibration_athens.png}
-    \end{subfigure}%
-    \begin{subfigure}{.5\textwidth}
-      \centering
-      \includegraphics[width=\textwidth]{Figures/Calibrations/calibration_ourense.png}
-    \end{subfigure}
-    \caption{Single qubit calibration on Athens and Ourense. Here the blue (orange) line corresponds to the data without (with) readout correction.}
-    \label{fig:pc_yorktown_sphere}
-\end{figure}
-
-\begin{figure}[H]
-    \centering
-    \begin{subfigure}{.5\textwidth}
-      \centering
-      \includegraphics[width=\textwidth]{Figures/Calibrations/calibration_valencia.png}
-    \end{subfigure}%
-    \begin{subfigure}{.5\textwidth}
-      \centering
-      \includegraphics[width=\textwidth]{Figures/Calibrations/calibration_vigo.png}
-    \end{subfigure}
-    \caption{Single qubit calibration on Valencia and Vigo. Here the blue (orange) line corresponds to the data without (with) readout correction.}
-    \label{fig:pc_yorktown_sphere}
-\end{figure}
-
-\begin{figure}[H]
-    \centering
-    \begin{subfigure}{.5\textwidth}
-      \centering
-      \includegraphics[width=\textwidth]{Figures/Calibrations/calibration_santiago.png}
-    \end{subfigure}%
-    \begin{subfigure}{.5\textwidth}
-      \centering
-      \includegraphics[width=\textwidth]{Figures/Calibrations/calibration_ibmqx2.png}
-    \end{subfigure}
-    \caption{Single qubit calibration on Santiago and Yorktown. Here the blue (orange) line corresponds to the data without (with) readout correction.}
-    \label{fig:pc_yorktown_sphere}
-\end{figure}
+We consider a single qubit tomography to observe the effect of the readout correction. 
+Let us consider a normal single qubit tomography. 
+We run this experiment in different available experimental backends and correct the results according to Eq. \ref{eq:corrected_ps}. 
+The readout parameters were calculated at the beginning of the experiment, and then the results were corrected. 
+In the following figures, we show the results for the Valencia backend, as an example.
 
 
 \begin{figure}[H]
     \centering
-    \begin{subfigure}{.5\textwidth}
-      \centering
-      \includegraphics[width=\textwidth]{Figures/Calibrations/calibration_simulator.png}
-    \end{subfigure}%
-    \begin{subfigure}{.5\textwidth}
-      \centering
-      \includegraphics[width=\textwidth]{Figures/Calibrations/calibration_melbourne.png}
-    \end{subfigure}
-    \caption{Single qubit calibration on Simulator and Melbourne. Here the blue (orange) line corresponds to the data without (with) readout correction. For the Simulator there is a single blue line since results do not require correction.}
-    \label{fig:pc_yorktown_sphere}
+      \includegraphics[width=0.5\textwidth]{Figures/Calibrations/calibration_valencia.png}
+    \caption{Single qubit calibration on Valencia. Here the blue (orange) line corresponds to the data without (with) readout correction.}
+    \label{fig:readout_correction_tomography_valencia}
 \end{figure}
 
 \subsection{Time dependence of readout parameters}
 
-The readout error is caused by calibration of the measuring device. Then, we expect an evolution of the readout correction parameters. This change would imply that a readout correction will negatively affect the corrected results. If they correspond to a previous calibration, they're no longer valid. In this case, we prepared a large block of $1000$ circuits, and every $75$ we run a readout calibration. The time between the running each block is not constant due to queue.
+The readout error depends on the calibration of the measuring device. 
+In principle, we should not assume the readout correction parameters to be constant in time, especially if the circuits are run over a long period of time.
+This would lead to a wrong correction of the results.
+In order to avoid this problem, we performed a readout calibration every $75$ circuits.
 
-In the following picture we observe how the readout calibration parameters change for the backend IBMQ Valencia. On each picture, we observe the evolution of the readout parameters of each measuring qubit. We can observe that in one case, the change in $\beta_0$ and $\beta_1$ is appreciable, while the other case show an almost constant pattern. This different behavior indicates that the qubits do not behave uniformly in this device.
+In the following picture we show how the readout calibration parameters changed for the backend IBMQ Valencia. In each picture, we observe the evolution of the readout parameters for both the measured qubits. 
+We can observe that in one case, the change in $\beta_0$ and $\beta_1$ is appreciable, while the other case show an almost constant pattern. This different behavior indicates that the qubits do not behave uniformly in this device.
 
 
 \begin{figure}[H]
@@ -214,10 +173,12 @@ Spin-2, on the other hand, is a $2$-qubit processor based on spin qubits in sili
 
 On the software side, we used Qiskit \cite{Qiskit} for all the backends. 
 It allowed us to write the code only one for both Quantum Inspire and IBM Quantum Experience.
+The code used to run and analyze the experiments is linked in Appendix B.
 It should be mentioned that we had no control on the used hardware nor on the access to it.
 We used the publicly available platforms without any priority.
 
-We have ran each experiment the maximum number of times allowed by each backend.
+\subsection{Statistical error due to finite sampling}
+Each backend allows to run the same circuit a maximum number of times. We have always run each circuit with the maximum number of shots available.
 The maximum number of shots allowed is $4096$ for Spin-2, $16384$ for Starmon-5 and $8192$ for all the other backends.
 This means that even if we had a perfect quantum computer, the results would still be affected by a statistical uncertainty.
 More specifically, each measurement can be considered a Bernoulli trial, where the success probability corresponds to the probability $p$ of measuring $0$, which is also the fidelity $F$ of the copy.
@@ -247,3 +208,6 @@ This is the dispersion of the results that we would expect even if we had an ide
 If we want to verify whether a QCM copies equally well certain input states, we should take into account this statistical uncertainty.
 If the standard deviation of our results is compatible with the one calculated above, we can assume that the quality of the copies is state-independent.
 Note that this does not mean that the copies are as good as theoretically possible: it could be that a QCM copies all the states 'equally bad'.  
+Finally, note that this is a sufficient condition for state-independent copy, not a necessary one: the fidelity of the copies could be distributed evenly around the average value (so that the quality of the copies does not depend on the input state), 
+but with a greater dispersion, for example because of additional noise.
+
